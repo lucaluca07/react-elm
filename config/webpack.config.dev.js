@@ -159,7 +159,7 @@ module.exports = {
           // In production, we use a plugin to extract that CSS to a file, but
           // in development "style" loader enables hot editing of CSS.
           {
-            test: /\.css$/,
+            test: /\.(css|less)$/,
             use: [
               require.resolve('style-loader'),
               {
@@ -189,19 +189,22 @@ module.exports = {
                   ],
                 },
               },
+              {
+                loader: require.resolve("less-loader") // 将 less 编译成 CSS
+              },
             ],
           },
           //scss
-          {
-            test: /\.scss$/,
-            use: [{
-                loader: "style-loader" // 将 JS 字符串生成为 style 节点
-            }, {
-                loader: "css-loader" // 将 CSS 转化成 CommonJS 模块
-            }, {
-                loader: "sass-loader" // 将 Sass 编译成 CSS
-            }]
-          },
+          // {
+          //   test: /\.scss$/,
+          //   use: [{
+          //       loader: "style-loader" // 将 JS 字符串生成为 style 节点
+          //   }, {
+          //       loader: "css-loader" // 将 CSS 转化成 CommonJS 模块
+          //   }, {
+          //       loader: "sass-loader" // 将 Sass 编译成 CSS
+          //   }]
+          // },
           // "file" loader makes sure those assets get served by WebpackDevServer.
           // When you `import` an asset, you get its (virtual) filename.
           // In production, they would get copied to the `build` folder.
