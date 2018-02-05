@@ -1,14 +1,14 @@
 import React from 'react' ;
-import './style.less'
+import Carousel from 'nuka-carousel' ;
 
-const FirstPageHeader = () => {
-
-    return(
-        <div className="first-page-header">
-            <div className="header-address">当前地址</div>
-            <div className="header-search-input">搜索</div>
-        </div>
-    )
+const Swiper = () => {
+    return (
+        <Carousel>
+            <div>1</div>
+            <div>3</div>
+            <div>4</div>
+      </Carousel>
+    ) ;
 }
 
-export default FirstPageHeader ;
+export default Swiper ;
