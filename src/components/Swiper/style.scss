@@ -1,0 +1,34 @@
+.slider-decorator-0,.slider-decorator-1{
+  display: none;
+}
+.slider-decorator-2{
+  ul{
+    top:10px !important;
+  }
+}
+.carousel-item{
+  display: flex;
+  height: 354px;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  .item-child{
+    box-sizing: border-box;
+    background-color: white;
+    flex: 0 0 20%;
+    height: 128px;
+    margin-top:22px; 
+    .stone-container{
+      height: 90px;
+      width: 90px;
+      border-radius: 50%;
+      background: gray;
+      margin: 0 auto;
+    }
+    .stone-title{
+      height: 20px;
+      width: 90px;
+      margin:10px auto 0;
+      background: gray;
+    }
+  }
+}

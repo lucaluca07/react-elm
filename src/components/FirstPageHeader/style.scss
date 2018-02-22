@@ -1,0 +1,21 @@
+.first-page-header{ 
+    .header-address{
+        height:70px;
+        padding: 20px 28px 0 ;
+        font-size:32px;
+        background: linear-gradient(to right, #0af, #0085ff);
+    }
+    .header-search-input{
+        height: 72px;
+        padding: 15px 0;
+        font-size:16px;
+        background: linear-gradient(to right, #0af, #0085ff);
+    }
+    .search-fixed{
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 2;
+    }
+}

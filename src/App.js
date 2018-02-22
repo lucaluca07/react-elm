@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.less';
+import './App.scss';
 import FirstPageHeader from './components/FirstPageHeader'
 import Swiper from './components/Swiper'
 import ShopList from './components/ShopList'
