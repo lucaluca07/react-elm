@@ -12,6 +12,9 @@ class FirstPageHeader extends React.Component {
         window.addEventListener('scroll',this.handleScroll,10)
         
     }
+    componentWillUnmount(){
+        window.removeEventListener('scroll',this.handleScroll)
+    }
     handleScroll(){
         const node = ReactDOM.findDOMNode(this.refs.address)
         const {bottom} = node.getBoundingClientRect()
