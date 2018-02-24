@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
+import throttle from '../../util/throttle'
 
-export default class LimitedInfiniteScroll extends Component {
+export default class InfiniteScroll extends Component {
     static propTypes = {
         pageStart: PropTypes.number,
         threshold: PropTypes.number,
         hasMore: PropTypes.bool,
         autoLoad: PropTypes.bool,
-        useWindow: PropTypes.bool,
         loadNext: PropTypes.func.isRequired,
         spinLoader: PropTypes.element,
         noMore: PropTypes.element
@@ -18,13 +19,15 @@ export default class LimitedInfiniteScroll extends Component {
         threshold: 200,
         hasMore: false,
         autoLoad: true,
-        useWindow: true,
         spinLoader: <div style={{textAlign: 'center', fontSize: 20, lineHeight: 1.5, paddingTop: 20, paddingBottom: 20, clear: 'both'}}>Loading...</div>,
         noMore: null
     }
 
-    state = {
-        loading: false
+    constructor(){
+        super()
+        this.state = {
+            loading: false
+        }
     }
 
     calcTop = (element) => {
@@ -36,15 +39,16 @@ export default class LimitedInfiniteScroll extends Component {
 
     scrollHandler = () => {
         let offset
-        const el = this.selfComponent
-        if (this.props.useWindow) {
-            let scrollTop = window.pageYOffset !== undefined ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop
-            offset = this.calcTop(el) + el.offsetHeight - scrollTop - window.innerHeight
-        } else {
-            offset = el.scrollHeight - el.parentNode.scrollTop - el.parentNode.clientHeight
-        }
-
+        const el = ReactDOM.findDOMNode(this.refs.loadmore)
+        console.log("scroll")
+        
+        let scrollTop = window.pageYOffset !== undefined ? 
+            window.pageYOffset : 
+            (document.documentElement || document.body.parentNode || document.body).scrollTop
+        offset = this.calcTop(el) + el.offsetHeight - scrollTop - window.innerHeight
+        console.log(offset)
         if (offset < Number(this.props.threshold)) {
+            
             this.detachScrollEvent()
 
             if (typeof this.props.loadNext === 'function') {
@@ -60,10 +64,9 @@ export default class LimitedInfiniteScroll extends Component {
         if (!this.props.hasMore) {
             return
         }
-
-        const scrollEl = this.props.useWindow ? window : this.selfComponent.parentNode
-        scrollEl.addEventListener('scroll', this.scrollHandler, false)
-        scrollEl.addEventListener('resize', this.scrollHandler, false)
+      
+        window.addEventListener('scroll', this.scroller, false)
+        window.addEventListener('resize', this.scroller, false)
 
         if (this.props.autoLoad && !this.autoLoaded) {
             this.autoLoaded = true
@@ -72,18 +75,18 @@ export default class LimitedInfiniteScroll extends Component {
     }
 
     detachScrollEvent = () => {
-        const scrollEl = this.props.useWindow ? window : this.selfComponent.parentNode
-
-        scrollEl.removeEventListener('scroll', this.scrollHandler, false)
-        scrollEl.removeEventListener('resize', this.scrollHandler, false)
+        window.removeEventListener('scroll', this.scroller, false)
+        window.removeEventListener('resize', this.scroller, false)
     }
 
     componentWillMount () {
         this.page = this.props.pageStart
+        this.scroller = throttle(this.scrollHandler,10)
         this.autoLoaded = false
     }
 
     componentDidMount () {
+        
         this.attachScrollEvent()
     }
 
@@ -103,21 +106,12 @@ export default class LimitedInfiniteScroll extends Component {
         }
     }
 
-    componentWillUnmount () {
-        this.detachScrollEvent()
-    }
+    // componentWillUnmount () {
+    //     this.detachScrollEvent()
+    // }
 
     render () {
-        const { pageStart, threshold, hasMore, autoLoad, useWindow, loadNext, spinLoader, noMore, children, ...props} = this.props
-
-        const cloneMannualLoader = React.cloneElement(mannualLoader, {
-            onClick: () => {
-                this.setState({
-                    loading: true
-                })
-                loadNext(this.page += 1)
-            }
-        })
+        const { pageStart, threshold, hasMore, autoLoad, loadNext, spinLoader, noMore, children, ...props} = this.props
 
         props.ref = node => { this.selfComponent = node }
 
@@ -126,6 +120,7 @@ export default class LimitedInfiniteScroll extends Component {
                 {children}
                 {this.state.loading && hasMore && <div style={{textAlign: 'center'}}>{spinLoader}</div>}
                 {!hasMore && noMore}
+                <div ref="loadmore"></div>
             </div>
         )
     }

@@ -1,0 +1,59 @@
+.shop-item-stone{
+    display: flex;
+    border-bottom: 1px solid #fdfdfd ; 
+    padding: 20px;
+    .img-stone{
+        width: 100px;
+        height: 100px;
+        margin-right: 20px;
+        background: #efefef;
+    }
+    .info-stone{
+        display: flex;
+        flex:1;
+        flex-direction: column;
+        justify-content: space-between;
+        .item-stone-top{
+            display: flex;
+            justify-content: space-between;
+            .top-left{
+                height: 30px;
+                width: 380px;
+                background: #efefef;
+            }
+            .top-right{
+                height: 20px;
+                width: 90px;
+                background: #efefef;
+            }
+        }
+        .item-stone-center{
+            display: flex;
+            justify-content: space-between;
+            .center-left{
+                height: 20px;
+                width: 280px;
+                background: #efefef;
+            }
+            .center-right{
+                height: 20px;
+                width: 140px;
+                background: #efefef;
+            }
+        }
+        .item-stone-bottom{
+            display: flex;
+            justify-content: space-between;
+            .bottom-left{
+                height: 20px;
+                width: 260px;
+                background: #efefef;
+            }
+            .bottom-right{
+                height: 20px;
+                width: 160px;
+                background: #efefef;
+            }
+        }
+    }
+}
