@@ -25,16 +25,21 @@ class FirstPageHeader extends React.Component {
             this.setState({searchFixed:false})
         }
     }
-
+    handleClick(){
+        console.log("Click")
+    }
     render(){
+        const searchFixed = this.state.searchFixed
         return(
             <div className="first-page-header">
                 <div className="header-address" ref="address">当前地址</div>
-                <div className="header-search-input">搜索</div>
-                {this.state.searchFixed
-                    ?<div className="header-search-input search-fixed">搜索</div>
-                    :""
-                }
+                {searchFixed
+                    ?<div className="header-search-input"></div>
+                    :""}
+                <div className={`header-search-input ${searchFixed?"search-fixed":""}`}
+                    onClick={this.handleClick.bind(this)}
+                >搜索</div>
+                
 
             </div>
         )

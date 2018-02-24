@@ -19,7 +19,7 @@ export default class InfiniteScroll extends Component {
         threshold: 200,
         hasMore: false,
         autoLoad: true,
-        spinLoader: <div style={{textAlign: 'center', fontSize: 20, lineHeight: 1.5, paddingTop: 20, paddingBottom: 20, clear: 'both'}}>Loading...</div>,
+        spinLoader: <div style={{textAlign: 'center', fontSize: 12, lineHeight: 1.5, paddingTop: 10, paddingBottom: 10, clear: 'both'}}>Loading...</div>,
         noMore: null
     }
 
