@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import throttle from '../../util/throttle'
+import './style.scss'
 
 export default class InfiniteScroll extends Component {
     static propTypes = {
@@ -26,7 +27,8 @@ export default class InfiniteScroll extends Component {
     constructor(){
         super()
         this.state = {
-            loading: false
+            loading: false,
+            showGoTop:false
         }
     }
 
@@ -46,7 +48,6 @@ export default class InfiniteScroll extends Component {
             window.pageYOffset : 
             (document.documentElement || document.body.parentNode || document.body).scrollTop
         offset = this.calcTop(el) + el.offsetHeight - scrollTop - window.innerHeight
-        console.log(offset)
         if (offset < Number(this.props.threshold)) {
             
             this.detachScrollEvent()
@@ -57,6 +58,11 @@ export default class InfiniteScroll extends Component {
                 })
                 this.props.loadNext(this.page += 1)
             }
+        }
+        if(scrollTop >= 300){
+            this.setState({showGoTop:true})
+        }else{
+            this.setState({showGoTop:false})
         }
     }
 
@@ -77,6 +83,10 @@ export default class InfiniteScroll extends Component {
     detachScrollEvent = () => {
         window.removeEventListener('scroll', this.scroller, false)
         window.removeEventListener('resize', this.scroller, false)
+    }
+
+    backTop(){
+        window.scrollTo(0,0);
     }
 
     componentWillMount () {
@@ -112,15 +122,17 @@ export default class InfiniteScroll extends Component {
 
     render () {
         const { pageStart, threshold, hasMore, autoLoad, loadNext, spinLoader, noMore, children, ...props} = this.props
-
-        props.ref = node => { this.selfComponent = node }
-
+        const {showGoTop, loading} = this.state
+        console.log(showGoTop)
         return (
             <div {...props}>
                 {children}
-                {this.state.loading && hasMore && <div style={{textAlign: 'center'}}>{spinLoader}</div>}
+                {loading && hasMore && <div style={{textAlign: 'center'}}>{spinLoader}</div>}
                 {!hasMore && noMore}
                 <div ref="loadmore"></div>
+                {showGoTop?<div className="back-top" 
+                    onClick={this.backTop.bind(this)}
+                >top</div>:""}
             </div>
         )
     }

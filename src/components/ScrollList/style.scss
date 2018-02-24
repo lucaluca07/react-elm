@@ -1,0 +1,12 @@
+.back-top{
+    position:fixed; 
+    bottom:200px;
+    right:30px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    line-height: 100px;
+    text-align: center;
+    background: #999;
+    transition: opacity 1s ease-in-out;
+}
