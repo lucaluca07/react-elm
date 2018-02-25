@@ -26,7 +26,6 @@
     "fs-extra": "3.0.1",
     "html-webpack-plugin": "2.29.0",
     "jest": "20.0.4",
-    "npm-run-all": "^4.1.2",
     "nuka-carousel": "^3.0.1",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.2.0",
@@ -48,6 +47,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
+    "server": "node  ./mock/server.js",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
@@ -98,6 +98,9 @@
     "less-loader": "^4.0.5",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
-    "webpack": "^3.8.1"
+    "webpack": "^3.8.1",
+    "koa": "^2.5.0",
+    "koa-body": "^2.5.0",
+    "koa-router": "^7.4.0"
   }
 }
