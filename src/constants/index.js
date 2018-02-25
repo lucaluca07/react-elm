@@ -1,0 +1,1 @@
+export const GET_ENTRIES_DATA = "GET_ENTRIES_DATA"
