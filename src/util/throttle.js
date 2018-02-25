@@ -1,20 +1,22 @@
-export default function throttle(fn, delay) {
-  let delayFlag = true;
-  let firstInvoke = true;
-  // console.log('exec once');
-  return function _throttle(e) {
-    if (delayFlag) {
-      delayFlag = false;
-      setTimeout(() => {
-        delayFlag = true;
-        // console.log('exec delay time');
-        fn(e);
-      }, delay);
-      if (firstInvoke) {
-        // console.log('first invoke');
-        fn(e);
-        firstInvoke = false;
-      }
+export default function throttle(fn, threshhold, scope) {
+  threshhold || (threshhold = 250);
+  var last,
+      deferTimer;
+  return function () {
+    var context = scope || this;
+
+    var now = +new Date(),
+        args = arguments;
+    if (last && now < last + threshhold) {
+      // hold on to it
+      clearTimeout(deferTimer);
+      deferTimer = setTimeout(function () {
+        last = now;
+        fn.apply(context, args);
+      }, threshhold);
+    } else {
+      last = now;
+      fn.apply(context, args);
     }
   };
 }

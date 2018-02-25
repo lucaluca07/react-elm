@@ -1,5 +1,6 @@
-import React from 'react' ;
+import React from 'react' 
 import ReactDOM from 'react-dom'
+import throttle from '../../util/throttle'
 import './style.scss'
 
 class FirstPageHeader extends React.Component {
@@ -9,11 +10,13 @@ class FirstPageHeader extends React.Component {
         this.handleScroll = this.handleScroll.bind(this)
     }
     componentDidMount(){
-        window.addEventListener('scroll',this.handleScroll,10)
+        //节流
+        this.scroll = throttle(this.handleScroll,16)
+        window.addEventListener('scroll',this.scroll,false)
         
     }
     componentWillUnmount(){
-        window.removeEventListener('scroll',this.handleScroll)
+        window.removeEventListener('scroll',this.scroll,false)
     }
     handleScroll(){
         const node = ReactDOM.findDOMNode(this.refs.address)
