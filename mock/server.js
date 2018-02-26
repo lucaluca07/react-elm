@@ -34,9 +34,9 @@ function parseQueryStr(queryStr) {
   return queryData;
 }
 
-//头条点评数据
+//首页数据
 let entries = require("./home/entries.js");
-router.get("/api/entries", async ctx => {
+router.get("/api/home/entries", async ctx => {
   ctx.body = entries;
 });
 
@@ -165,6 +165,6 @@ router.get("/api/entries", async ctx => {
 // 加载路由中间件
 app.use(router.routes()).use(router.allowedMethods());
 
-app.listen(3000, () => {
-  console.log("[demo] route-use-middleware is starting at port 3000");
+app.listen(9000, () => {
+  console.log("[demo] route-use-middleware is starting at port 9000");
 });
