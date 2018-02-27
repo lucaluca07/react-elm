@@ -4,11 +4,16 @@
     position: fixed;
     left: 0;
     bottom: 0;
+    text-align: center;
     // border-top:1px solid #555;/*no*/
     color:#333 ;
     font-size:24px;
     z-index:9999;
     background: ghostwhite;
+    a{
+        color:#8e8e93;
+        text-decoration: none;
+    }
     .footer-split{
         height: 100%;
         background: linear-gradient(to bottom, #efefef, #333);
@@ -16,19 +21,47 @@
     .footer-wrap{
         position: absolute;
         width:100%;
-        height: 98px;
+        height: 91px;
         background: #fff;
         bottom: 0;
         z-index: 2;
         display: flex;
+        padding-top: 20px;
         .footer-item{
             flex:1;
+            .icon-box{
+                height: 49px;
+                overflow: hidden;
+            }
+            .home-icon{
+                margin-top:-18px; 
+                height: 67px;
+                .iconfont{
+                    font-size: 75px;
+                }
+            }
+            .discover-icon,.order-icon{
+                .iconfont{
+                    font-size: 40px;
+                }
+            }
+            .my-icon{
+                margin-top:-6px;
+                margin-bottom:6px;  
+                .iconfont{
+                    font-size: 55px;
+                }
+            }
         }
         .active{
             color:#0089dc;
+            .discover-icon, .order-icon{
+                font-weight: bold;
+            }
+            
         }
     }
 }
 .box{
-    height:100px;
+    height:50px;
 }

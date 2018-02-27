@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import './App.scss';
-import FirstPageHeader from './components/FirstPageHeader'
-import Swiper from './components/Swiper'
-import ShopList from './components/ShopList'
-import Footer from './components/Footer'
-import EleH5HomeModel from './fetch'
+import FirstPageHeader from '../../components/FirstPageHeader'
+import Swiper from '../../components/Swiper'
+import ShopList from '../../components/ShopList'
+import Footer from '../../components/Footer'
+import EleH5HomeModel from '../../fetch'
 
-class App extends Component {
+class Home extends Component {
   constructor(){
     super()
     this.state = {location:"地址"}
@@ -19,6 +18,7 @@ class App extends Component {
   }
   getLocation(){
     if (navigator.geolocation){
+        this.setState({location:"正在获取位置"})
       navigator.geolocation.getCurrentPosition(this.showPosition);
     }
     else{
@@ -42,4 +42,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Home;
