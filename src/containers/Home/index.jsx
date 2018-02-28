@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
-import {bindActionCreators} from 'redux'
 import FirstPageHeader from '../../components/FirstPageHeader'
 import Swiper from '../../components/Swiper'
 import ShopList from '../../components/ShopList'
 import Footer from '../../components/Footer'
-import EleH5HomeModel from '../../fetch'
-import * as setLocationInfo from '../../actions/locationInfo'
+import HomeModel from '../../fetch'
+import {setLongitudeAndLatitude} from '../../actions/locationInfo'
 
 class Home extends Component {
   constructor(){
@@ -16,8 +15,11 @@ class Home extends Component {
     this.showPosition = this.showPosition.bind(this)
   }
   componentDidMount(){
-    EleH5HomeModel.getEntriesData().then(data => {console.log(data)})
-    this.getLocation()
+    HomeModel.getEntriesData().then(data => {console.log(data)})
+    const {longitude,latitude} = this.props.locationInfo
+    if(longitude === 0 && latitude===0){
+      this.getLocation()
+    }  
   }
   getLocation(){
     if (navigator.geolocation){
@@ -29,10 +31,10 @@ class Home extends Component {
     }
   }
   showPosition(position){
-    const {setLongitudeAndLatitude} = this.props.action
-    setLongitudeAndLatitude(position.coords.longitude,position.coords.latitude)
-    this.setState({location:`Latitude: ${position.coords.latitude}
-    Longitude: ${position.coords.longitude}`})
+    const { dispatch } = this.props;
+    const {longitude,latitude} = position.coords
+    dispatch(setLongitudeAndLatitude(longitude,latitude))
+    
   }
   render() {
     console.log('----------',this.props)
@@ -48,9 +50,7 @@ class Home extends Component {
 }
 
 const mapStateToProps = (state) =>({
-  locationInfo:state.locationInfo
+  locationInfo:state.locationInfo,
 })
-const mapDispatchToProps = (dispatch) => ({
-  action:bindActionCreators(setLocationInfo,dispatch)
-})
-export default connect(mapStateToProps, mapDispatchToProps)(Home)
+
+export default connect(mapStateToProps)(Home)

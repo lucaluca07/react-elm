@@ -1,9 +1,8 @@
 import Http from '../util/http'
 
-let EleH5HomeModel = {
+let HomeModel = {
 
     getEntriesData() {
-        console.log("getEntriesData")
       return new Promise((resolve) => {
         Http.get('/api/home/entries').then((res) => {
           resolve(res);
@@ -12,4 +11,4 @@ let EleH5HomeModel = {
     }
   
   };
-  export default EleH5HomeModel;
+  export default HomeModel;

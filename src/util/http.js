@@ -32,6 +32,22 @@ export default class Http {
       .then((response) => {
         if (response.status >= 200 && response.status < 300) {
           return response;
+        }else {
+          // 异常处理
+          switch (response.status) {
+            case 401:
+              return {
+                code: 401,
+                message: '请登录后再试.',
+                type: 'ERROR_401'
+              };
+            default:
+              return {
+                code: response.status,
+                message: '服务端通信出错,请与管理员联系.',
+                type: 'ERROR_500'
+              };
+          }
         }
         const error = new Error(response.statusText);
         error.response = response;
@@ -45,10 +61,7 @@ export default class Http {
         });
       })
       .catch((e) => {
-        console.log(e);
-        // Toast.hide();
         if (errorCallback && typeof errorCallback === 'function') {
-          console.log(e, ' errorCallback');
           errorCallback();
         }
       });

@@ -3,10 +3,9 @@ import rootReducer from '../reducers'
 import logger from 'redux-logger' 
 import thunkMiddleware from 'redux-thunk' 
 
-export default  function configureStore(initialState) {
+export default  function configureStore() {
   const store = createStore(
     rootReducer,
-    initialState,
     compose(applyMiddleware(thunkMiddleware, logger),
       window.devToolsExtension 
         ? window.devToolsExtension() 

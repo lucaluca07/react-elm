@@ -37,7 +37,7 @@ export default class InfiniteScroll extends Component {
     componentWillMount () {
         this.page = this.props.pageStart
         //节流
-        this.scroller = throttle(this.scrollHandler,100)
+        this.scroller = throttle(this.scrollHandler,50)
         //防抖
         this.finalShowbackTop = debounce(this.showBackTop,50)
         this.autoLoaded = false
