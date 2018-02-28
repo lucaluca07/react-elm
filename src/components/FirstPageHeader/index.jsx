@@ -1,5 +1,6 @@
 import React from 'react' 
 import ReactDOM from 'react-dom'
+import {Link} from 'react-router-dom'
 import throttle from '../../util/throttle'
 import './style.scss'
 
@@ -42,9 +43,11 @@ class FirstPageHeader extends React.Component {
                 {searchFixed
                     ?<div className="header-search-input"></div>
                     :""}
+                <Link to={'/search'}>
                 <div className={`header-search-input ${searchFixed?"search-fixed":""}`}
                     onClick={this.handleClick.bind(this)}
                 >搜索</div>
+                </Link>
                 
 
             </div>

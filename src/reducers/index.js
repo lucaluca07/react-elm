@@ -1,9 +1,9 @@
 import { combineReducers } from "redux";
-import { routerReducer } from "react-router-redux";
+import locationInfo from './locationInfo'
 
 
 const rootReducer = combineReducers({
-  router: routerReducer
+  locationInfo,
 });
 
 export default rootReducer;

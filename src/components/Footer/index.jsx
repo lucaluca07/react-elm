@@ -1,18 +1,9 @@
 import React from 'react' ;
-import {NavLink,Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import './style.scss'
 
 class Footer extends React.Component{
-    constructor(props){
-        super(props)
-        this.state = {activeIndex : 0}
-    }
-
-    handleClick(index){
-        this.setState({activeIndex:index})
-    }
     render(){
-        const activeIndex = this.state.activeIndex
         return(
             <div>
                 <div className="footer">

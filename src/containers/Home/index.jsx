@@ -1,9 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import {connect} from 'react-redux'
+import {bindActionCreators} from 'redux'
 import FirstPageHeader from '../../components/FirstPageHeader'
 import Swiper from '../../components/Swiper'
 import ShopList from '../../components/ShopList'
 import Footer from '../../components/Footer'
 import EleH5HomeModel from '../../fetch'
+import * as setLocationInfo from '../../actions/locationInfo'
 
 class Home extends Component {
   constructor(){
@@ -26,13 +29,15 @@ class Home extends Component {
     }
   }
   showPosition(position){
+    const {setLongitudeAndLatitude} = this.props.action
+    setLongitudeAndLatitude(position.coords.longitude,position.coords.latitude)
     this.setState({location:`Latitude: ${position.coords.latitude}
     Longitude: ${position.coords.longitude}`})
   }
   render() {
+    console.log('----------',this.props)
     return (
       <div className="App">
-        <div>{this.state.location}</div> 
         <FirstPageHeader/>
         <Swiper/>
         <ShopList/>
@@ -42,4 +47,10 @@ class Home extends Component {
   }
 }
 
-export default Home;
+const mapStateToProps = (state) =>({
+  locationInfo:state.locationInfo
+})
+const mapDispatchToProps = (dispatch) => ({
+  action:bindActionCreators(setLocationInfo,dispatch)
+})
+export default connect(mapStateToProps, mapDispatchToProps)(Home)

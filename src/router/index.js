@@ -1,13 +1,5 @@
 import React from "react";
-import createHistory from "history/createHashHistory";
-import {
-  ConnectedRouter,
-  routerReducer,
-  routerMiddleware,
-  push
-} from "react-router-redux";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
-
 import Home from "../containers/Home"
 import Discover from '../containers/Discover'
 import Order from '../containers/Order'
@@ -16,7 +8,6 @@ import Footer from '../components/Footer'
 
 export default class RouterMap extends React.Component {
   render() {
-    const history = createHistory();
     return (
         <div>
             <Router>
@@ -27,10 +18,13 @@ export default class RouterMap extends React.Component {
                     <Route path="/order" component={Order} />
                     <Route path="/my" component={My} />
                 </Switch>
-                <Footer/>
+                <Switch>
+                    <Route path="/search" component={My} />
+                    <Footer/>
+                </Switch>
+               
                 </div>
             </Router>
-            
         </div>
     );
   }
