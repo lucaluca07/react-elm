@@ -40,6 +40,17 @@ router.get("/api/home/entries", async ctx => {
   ctx.body = entries;
 });
 
+let address = require("./home/address.js");
+router.get("/api/home/address", async ctx => {
+  const {latitude,longitude} = ctx.query
+  console.log(latitude,longitude)
+  if(latitude<=0 || longitude<=0){
+    ctx.body = {"message":"无效的经纬度坐标","name":"未知地址"}
+  }else{
+    ctx.body = address;
+  }
+  
+});
 // //首页超值特惠和天天立减数据
 // let homeAdData = require("./home/ad.js");
 // router.get("/api/homead", async ctx => {

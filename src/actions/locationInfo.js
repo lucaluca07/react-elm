@@ -7,3 +7,14 @@ export const setLongitudeAndLatitude = (longitude,latitude) => ({
     latitude
 })
 
+export const getLocationInfo = async(longitude,latitude) => {
+    try{
+        const {result} = await HomeModel.getLocationInfo(longitude,latitude)
+        return {
+            type:actionType.SET_LOCATION_INFO,
+            name:result.name
+        }
+    }catch(e){
+        return e
+    }
+}

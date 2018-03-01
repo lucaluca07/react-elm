@@ -3,7 +3,7 @@ import 'whatwg-fetch';
 
 
 export default class Http {
-  static send(url, option, resolve, reject, errorCallback) {
+  static async send(url, option) {
     const param = {
       method: 'GET',
       credentials: 'same-origin',
@@ -14,7 +14,6 @@ export default class Http {
       body: null
     };
     Object.assign(param, option);
-
 
     let _url = url;
 
@@ -28,57 +27,47 @@ export default class Http {
       }
     }
     console.log(_url + param);
-    return fetch(_url, param)
-      .then((response) => {
-        if (response.status >= 200 && response.status < 300) {
-          return response;
-        }else {
-          // 异常处理
-          switch (response.status) {
-            case 401:
-              return {
-                code: 401,
-                message: '请登录后再试.',
-                type: 'ERROR_401'
-              };
-            default:
-              return {
-                code: response.status,
-                message: '服务端通信出错,请与管理员联系.',
-                type: 'ERROR_500'
-              };
-          }
-        }
-        const error = new Error(response.statusText);
-        error.response = response;
-        throw error;
-      })
-      .then((res) => {
-        res.json().then((data) => {
-          resolve(data, res);
-        }).catch(() => {
-          reject();
-        });
-      })
-      .catch((e) => {
-        if (errorCallback && typeof errorCallback === 'function') {
-          errorCallback();
-        }
-      });
+    const response = await fetch(_url, param)
+    const { status } = response;
+    let result
+    if (status >= 200 && status < 300) {
+      result = await response.json();
+    } else {
+      // 异常处理
+      switch (status) {
+        case 401:
+          result = {
+            code: 401,
+            message: '请登录后再试.',
+            type: 'ERROR_401'
+          };
+          break;
+        default:
+          result = {
+            code: status,
+            message: '服务端通信出错,请与管理员联系.',
+            type: 'ERROR_500'
+          };
+      }
+      return Promise.reject(result);
+    }
+    return {
+      result,
+      response: {
+        status: response.status
+        //TODO: 需要增加其他状态信息
+      }
+    };
   }
 
-  static get(url, option = {}, errorCallback) {
-    return new Promise((resolve, reject) => {
-      Http.send(url, option, resolve, reject, errorCallback);
-    });
+  static get(url, option = {}) {
+    return Http.send(url, option);
   }
 
-  static post(url, option = {}, errorCallback) {
+  static post(url, option = {}) {
     Object.assign(option, {
       method: 'POST'
     });
-    return new Promise((resolve, reject) => {
-      Http.send(url, option, resolve, reject, errorCallback);
-    });
+    return Http.send(url, option);
   }
 }

@@ -4,43 +4,41 @@ import FirstPageHeader from '../../components/FirstPageHeader'
 import Swiper from '../../components/Swiper'
 import ShopList from '../../components/ShopList'
 import Footer from '../../components/Footer'
-import HomeModel from '../../fetch'
-import {setLongitudeAndLatitude} from '../../actions/locationInfo'
+import {setLongitudeAndLatitude,getLocationInfo} from '../../actions/locationInfo'
 
 class Home extends Component {
   constructor(){
     super()
-    this.state = {location:"地址"}
+    this.state = {location:"正在定位"}
     this.getLocation = this.getLocation.bind(this)
     this.showPosition = this.showPosition.bind(this)
   }
-  componentDidMount(){
-    HomeModel.getEntriesData().then(data => {console.log(data)})
-    const {longitude,latitude} = this.props.locationInfo
+  async componentDidMount(){
+    const {longitude,latitude} = this.props
     if(longitude === 0 && latitude===0){
       this.getLocation()
     }  
   }
   getLocation(){
     if (navigator.geolocation){
-        this.setState({location:"正在获取位置"})
       navigator.geolocation.getCurrentPosition(this.showPosition);
     }
     else{
       this.setState({location:"无法获得定位"})
     }
   }
-  showPosition(position){
+  async showPosition(position){
     const { dispatch } = this.props;
     const {longitude,latitude} = position.coords
     dispatch(setLongitudeAndLatitude(longitude,latitude))
-    
+    dispatch(await getLocationInfo(longitude,latitude))
   }
   render() {
-    console.log('----------',this.props)
+    const address = this.props.name
+    console.log(address)
     return (
       <div className="App">
-        <FirstPageHeader/>
+        <FirstPageHeader address={address}/>
         <Swiper/>
         <ShopList/>
         <Footer/>
@@ -49,8 +47,13 @@ class Home extends Component {
   }
 }
 
-const mapStateToProps = (state) =>({
-  locationInfo:state.locationInfo,
-})
+const mapStateToProps = (state) =>{
+  const {longitude,latitude,name} = state.home
+  return {
+    longitude,
+    latitude,
+    name:name
+  }
+}
 
 export default connect(mapStateToProps)(Home)

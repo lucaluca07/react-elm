@@ -1,9 +1,11 @@
 import { combineReducers } from "redux";
-import locationInfo from './locationInfo'
+import home from './home'
+import errorReducer from './errorReducer'
 
 
 const rootReducer = combineReducers({
-  locationInfo,
+  home,
+  errorReducer
 });
 
 export default rootReducer;

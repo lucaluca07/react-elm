@@ -34,11 +34,12 @@ class FirstPageHeader extends React.Component {
     }
     render(){
         const searchFixed = this.state.searchFixed
+        const address = this.props.address
         return(
             <div className="first-page-header">
                 <div className="header-address" ref="address">
                 <i className="iconfont icon-coordinates_fill"></i> 
-                    <span>当前地址</span>
+                    <span>{address?address:"正在定位"}</span>
                 </div>
                 {searchFixed
                     ?<div className="header-search-input"></div>
