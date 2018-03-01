@@ -21,10 +21,11 @@ export const getLocationInfo = async(longitude,latitude) => {
 
 export const getEntries = async(longitude,latitude) => {
     try{
-        const {result} = await HomeModel.getLocationInfo(longitude,latitude)
+        const {result} = await HomeModel.getEntriesData(longitude,latitude)
         return {
-            type:actionType.SET_LOCATION_INFO,
-            name:result.name
+            type:actionType.GET_ENTRIES_DATA,
+            foodentry:result[0],
+            activity:result[1]
         }
     }catch(e){
         return e

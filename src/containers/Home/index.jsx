@@ -5,7 +5,7 @@ import Swiper from '../../components/Swiper'
 import ShopList from '../../components/ShopList'
 import Footer from '../../components/Footer'
 import HomeModel from '../../fetch'
-import {setLongitudeAndLatitude,getLocationInfo,} from '../../actions/home'
+import {setLongitudeAndLatitude,getLocationInfo,getEntries} from '../../actions/home'
 
 class Home extends Component {
   constructor(){
@@ -15,7 +15,7 @@ class Home extends Component {
     this.showPosition = this.showPosition.bind(this)
   }
   async componentDidMount(){
-    const {longitude,latitude,dispatch} = this.props
+    const {longitude,latitude} = this.props
     const data = await HomeModel.getEntriesData()
     console.log(data)
     if(longitude === 0 && latitude===0){
@@ -34,6 +34,7 @@ class Home extends Component {
     const {longitude,latitude} = position.coords
     dispatch(setLongitudeAndLatitude(longitude,latitude))
     dispatch(await getLocationInfo(longitude,latitude))
+    dispatch(await getEntries(longitude,latitude))
   }
   render() {
     const address = this.props.name

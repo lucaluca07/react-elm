@@ -16,6 +16,11 @@ const home = (state = defaultState,action) => {
         case actionTypes.SET_LOCATION_INFO:
             return {...state,
                 name:action.name}
+        case actionTypes.GET_ENTRIES_DATA:
+            return {...state,
+                foodentry:action.foodentry,
+                activity:action.activity
+            }
         default:
             return state
     }
