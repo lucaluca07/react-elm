@@ -1,8 +1,8 @@
 import Http from '../util/http'
 
 let HomeModel = {
-    async getEntriesData() {
-      const result = await Http.get('/api/home/entries')
+    async getEntriesData(latitude,longitude) {
+      const result = await Http.get(`/api/home/entries?latitude=${latitude}&longitude=${longitude}`)
       return result   
     },
 

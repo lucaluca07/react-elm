@@ -4,7 +4,8 @@ import FirstPageHeader from '../../components/FirstPageHeader'
 import Swiper from '../../components/Swiper'
 import ShopList from '../../components/ShopList'
 import Footer from '../../components/Footer'
-import {setLongitudeAndLatitude,getLocationInfo} from '../../actions/locationInfo'
+import HomeModel from '../../fetch'
+import {setLongitudeAndLatitude,getLocationInfo,} from '../../actions/home'
 
 class Home extends Component {
   constructor(){
@@ -14,17 +15,18 @@ class Home extends Component {
     this.showPosition = this.showPosition.bind(this)
   }
   async componentDidMount(){
-    const {longitude,latitude} = this.props
+    const {longitude,latitude,dispatch} = this.props
+    const data = await HomeModel.getEntriesData()
+    console.log(data)
     if(longitude === 0 && latitude===0){
       this.getLocation()
-    }  
+    }else{
+      
+    }
   }
   getLocation(){
     if (navigator.geolocation){
       navigator.geolocation.getCurrentPosition(this.showPosition);
-    }
-    else{
-      this.setState({location:"无法获得定位"})
     }
   }
   async showPosition(position){
