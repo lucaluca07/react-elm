@@ -51,6 +51,13 @@ router.get("/api/home/address", async ctx => {
   }
   
 });
+
+let shoplist = require("./home/shoplist.js")
+router.get("/api/shopping/restaurants",async ctx =>{
+  const {offset, filter} = ctx.query
+  console.log("Restaurants:::",offset, filter)
+  ctx.body = shoplist;
+})
 // //首页超值特惠和天天立减数据
 // let homeAdData = require("./home/ad.js");
 // router.get("/api/homead", async ctx => {

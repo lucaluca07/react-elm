@@ -31,3 +31,17 @@ export const getEntries = async(longitude,latitude) => {
         return e
     }
 }
+
+export const getRestaurants = async(longitude,latitude,offset,limit,filter) => {
+    try{
+        const {result} = await HomeModel.getRestaurants(longitude,latitude,offset,limit,filter)
+        return {
+            type:actionType.GET_RESTAURANTS,
+            restaurants:result.items,
+            offset:offset+limit,
+            hasMore:result.items.length === limit
+        }
+    }catch(e){
+        return e
+    }
+}

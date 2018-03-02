@@ -4,7 +4,12 @@ import * as actionTypes from '../constants'
 const defaultState = {
     longitude:0,
     latitude:0,
-    location:{}
+    location:{},
+    foodentry:[],
+    activity:[],
+    offset:0,
+    restaurants:[],
+    hasMore:false
 }
 const home = (state = defaultState,action) => {
     switch(action.type){
@@ -20,6 +25,12 @@ const home = (state = defaultState,action) => {
             return {...state,
                 foodentry:action.foodentry,
                 activity:action.activity
+            }
+        case actionTypes.GET_RESTAURANTS:
+            return {...state,
+                restaurants:[...state.restaurants,...action.restaurants],
+                offset:action.offset,
+                hasMore:action.hasMore
             }
         default:
             return state

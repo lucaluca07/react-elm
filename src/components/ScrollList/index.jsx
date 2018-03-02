@@ -78,17 +78,15 @@ export default class InfiniteScroll extends Component {
     scrollHandler = () => {
         let offset
         const el = ReactDOM.findDOMNode(this.refs.loadmore)
-        console.log("scroll")
-        
+        const {loading} = this.state
         let scrollTop = window.pageYOffset !== undefined ? 
             window.pageYOffset : 
             (document.documentElement || document.body.parentNode || document.body).scrollTop
         offset = this.calcTop(el) + el.offsetHeight - scrollTop - window.innerHeight
-        if (offset < Number(this.props.threshold)) {
-            
+        if (offset < Number(this.props.threshold)) {       
             this.detachScrollEvent()
-
-            if (typeof this.props.loadNext === 'function') {
+            //如果正在请求不会发起下次请求
+            if (typeof this.props.loadNext === 'function' && !loading) {
                 this.setState({
                     loading: true
                 })

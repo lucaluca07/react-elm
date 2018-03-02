@@ -5,7 +5,7 @@ import Swiper from '../../components/Swiper'
 import ShopList from '../../components/ShopList'
 import Footer from '../../components/Footer'
 import HomeModel from '../../fetch'
-import {setLongitudeAndLatitude,getLocationInfo,getEntries} from '../../actions/home'
+import {setLongitudeAndLatitude,getLocationInfo,getEntries,getRestaurants} from '../../actions/home'
 
 class Home extends Component {
   constructor(){
@@ -20,14 +20,16 @@ class Home extends Component {
     console.log(data)
     if(longitude === 0 && latitude===0){
       this.getLocation()
-    }else{
-      
     }
   }
   getLocation(){
     if (navigator.geolocation){
       navigator.geolocation.getCurrentPosition(this.showPosition);
     }
+  }
+  async getShopList(){
+    const { dispatch,offset,longitude,latitude } = this.props;
+    dispatch(await getRestaurants(longitude,latitude,offset,8,"home"))
   }
   async showPosition(position){
     const { dispatch } = this.props;
@@ -37,13 +39,13 @@ class Home extends Component {
     dispatch(await getEntries(longitude,latitude))
   }
   render() {
-    const address = this.props.name
-    console.log(address)
+    const {name,restaurants} = this.props
+    console.log(name)
     return (
       <div className="App">
-        <FirstPageHeader address={address}/>
+        <FirstPageHeader address={name}/>
         <Swiper/>
-        <ShopList/>
+        <ShopList loadNext={this.getShopList.bind(this)} data={restaurants}/>
         <Footer/>
       </div>
     );
@@ -51,11 +53,14 @@ class Home extends Component {
 }
 
 const mapStateToProps = (state) =>{
-  const {longitude,latitude,name} = state.home
+  const {longitude,latitude,name,offset,hasMore,restaurants} = state.home
   return {
     longitude,
     latitude,
-    name:name
+    name,
+    offset,
+    hasMore,
+    restaurants
   }
 }
 

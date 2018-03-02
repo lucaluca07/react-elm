@@ -1,5 +1,6 @@
+export const ERROR_401 = "ERROR_401"
+export const ERROR_500 = "ERROR_500"
 export const SET_LONGITUDE_LATITUDE = "SET_LONGITUDE_LATITUDE"
 export const SET_LOCATION_INFO = "SET_LOCATION_INFO"
 export const GET_ENTRIES_DATA = "GET_ENTRIES_DATA"
-export const ERROR_401 = "ERROR_401"
-export const ERROR_500 = "ERROR_500"
+export const GET_RESTAURANTS = "GET_RESTAURANTS"
