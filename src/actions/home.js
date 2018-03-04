@@ -24,8 +24,8 @@ export const getEntries = async(longitude,latitude) => {
         const {result} = await HomeModel.getEntriesData(longitude,latitude)
         return {
             type:actionType.GET_ENTRIES_DATA,
-            foodentry:result[0],
-            activity:result[1]
+            foodentry:result[0].entries,
+            activity:result[1].entries
         }
     }catch(e){
         return e

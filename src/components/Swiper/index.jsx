@@ -1,18 +1,25 @@
 import React from 'react' ;
 import Carousel from 'nuka-carousel' ;
+import {sliceArray} from '../../util/sliceArray'
 import './style.scss'
 
-const Swiper = () => {
-    
+const Swiper = ({foodentry}) => {
+    const arr = sliceArray(foodentry,10)
+    console.log("1111111111",arr)
     return (
         <Carousel>
-            <div className="carousel-item">
-                {[1,2,3,4,5,6,7,8,9,0].map(val =>(<div key={val} className="item-child">
-                    <div className="stone-container"></div>
-                    <div className="stone-title"></div>
-                </div>))}
-            </div>
-            <div className="carousel-item">3</div>
+                {arr.map((item,index)=>(
+                    <div className="carousel-item" key={index}>
+                        {item.map((val,index) => (
+                            <div key={index} className="item-child">
+                                <div className="container">
+                                    <img src={val.image_hash} alt={val.description}/>
+                                </div>
+                                <div className="title">{val.name}</div>
+                            </div>
+                        ))}
+                    </div>
+                ))}
       </Carousel>
     ) ;
 }

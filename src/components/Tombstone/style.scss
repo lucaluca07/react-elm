@@ -1,22 +1,49 @@
-.shop-item{
+.foodentry-tombstone{
+    display: flex;
+    height: 354px;
+    flex-flow: row wrap;
+    align-content: flex-start;
+  .foodentry-item{
+    box-sizing: border-box;
+    background-color: white;
+    flex: 0 0 20%;
+    height: 128px;
+    margin-top:22px; 
+    .stone-container{
+      height: 90px;
+      width: 90px;
+      border-radius: 50%;
+      background: #efefef;
+      margin: 0 auto;
+    }
+    .stone-title{
+      height: 20px;
+      width: 80px;
+      margin:10px auto 0;
+      background: #efefef;
+    }
+  }
+}
+
+.shop-item-stone{
     display: flex;
     border-bottom: 1px solid #fdfdfd ; 
     padding: 20px;
-    .shop-img{
+    .img-stone{
         width: 100px;
         height: 100px;
         margin-right: 20px;
         background: #efefef;
     }
-    .shop-info{
+    .info-stone{
         display: flex;
         flex:1;
         flex-direction: column;
         justify-content: space-between;
-        .shop-title{
+        .item-stone-top{
             display: flex;
             justify-content: space-between;
-            .title{
+            .top-left{
                 height: 30px;
                 width: 380px;
                 background: #efefef;
@@ -27,29 +54,29 @@
                 background: #efefef;
             }
         }
-        .shop-rate{
+        .item-stone-center{
             display: flex;
             justify-content: space-between;
-            .star{
+            .center-left{
                 height: 20px;
                 width: 280px;
                 background: #efefef;
             }
-            .grade{
+            .center-right{
                 height: 20px;
                 width: 140px;
                 background: #efefef;
             }
         }
-        .distribution-info{
+        .item-stone-bottom{
             display: flex;
             justify-content: space-between;
-            .distribution-left{
+            .bottom-left{
                 height: 20px;
                 width: 260px;
                 background: #efefef;
             }
-            .distribution-right{
+            .bottom-right{
                 height: 20px;
                 width: 160px;
                 background: #efefef;

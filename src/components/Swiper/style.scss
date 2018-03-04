@@ -3,7 +3,11 @@
 }
 .slider-decorator-2{
   ul{
-    top:10px !important;
+    top:20px !important;
+    button{
+      font-size: 32px !important;
+      padding: 20px 10px !important;
+    }
   }
 }
 .carousel-item{
@@ -17,18 +21,24 @@
     flex: 0 0 20%;
     height: 128px;
     margin-top:22px; 
-    .stone-container{
+    .container{
       height: 90px;
       width: 90px;
       border-radius: 50%;
-      background: #efefef;
       margin: 0 auto;
+      img{
+        height: 90px;
+        width: 90px;
+        border-radius: 50%;
+      }
     }
-    .stone-title{
+    .title{
       height: 20px;
-      width: 80px;
+      text-align: center;
+      color:#666;
+      font-size:26px;
       margin:10px auto 0;
-      background: #efefef;
+      
     }
   }
 }

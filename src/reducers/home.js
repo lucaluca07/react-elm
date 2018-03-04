@@ -8,7 +8,7 @@ const defaultState = {
     foodentry:[],
     activity:[],
     offset:0,
-    restaurants:[],
+    restaurants:false,
     hasMore:false
 }
 const home = (state = defaultState,action) => {

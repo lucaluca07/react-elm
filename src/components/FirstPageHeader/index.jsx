@@ -29,26 +29,33 @@ class FirstPageHeader extends React.Component {
             this.setState({searchFixed:false})
         }
     }
-    handleClick(){
-        console.log("Click")
-    }
+   
     render(){
         const searchFixed = this.state.searchFixed
         const address = this.props.address
         return(
             <div className="first-page-header">
                 <div className="header-address" ref="address">
-                <i className="iconfont icon-coordinates_fill"></i> 
-                    <span>{address?address:"正在定位"}</span>
+                    <i className="iconfont icon-coordinates_fill coordinates"></i> 
+                    <span className="address">{address?address:"正在定位..."}</span>
                 </div>
                 {searchFixed
-                    ?<div className="header-search-input"></div>
+                    ?<div className="header-search">   
+                    </div>
                     :""}
                 <Link to={'/search'}>
-                <div className={`header-search-input ${searchFixed?"search-fixed":""}`}
-                    onClick={this.handleClick.bind(this)}
-                >搜索</div>
+                <div className={`header-search-input ${searchFixed?"search-fixed":""}`}>
+                    
+                    <div className="search-left"></div>
+                    <div className="search-btn">
+                        <i className="iconfont icon-sousuoxiao"></i>
+                        <span>搜索商家、商品名称</span>
+                    </div>
+                    <div className="search-right"></div>
+                    
+                </div>
                 </Link>
+                
                 
 
             </div>

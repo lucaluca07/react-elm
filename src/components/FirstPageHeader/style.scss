@@ -1,18 +1,47 @@
 .first-page-header{ 
     .header-address{
         height:70px;
+        line-height: 70px;
         padding: 20px 28px 0 ;
         font-size:32px;
         background: linear-gradient(to right, #0af, #0085ff);
-        .icon-font{
-            font-size: 12px;
+        color:#fff;
+        .coordinates{
+            font-size: 37px;
+            padding-top:15px;
         }
+        .address{
+            margin: 0  10px 0 0;
+        }
+    }
+    .header-search{
+        height: 72px;
+        padding: 15px 0;
     }
     .header-search-input{
         height: 72px;
         padding: 15px 0;
         font-size:16px;
         background: linear-gradient(to right, #0af, #0085ff);
+        display: flex;
+        .search-left,.search-right{
+            width: 28px;
+            flex:0 0 28px;
+        }
+        .search-btn{
+            flex:1;
+            height: 72px;
+            text-align: center;
+            background: #fff;
+            line-height: 72px;
+            color:#999;
+            font-size: 28px;
+            font-weight: 300;
+            .icon-sousuoxiao{
+                font-size: 28px;
+                margin-right: 8px;
+            }
+        }
     }
     .search-fixed{
         width: 100%;

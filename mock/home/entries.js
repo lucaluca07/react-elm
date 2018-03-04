@@ -134,7 +134,7 @@ module.exports = [{
             "is_in_serving": true,
             "is_personalized": false,
             "link": "eleme://web?navColor=&target_name=%E6%8B%9B%E7%89%8C%E7%BE%8E%E5%91%B3%E9%99%90%E9%87%8F%E6%8A%A2&url=https%3A%2F%2Fh5.ele.me%2Fsales%2F%3Factivity_ids%3D%255B10013617%255D&title=%E6%8B%9B%E7%89%8C%E7%BE%8E%E5%91%B3%E9%99%90%E9%87%8F%E6%8A%A2&navType=0&animation_type=1",
-            "more": "{\"third_title\":\"\",\"tags\":null,\"third_title_color\":\"\",\"population\":2817}",
+            "more": {"third_title":"","tags":null,"third_title_color":"","population":2817},
             "name": "限量抢购",
             "name_color": "e81919"
         }],
