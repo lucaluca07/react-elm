@@ -23,7 +23,16 @@
             display: flex;
             justify-content: space-between;
             .activity-list{
-
+                .shop-activity-item{
+                    .activity-icon{
+                        display: inline-block;
+                        height: 33px;
+                        width: 33px;
+                        text-align: center;
+                        color:#fff;
+                        transform: scale(0.8)
+                    }
+                }
             }
             .activityBtn{
                 display: flex;
