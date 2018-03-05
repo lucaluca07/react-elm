@@ -1,59 +1,60 @@
-.shop-item{
-    display: flex;
-    border-bottom: 1px solid #fdfdfd ; 
+.item-wrap{
+    border-bottom: 2px solid #f1efef ; 
     padding: 20px;
-    .shop-img{
-        width: 100px;
-        height: 100px;
-        margin-right: 20px;
-        background: #efefef;
-    }
-    .shop-info{
+    .shop-item{
         display: flex;
-        flex:1;
-        flex-direction: column;
-        justify-content: space-between;
-        .shop-title{
-            display: flex;
-            justify-content: space-between;
-            .title{
-                height: 30px;
-                width: 380px;
-                background: #efefef;
-            }
-            .top-right{
-                height: 20px;
-                width: 90px;
-                background: #efefef;
+        color:#666;
+        .shop-img{
+            width: 128px;
+            height: 128px;
+            margin-right: 20px;
+            border: 1px solid #777;
+            img{
+                width: 128px;
+                height: 128px;
             }
         }
-        .shop-rate{
+        .shop-info{
             display: flex;
+            flex:1;
+            flex-direction: column;
             justify-content: space-between;
-            .star{
-                height: 20px;
-                width: 280px;
-                background: #efefef;
+            .shop-title{
+                display: flex;
+                justify-content: space-between;
+                .title{
+                    font-size: 28px;
+                    font-weight: 700;
+                    color:#333;
+                }
+                .top-right{
+                    display: flex;
+                }
             }
-            .grade{
-                height: 20px;
-                width: 140px;
-                background: #efefef;
+            .shop-rate{
+                display: flex;
+                justify-content: space-between;
+                .shop-rate-left{
+                    display: flex;
+                   
+                }
+                .shop-rate-right{
+                    display: flex;
+                    
+                }
             }
-        }
-        .distribution-info{
-            display: flex;
-            justify-content: space-between;
-            .distribution-left{
-                height: 20px;
-                width: 260px;
-                background: #efefef;
-            }
-            .distribution-right{
-                height: 20px;
-                width: 160px;
-                background: #efefef;
+            .distribution-info{
+                display: flex;
+                justify-content: space-between;
+                .distribution-left{
+                    
+                }
+                .distribution-right{
+                    
+                   
+                }
             }
         }
     }
 }
+

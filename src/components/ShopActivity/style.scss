@@ -1,0 +1,49 @@
+.shop-activity{
+    display: flex;
+    padding: 5px 20px 10px;
+    color:#666;
+    .activity-left{
+        width: 128px;
+    }
+    .activity-right{   
+        flex:1;
+        .tagLine{
+            font-size: 20px;
+            color:rgb(232, 71, 11);
+            padding: 15px 0; 
+            border-bottom: 2px dotted rgb(231, 228, 228); 
+            margin-bottom: 10px;
+            img{
+                padding-top: 8px;
+                height: 20px;
+                width: 20px;;
+            }
+        }
+        .activities{
+            display: flex;
+            justify-content: space-between;
+            .activity-list{
+
+            }
+            .activityBtn{
+                display: flex;
+                height: 40px;
+                overflow: hidden;
+                
+                .rotate180:before{
+                    transition: All 0.4s ease-in-out;
+                    display: inline-block;
+                    transform: rotate(180deg);
+                   
+                }
+                .rotate0:before{
+                    transition: All 0.4s ease-in-out;
+                    display: inline-block;
+                    transform: rotate(0deg);
+                   
+                }
+                
+            }
+        }
+    }
+}

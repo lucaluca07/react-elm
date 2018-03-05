@@ -69,11 +69,8 @@ class Home extends Component {
             {restaurants.length>0
             ?<ShopList loadNext={this.getShopList.bind(this)} hasMore={hasMore} data={restaurants}/>
             :"暂无数据"
-            }
-            
-          </div>:""}
-        
-        
+            }           
+          </div>:""} 
         <Footer/>
       </div>
     );
