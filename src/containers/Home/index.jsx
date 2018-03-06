@@ -8,6 +8,7 @@ import Footer from '../../components/Footer'
 import ShopListTitle from '../../components/ShopListTitle'
 import {FoodentryTombstone} from '../../components/Tombstone'
 import {setLongitudeAndLatitude,getLocationInfo,getEntries,getRestaurants} from '../../actions/home'
+import newUser from '../../static/image/red_envelope.png'
 
 
 class Home extends Component {
@@ -58,7 +59,10 @@ class Home extends Component {
       <div className="App">
       <FirstPageHeader address={name} />
         {foodentry.length>0
-          ?<Swiper foodentry={foodentry}/>
+          ?<div>
+            <Swiper foodentry={foodentry}/>
+            <img style={{width:'100%', height:'100%'}} src={newUser} alt="新用户"/>
+          </div>
           :<FoodentryTombstone/>}
         {activity.length > 0
         ? <Activity data={activity[0]}/>
