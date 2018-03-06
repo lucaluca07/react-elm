@@ -8,18 +8,16 @@
         flex:0 0 60px;
         padding: 0 20px;
         .back:before{
-            font-size: 50px;
+            font-size: 40px;
         }
     }
     .header-title{
-        font-size: 40px;
+        font-size: 35px;
         flex:1;
         text-align: center;
-        // align-self: center;
     }
     .add-address{
-        font-size: 30px;
+        font-size: 26px;
         flex:0 0 130px;
-        // align-self: flex-end;
     }
 }
