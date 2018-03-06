@@ -1,0 +1,15 @@
+.search-wrap{
+    display: flex;
+    align-items: center;
+    padding:20px;
+    background: #f4f4f4;
+    color:#666;
+    input{
+        border: none;
+        margin-left:15px; 
+        background: #f4f4f4;
+        color:#666;
+        font-size: 32px;
+        line-height: 1.2;
+    }
+}
