@@ -1,3 +1,11 @@
+@keyframes fadeIn{
+    from{
+      opacity:0
+    }to{
+      opacity:1
+    }
+  }
+
 .item-wrap{
     border-bottom: 2px solid #f1efef ; 
     padding: 20px;
@@ -12,6 +20,10 @@
             img{
                 width: 128px;
                 height: 128px;
+                opacity:0;
+                animation-name: fadeIn;
+                animation-duration: .6s;
+                animation-fill-mode: forwards;
             }
         }
         .shop-info{
@@ -19,7 +31,7 @@
             flex:1;
             flex-direction: column;
             justify-content: space-between;
-            font-size:10px;
+            font-size: 24px;
             .shop-title{
                 display: flex;
                 justify-content: space-between;
@@ -27,13 +39,16 @@
                     font-size: 28px;
                     font-weight: 700;
                     color:#333;
+                    overflow: hidden; 
+                    text-overflow:ellipsis; 
+                    white-space: nowrap;
                 }
                 .top-right{
                     display: flex;
                     .ad{
                         height: 32px;
                         border:2px solid #dbd8d8;
-                        font-size: 12px;
+                        
                         text-align: center;
                         color:rgb(177, 176, 176);
                         transform: scale(0.7);
@@ -43,7 +58,6 @@
                         height: 32px;
                         width: 32px;
                         border:2px solid #dbd8d8;
-                        font-size: 12px;
                         text-align: center;
                         margin: 0 -4px;
                         transform: scale(0.7)
@@ -55,15 +69,24 @@
                 justify-content: space-between;
                 .shop-rate-left{
                     display: flex;
-                   
+                    // align-items: center;
+                   .star{
+
+                       margin: -7px 0 0 -7px; 
+                   }
+                   .grade{
+                        line-height: 1.2
+                   }
+                   .sell-number{
+                    line-height: 1.2
+                   }
                 }
                 .shop-rate-right{
                     display: flex;
                     .delivery{
                         height: 32px;
-                        font-size: 12px;
                         padding: 0 6px;
-                        margin-right:-14px; 
+                        margin:-4px -14px 0 0; 
                         transform: scale(0.7)
                     }
                     

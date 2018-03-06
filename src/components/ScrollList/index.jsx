@@ -37,7 +37,7 @@ export default class InfiniteScroll extends Component {
     componentWillMount () {
         this.page = this.props.pageStart
         //节流
-        this.scroller = throttle(this.scrollHandler,50)
+        this.scroller = throttle(this.scrollHandler,10)
         //防抖
         this.finalShowbackTop = debounce(this.showBackTop,50)
         this.autoLoaded = false
@@ -86,11 +86,13 @@ export default class InfiniteScroll extends Component {
         if (offset < Number(this.props.threshold)) {       
             this.detachScrollEvent()
             //如果正在请求不会发起下次请求
-            if (typeof this.props.loadNext === 'function' && !loading) {
+            if (typeof this.props.loadNext === 'function') {
                 this.setState({
                     loading: true
                 })
-                this.props.loadNext(this.page += 1)
+                if(!loading){
+                    this.props.loadNext(this.page += 1)
+                }  
             }
         }
     }
@@ -135,7 +137,6 @@ export default class InfiniteScroll extends Component {
     render () {
         const { pageStart, threshold, hasMore, autoLoad, loadNext, spinLoader, noMore, children, ...props} = this.props
         const {showGoTop, loading} = this.state
-        console.log(showGoTop)
         return (
             <div {...props}>
                 {children}
@@ -143,8 +144,9 @@ export default class InfiniteScroll extends Component {
                 {!hasMore && noMore}
                 <div ref="loadmore"></div>
                 {showGoTop?<div className="back-top" 
-                    onClick={this.backTop.bind(this)}
-                >top</div>:""}
+                    onClick={this.backTop.bind(this)}>
+                    <i className="iconfont icon-huidaodingbu"></i>
+                </div>:""}
             </div>
         )
     }

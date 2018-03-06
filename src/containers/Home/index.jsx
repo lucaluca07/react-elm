@@ -9,6 +9,7 @@ import ShopListTitle from '../../components/ShopListTitle'
 import {FoodentryTombstone} from '../../components/Tombstone'
 import {setLongitudeAndLatitude,getLocationInfo,getEntries,getRestaurants} from '../../actions/home'
 
+
 class Home extends Component {
   constructor(){
     super()
@@ -53,7 +54,6 @@ class Home extends Component {
   }
   render() {
     const {name,restaurants,hasMore,foodentry,activity} = this.props
-    console.log(activity)
     return (
       <div className="App">
       <FirstPageHeader address={name} />

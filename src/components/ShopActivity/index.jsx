@@ -19,9 +19,9 @@ class ShopActivity extends React.Component{
             <div className="shop-activity">
                 <div className="activity-left"></div>
                 <div className="activity-right">
-                    <div className="tagLine">
+                    <div className="tag-line">
                         {!recommend.is_ad && recommend.reason
-                        ?<div>
+                        ?<div className="tag-container">
                             <img src="http://fuss10.elemecdn.com/a/c1/24c767ffa7fd296d3e2d6f01798c6png.png?imageMogr/format/webp/thumbnail/!60x60r/gravity/Center/crop/60x60/" alt="tag"/>
                             <span>{recommend.reason}</span>
                         </div>
@@ -33,13 +33,13 @@ class ShopActivity extends React.Component{
                                 activityList.map((val,index)=>(
                                     <div className="shop-activity-item" key={index}>
                                         <span className="activity-icon" style={{background:`#${val.icon_color}`}}>{val.icon_name}</span>
-                                        <span>{val.description}</span>
+                                        <span className="activity-descripition">{val.description}</span>
                                     </div>
                                 ))
                                 :activityList.slice(0,2).map((val,index)=>(
                                     <div className="shop-activity-item" key={index}>
                                         <span className="activity-icon" style={{background:`#${val.icon_color}`}}>{val.icon_name}</span>
-                                        <span>{val.description}</span>
+                                        <span className="activity-descripition">{val.description}</span>
                                     </div>
                                 ))
                             }

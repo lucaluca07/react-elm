@@ -35,10 +35,12 @@ class FirstPageHeader extends React.Component {
         const address = this.props.address
         return(
             <div className="first-page-header">
+                <Link to={'/location'}>
                 <div className="header-address" ref="address">
                     <i className="iconfont icon-coordinates_fill coordinates"></i> 
                     <span className="address">{address?address:"正在定位..."}</span>
                 </div>
+                </Link>
                 {searchFixed
                     ?<div className="header-search">   
                     </div>

@@ -5,7 +5,6 @@ import './style.scss'
 
 const Swiper = ({foodentry}) => {
     const arr = sliceArray(foodentry,10)
-    console.log("1111111111",arr)
     return (
         <Carousel>
                 {arr.map((item,index)=>(

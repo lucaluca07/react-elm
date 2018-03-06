@@ -4,6 +4,8 @@ import Home from "../containers/Home"
 import Discover from '../containers/Discover'
 import Order from '../containers/Order'
 import My from '../containers/My'
+import Search from '../containers/Search'
+import Location from '../containers/Location'
 import Footer from '../components/Footer'
 
 export default class RouterMap extends React.Component {
@@ -19,7 +21,8 @@ export default class RouterMap extends React.Component {
                     <Route path="/my" component={My} />
                 </Switch>
                 <Switch>
-                    <Route path="/search" component={My} />
+                    <Route path="/search" component={Search} />
+                    <Route path="/location" component={Location} />
                     <Footer/>
                 </Switch>
                
