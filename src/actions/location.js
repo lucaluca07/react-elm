@@ -6,16 +6,18 @@ export const setLongitudeAndLatitude = (longitude,latitude) => ({
     longitude,
     latitude
 })
-export const setCurrentAddress = (currentAddresss) => ({
+export const setCurrentAddress = (address) => ({
     type:actionType.SET_CURRENT_ADDRESS,
-    currentAddresss
+    address
 })
 export const getLocationInfo = async(longitude,latitude) => {
     try{
         const {result} = await LocationModel.getLocationInfo(longitude,latitude)
         return {
             type:actionType.SET_LOCATION_INFO,
-            name:result.name
+            location:{name:result.name,
+                latitude:result.latitude,
+                longitude:result.longitude}
         }
     }catch(e){
         return e

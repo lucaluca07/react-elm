@@ -2,9 +2,6 @@ import * as actionTypes from '../constants'
 
 
 const defaultState = {
-    longitude:0,
-    latitude:0,
-    location:{},
     foodentry:[],
     activity:[],
     offset:0,

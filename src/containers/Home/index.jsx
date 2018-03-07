@@ -21,6 +21,7 @@ class Home extends Component {
   }
   async componentDidMount(){
     const {longitude,latitude} = this.props
+    console.log(longitude,latitude)
     if(longitude === 0 && latitude===0){
       this.getLocation()
     }
@@ -43,9 +44,8 @@ class Home extends Component {
     dispatch(setLongitudeAndLatitude(longitude,latitude))
     dispatch(await getLocationInfo(longitude,latitude))
     dispatch(await getEntries(longitude,latitude))
-    console.log("name::::",this.props.name)
-    const name = this.props.name
-    dispatch(setCurrentAddress(name))
+    const address = this.props.location.name
+    dispatch(setCurrentAddress(address))
     this.getShopList()
   }
   async errPosition(){
@@ -55,16 +55,16 @@ class Home extends Component {
     dispatch(setLongitudeAndLatitude(longitude,latitude))
     dispatch(await getLocationInfo(longitude,latitude))
     dispatch(await getEntries(longitude,latitude))
-    console.log("name::::",this.props.name)
-    const name = this.props.name
-    dispatch(setCurrentAddress(name))
+    
+    const address = this.props.location.name
+    dispatch(setCurrentAddress(address))
     this.getShopList()
   }
   render() {
-    const {currentAddress,restaurants,hasMore,foodentry,activity} = this.props
+    const {address,restaurants,hasMore,foodentry,activity} = this.props
     return (
       <div className="App">
-      <FirstPageHeader address={currentAddress} />
+      <FirstPageHeader address={address} />
         {foodentry.length>0
           ?<div>
             <Swiper foodentry={foodentry}/>
@@ -90,12 +90,12 @@ class Home extends Component {
 
 const mapStateToProps = (state) =>{
   const {offset,hasMore,restaurants,foodentry,activity} = state.home
-  const {longitude,latitude,name,currentAddress} = state.location
+  const {location,longitude,latitude,address} = state.location
   return {
     longitude,
     latitude,
-    name,
-    currentAddress,
+    location,
+    address,
     offset,
     hasMore,
     restaurants,

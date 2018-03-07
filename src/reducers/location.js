@@ -4,6 +4,7 @@ import * as actionTypes from '../constants'
 const defaultState = {
     longitude:0,
     latitude:0,
+    address:"",
     location:{}
 }
 const location = (state = defaultState,action) => {
@@ -12,13 +13,13 @@ const location = (state = defaultState,action) => {
             return {...state,
                 longitude:action.longitude,
                 latitude:action.latitude,
-                currentAddress:"正在识别位置..."}
+                address:"正在识别位置..."}
         case actionTypes.SET_LOCATION_INFO:
             return {...state,
-                name:action.name}
+                location:action.location}
         case actionTypes.SET_CURRENT_ADDRESS:
             return {...state,
-                currentAddress:action.currentAddress
+                address:action.address
             } 
         default:
             return state
