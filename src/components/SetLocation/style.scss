@@ -1,0 +1,21 @@
+.current-location{
+    .title{
+        padding: 20px 30px;
+        color:#666;
+        font-weight: normal;
+        line-height: 2;
+    }
+    .location{
+        padding: 30px 30px;
+        display: flex;
+        background: #fff;
+        font-size: 32px;
+        justify-content: space-between;
+        font-weight: bold;
+        .refresh-location{
+            font-size: 30px;
+            color:#2395ff;
+            font-weight: normal;
+        }
+    }
+}

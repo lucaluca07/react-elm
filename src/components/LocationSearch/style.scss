@@ -1,0 +1,22 @@
+.location-search{
+    background: #fff;
+    position: relative;
+    .search-comp{
+        padding: 20px 30px;
+    }
+    .location-list{
+        position: absolute;    
+        background: #fff;
+        width: 100%;
+        .location-item{
+            padding: 20px 30px;
+            border-bottom: 2px solid rgb(226, 226, 226);
+            .location-name{
+                font-size: 28px;
+            }
+            .location-address{
+                font-size: 24px;
+            }
+        }
+    }
+}

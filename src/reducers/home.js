@@ -13,14 +13,6 @@ const defaultState = {
 }
 const home = (state = defaultState,action) => {
     switch(action.type){
-        case actionTypes.SET_LONGITUDE_LATITUDE:
-            return {...state,
-                longitude:action.longitude,
-                latitude:action.latitude,
-                name:"正在识别位置..."}
-        case actionTypes.SET_LOCATION_INFO:
-            return {...state,
-                name:action.name}
         case actionTypes.GET_ENTRIES_DATA:
             return {...state,
                 foodentry:action.foodentry,

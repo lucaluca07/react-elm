@@ -37,20 +37,11 @@ function parseQueryStr(queryStr) {
 //首页数据
 let entries = require("./home/entries.js");
 router.get("/api/home/entries", async ctx => {
+  const {latitude,longitude} = ctx.query
+  console.log("entries:::",latitude,longitude)
   ctx.body = entries;
 });
 
-let address = require("./home/address.js");
-router.get("/api/home/address", async ctx => {
-  const {latitude,longitude} = ctx.query
-  console.log(latitude,longitude)
-  if(latitude<=0 || longitude<=0){
-    ctx.body = {"message":"无效的经纬度坐标","name":"未知地址"}
-  }else{
-    ctx.body = address;
-  }
-  
-});
 
 let shoplist = require("./home/shoplist.js")
 router.get("/api/shopping/restaurants",async ctx =>{
@@ -58,6 +49,26 @@ router.get("/api/shopping/restaurants",async ctx =>{
   console.log("Restaurants:::",offset, filter)
   ctx.body = shoplist;
 })
+
+let address = require("./home/address.js");
+router.get("/api/location/address", async ctx => {
+  const {latitude,longitude} = ctx.query
+  console.log("address:::",latitude,longitude)
+  if(latitude<=0 || longitude<=0){
+    ctx.body = {"message":"无效的经纬度坐标","name":"未知地址"}
+  }else{
+    ctx.body = address;
+  }
+});
+
+let addresslist = require('./home/addresslist.js')
+router.get("/api/location/search_poi_nearby",async ctx =>{
+  const {keyword,latitude,longitude} = ctx.query
+  console.log("search_poi_nearby:::",keyword,latitude,longitude)
+  ctx.body = addresslist;
+})
+
+
 // //首页超值特惠和天天立减数据
 // let homeAdData = require("./home/ad.js");
 // router.get("/api/homead", async ctx => {

@@ -5,11 +5,15 @@
     background: #f4f4f4;
     color:#666;
     input{
+        flex:1;
         border: none;
         margin-left:15px; 
         background: #f4f4f4;
         color:#666;
         font-size: 32px;
         line-height: 1.2;
+    }
+    .clear-input{
+        color:rgb(29, 19, 122);
     }
 }

@@ -7,7 +7,8 @@ import ShopList from '../../components/ShopList'
 import Footer from '../../components/Footer'
 import ShopListTitle from '../../components/ShopListTitle'
 import {FoodentryTombstone} from '../../components/Tombstone'
-import {setLongitudeAndLatitude,getLocationInfo,getEntries,getRestaurants} from '../../actions/home'
+import {getEntries,getRestaurants} from '../../actions/home'
+import {setLongitudeAndLatitude,getLocationInfo,setCurrentAddress} from '../../actions/location'
 import newUser from '../../static/image/red_envelope.png'
 
 
@@ -42,6 +43,9 @@ class Home extends Component {
     dispatch(setLongitudeAndLatitude(longitude,latitude))
     dispatch(await getLocationInfo(longitude,latitude))
     dispatch(await getEntries(longitude,latitude))
+    console.log("name::::",this.props.name)
+    const name = this.props.name
+    dispatch(setCurrentAddress(name))
     this.getShopList()
   }
   async errPosition(){
@@ -51,13 +55,16 @@ class Home extends Component {
     dispatch(setLongitudeAndLatitude(longitude,latitude))
     dispatch(await getLocationInfo(longitude,latitude))
     dispatch(await getEntries(longitude,latitude))
+    console.log("name::::",this.props.name)
+    const name = this.props.name
+    dispatch(setCurrentAddress(name))
     this.getShopList()
   }
   render() {
-    const {name,restaurants,hasMore,foodentry,activity} = this.props
+    const {currentAddress,restaurants,hasMore,foodentry,activity} = this.props
     return (
       <div className="App">
-      <FirstPageHeader address={name} />
+      <FirstPageHeader address={currentAddress} />
         {foodentry.length>0
           ?<div>
             <Swiper foodentry={foodentry}/>
@@ -82,11 +89,13 @@ class Home extends Component {
 }
 
 const mapStateToProps = (state) =>{
-  const {longitude,latitude,name,offset,hasMore,restaurants,foodentry,activity} = state.home
+  const {offset,hasMore,restaurants,foodentry,activity} = state.home
+  const {longitude,latitude,name,currentAddress} = state.location
   return {
     longitude,
     latitude,
     name,
+    currentAddress,
     offset,
     hasMore,
     restaurants,
