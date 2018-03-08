@@ -20,10 +20,13 @@ class Home extends Component {
     this.errPosition = this.errPosition.bind(this)
   }
   async componentDidMount(){
-    const {longitude,latitude} = this.props
+    const {longitude,latitude,dispatch} = this.props
     console.log(longitude,latitude)
     if(longitude === 0 && latitude===0){
       this.getLocation()
+    }else{
+      dispatch(await getEntries(longitude,latitude))
+      this.getShopList()
     }
   }
   getLocation(){

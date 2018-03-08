@@ -5,7 +5,8 @@ const defaultState = {
     longitude:0,
     latitude:0,
     address:"",
-    location:{}
+    location:{},
+    locationList:[]
 }
 const location = (state = defaultState,action) => {
     switch(action.type){
@@ -21,6 +22,10 @@ const location = (state = defaultState,action) => {
             return {...state,
                 address:action.address
             } 
+        case actionTypes.GET_LOCATION_LIST:
+            return {...state,
+                locationList:action.locationList
+            }
         default:
             return state
     }
