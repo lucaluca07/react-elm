@@ -4,7 +4,7 @@ import './style.scss'
 export default class SearchInput extends Component{
     constructor(){
         super()
-        this.state={value:"",keyCode:""}
+        this.state={value:""}
         this.handleChange = this.handleChange.bind(this)
         this.handleKeyUp = this.handleKeyUp.bind(this)
         this.handleClick = this.handleClick.bind(this)
@@ -28,11 +28,12 @@ export default class SearchInput extends Component{
     render(){
         const {height,placeholder} = this.props
         const value = this.state.value
+        const padding = height?`${height}px`:"10px" 
         return(
             <div className="search-wrap">
                 <i className="iconfont icon-sousuoxiao"></i>
                 <input type="text" 
-                    style={{height}} 
+                    style={{paddingBottom:padding,paddingTop:padding}} 
                     placeholder={placeholder} 
                     value={value} 
                     onChange={this.handleChange} 

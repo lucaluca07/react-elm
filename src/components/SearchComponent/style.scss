@@ -1,9 +1,11 @@
 .search-wrap{
     display: flex;
     align-items: center;
-    padding:20px;
+    padding-left:20px;
+    padding-right:20px;
     background: #f4f4f4;
     color:#666;
+    flex:1;
     input{
         flex:1;
         border: none;

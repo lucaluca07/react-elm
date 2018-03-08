@@ -1,0 +1,25 @@
+.search-header{
+    display: flex;
+    padding: 20px ;
+    line-height: 1.2;
+    .search-back{        
+        flex:0 0 40px;
+        padding: 8px 20px 0 0;
+        .back:before{
+            font-size: 40px;
+        }
+    }
+    .search-comp-box{
+        flex:1;
+        padding: 5px;
+        .search-wrap{
+            input{
+                font-size:26px;
+            }
+        }
+    }
+    .search-btn{
+        font-size: 30px;
+        padding: 12px 0 0 10px;
+    }
+}
