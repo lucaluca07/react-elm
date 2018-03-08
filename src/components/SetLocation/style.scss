@@ -1,3 +1,8 @@
+@keyframes rotate{
+	from{transform:rotate(0deg)}
+	to{transform:rotate(360deg)}
+	}
+
 .current-location{
     .title{
         padding: 20px 30px;
@@ -15,6 +20,15 @@
             font-size: 28px;
             color:#2395ff;
             font-weight: normal;
+            display: flex;
+            .icon-ditudingwei:before{
+                font-size: 36px;
+                display: inline-block;
+                // text-align: center;
+            }
+            .rotate-icon:before{
+                animation: rotate infinite 2s linear;
+            }
         }
     }
 }

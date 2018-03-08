@@ -23,14 +23,14 @@ import {setLongitudeAndLatitude,
       }
 
     async componentDidMount(){
-        const {longitude,latitude} = this.props.location
-        
+        const {longitude,latitude} = this.props.location   
         if(!longitude && !latitude){
           this.getLocation()
         }
       }
 
-      getLocation(){
+      getLocation(callback){
+        this.callback = callback
         if (navigator.geolocation){
           navigator.geolocation.getCurrentPosition(this.showPosition,this.errPosition);
         }
@@ -61,6 +61,7 @@ import {setLongitudeAndLatitude,
         const { dispatch } = this.props;
         const {longitude,latitude} = position.coords
         dispatch(await getLocationInfo(longitude,latitude))
+        this.callback&&this.callback()
       }
 
       async errPosition(){
@@ -68,6 +69,7 @@ import {setLongitudeAndLatitude,
         const {longitude,latitude} = {longitude:728,latitude:820}
         console.log("iOS,OSX在https协议下支持getCurrentPosition, 在err中给了一个固定的值")
         dispatch(await getLocationInfo(longitude,latitude))
+        this.callback&&this.callback()
       }
 
       async handleEnter(keyword){
