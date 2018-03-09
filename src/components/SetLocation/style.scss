@@ -22,9 +22,9 @@
             font-weight: normal;
             display: flex;
             .icon-ditudingwei:before{
-                font-size: 36px;
                 display: inline-block;
-                // text-align: center;
+                text-align: center;
+                line-height: 1.2;
             }
             .rotate-icon:before{
                 animation: rotate infinite 2s linear;

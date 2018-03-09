@@ -32,9 +32,9 @@ export default class SetLocation extends Component{
                 <h4 className="title">当前位置</h4>
                 <div className="location">
                     <div onClick={this.handleClick}>{name}</div>
-                    <div className="refresh-location">
-                            <i className={`iconfont icon-ditudingwei ${rotate&&"rotate-icon"}`}></i>
-                        <span onClick={this.refreshLocation}>重新定位</span>
+                    <div className="refresh-location" onClick={this.refreshLocation}>
+                        <i className={`iconfont icon-ditudingwei ${rotate&&"rotate-icon"}`}></i>
+                        <span>重新定位</span>
                     </div>
                 </div>
                 

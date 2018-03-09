@@ -13,7 +13,7 @@ export default class SearchInput extends Component{
         const inputValue = e.target.value
         this.setState({value:inputValue})
         const onChange = this.props.onChange
-        onChange&&onChange()  
+        onChange&&onChange(inputValue)  
     }
     handleKeyUp(e){
         const onEnter = this.props.onEnter
@@ -24,6 +24,8 @@ export default class SearchInput extends Component{
     }
     handleClick(){
         this.setState({value:""})
+        const onChange = this.props.onChange
+        onChange&&onChange("")
     }
     render(){
         const {height,placeholder} = this.props

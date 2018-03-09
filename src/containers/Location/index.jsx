@@ -86,7 +86,6 @@ import {setLongitudeAndLatitude,
         const name = this.props.location.name||"正在定位..."
         const {locationList} = this.props
         const {longitude,latitude} = this.props.location
-        console.log("333333333333",locationList)
         return(
             // 行内样式是为了让div充满整个body
             <div style={{height:'100%', width:"100%",position:'absolute', backgroundColor:"#f4f4f4"}}>

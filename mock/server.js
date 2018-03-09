@@ -68,6 +68,19 @@ router.get("/api/location/search_poi_nearby",async ctx =>{
   ctx.body = addresslist;
 })
 
+let typeahead = require('./search/typeahead.js')
+router.get("/api/shopping/typeahead",async ctx =>{
+  const {keyword,latitude,longitude} = ctx.query
+  console.log("typeahead:::",keyword,latitude,longitude)
+  ctx.body = typeahead;
+})
+
+let hotSearchWord = require('./search/hotSearchWord.js')
+router.get("/api/shopping/hot_search_words",async ctx =>{
+  const {latitude,longitude} = ctx.query
+  console.log("typeahead:::",latitude,longitude)
+  ctx.body = hotSearchWord;
+})
 
 // //首页超值特惠和天天立减数据
 // let homeAdData = require("./home/ad.js");

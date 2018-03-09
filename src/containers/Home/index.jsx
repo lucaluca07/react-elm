@@ -21,7 +21,6 @@ class Home extends Component {
   }
   async componentDidMount(){
     const {longitude,latitude,dispatch} = this.props
-    console.log(longitude,latitude)
     if(longitude === 0 && latitude===0){
       this.getLocation()
     }else{

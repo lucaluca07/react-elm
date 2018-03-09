@@ -9,7 +9,6 @@ export default class LocationSearch extends Component{
     }
     render(){
         const locationList = this.props.locationList
-        console.log(222222222)
         return(
             <div className="location-search">
             <div className="search-comp">

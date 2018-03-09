@@ -11,4 +11,4 @@ let LocationModel = {
       return result
     }
   };
-  export default LocationModel;
+export default LocationModel;

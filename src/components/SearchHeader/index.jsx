@@ -3,10 +3,6 @@ import SearchComponent from '../SearchComponent'
 import './style.scss'
 
 export default class SearchHeader extends Component{
-    constructor(){
-        super()
-    }
-
     render(){
         return(
             <div className="search-header">
@@ -14,7 +10,7 @@ export default class SearchHeader extends Component{
                     <i className="iconfont icon-fanhuijiantou back"></i>
                 </div>
                 <div className="search-comp-box">
-                    <SearchComponent height={5} placeholder={"输入商家、商品名称"}/>
+                    <SearchComponent onChange={this.props.onChange} height={5} placeholder={"输入商家、商品名称"}/>
                 </div>
                 <div className="search-btn">搜索</div>
             </div>
