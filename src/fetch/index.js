@@ -7,8 +7,8 @@ let HomeModel = {
       return result   
     },
     async getRestaurants(latitude, longitude, offset, limit, filter,order,vip,delivery,activity,support_ids,category_ids){
-      const support = support_ids.reduce((a,b) => ("support_ids="+a+"&"+"support_ids"+b))
-      const category = category_ids.reduce((a,b) => ("category_ids="+a+"&"+"category_ids="+b))
+      const support = support_ids?support_ids.reduce((a,b) => (`support_ids=${a}&support_ids=${b}`)):"support_ids="
+      const category = category_ids?category_ids.reduce((a,b) => (`category_ids=${a}&category_ids=${b}`)):"category_ids="
       const result = await Http.get(`/api/shopping/restaurants?latitude=${latitude}&longitude=${longitude}&offset=${offset}&limit=${limit}&filter=${filter}&order=${order}&vip=${vip}&delivery=${delivery}&activity=${activity}&${support}&${category}`)
       return result
     }
