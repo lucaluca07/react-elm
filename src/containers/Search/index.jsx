@@ -2,6 +2,7 @@ import React,{Component} from 'react'
 import {connect} from 'react-redux'
 import SearchHeader from '../../components/SearchHeader'
 import SearchWord from '../../components/SearchWord'
+import SearchTips from '../../components/SearchTips'
 import {getTypeAhead,getHotSearchWrods} from '../../actions/search'
 
 class Search extends Component{
@@ -17,19 +18,28 @@ class Search extends Component{
         dispatch(await getHotSearchWrods(longitude,latitude))
     }
     async handleChange(keyword){
+        const {dispatch,longitude,latitude} = this.props
         if(keyword.length === 0){
             this.setState({showSearchWord:true,keyword:keyword})
         }else{
             this.setState({showSearchWord:false,keyword:keyword})
         }
+        //防止请求太频繁
+        if(!this.time){
+            this.time = new Date()
+            dispatch(await getTypeAhead(keyword, longitude, latitude))
+        }else{
+            if(new Date() - this.time > 500){
+                this.time = new Date()
+                dispatch(await getTypeAhead(keyword, longitude, latitude))
+            }
+        }
         
-        const {dispatch,longitude,latitude} = this.props
-        dispatch(await getTypeAhead(keyword, longitude, latitude))
     }
     render(){
-        const {hotSearchWords} = this.props
+        const {typeahead,hotSearchWords} = this.props
         const {showSearchWord,keyword} = this.state
-        // const {restaurants,words,search_word} = typeahead
+        const {restaurants,words,search_word} = typeahead
         return(<div>
                 <SearchHeader onChange={this.handleChange}/>
                 {showSearchWord
@@ -37,7 +47,10 @@ class Search extends Component{
                     <SearchWord title="热门搜索" data={hotSearchWords}/>
                 </div>
                 :<div>
-                    搜索{keyword}
+                    <SearchTips restaurants={restaurants} 
+                        words={words} 
+                        search_word={search_word} 
+                        keyword={keyword}/>
                 </div>
                 }
                 
