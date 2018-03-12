@@ -1,3 +1,49 @@
 .filter-nav{
     background: #fafafa;
+    font-size: 28px;
+    .filter-wrap{
+        .filter-item{
+            margin: 20px 0;
+        }
+        .title{
+            padding: 0 30px;
+            margin-bottom: 15px;
+        }
+        .content{
+            background: #fff;
+            border-top: 1px solid  #e4e3e3;/*no*/
+            border-bottom: 1px solid  #e4e3e3;/*no*/
+            display: flex;
+            flex-flow: row wrap;
+            .more-filter{
+                height: 70px;
+                flex:0 0 33.11%;
+                display: flex;
+                align-items: center;
+                // padding-left: 30px;
+                .activity-icon{
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 5px;
+                    color:#fff;
+                    font-size: 24px;
+                    line-height: 30px;
+                    text-align: center;
+                    margin:0 5px 0 30px;
+                }
+                .average-costs{
+                    margin-left: 30px;
+                }
+                .support-icon{
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 5px;
+                    font-size: 24px;
+                    line-height: 30px;
+                    text-align: center;
+                    margin:0 5px 0 30px;
+                }
+            }
+        }
+    }
 }
