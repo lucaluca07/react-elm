@@ -14,7 +14,8 @@ export default class FilterNav extends Component{
                         <dt className="title">配送方式</dt>
                         <dd className="content">{
                             <div className="more-filter">
-                                123
+                                <img src="" alt=""/>
+                                <span>{delivery_mode.text}</span>
                             </div>
                         }</dd>
                     </dl>}
