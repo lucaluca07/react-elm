@@ -7,10 +7,19 @@ let HomeModel = {
       return result   
     },
     async getRestaurants(latitude, longitude, offset, limit, filter,order,vip,delivery,activity,support_ids,category_ids){
-      const support = support_ids?support_ids.reduce((a,b) => (`support_ids=${a}&support_ids=${b}`)):"support_ids="
-      const category = category_ids?category_ids.reduce((a,b) => (`category_ids=${a}&category_ids=${b}`)):"category_ids="
-      const result = await Http.get(`/api/shopping/restaurants?latitude=${latitude}&longitude=${longitude}&offset=${offset}&limit=${limit}&filter=${filter}&order=${order}&vip=${vip}&delivery=${delivery}&activity=${activity}&${support}&${category}`)
+      const support = support_ids?support_ids.reduce((a,b) => (`${a}&support_ids=${b}`)):""
+      const category = category_ids?category_ids.reduce((a,b) => (`${a}&category_ids=${b}`)):""
+      const result = await Http.get(`/api/shopping/restaurants?latitude=${latitude}&longitude=${longitude}&offset=${offset}&limit=${limit}&filter=${filter}&order=${order}&vip=${vip}&delivery=${delivery}&activity=${activity}&support_ids=${support}&category_ids=${category}`)
+      return result
+    },
+    async getSiftFactors(latitude, longitude, entryId){
+      const result = await Http.get(`/api/shopping/food/sift_factors?latitude=${latitude}&longitude=${longitude}&entry_id=${entryId}`)
+      return result
+    },
+    async getFilterBar(latitude, longitude){
+      const result = await Http.get(` /api/shopping/restaurants/filter-bar?latitude=${latitude}&longitude=${longitude}`)
       return result
     }
+    
   };
   export default HomeModel;

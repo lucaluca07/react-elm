@@ -26,7 +26,7 @@ export default class Http {
         param.body = JSON.stringify(param.body);
       }
     }
-    console.log(_url + param);
+    console.log(_url,param);
     const response = await fetch(_url, param)
     const { status } = response;
     let result

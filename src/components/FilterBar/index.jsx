@@ -1,4 +1,5 @@
 import React,{Component} from 'react'
+import FilterNav from '../FilterNav'
 import './style.scss'
 
 export default class FilterBar extends Component{
@@ -12,9 +13,7 @@ export default class FilterBar extends Component{
         this.handleOrderByDistance = this.handleOrderByDistance.bind(this)
         this.handleToggleVip = this.handleToggleVip.bind(this)
     }
-    componentDidMount(){
-        
-    }
+    
     handleCilck(show){
         const showFliter = this.state.showFliter
         if(!!showFliter && showFliter === show){
@@ -29,19 +28,28 @@ export default class FilterBar extends Component{
     }
     handleSortClick(index){
         const orderArr = ["综合排序","销量最高","起送价最低","配送最快"]
+        const order = this.state.order
+        if(order === index) return
         this.setState({orderText:orderArr[index],order:index,showFliter:false})
+        this.props.onClick("order",index)
     }
     handleOrderByDistance(){
+        const order = this.state.order
+        if(order === 4) return
         this.setState({order:4,showFliter:false})
+        this.props.onClick("order",4)
     }
     handleToggleVip(){
         const {vip} = this.state
         this.setState({vip:!vip,showFliter:false})
+        const vipValue = vip?1:0
+        this.props.onClick("vip",vipValue)
     }
 
     render(){
         const {showFliter,orderText,order,vip} = this.state
         const orderArr = ["综合排序","销量最高","起送价最低","配送最快"]
+       const fliterMore = this.props.filterMore
         return(
             <div className="filter-bar">
                 <ul className="filter">
@@ -58,80 +66,11 @@ export default class FilterBar extends Component{
                         ? <ul className="sort-list">
                             {orderArr.map((val,index) => (<li key={index} style={{color:index===order?"#3190e8":"#333",fontWeight:index===order?"bold":"normal"}} onClick={this.handleSortClick.bind(this,index)}><span>{val}</span></li>))}
                         </ul>
-                        :<div>筛选</div>
+                        :<FilterNav fliterMore={fliterMore}/>
                     }
                     <div className="shade" onClick={() => this.setState({showFliter:false})}></div>
                 </div>
                 }
-                
-                <div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div><div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div><div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div><div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                    <div>1</div>
-                </div>
             </div>
         )
     }

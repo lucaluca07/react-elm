@@ -7,7 +7,7 @@ import ShopList from '../../components/ShopList'
 import Footer from '../../components/Footer'
 import ShopListTitle from '../../components/ShopListTitle'
 import {FoodentryTombstone} from '../../components/Tombstone'
-import {getEntries,getRestaurants} from '../../actions/home'
+import {getEntries,getRestaurants,clearRestaurants} from '../../actions/home'
 import {setLongitudeAndLatitude,getLocationInfo,setCurrentAddress} from '../../actions/location'
 import newUser from '../../static/image/red_envelope.png'
 
@@ -21,6 +21,7 @@ class Home extends Component {
   }
   async componentDidMount(){
     const {longitude,latitude,dispatch} = this.props
+    dispatch(clearRestaurants())
     if(longitude === 0 && latitude===0){
       this.getLocation()
     }else{
@@ -38,7 +39,6 @@ class Home extends Component {
     if(longitude&&latitude){
       dispatch(await getRestaurants(longitude,latitude,offset,8,"home"))
     }
-    
   }
   async showPosition(position){
     const { dispatch } = this.props;

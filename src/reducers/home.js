@@ -6,7 +6,9 @@ const defaultState = {
     activity:[],
     offset:0,
     restaurants:false,
-    hasMore:false
+    siftFactors:[],
+    hasMore:false,
+    filterMore:false
 }
 const home = (state = defaultState,action) => {
     switch(action.type){
@@ -20,6 +22,20 @@ const home = (state = defaultState,action) => {
                 restaurants:[...state.restaurants,...action.restaurants],
                 offset:action.offset,
                 hasMore:action.hasMore
+            }
+        case actionTypes.CLEAR_RESTAURANTS:
+            return {...state,
+                offset:0,
+                restaurants:false,
+                hasMore:false
+            }
+        case actionTypes.GET_SIFT_FACTORS:
+            return {...state,
+                siftFactors:action.siftFactors
+            }
+        case actionTypes.GET_FILTER_BAR:
+            return{...state,
+                filterMore:action.filterMore
             }
         default:
             return state

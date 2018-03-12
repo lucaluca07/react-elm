@@ -50,6 +50,26 @@ router.get("/api/shopping/restaurants",async ctx =>{
   ctx.body = shoplist;
 })
 
+let foodCategoty = require("./shop/food/category")
+router.get("/api/shopping/food/sift_factors",async ctx =>{
+  const {entry_id} = ctx.query
+  console.log("sift_factors:::",entry_id)
+  switch(entry_id){
+    case "20004689":
+      ctx.body = foodCategoty
+      break
+    default:
+      ctx.body = {message:"无效的entry_id"}
+  }  
+})
+let filterBar = require("./shop/fliterBar")
+router.get("/api/shopping/restaurants/filter-bar",async ctx =>{
+  const {latitude,longitude} = ctx.query
+  console.log("FilterBar:::",latitude,longitude)
+  ctx.body = filterBar
+})
+
+
 let address = require("./home/address.js");
 router.get("/api/location/address", async ctx => {
   const {latitude,longitude} = ctx.query
@@ -81,6 +101,8 @@ router.get("/api/shopping/hot_search_words",async ctx =>{
   console.log("typeahead:::",latitude,longitude)
   ctx.body = hotSearchWord;
 })
+
+
 
 // //首页超值特惠和天天立减数据
 // let homeAdData = require("./home/ad.js");
