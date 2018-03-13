@@ -16,12 +16,18 @@
             border-bottom: 1px solid  #e4e3e3;/*no*/
             display: flex;
             flex-flow: row wrap;
+            .filter-activity{
+                background: #eee;
+                color:#3190e8 !important;
+            }
             .more-filter{
                 height: 70px;
                 flex:0 0 33.11%;
                 display: flex;
                 align-items: center;
-                // padding-left: 30px;
+                .icon-finish::before{
+                    margin: 0 5px 0 30px;
+                }
                 .activity-icon{
                     height: 30px;
                     width: 30px;
@@ -35,17 +41,38 @@
                     margin-left: 30px;
                 }
                 .support-icon{
-                    height: 30px;
-                    width: 30px;
+                    height: 28px;
+                    width: 28px;
                     border-radius: 5px;
                     font-size: 24px;
-                    line-height: 30px;
+                    line-height: 28px;
                     text-align: center;
                     margin:0 5px 0 30px;
                     border-width: 1px;/*no*/
                     border-style: solid;
                 }
+                .icon-birdxiaoniao:before{
+                    color:#3190e8;
+                    font-size: 28px;
+                    margin:0 5px 0 30px;
+                }
             }
+        }
+    }
+    .filter-btn{
+        display: flex;
+        text-align: center;
+        height: 86px;
+        line-height: 86px;
+        .clear-btn{
+            flex:1;
+            background: #fff;
+            border-top: 1px solid #e4e3e3;
+        }
+        .submit-btn{
+            flex:1;
+            background: #68d962;
+            color:#fff;
         }
     }
 }

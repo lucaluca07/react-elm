@@ -24,7 +24,7 @@ export default class RatingStar extends Component{
                     <li><i className="iconfont icon-favor"></i></li>
                     <li><i className="iconfont icon-favor"></i></li>
                 </ul>
-        <ul className="favor-fill" style={{width:80*rate/5}}>
+                <ul className="favor-fill" style={{width:80*rate/5}}>
                     <li><i className="iconfont icon-favorfill"></i></li>
                     <li><i className="iconfont icon-favorfill"></i></li>
                     <li><i className="iconfont icon-favorfill"></i></li>

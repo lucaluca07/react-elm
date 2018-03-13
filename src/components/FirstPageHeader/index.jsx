@@ -57,13 +57,9 @@ class FirstPageHeader extends React.Component {
                     
                 </div>
                 </Link>
-                
-                
-
             </div>
         )
     }
-    
 }
 
 export default FirstPageHeader ;

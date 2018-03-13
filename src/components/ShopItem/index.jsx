@@ -32,7 +32,11 @@ const ShopItem = ({shopData}) => {
                             :""}
                             {supports.length>0
                             ?supports.map((val,index) => (
-                                <li className="support" key={index} style={{color:`#${val.icon_color}`}}>{val.icon_name}</li>
+                                <li className="support" 
+                                    key={index} 
+                                    style={{color:`#${val.icon_color}`}}>
+                                    {val.icon_name}
+                                </li>
                             ))
                             :""}
                         </ul>

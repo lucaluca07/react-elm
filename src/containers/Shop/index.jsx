@@ -2,6 +2,7 @@ import React,{Component} from 'react'
 import {connect} from 'react-redux'
 import {getRestaurants,clearRestaurants,getSiftFactors,getFilterBar} from '../../actions/home'
 import Header from '../../components/Header'
+import Categories from '../../components/Categories'
 import FilterBar from '../../components/FilterBar'
 import ShopList from '../../components/ShopList'
 
@@ -13,10 +14,12 @@ class Shop extends Component{
             vip:1,
             delivery:"",
             activity:"",
-            support_ids:"",
-            category_ids:""   
+            support_ids:[],
+            category_ids:"",
+            cost:"" 
         }
         this.handleSetState = this.handleSetState.bind(this)
+        this.handleSetFilterMore = this.handleSetFilterMore.bind(this)
     }
 
     async componentDidMount(){
@@ -35,9 +38,16 @@ class Shop extends Component{
     handleSetState(state,value){
         const {dispatch} = this.props
         dispatch(clearRestaurants())
-        this.setState({[state]:value},() =>{this.getShopList()})
-        
-        
+        this.setState({[state]:value},() =>{this.getShopList()})    
+    }
+    handleSetFilterMore(delivery,activity,support_ids,cost){
+        const {dispatch} = this.props
+        dispatch(clearRestaurants())
+        this.setState({delivery:delivery,
+            activity:activity,
+            support_ids:support_ids,
+            cost:cost
+        },() =>{this.getShopList()})
     }
 
     splitSearch(key){
@@ -51,26 +61,42 @@ class Shop extends Component{
     }
     async getShopList(){
         //latitude, longitude, offset, limit, filter,order,vip,delivery,activity,support_ids,category_ids
-        const {order,vip,delivery,activity,support_ids,category_ids} = this.state
+        const {order,vip,delivery,activity,support_ids,category_ids,cost} = this.state
         const { dispatch,offset,longitude,latitude } = this.props;
-        // console.log("category_ids",category_ids)
-        console.log("order1111111111111",order)
-        dispatch(await getRestaurants(longitude,latitude,offset,8,"",order,vip,delivery,activity,support_ids,category_ids))
+        dispatch(await getRestaurants(longitude,latitude,offset,8,"",order,vip,delivery,activity,support_ids,category_ids,cost))
       }
 
     render(){
         const targetName = this.splitSearch('target_name')
-        const {longitude,latitude,restaurants,hasMore,filterMore} = this.props
+        const {longitude,latitude,restaurants,hasMore,filterMore,siftFactors} = this.props
         console.log(longitude,latitude)
-        return(<div>
-                <Header title={targetName}/>
-                <FilterBar onClick={this.handleSetState} filterMore={filterMore}/>
-                {restaurants.length>0
-                ?<ShopList loadNext={this.getShopList.bind(this)} hasMore={hasMore} data={restaurants}/>
-                :"暂无数据"
-                } 
+        const {delivery,activity,support_ids, cost} = this.state
+        return(
+        <div>
+            <div style={{position: "sticky", top: 0, zIndex: 1000}}>
+                <div style={{top: 0, zIndex: 1000}}>
+                    <Header title={targetName}/>
+                    <Categories categories={siftFactors}/>
+                    <FilterBar 
+                        onClick={this.handleSetState} 
+                        filterMore={filterMore}
+                        setFilterMore={this.handleSetFilterMore}
+                        delivery={delivery}
+                        activity={activity}
+                        support_ids={support_ids}
+                        cost={cost}
+                    />
+                </div>
             </div>
-        )
+            
+            {restaurants.length>0
+                ?<ShopList 
+                    loadNext={this.getShopList.bind(this)} 
+                    hasMore={hasMore} 
+                    data={restaurants}/>
+                :"Loadding"
+                } 
+        </div>)
     }
 }
 
