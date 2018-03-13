@@ -6,7 +6,6 @@ const defaultState = {
     activity:[],
     offset:0,
     restaurants:false,
-    siftFactors:[],
     hasMore:false,
     filterMore:false
 }
@@ -28,10 +27,6 @@ const home = (state = defaultState,action) => {
                 offset:0,
                 restaurants:false,
                 hasMore:false
-            }
-        case actionTypes.GET_SIFT_FACTORS:
-            return {...state,
-                siftFactors:action.siftFactors
             }
         case actionTypes.GET_FILTER_BAR:
             return{...state,

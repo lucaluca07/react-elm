@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import {connect} from 'react-redux'
-import {getRestaurants,clearRestaurants,getSiftFactors,getFilterBar} from '../../actions/home'
+import {getRestaurants, clearRestaurants, getFilterBar} from '../../actions/home'
+import {getSiftFactors, setCategoryId} from '../../actions/category'
 import Header from '../../components/Header'
 import Categories from '../../components/Categories'
 import FilterBar from '../../components/FilterBar'
@@ -20,6 +21,7 @@ class Shop extends Component{
         }
         this.handleSetState = this.handleSetState.bind(this)
         this.handleSetFilterMore = this.handleSetFilterMore.bind(this)
+        this.setCategoryId = this.setCategoryId.bind(this)
     }
 
     async componentDidMount(){
@@ -40,6 +42,7 @@ class Shop extends Component{
         dispatch(clearRestaurants())
         this.setState({[state]:value},() =>{this.getShopList()})    
     }
+
     handleSetFilterMore(delivery,activity,support_ids,cost){
         const {dispatch} = this.props
         dispatch(clearRestaurants())
@@ -59,16 +62,22 @@ class Shop extends Component{
         });
         return obj[key]
     }
+
     async getShopList(){
         //latitude, longitude, offset, limit, filter,order,vip,delivery,activity,support_ids,category_ids
         const {order,vip,delivery,activity,support_ids,category_ids,cost} = this.state
         const { dispatch,offset,longitude,latitude } = this.props;
         dispatch(await getRestaurants(longitude,latitude,offset,8,"",order,vip,delivery,activity,support_ids,category_ids,cost))
-      }
+    }
+
+    setCategoryId(id){
+        const {dispatch} = this.props
+        dispatch(setCategoryId(id))
+    }
 
     render(){
         const targetName = this.splitSearch('target_name')
-        const {longitude,latitude,restaurants,hasMore,filterMore,siftFactors} = this.props
+        const {longitude,latitude,restaurants,hasMore,filterMore,siftFactors,categoryId} = this.props
         console.log(longitude,latitude)
         const {delivery,activity,support_ids, cost} = this.state
         return(
@@ -76,7 +85,11 @@ class Shop extends Component{
             <div style={{position: "sticky", top: 0, zIndex: 1000}}>
                 <div style={{top: 0, zIndex: 1000}}>
                     <Header title={targetName}/>
-                    <Categories categories={siftFactors}/>
+                    <Categories 
+                        categories={siftFactors}
+                        categoryId={categoryId}
+                        onClick={this.setCategoryId}
+                        />
                     <FilterBar 
                         onClick={this.handleSetState} 
                         filterMore={filterMore}
@@ -102,7 +115,8 @@ class Shop extends Component{
 
 const mapStateToProps = (state) => {
     const {longitude,latitude} = state.location
-    const {restaurants,offset,siftFactors,hasMore,filterMore} = state.home
+    const {restaurants,offset,hasMore,filterMore} = state.home
+    const {siftFactors,categoryId} = state.category
     return {
         longitude,
         latitude,
@@ -110,7 +124,8 @@ const mapStateToProps = (state) => {
         restaurants,
         siftFactors,
         hasMore,
-        filterMore
+        filterMore,
+        categoryId
     }
 }
 

@@ -2,24 +2,20 @@ import React,{Component} from 'react'
 import './style.scss'
 
 export default class Categories extends Component{
-    constructor(){
-        super()
-        this.state = {activityId:0}
-    }
-    handleClick(index){
-        this.setState({activityId:index})
+    handleClick(id){
+        this.props.onClick(id)
     }
     render(){
         const categories = this.props.categories
-        const {activityId} = this.state
+        const {categoryId} = this.props
         return(
         <div className="categories">
             <ul className="category-list">
                 {categories.map((val,index) => (
                     <li 
                         key={index} 
-                        onClick={this.handleClick.bind(this,index)}
-                        className={`category-item ${activityId===index&&"activity"}`}>
+                        onClick={this.handleClick.bind(this,val.id)}
+                        className={`category-item ${categoryId===val.id&&"activity"}`}>
                         {val.name}
                     </li>))}
             </ul>

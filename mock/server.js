@@ -62,6 +62,14 @@ router.get("/api/shopping/food/sift_factors",async ctx =>{
       ctx.body = {message:"无效的entry_id"}
   }  
 })
+
+let categoties = require("./shop/food/categories")
+router.get("/api/shopping/category",async ctx =>{
+  const {latitude,longitude} = ctx.query
+  console.log("category:::",latitude,longitude)
+    ctx.body = categoties
+})
+
 let filterBar = require("./shop/fliterBar")
 router.get("/api/shopping/restaurants/filter-bar",async ctx =>{
   const {latitude,longitude} = ctx.query

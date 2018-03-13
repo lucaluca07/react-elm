@@ -28,18 +28,6 @@ export const getRestaurants = async(longitude,latitude,offset,limit,filter,order
     }
 }
 
-export const getSiftFactors = async(longitude,latitude,entryId) => {
-    try{
-        const {result} = await HomeModel.getSiftFactors(longitude,latitude,entryId)
-        return {
-            type:actionTypes.GET_SIFT_FACTORS,
-            siftFactors:result
-        }
-    }catch(e){
-        return e
-    }
-}
-
 export const clearRestaurants = () => ({
     type:actionTypes.CLEAR_RESTAURANTS
 })

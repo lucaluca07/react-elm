@@ -4,7 +4,7 @@
     height: 80px;
     display: flex;
     color:#fff;
-    font-size: 30px;
+    font-size: 26px;
     .category-list{
         // display: flex;
         // flex-direction: row ;
@@ -14,11 +14,12 @@
         line-height: 1.2;
         white-space: nowrap;
         .category-item{
-            padding: 26px 0 12px;
+            padding: 24px 0 12px;
             display: inline-block;
             margin-right: 50px;
             opacity: 0.7;
             line-height: 1;
+            font-weight: 300;
         }
         .activity{
             opacity: 1 !important;
