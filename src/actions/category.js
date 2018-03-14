@@ -14,6 +14,18 @@ export const getSiftFactors = async(longitude,latitude,entryId) => {
     }
 }
 
+export const getCategory = async(longitude,latitude) => {
+    try{
+        const {result} = await CategoryModel.getCategory(longitude,latitude)
+        return{
+            type:actionTypes.GET_CATEGORY,
+            category:result
+        }
+    }catch(e){
+        return e
+    }
+}
+
 export const setCategoryId = (categoryId) => ({
     type:actionTypes.SET_CATEGORY_ID,
     categoryId:categoryId

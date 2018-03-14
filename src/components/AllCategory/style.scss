@@ -1,0 +1,74 @@
+.filter-category{
+    .filter-scroller{
+        display: flex;
+        background: #fff;
+        color:#666;
+        .main-menu{
+            height: 750px;
+            overflow: auto;
+            flex:0 0 260px;
+            .main-menu-activity{
+                border-right: 1px solid #fff !important;/*no*/
+                background: #fff !important;
+                .menu-name{
+                    padding-left: 36px !important;
+                    border-left: 4px solid #2395ff; 
+                }
+            }
+            .main-menu-item{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 96px;
+                padding-right: 20px;
+                border-right: 1px solid #f5f5f5;/*no*/
+                background: #f1f1f1;
+                .menu-name{
+                    padding-left: 40px;
+                    font-size: 26px;
+                }
+                .count{
+                    border-radius: 15px;
+                    // display: inline-block;
+                    padding: 5px;
+                    transform: scale(0.7);
+                    border: 1px solid #666;
+                }
+            }
+        }
+        .sub-menu{
+            flex:1;
+            height: 750px;
+            overflow: auto;
+            .sub-menu-activity{
+                .menu-name{
+                    color: #2395ff;
+                    font-weight: 700;
+                }
+                .count{
+                    background: #2395ff;
+                    border: 1px solid #2395ff;
+                    color:#fff;
+                }
+            }
+            .sub-menu-item{
+                display: flex;
+                justify-content: space-between;
+                height: 96px;
+                align-items: center;
+                padding-right: 20px;
+                .menu-name{
+                    margin-left: 40px;
+                    font-size: 26px;
+                }
+                .count{
+                    border-radius: 15px;
+                    // display: inline-block;
+                    padding:2px 5px;
+                    transform: scale(0.7);
+                    border: 1px solid #666;
+                }
+            }
+        }
+    }
+}

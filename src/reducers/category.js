@@ -2,8 +2,8 @@ import * as actionTypes from '../constants'
 
 const defaultState = {
     siftFactors:[],
-    categories:[],
-    category:""
+    category:false,
+    categoryId:""
 }
 
 const category = (state = defaultState,action) => {
@@ -17,7 +17,10 @@ const category = (state = defaultState,action) => {
             return{...state,
                 categoryId:action.categoryId
             }
-
+        case actionTypes.GET_CATEGORY:
+            return {...state,
+                category:action.category
+            }
         default:
             return state
     }
