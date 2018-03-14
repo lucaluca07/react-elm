@@ -1,15 +1,17 @@
 import React,{Component} from 'react'
 import {connect} from 'react-redux'
 import {getRestaurants, clearRestaurants, getFilterBar} from '../../actions/home'
-import {getSiftFactors, setCategoryId} from '../../actions/category'
+import {getSiftFactors, setCategoryId, getCategory,setSiftFactors,setMainCategory} from '../../actions/category'
 import Header from '../../components/Header'
 import Categories from '../../components/Categories'
 import FilterBar from '../../components/FilterBar'
 import ShopList from '../../components/ShopList'
+import AllCategory from '../../components/AllCategory'
 
 class Shop extends Component{
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
+        const category = this.props.category
         this.state = {
             order:0,
             vip:1,
@@ -17,11 +19,16 @@ class Shop extends Component{
             activity:"",
             support_ids:[],
             category_ids:"",
-            cost:"" 
+            cost:"",
+            mainMenuId:category&&category[1].id,
+            subMenuId:category&&category[1].sub_categories[0].id            
         }
         this.handleSetState = this.handleSetState.bind(this)
         this.handleSetFilterMore = this.handleSetFilterMore.bind(this)
         this.setCategoryId = this.setCategoryId.bind(this)
+        this.handleGetCategory = this.handleGetCategory.bind(this)
+        this.setMainMenuId = this.setMainMenuId.bind(this)
+        this.setSubMenuId = this.setSubMenuId.bind(this)
     }
 
     async componentDidMount(){
@@ -34,7 +41,7 @@ class Shop extends Component{
       }
       const siftFactors = this.props.siftFactors
       const restaurant_category_ids = siftFactors[0].restaurant_category_ids
-      this.setState({category_ids:restaurant_category_ids},() => {this.getShopList()})  
+      this.setState({category_ids:restaurant_category_ids},() => {this.getShopList()})
     }
 
     handleSetState(state,value){
@@ -66,8 +73,14 @@ class Shop extends Component{
     async getShopList(){
         //latitude, longitude, offset, limit, filter,order,vip,delivery,activity,support_ids,category_ids
         const {order,vip,delivery,activity,support_ids,category_ids,cost} = this.state
+        console.log("ids",category_ids)
         const { dispatch,offset,longitude,latitude } = this.props;
         dispatch(await getRestaurants(longitude,latitude,offset,8,"",order,vip,delivery,activity,support_ids,category_ids,cost))
+    }
+
+    async handleGetCategory(){
+        const { dispatch,longitude,latitude } = this.props;
+        dispatch(await getCategory(longitude,latitude))
     }
 
     setCategoryId(id){
@@ -75,11 +88,23 @@ class Shop extends Component{
         dispatch(setCategoryId(id))
     }
 
+    setMainMenuId(id){
+        const {dispatch} = this.props
+        dispatch(setMainCategory(id))
+    }
+    setSubMenuId(id,category){
+        const {dispatch} = this.props
+        dispatch(setCategoryId(id))
+        dispatch(setSiftFactors(id,category))
+        dispatch(clearRestaurants())
+        this.setState({category_ids:[id]},() =>{this.getShopList()}) 
+    }
+
     render(){
         const targetName = this.splitSearch('target_name')
-        const {longitude,latitude,restaurants,hasMore,filterMore,siftFactors,categoryId} = this.props
+        const {longitude,latitude,restaurants,hasMore,filterMore,siftFactors,categoryId,category,mainCategoryId,subCategoryId} = this.props
         console.log(longitude,latitude)
-        const {delivery,activity,support_ids, cost} = this.state
+        const {delivery,activity,support_ids,cost} = this.state
         return(
         <div>
             <div style={{position: "sticky", top: 0, zIndex: 1000}}>
@@ -89,7 +114,8 @@ class Shop extends Component{
                         categories={siftFactors}
                         categoryId={categoryId}
                         onClick={this.setCategoryId}
-                        />
+                        onMoreClick={this.handleGetCategory}
+                    />
                     <FilterBar 
                         onClick={this.handleSetState} 
                         filterMore={filterMore}
@@ -101,7 +127,12 @@ class Shop extends Component{
                     />
                 </div>
             </div>
-            
+            <AllCategory 
+                mainMenuId={mainCategoryId} 
+                subMenuId={subCategoryId} 
+                category={category&&category.slice(1)}
+                setMainMenuId={this.setMainMenuId}
+                setSubMenuId={this.setSubMenuId}/>
             {restaurants.length>0
                 ?<ShopList 
                     loadNext={this.getShopList.bind(this)} 
@@ -116,7 +147,7 @@ class Shop extends Component{
 const mapStateToProps = (state) => {
     const {longitude,latitude} = state.location
     const {restaurants,offset,hasMore,filterMore} = state.home
-    const {siftFactors,categoryId} = state.category
+    const {siftFactors,categoryId,category,mainCategoryId,subCategoryId} = state.category
     return {
         longitude,
         latitude,
@@ -125,7 +156,10 @@ const mapStateToProps = (state) => {
         siftFactors,
         hasMore,
         filterMore,
-        categoryId
+        categoryId,
+        category,
+        mainCategoryId,
+        subCategoryId
     }
 }
 

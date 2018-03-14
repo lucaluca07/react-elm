@@ -19,7 +19,7 @@ export default class Categories extends Component{
                         {val.name}
                     </li>))}
             </ul>
-            <div className="show-more-btn">
+            <div className="show-more-btn" onClick={() => {this.props.onMoreClick()}}>
                 <i className="iconfont icon-unfold">
             </i></div>
         </div>)
