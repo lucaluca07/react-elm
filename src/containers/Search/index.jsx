@@ -12,6 +12,7 @@ class Search extends Component{
             showSearchWord:true,
             keyword:""}
         this.handleChange = this.handleChange.bind(this)
+        this.handleEnter = this.handleEnter.bind(this)
     }
     async componentDidMount(){
         const {dispatch,longitude,latitude} = this.props
@@ -33,15 +34,19 @@ class Search extends Component{
                 this.time = new Date()
                 dispatch(await getTypeAhead(keyword, longitude, latitude))
             }
-        }
-        
+        }  
+    }
+    handleEnter(keyword){
+        this.props.history.push(`/search/shop?keyword=${keyword}`)
     }
     render(){
         const {typeahead,hotSearchWords} = this.props
         const {showSearchWord,keyword} = this.state
         const {restaurants,words,search_word} = typeahead
         return(<div>
-                <SearchHeader onChange={this.handleChange}/>
+                <SearchHeader 
+                    onChange={this.handleChange}
+                    onEnter={this.handleEnter}/>
                 {showSearchWord
                 ?<div>
                     <SearchWord title="热门搜索" data={hotSearchWords}/>

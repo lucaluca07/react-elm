@@ -8,6 +8,7 @@ import Search from '../containers/Search'
 import Location from '../containers/Location'
 import Shop from '../containers/Shop'
 import Footer from '../components/Footer'
+import SearchResult from '../containers/SearchResult'
 
 export default class RouterMap extends React.Component {
   render() {
@@ -22,7 +23,8 @@ export default class RouterMap extends React.Component {
                     <Route path="/my" component={My} />
                 </Switch>
                 <Switch>
-                    <Route path="/search" component={Search} />
+                    <Route exact path="/search" component={Search} />
+                    <Route exact path="/search/shop" component={SearchResult} />
                     <Route path="/location" component={Location} />
                     <Route path="/shop" component={Shop} />
                     <Footer/>

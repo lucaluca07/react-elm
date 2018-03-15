@@ -2,9 +2,9 @@ import React,{Component} from 'react'
 import './style.scss'
 
 export default class SearchInput extends Component{
-    constructor(){
-        super()
-        this.state={value:"",showClear:false}
+    constructor(props){
+        super(props)
+        this.state={value:this.props.value||"",showClear:false}
         this.handleChange = this.handleChange.bind(this)
         this.handleKeyUp = this.handleKeyUp.bind(this)
         this.handleClick = this.handleClick.bind(this)
@@ -20,6 +20,7 @@ export default class SearchInput extends Component{
         const onEnter = this.props.onEnter
         const value = this.state.value
         if(e.keyCode === 13){
+            console.log(onEnter)
             onEnter&&onEnter(value)
         }
     }

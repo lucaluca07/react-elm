@@ -10,7 +10,12 @@ export default class SearchHeader extends Component{
                     <i className="iconfont icon-fanhuijiantou back"></i>
                 </div>
                 <div className="search-comp-box">
-                    <SearchComponent onChange={this.props.onChange} height={5} placeholder={"输入商家、商品名称"}/>
+                    <SearchComponent 
+                        value={this.props.value}
+                        onEnter={this.props.onEnter}
+                        onChange={this.props.onChange} 
+                        height={5} 
+                        placeholder={"输入商家、商品名称"}/>
                 </div>
                 <div className="search-btn">搜索</div>
             </div>
