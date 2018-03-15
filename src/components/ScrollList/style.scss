@@ -4,10 +4,13 @@
     right:30px;
     width: 100px;
     height: 100px;
+    line-height: 100px;
     border-radius: 50%;
     text-align: center;
     background: #fff;
     z-index: 998;
-    font-size: 60px;
     border: 2px solid #666;
+    .icon-huidaodingbu:before{
+        font-size: 40px;
+    }
 }
