@@ -34,6 +34,10 @@ const category = (state = defaultState,action) => {
             return{...state,
                 mainCategoryId:action.mainCategoryId
             }
+        case actionTypes.CLEAR_CATEGORY:
+            return{...state,
+                category:false
+            }
         default:
             return state
     }

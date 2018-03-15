@@ -1,17 +1,17 @@
 import React,{Component} from 'react'
 import {connect} from 'react-redux'
 import {getRestaurants, clearRestaurants, getFilterBar} from '../../actions/home'
-import {getSiftFactors, setCategoryId, getCategory,setSiftFactors,setMainCategory} from '../../actions/category'
+import {getSiftFactors, setCategoryId, getCategory,setSiftFactors,setMainCategory,clearCategory} from '../../actions/category'
 import Header from '../../components/Header'
 import Categories from '../../components/Categories'
 import FilterBar from '../../components/FilterBar'
 import ShopList from '../../components/ShopList'
 import AllCategory from '../../components/AllCategory'
+import Loadding from '../../components/Loadding'
 
 class Shop extends Component{
     constructor(props){
         super(props)
-        const category = this.props.category
         this.state = {
             order:0,
             vip:1,
@@ -19,9 +19,8 @@ class Shop extends Component{
             activity:"",
             support_ids:[],
             category_ids:"",
-            cost:"",
-            mainMenuId:category&&category[1].id,
-            subMenuId:category&&category[1].sub_categories[0].id            
+            cost:"",    
+            openCategory:false 
         }
         this.handleSetState = this.handleSetState.bind(this)
         this.handleSetFilterMore = this.handleSetFilterMore.bind(this)
@@ -29,12 +28,14 @@ class Shop extends Component{
         this.handleGetCategory = this.handleGetCategory.bind(this)
         this.setMainMenuId = this.setMainMenuId.bind(this)
         this.setSubMenuId = this.setSubMenuId.bind(this)
+        this.handleColseCategory = this.handleColseCategory.bind(this)
     }
 
     async componentDidMount(){
       const {dispatch,longitude,latitude,filterMore} = this.props
       const entry_id = this.splitSearch('entry_id')
       dispatch(clearRestaurants())
+      dispatch(clearCategory())
       dispatch(await getSiftFactors(longitude,latitude,entry_id))
       if(!filterMore){
         dispatch(await getFilterBar(longitude,latitude))
@@ -79,13 +80,16 @@ class Shop extends Component{
     }
 
     async handleGetCategory(){
-        const { dispatch,longitude,latitude } = this.props;
-        dispatch(await getCategory(longitude,latitude))
+        const { dispatch,longitude,latitude,category } = this.props;
+        this.setState({openCategory:true})
+        !category&&dispatch(await getCategory(longitude,latitude))
     }
 
     setCategoryId(id){
         const {dispatch} = this.props
         dispatch(setCategoryId(id))
+        dispatch(clearRestaurants())
+        this.setState({category_ids:[id],openCategory:false},() =>{this.getShopList()})
     }
 
     setMainMenuId(id){
@@ -97,18 +101,20 @@ class Shop extends Component{
         dispatch(setCategoryId(id))
         dispatch(setSiftFactors(id,category))
         dispatch(clearRestaurants())
-        this.setState({category_ids:[id]},() =>{this.getShopList()}) 
+        this.setState({category_ids:[id],openCategory:false},() =>{this.getShopList()})
     }
-
+    handleColseCategory(){
+        this.setState({openCategory:false})
+    }
     render(){
         const targetName = this.splitSearch('target_name')
         const {longitude,latitude,restaurants,hasMore,filterMore,siftFactors,categoryId,category,mainCategoryId,subCategoryId} = this.props
         console.log(longitude,latitude)
-        const {delivery,activity,support_ids,cost} = this.state
+        const {delivery,activity,support_ids,cost,openCategory} = this.state
         return(
         <div>
-            <div style={{position: "sticky", top: 0, zIndex: 1000}}>
-                <div style={{top: 0, zIndex: 1000}}>
+            <div style={{position: "sticky", top: 0, zIndex: 100}}>
+                <div style={{top: 0, zIndex: 100}}>
                     <Header title={targetName}/>
                     <Categories 
                         categories={siftFactors}
@@ -127,19 +133,25 @@ class Shop extends Component{
                     />
                 </div>
             </div>
-            <AllCategory 
+            {openCategory&&
+            <div style={{position:"absolute",top:0,left:0,zIndex:1000,width:"100%"}}>
+                <AllCategory 
                 mainMenuId={mainCategoryId} 
                 subMenuId={subCategoryId} 
                 category={category&&category.slice(1)}
                 setMainMenuId={this.setMainMenuId}
-                setSubMenuId={this.setSubMenuId}/>
+                setSubMenuId={this.setSubMenuId}
+                top={true}
+                closeCategory={this.handleColseCategory}/>
+            </div>}
+                
+            
             {restaurants.length>0
                 ?<ShopList 
                     loadNext={this.getShopList.bind(this)} 
                     hasMore={hasMore} 
                     data={restaurants}/>
-                :"Loadding"
-                } 
+                :<Loadding/>} 
         </div>)
     }
 }

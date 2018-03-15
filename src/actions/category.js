@@ -43,3 +43,7 @@ export const setMainCategory = (id) =>({
     type:actionTypes.SET_MAIN_CATEGORY_ID,
     mainCategoryId:id
 })
+
+export const clearCategory = () => ({
+    type:actionTypes.CLEAR_CATEGORY
+})

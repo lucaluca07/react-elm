@@ -1,8 +1,16 @@
 import React,{Component} from 'react'
 import './style.scss'
+import Loadding from '../Loadding'
 
 export default class AllCategory extends Component{
-    
+    componentDidMount(){
+        document.body.style.overflow = "hidden"
+        document.getElementsByTagName('body')[0].style.height = window.innerHeight+'px'
+    }
+    componentWillUnmount(){
+        document.body.style.overflow = "visible"
+        document.getElementsByTagName('body')[0].style.height = "auto"
+    }
     getSrc(src){
         let url
         const hash = [src.slice(0,1),src.slice(1,3),src.slice(3)].join('/')
@@ -14,12 +22,16 @@ export default class AllCategory extends Component{
         return url
     }
     render(){
-        const {category,mainMenuId,subMenuId} = this.props
-        console.log(category,mainMenuId)
+        const {category,mainMenuId,subMenuId,top} = this.props
         const submenu = category&&category.filter(element => (element.id === mainMenuId))[0].sub_categories
         return(
             <div className="filter-category">
-                <div></div>
+                {top&&
+                <div className="top">
+                    <span>请选择分类</span>
+                    <i onClick={()=>{this.props.closeCategory()}} className="iconfont icon-close"></i>
+                </div>}
+                <div className="scroller-wrap">
                 {category
                 ?<div className="filter-scroller">
                     <ul className="main-menu">
@@ -43,9 +55,14 @@ export default class AllCategory extends Component{
                             </li>
                         ))}
                     </ul>
+                    
                 </div>
-                    :"Loading"
+                    :<Loadding/>
                 }
+                </div>
+                <div className="shade" 
+                    onClick={()=>{this.props.closeCategory()}}>
+                </div>
             </div>
         )
     }

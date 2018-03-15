@@ -13,14 +13,17 @@ export default class FilterBar extends Component{
         this.handleOrderByDistance = this.handleOrderByDistance.bind(this)
         this.handleToggleVip = this.handleToggleVip.bind(this)
         this.handleSetFilterMore = this.handleSetFilterMore.bind(this)
+        this.handleHiddenFilter = this.handleHiddenFilter.bind(this)
     }
-    
+    handleHiddenFilter(){
+        this.setState({showFliter:false})
+        document.body.style.overflow = "visible"
+        document.getElementsByTagName('body')[0].style.height = "auto"
+    }
     handleCilck(show){
         const showFliter = this.state.showFliter
         if(!!showFliter && showFliter === show){
-            this.setState({showFliter:false})
-            document.body.style.overflow = "auto"
-            document.getElementsByTagName('body')[0].style.height = "100%"
+            this.handleHiddenFilter()
         }else{
             this.setState({showFliter:show})
             document.body.style.overflow = "hidden"
@@ -31,25 +34,26 @@ export default class FilterBar extends Component{
         const orderArr = ["综合排序","销量最高","起送价最低","配送最快"]
         const order = this.state.order
         if(order === index) return
-        this.setState({orderText:orderArr[index],order:index,showFliter:false})
+        this.setState({orderText:orderArr[index],order:index})
+        this.handleHiddenFilter()
         this.props.onClick("order",index)
     }
     handleOrderByDistance(){
         const order = this.state.order
         if(order === 4) return
-        this.setState({order:4,showFliter:false})
+        this.setState({order:4})
+        this.handleHiddenFilter()
         this.props.onClick("order",4)
     }
     handleToggleVip(){
         const {vip} = this.state
-        this.setState({vip:!vip,showFliter:false})
+        this.setState({vip:!vip})
+        this.handleHiddenFilter()
         const vipValue = vip?1:0
         this.props.onClick("vip",vipValue)
     }
     handleSetFilterMore(delivery,activity,support_ids,cost){
-        this.setState({showFliter:false})
-        document.body.style.overflow = "auto"
-        document.getElementsByTagName('body')[0].style.height = "100%"
+        this.handleHiddenFilter()
         this.props.setFilterMore(delivery,activity,support_ids,cost)
     }
 
@@ -100,7 +104,7 @@ export default class FilterBar extends Component{
                             cost={cost}/>
                     }
                     <div className="shade" 
-                        onClick={() => this.setState({showFliter:false})}>
+                        onClick={this.handleHiddenFilter}>
                     </div>
                 </div>
                 }

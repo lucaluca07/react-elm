@@ -1,0 +1,14 @@
+@keyframes rotate{
+	from{transform:rotate(0deg)}
+	to{transform:rotate(360deg)}
+}
+
+.loadding{
+    padding: 40px;
+    text-align: center;
+    .icon-loading:before{
+        display: inline-block;
+        animation: rotate infinite .5s linear;
+        font-size: 40px;
+    }
+}
