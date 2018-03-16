@@ -22,7 +22,7 @@ export default class AllCategory extends Component{
         return url
     }
     render(){
-        const {category,mainMenuId,subMenuId,top} = this.props
+        const {category,mainMenuId,subMenuId,top,setMainMenuId,setSubMenuId} = this.props
         const submenu = category&&category.filter(element => (element.id === mainMenuId))[0].sub_categories
         return(
             <div className="filter-category">
@@ -35,20 +35,20 @@ export default class AllCategory extends Component{
                 {category
                 ?<div className="filter-scroller">
                     <ul className="main-menu">
-                        {category.map((val,index) => (
+                        {category&&category.map((val,index) => (
                             <li key={index} 
                                 className={`main-menu-item ${val.id===mainMenuId && "main-menu-activity"}`}
-                                onClick={() => {this.props.setMainMenuId(val.id)}}>
+                                onClick={() => {setMainMenuId&&setMainMenuId(val.id)}}>
                                 <span className="menu-name">{val.name}</span>
                                 <span className="count">{val.count}</span>
                             </li>
                         ))}
                     </ul>
                     <ul className="sub-menu">
-                        {submenu.map((val,index) => (
+                        {submenu&&submenu.map((val,index) => (
                             <li key={index} 
                                 className={`sub-menu-item ${val.id===subMenuId && "sub-menu-activity"}`}
-                                onClick={() => {this.props.setSubMenuId(val.id,submenu)}}>
+                                onClick={() => {setSubMenuId&&setSubMenuId(val.id,submenu)}}>
                                 <img className="menu-img" src={this.getSrc(val.image_url)} alt="category"/>
                                 <span className="menu-name">{val.name}</span>
                                 <span className="count">{val.count}</span>

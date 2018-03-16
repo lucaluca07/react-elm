@@ -4,10 +4,17 @@ import './style.scss'
 export default class SearchInput extends Component{
     constructor(props){
         super(props)
-        this.state={value:this.props.value||"",showClear:false}
+        this.state={value:"",showClear:false}
         this.handleChange = this.handleChange.bind(this)
         this.handleKeyUp = this.handleKeyUp.bind(this)
         this.handleClick = this.handleClick.bind(this)
+    }
+
+    componentDidMount(){
+        const value = this.props.value
+        if(value){
+            this.setState({value,showClear:true})
+        }
     }
     
     handleChange(e){
@@ -20,8 +27,7 @@ export default class SearchInput extends Component{
         const onEnter = this.props.onEnter
         const value = this.state.value
         if(e.keyCode === 13){
-            console.log(onEnter)
-            onEnter&&onEnter(value)
+            value&&onEnter&&onEnter(value)
         }
     }
     handleClick(){
@@ -41,6 +47,7 @@ export default class SearchInput extends Component{
                     style={{paddingBottom:padding,paddingTop:padding}} 
                     placeholder={placeholder} 
                     value={value} 
+                    autoFocus
                     onChange={this.handleChange} 
                     onKeyUp={this.handleKeyUp}
                     onFocus={this.handleFocus}

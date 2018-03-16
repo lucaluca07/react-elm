@@ -7,7 +7,7 @@ export const getSiftFactors = async(longitude,latitude,entryId) => {
         return {
             type:actionTypes.GET_SIFT_FACTORS,
             siftFactors:result,
-            categoryId:result[0].id
+            categoryId:(result.length&&result[0].id)||0
         }
     }catch(e){
         return e
@@ -21,7 +21,7 @@ export const getCategory = async(longitude,latitude,index=1) => {
             type:actionTypes.GET_CATEGORY,
             category:result,
             mainCategoryId:result[index].id,
-            subCategoryId:result[index].sub_categories[0].id ,
+            subCategoryId:result[index].sub_categories&&result[index].sub_categories[0].id ,
         }
     }catch(e){
         return e

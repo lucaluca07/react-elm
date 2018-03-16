@@ -41,7 +41,7 @@ class Shop extends Component{
         dispatch(await getFilterBar(longitude,latitude))
       }
       const siftFactors = this.props.siftFactors
-      const restaurant_category_ids = siftFactors[0].restaurant_category_ids
+      const restaurant_category_ids = (siftFactors[0]&&siftFactors[0].restaurant_category_ids)||[]
       this.setState({category_ids:restaurant_category_ids},() => {this.getShopList()})
     }
 
@@ -72,7 +72,6 @@ class Shop extends Component{
     }
 
     async getShopList(){
-        //latitude, longitude, offset, limit, filter,order,vip,delivery,activity,support_ids,category_ids
         const {order,vip,delivery,activity,support_ids,category_ids,cost} = this.state
         console.log("ids",category_ids)
         const { dispatch,offset,longitude,latitude } = this.props;
@@ -116,12 +115,13 @@ class Shop extends Component{
             <div style={{position: "sticky", top: 0, zIndex: 100}}>
                 <div style={{top: 0, zIndex: 100}}>
                     <Header title={targetName}/>
+                    {siftFactors.length>0&&
                     <Categories 
                         categories={siftFactors}
                         categoryId={categoryId}
                         onClick={this.setCategoryId}
                         onMoreClick={this.handleGetCategory}
-                    />
+                    />}
                     <FilterBar 
                         onClick={this.handleSetState} 
                         filterMore={filterMore}

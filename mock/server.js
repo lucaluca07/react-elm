@@ -54,20 +54,31 @@ let foodCategoty = require("./shop/food/category")
 router.get("/api/shopping/food/sift_factors",async ctx =>{
   const {entry_id} = ctx.query
   console.log("sift_factors:::",entry_id)
-  switch(entry_id){
-    case "20004689":
-      ctx.body = foodCategoty
-      break
-    default:
-      ctx.body = {message:"无效的entry_id"}
-  }  
+  // switch(entry_id){
+  //   case "20004689":
+  //     ctx.body = foodCategoty
+  //     break
+  //   default:
+  //     ctx.body = {message:"无效的entry_id"}
+  // }
+  if(entry_id === "20008529" ||
+    entry_id === "20008849"||
+    entry_id === "20008857"||
+    entry_id === "20008537"||
+    entry_id === "20008521"
+    ){
+    ctx.body = []
+  }else{
+    ctx.body = foodCategoty
+  }
+  
 })
 
 let categoties = require("./shop/food/categories")
 router.get("/api/shopping/category",async ctx =>{
   const {latitude,longitude} = ctx.query
   console.log("category:::",latitude,longitude)
-    ctx.body = categoties
+  ctx.body = categoties
 })
 
 let filterBar = require("./shop/fliterBar")

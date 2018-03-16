@@ -1,0 +1,47 @@
+.result-filter-bar{
+    background: #fff;
+    width: 100%;
+    font-size: 28px;
+    position: relative;
+    .filter{
+        height: 80px;
+        border-bottom: 1px solid rgb(209, 207, 207);/*no*/
+        line-height: 80px;
+        color:#333; 
+        display: flex;
+        padding:0 32px; 
+        .icon-huangguan:before{
+            color:rgb(233, 218, 12);
+        }
+        .iconfont:before{
+            font-size: 28px;
+        }
+        li{
+            text-align: center;
+            flex:1;
+        }
+    }
+    .filter-extend{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        font-size: 26px;
+        width: 100%;
+        top: 80px;
+        z-index: 10;
+        .sort-list{
+            background: #fff;
+            li{
+                padding: 0 20px 0 40px;
+                height: 80px;
+                line-height: 80px;
+            }
+        }
+        .shade{
+            flex:1;
+            height: 1000px;
+            background: #000;
+            opacity: 0.4;
+        }
+    }
+}

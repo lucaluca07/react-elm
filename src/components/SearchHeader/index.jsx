@@ -1,12 +1,16 @@
 import React,{Component} from 'react'
+import {withRouter} from 'react-router-dom'
 import SearchComponent from '../SearchComponent'
 import './style.scss'
 
-export default class SearchHeader extends Component{
+class SearchHeader extends Component{
+    handleClick(){   
+        this.props.history.push('/')
+    }
     render(){
         return(
             <div className="search-header">
-                <div className="search-back" onClick={() => {window.history.go(-1)}}>
+                <div className="search-back" onClick={this.handleClick.bind(this)}>
                     <i className="iconfont icon-fanhuijiantou back"></i>
                 </div>
                 <div className="search-comp-box">
@@ -22,3 +26,5 @@ export default class SearchHeader extends Component{
         )
     }
 }
+
+export default withRouter(SearchHeader)
