@@ -33,9 +33,9 @@ export default class FilterBar extends Component{
     handleSortClick(index){
         const orderArr = ["综合排序","销量最高","起送价最低","配送最快"]
         const order = this.state.order
+        this.handleHiddenFilter()
         if(order === index) return
         this.setState({orderText:orderArr[index],order:index})
-        this.handleHiddenFilter()
         this.props.onClick("order",index)
     }
     handleOrderByDistance(){

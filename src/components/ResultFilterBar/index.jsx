@@ -38,9 +38,9 @@ export default class ResultFilterBar extends Component{
         const {onClick} = this.props
         const orderArr = ["综合排序","销量最高","起送价最低","配送最快"]
         const order = this.state.order
+        this.handleHiddenFilter()
         if(order === index) return
         this.setState({orderText:orderArr[index],order:index})
-        this.handleHiddenFilter()
         onClick&&onClick(index)
     }
 
@@ -61,7 +61,6 @@ export default class ResultFilterBar extends Component{
         const orderArr = ["综合排序","销量最高","起送价最低","配送最快"]
         const {delivery,activity,support_ids, cost, category,setMainMenuId,mainCategoryId,subCategoryId} = this.props
         const fliterMore = this.props.filterMore
-        console.log("11111111",category)
         return(
             <div className="result-filter-bar">
                 <ul className="filter">

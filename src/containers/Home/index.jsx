@@ -91,7 +91,8 @@ class Home extends Component {
 }
 
 const mapStateToProps = (state) =>{
-  const {offset,hasMore,restaurants,foodentry,activity} = state.home
+  const {result,foodentry,activity} = state.shop
+  const {offset,hasMore,restaurants} = result
   const {location,longitude,latitude,address} = state.location
   return {
     longitude,

@@ -73,7 +73,6 @@ class Shop extends Component{
 
     async getShopList(){
         const {order,vip,delivery,activity,support_ids,category_ids,cost} = this.state
-        console.log("ids",category_ids)
         const { dispatch,offset,longitude,latitude } = this.props;
         dispatch(await getRestaurants(longitude,latitude,offset,8,"",order,vip,delivery,activity,support_ids,category_ids,cost))
     }
@@ -158,7 +157,8 @@ class Shop extends Component{
 
 const mapStateToProps = (state) => {
     const {longitude,latitude} = state.location
-    const {restaurants,offset,hasMore,filterMore} = state.home
+    const {result,filterMore} = state.shop
+    const {offset,hasMore,restaurants} = result
     const {siftFactors,categoryId,category,mainCategoryId,subCategoryId} = state.category
     return {
         longitude,

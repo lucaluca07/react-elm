@@ -57,7 +57,6 @@ export default class FilterNav extends Component{
     render(){
         const fliterMore = this.props.fliterMore
         const {activity_types,average_costs,delivery_mode,supports} = fliterMore
-        console.log(fliterMore)
         const {activityId,delivery,averageCosts,supportIds} = this.state
         return(
             <div className="filter-nav">

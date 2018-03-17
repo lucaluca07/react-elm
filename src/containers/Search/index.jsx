@@ -24,7 +24,7 @@ class Search extends Component{
         const {dispatch,longitude,latitude} = this.props
         const historySearch = getItem("searchWord")
         const wordArr = historySearch&&historySearch.split("&&")
-        wordArr.splice(-1,1)
+        wordArr&&wordArr.splice(-1,1)
         const keyword = this.state.keyword
         dispatch(await getHotSearchWrods(longitude,latitude))
         if(keyword){
