@@ -14,7 +14,7 @@ class SearchResultList extends React.Component {
             <InfiniteScroll loadNext={loadNext} threshold={100} hasMore={hasMore} spinLoader={spinLoader}>
                 {data&&data.map((val,index)=>(
                     <LazyLoad key={index} offset={10} placeholder={<ShopTombstone/>}>
-                        <SearchResultItem shopData={val}/>
+                        <SearchResultItem data={val}/>
                     </LazyLoad>
                 ))}
             </InfiniteScroll>

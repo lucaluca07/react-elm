@@ -1,0 +1,34 @@
+.food-item{
+    display: flex;
+    padding: 24px 0 ;
+    border-bottom:1px solid hsla(0,0%,89%,.5);
+    .img-wrap{
+        height: 128px;
+        width: 128px;
+        margin-right: 16px;
+        img{
+            height: 128px;
+            width: 128px;
+        }
+    }
+    .food-item-right{
+        flex:1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .food-item-rate{
+
+        }
+        .food-item-price{
+            .price{
+
+            }
+            .old-price{
+
+            }
+            .sale-tag{
+
+            }
+        }
+    }
+}
