@@ -13,7 +13,7 @@ export default class FoodList extends Component{
         this.setState({showMore:!showMore})
     }
     render(){
-        const data = [0,1,2,3,4,5]
+        const data = this.props.data
         const showMore = this.state.showMore
         return (
             <div className="food-list">
@@ -21,10 +21,10 @@ export default class FoodList extends Component{
                 ?<div>
                     {showMore
                     ?data.map((val,index) => (
-                        <FoodItem key={index}/>
+                        <FoodItem key={index} data={val}/>
                     ))
                     :data.slice(0,2).map((val,index) => (
-                        <FoodItem key={index}/>
+                        <FoodItem key={index} data={val}/>
                     ))}
                     <div className="showmore-btn" onClick={this.handleClick}>
                         {showMore?

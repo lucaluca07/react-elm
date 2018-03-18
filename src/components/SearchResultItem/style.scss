@@ -1,63 +1,65 @@
-@keyframes fadeIn{
-    from{
-      opacity:0
-    }to{
-      opacity:1
+@keyframes fadeIn {
+    from {
+        opacity: 0
     }
-  }
+    to {
+        opacity: 1
+    }
+}
 
-.search-result-item{
-    border-bottom: 2px solid #f1efef ; 
-    .result-item{
+.search-result-item {
+    border-bottom: 2px solid #f1efef;
+    .result-item {
         display: flex;
-        color:#666;
+        color: #666;
         padding: 20px;
-        border-bottom:1px solid hsla(0,0%,89%,.5);
-        .result-img{
+        border-bottom: 1px solid hsla(0, 0%, 89%, .5);
+        .result-img {
             width: 70px;
             height: 70px;
             margin-right: 20px;
             border: 2px solid rgb(211, 209, 209);
-            img{
+            img {
                 width: 70px;
                 height: 70px;
-                opacity:0;
+                opacity: 0;
                 animation-name: fadeIn;
                 animation-duration: .6s;
                 animation-fill-mode: forwards;
             }
         }
-        .result-info{
+        .result-info {
             display: flex;
-            flex:1;
+            flex: 1;
             flex-direction: column;
             justify-content: space-between;
             font-size: 24px;
-            .result-title{
+            .result-title {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                .title{
+                .title {
                     font-size: 28px;
                     font-weight: 700;
-                    color:#333;
-                    overflow: hidden; 
-                    text-overflow:ellipsis; 
+                    color: #333;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                     white-space: nowrap;
                 }
+                .top-right {
+                    .delivery {
+                        padding: 0 5px;
+                        transform: scale(0.8)
+                    }
+                }
             }
-            .result-rate{
+            .result-rate {
                 display: flex;
                 justify-content: space-between;
-                .result-rate-left{
-                    display: flex;
-                    // align-items: center;
-                   .grade{
-                        line-height: 1.2
-                   }
+                .result-rate-left {
+                    display: flex; // align-items: center;
                 }
             }
         }
     }
 }
-

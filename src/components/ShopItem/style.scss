@@ -1,102 +1,98 @@
-@keyframes fadeIn{
-    from{
-      opacity:0
-    }to{
-      opacity:1
+@keyframes fadeIn {
+    from {
+        opacity: 0
     }
-  }
+    to {
+        opacity: 1
+    }
+}
 
-.item-wrap{
-    border-bottom: 2px solid #f1efef ; 
+.item-wrap {
+    border-bottom: 2px solid #f1efef;
     padding: 20px;
-    .shop-item{
+    .shop-item {
         display: flex;
-        color:#666;
-        .shop-img{
+        color: #666;
+        .shop-img {
             width: 128px;
             height: 128px;
             margin-right: 20px;
             border: 2px solid rgb(211, 209, 209);
-            img{
+            img {
                 width: 128px;
                 height: 128px;
-                opacity:0;
+                opacity: 0;
                 animation-name: fadeIn;
                 animation-duration: .6s;
                 animation-fill-mode: forwards;
             }
         }
-        .shop-info{
+        .shop-info {
             display: flex;
-            flex:1;
+            flex: 1;
             flex-direction: column;
             justify-content: space-between;
             font-size: 24px;
-            .shop-title{
+            .shop-title {
                 display: flex;
                 justify-content: space-between;
-                .title{
+                .title {
                     font-size: 28px;
                     font-weight: 700;
-                    color:#333;
-                    overflow: hidden; 
-                    text-overflow:ellipsis; 
+                    color: #333;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                     white-space: nowrap;
                 }
-                .top-right{
+                .top-right {
                     display: flex;
-                    .ad{
+                    .ad {
                         height: 32px;
-                        border:2px solid #dbd8d8;
-                        
+                        border: 2px solid #dbd8d8;
                         text-align: center;
-                        color:rgb(177, 176, 176);
+                        color: rgb(177, 176, 176);
                         transform: scale(0.7);
                         margin: 0 -4px;
                     }
-                    .support{
+                    .support {
                         height: 32px;
                         width: 32px;
-                        border:2px solid #dbd8d8;
+                        border: 2px solid #dbd8d8;
                         text-align: center;
                         margin: 0 -4px;
                         transform: scale(0.7)
                     }
                 }
             }
-            .shop-rate{
+            .shop-rate {
                 display: flex;
                 justify-content: space-between;
-                .shop-rate-left{
-                    display: flex;
-                    // align-items: center;
-                   .star{
-
-                       margin: -7px 0 0 -7px; 
-                   }
-                   .grade{
+                .shop-rate-left {
+                    display: flex; // align-items: center;
+                    .star {
+                        margin: -7px 0 0 -7px;
+                    }
+                    .grade {
                         line-height: 1.2
-                   }
-                   .sell-number{
-                    line-height: 1.2
-                   }
+                    }
+                    .sell-number {
+                        line-height: 1.2
+                    }
                 }
-                .shop-rate-right{
+                .shop-rate-right {
                     display: flex;
-                    .delivery{
+                    .delivery {
                         height: 32px;
                         padding: 0 6px;
-                        margin:-4px -14px 0 0; 
+                        margin: -4px -14px 0 0;
                         transform: scale(0.7)
                     }
-                    
                 }
             }
-            .distribution-info{
+            .distribution-info {
                 display: flex;
                 justify-content: space-between;
             }
         }
     }
 }
-

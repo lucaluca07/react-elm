@@ -1,6 +1,7 @@
 import React,{Component} from 'react' 
 import './style.scss' 
 import FoodList from '../FoodList'
+import getImgSrc from '../../util/getImgSrc'
 
 class ShopItem extends Component {
     // const restaurant = shopData.restaurant
@@ -19,12 +20,14 @@ class ShopItem extends Component {
     render(){
         const data = this.props.data
         const {foods, restaurant} = data
-        const {name,distance,rating,float_delivery_fee,float_minimum_order_amount,order_lead_time,delivery_mode} = restaurant
+        const {name,distance,rating,
+            float_delivery_fee,float_minimum_order_amount,order_lead_time,
+            delivery_mode,image_path} = restaurant
         return (
             <div className="search-result-item">
                 <div className="result-item">
                     <div className="result-img">
-                        {/* <img src={image_path} alt="result"/> */}
+                        <img src={getImgSrc(image_path)} alt="result"/>
                     </div>
                     <div className="result-info">
                         <div className="result-title">
@@ -52,7 +55,7 @@ class ShopItem extends Component {
                         </div>
                     </div>
                 </div>
-                <FoodList/>
+                <FoodList data={foods}/>
             </div>) 
     }
     
