@@ -6,7 +6,8 @@ class ShopActivity extends React.Component{
         super()
         this.state = {showMore:false}
     }
-    toggleShowMore(){
+    toggleShowMore(e){
+        e.preventDefault()
         const showMore = this.state.showMore
         this.setState({showMore:!showMore})
     }

@@ -1,30 +1,25 @@
 import React,{Component} from 'react' 
+import {Link} from 'react-router-dom'
 import './style.scss' 
 import FoodList from '../FoodList'
 import getImgSrc from '../../util/getImgSrc'
 
 class ShopItem extends Component {
-    // const restaurant = shopData.restaurant
-    // const {image_path,
-    //     name,
-    //     recommend,
-    //     supports,
-    //     rating,
-    //     recent_order_num,
-    //     delivery_mode,
-    //     float_minimum_order_amount,
-    //     order_lead_time,
-    //     float_delivery_fee,
-    //     distance,
-    //     activities} = restaurant
     render(){
         const data = this.props.data
         const {foods, restaurant} = data
-        const {name,distance,rating,
-            float_delivery_fee,float_minimum_order_amount,order_lead_time,
-            delivery_mode,image_path} = restaurant
+        const {name,
+            id,
+            distance,
+            rating,
+            float_delivery_fee,
+            float_minimum_order_amount,
+            order_lead_time,
+            delivery_mode,
+            image_path} = restaurant
         return (
             <div className="search-result-item">
+                <Link to={`/shop/${id}`}>
                 <div className="result-item">
                     <div className="result-img">
                         <img src={getImgSrc(image_path)} alt="result"/>
@@ -56,6 +51,7 @@ class ShopItem extends Component {
                     </div>
                 </div>
                 <FoodList data={foods}/>
+                </Link>
             </div>) 
     }
     

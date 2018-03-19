@@ -9,7 +9,7 @@ const defaultState = {
         restaurants:false,
         hasMore:false,
         filterMore:false
-    }  
+    }
 }
 const shop = (state = defaultState,action) => {
     switch(action.type){

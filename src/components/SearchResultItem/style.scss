@@ -9,6 +9,10 @@
 
 .search-result-item {
     border-bottom: 2px solid #f1efef;
+    a{
+        color:#333;
+        text-decoration: none;
+    }
     .result-item {
         display: flex;
         color: #666;

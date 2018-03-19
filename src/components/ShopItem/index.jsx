@@ -2,11 +2,13 @@ import React from 'react'
 import './style.scss' 
 import RatingStar from '../RatingStar'
 import ShopActivity from '../ShopActivity'
+import {Link} from 'react-router-dom'
 
 const ShopItem = ({shopData}) => {
     const restaurant = shopData.restaurant
     const {image_path,
         name,
+        id,
         recommend,
         supports,
         rating,
@@ -19,6 +21,7 @@ const ShopItem = ({shopData}) => {
         activities} = restaurant
     return (
         <div className="item-wrap">
+        <Link to={`/shop/${id}`}>
             <div className="shop-item">
                 <div className="shop-img">
                     <img src={image_path} alt="shop"/>
@@ -74,6 +77,7 @@ const ShopItem = ({shopData}) => {
                 </div>
             </div>
             <ShopActivity activities={activities} recommend={recommend}/>
+            </Link>
         </div>)
 }
 export default ShopItem ;

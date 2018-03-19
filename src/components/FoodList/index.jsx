@@ -8,7 +8,8 @@ export default class FoodList extends Component{
         this.state = {showMore:false}
         this.handleClick = this.handleClick.bind(this)
     }
-    handleClick(){
+    handleClick(e){
+        e.preventDefault()
         const showMore = this.state.showMore
         this.setState({showMore:!showMore})
     }
