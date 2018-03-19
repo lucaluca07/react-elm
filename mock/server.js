@@ -127,6 +127,25 @@ router.get('/api/shopping/search',async ctx => {
   ctx.body = searchResult_1
 })
 
+let menu = require('./shopDetail/menu')
+router.get('/api/shopping/shop/menu',async ctx => {
+  const {shop_id} = ctx.query
+  ctx.body = menu
+})
+
+let shopinfo = require('./shopDetail/shopinfo')
+router.get('/api/shopping/shopinfo/:shop_id',async ctx => {
+  const {shop_id} = ctx.params
+  ctx.body = shopinfo
+})
+
+let rating = require('./shopDetail/rating')
+router.get('/api/shopping/shop/ratings/:shop_id',async ctx => {
+  const {shop_id} = ctx.params
+  const {offset, limit} = ctx.query
+  ctx.body = rating
+})
+
 // //提交评论
 // router.post("/api/submitAssess", async ctx => {
 //   let postData = await parsePostData(ctx);

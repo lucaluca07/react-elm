@@ -22,3 +22,7 @@ export const GET_CATEGORY = "GET_CATEGORY"
 export const SET_SIFT_FACTORS = "SET_SIFT_FACTORS"
 export const SET_MAIN_CATEGORY_ID = "SET_MAIN_CATEGORY_ID"
 export const CLEAR_CATEGORY = "CLEAR_CATEGORY"
+
+export const GET_MENU = "GET_MENU"
+export const GET_SHOPINFO = "GET_SHOPINFO"
+export const GET_RATING = "GET_RATING"

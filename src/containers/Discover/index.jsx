@@ -1,12 +1,13 @@
 import React,{Component} from 'react';
-import RatingStar from '../../components/RatingStar'
+import DevelopmengPending from '../../components/DevelopmentPending'
+import Header from '../../components/Header'
 
 export default class Discover extends Component{
 
     render(){
         return(<div>
-                discover
-                <RatingStar rate={4.5} scale={1}/>
+                <Header title="发现"/>
+                <DevelopmengPending/>
             </div>
         )
     }
