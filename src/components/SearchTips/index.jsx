@@ -13,7 +13,7 @@ export default class SearchTips extends Component{
                     <img className="shop-img" src="https://fuss10.elemecdn.com/a/a9/e6089ce3150798b80b44cb622ff95png.png?imageMogr/format/webp/thumbnail/48x/" alt="ele"/>
                     <div className="shop-info">
                         <div className="shop-name">
-                            <p dangerouslySetInnerHTML={{__html:val.name.split(search_word).join(`<span className="keyword">${search_word}</span>`)}}></p>
+                            <p dangerouslySetInnerHTML={{__html:val.name.split(search_word).join(`<span class="keyword">${search_word}</span>`)}}></p>
                             <span className="tag">减</span>
                         </div>
                         <div className="rate">评价4.8</div>
@@ -21,7 +21,7 @@ export default class SearchTips extends Component{
                 </div>))}
                 {words.map((val,index) => (<div key={index} className="word-tips">
                     <i className="iconfont icon-sousuoxiao"></i>
-                    <p className="word" dangerouslySetInnerHTML={{__html:val.split(search_word).join(`<span className="keyword">${search_word}</span>`)}}></p>
+                    <p className="word" dangerouslySetInnerHTML={{__html:val.split(search_word).join(`<span class="keyword">${search_word}</span>`)}}></p>
                 </div>))
                 }
                 

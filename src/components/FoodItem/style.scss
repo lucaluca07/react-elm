@@ -30,6 +30,11 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        .food-item-name{
+            .highlights{
+                color:#0af;
+            }
+        }
         .food-item-price {
             .price {
                 font-size: 28px;

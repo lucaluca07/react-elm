@@ -2,16 +2,25 @@ import React from 'react'
 import './style.scss'
 import getImgSrc from '../../util/getImgSrc'
 
-const FoodItem = ({data}) => {
+const showHighlights = (ele,name) => {
+    let title 
+    ele.forEach(element => {
+        title = name.split(element).join(`<span class='highlights'>${element}</span>`)
+    })
+    return title
+}
+
+const FoodItem = ({data,highlights}) => {
     const {name,month_sales,price,satisfy_rate,image_path,activities,original_price} = data
+    const innerHtml =  showHighlights(highlights,name)
     return(
         <div className="food-item">
             <div className="img-wrap">
                 <img src={getImgSrc(image_path)} alt="food"/>
             </div>
             <div className="food-item-right">
-                <h4 className="food-item-name">
-                    {name}
+                <h4 className="food-item-name" 
+                    dangerouslySetInnerHTML={{__html: innerHtml}}>
                 </h4>
                 <div className="food-item-rate">
                     <span>月售{month_sales}份</span>&nbsp;

@@ -91,7 +91,7 @@ class SearchResult extends Component{
 
     render(){
         const keyword = this.splitSearch("keyword")
-        const {filterMore,categoryId,category,mainCategoryId,restaurant_with_foods,hasMore} = this.props
+        const {filterMore,categoryId,category,mainCategoryId,restaurant_with_foods,hasMore,highlights} = this.props
         console.log("restaurant_with_foods",restaurant_with_foods)
         const {delivery,activity,support_ids,cost} = this.state
         return(
@@ -122,7 +122,8 @@ class SearchResult extends Component{
                         ?<SearchResultList
                         loadNext={this.getSearchResult}
                         data={restaurant_with_foods}
-                        hasMore={hasMore}/>
+                        hasMore={hasMore}
+                        highlights={highlights}/>
                         :"没有数据"
                     :<Loadding/>}
             </div>
@@ -133,9 +134,8 @@ const mapStateToProps = (state) => {
     const {filterMore} = state.shop
     const {longitude,latitude} = state.location
     const {categoryId,category,mainCategoryId} = state.category
-    const {data} = state.search
+    const {data,highlights} = state.search
     const {restaurant_with_foods, offset, hasMore} = data
-    console.log(1111111,data)
     return {
         longitude,
         latitude,
@@ -145,7 +145,8 @@ const mapStateToProps = (state) => {
         filterMore,
         restaurant_with_foods,
         offset,
-        hasMore
+        hasMore,
+        highlights
     }
 }
 export default connect(mapStateToProps)(SearchResult)

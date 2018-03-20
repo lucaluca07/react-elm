@@ -12,32 +12,29 @@ const defaultState = {
 }
 const shopDetail = (state = defaultState,action) => {
     switch(action.type){
-        case actionTypes.GET_ENTRIES_DATA:
+        case actionTypes.GET_MENU:
             return {...state,
-                foodentry:action.foodentry,
-                activity:action.activity
+                menu:action.menu,
             }
-        case actionTypes.GET_RESTAURANTS:
+        case actionTypes.GET_RATING:
             return {...state,
-                result:{
-                    restaurants:[...state.result.restaurants,...action.restaurants],
+                rating:{
+                    data:[...state.rating.data,...action.rating],
                     offset:action.offset,
                     hasMore:action.hasMore
                 },
             }
-        case actionTypes.CLEAR_RESTAURANTS:
+        case actionTypes.GET_SHOPINFO:
             return {...state,
-                result:{
-                    ...state.result,
+                shopinfo:action.shopinfo
+            }
+        case actionTypes.CLEAR_RATING:
+            return{...state,
+                rating:{
+                    data:[],
                     offset:0,
-                    restaurants:false,
                     hasMore:false
                 }
-                
-            }
-        case actionTypes.GET_FILTER_BAR:
-            return{...state,
-                filterMore:action.filterMore
             }
         default:
             return state

@@ -6,7 +6,7 @@ import getImgSrc from '../../util/getImgSrc'
 
 class ShopItem extends Component {
     render(){
-        const data = this.props.data
+        const {data,highlights} = this.props
         const {foods, restaurant} = data
         const {name,
             id,
@@ -50,7 +50,7 @@ class ShopItem extends Component {
                         </div>
                     </div>
                 </div>
-                <FoodList data={foods}/>
+                <FoodList data={foods} highlights={highlights}/>
                 </Link>
             </div>) 
     }
