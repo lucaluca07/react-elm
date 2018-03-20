@@ -29,8 +29,18 @@ export const ShopTombstone = () => (
     </div>
 )
 
-export const ShopDetailTombstone = () => (
-    <div className="shop-detail-tombstone">
+export class ShopDetailTombstone extends React.Component{
+    componentDidMount(){
+        document.body.style.overflow = "hidden"
+        document.getElementsByTagName('body')[0].style.height = window.innerHeight+'px'
+    }
+    componentWillMount(){
+        document.body.style.overflow = "visible"
+        document.getElementsByTagName('body')[0].style.height = "auto"
+    }
+    render(){
+        return(
+<div className="shop-detail-tombstone">
         <div className="shop-header">
             <div className="shop-header-top"></div>
             <div className="shop-header-center">
@@ -114,4 +124,6 @@ export const ShopDetailTombstone = () => (
         </div>
         <div className="cart"></div>
     </div>
-)
+        )
+    }
+} 

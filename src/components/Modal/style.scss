@@ -6,9 +6,12 @@
     align-items: center;
     justify-content: center;
     background: rgba(0,0,0,0.5);
+    z-index:99;
     .content{
-        height: 500px;
-        width: 400px;
-        background: #fff;
+        .tips{
+            font-size: 32px;
+            text-align: center;
+            color: #333;
+        }
     }
 }

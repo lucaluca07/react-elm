@@ -26,7 +26,7 @@ class ShopDetail extends Component{
         return(
             <div>
                 <Modal/>
-                {/* <ShopDetailTombstone/> */}
+                <ShopDetailTombstone/>
             </div>)
     }
 }
