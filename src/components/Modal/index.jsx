@@ -37,8 +37,8 @@ export default class Modal extends Component{
     handleTouchStart(e){
         e.preventDefault();
         e.nativeEvent.stopImmediatePropagation();
-        console.log("start", e.touches[0].pageY)
-        this.setState({startY:e.touches[0].pageY,showTips:true})
+        // console.log("start", e.touches[0].pageY)
+        this.setState({startY:e.touches[0].pageY})
     }
     handleTouchMove(e){
         e.preventDefault()
@@ -52,7 +52,7 @@ export default class Modal extends Component{
         }else{
             this.setState({tipsText:"下拉关闭"})
         }
-        this.setState({top:move/2})
+        this.setState({top:move/2,showTips:true})
     }
     handleTouchEnd(e){
         e.preventDefault();

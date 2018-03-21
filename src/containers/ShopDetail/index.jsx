@@ -2,7 +2,8 @@ import React,{Component} from 'react'
 import {connect} from 'react-redux'
 // import {ShopDetailTombstone} from '../../components/Tombstone'
 import ShopDetailHeader from '../../components/ShopDetailHeader'
-// import Modal from '../../components/Modal'
+import ShopDetailTab from '../../components/ShopDetailTab'
+import ShopMenu from '../../components/ShopMenu'
 import {getMenu, getShopInfo, getRating, clearRating} from '../../actions/shopDetail'
 
 class ShopDetail extends Component{
@@ -24,9 +25,12 @@ class ShopDetail extends Component{
         dispatch(await getRating(shopId,offset,8,longitude, latitude))
     }
     render(){
+        const {menu} = this.props
         return(
-            <div>
+            <div style={{display:"flex",flexDirection: "column"}}>
                 <ShopDetailHeader/>
+                <ShopDetailTab/>
+                {menu&&<ShopMenu data={menu}/>}
             </div>)
     }
 }
