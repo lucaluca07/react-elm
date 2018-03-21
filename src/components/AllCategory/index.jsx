@@ -6,10 +6,12 @@ import getImgSrc from '../../util/getImgSrc'
 export default class AllCategory extends Component{
     componentDidMount(){
         document.body.style.overflow = "hidden"
-        document.getElementsByTagName('body')[0].style.height = window.innerHeight+'px'
+        document.body.style.position = "relative"
+        document.getElementsByTagName('body')[0].style.height = window.screen.height+'px'
     }
     componentWillUnmount(){
         document.body.style.overflow = "visible"
+        document.body.style.position = ""
         document.getElementsByTagName('body')[0].style.height = "auto"
     }
     // getSrc(src){

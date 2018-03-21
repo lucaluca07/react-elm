@@ -1,7 +1,8 @@
 import React,{Component} from 'react'
 import {connect} from 'react-redux'
-import {ShopDetailTombstone} from '../../components/Tombstone'
-import Modal from '../../components/Modal'
+// import {ShopDetailTombstone} from '../../components/Tombstone'
+import ShopDetailHeader from '../../components/ShopDetailHeader'
+// import Modal from '../../components/Modal'
 import {getMenu, getShopInfo, getRating, clearRating} from '../../actions/shopDetail'
 
 class ShopDetail extends Component{
@@ -25,8 +26,7 @@ class ShopDetail extends Component{
     render(){
         return(
             <div>
-                <Modal/>
-                <ShopDetailTombstone/>
+                <ShopDetailHeader/>
             </div>)
     }
 }

@@ -47,8 +47,10 @@ export default class Modal extends Component{
         const startY = this.state.startY
         const moveY = e.touches[0].pageY
         const move = moveY - startY
-        if(move > displacement){
+        if(move/2 > displacement){
             this.setState({tipsText:"释放关闭"})
+        }else{
+            this.setState({tipsText:"下拉关闭"})
         }
         this.setState({top:move/2})
     }

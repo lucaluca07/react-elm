@@ -18,6 +18,7 @@ export default class FilterBar extends Component{
     handleHiddenFilter(){
         this.setState({showFliter:false})
         document.body.style.overflow = "visible"
+        document.body.style.position = ""
         document.getElementsByTagName('body')[0].style.height = "auto"
     }
     handleCilck(show){
@@ -27,6 +28,7 @@ export default class FilterBar extends Component{
         }else{
             this.setState({showFliter:show})
             document.body.style.overflow = "hidden"
+            document.body.style.position = "relative"
             document.getElementsByTagName('body')[0].style.height = window.innerHeight+'px'
         }
     }

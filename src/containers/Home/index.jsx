@@ -6,6 +6,7 @@ import Activity from '../../components/Activity'
 import ShopList from '../../components/ShopList'
 import Footer from '../../components/Footer'
 import ShopListTitle from '../../components/ShopListTitle'
+import Loadding from '../../components/Loadding'
 import {FoodentryTombstone} from '../../components/Tombstone'
 import {getEntries,getRestaurants,clearRestaurants} from '../../actions/home'
 import {setLongitudeAndLatitude,getLocationInfo,setCurrentAddress} from '../../actions/location'
@@ -83,7 +84,7 @@ class Home extends Component {
             ?<ShopList loadNext={this.getShopList.bind(this)} hasMore={hasMore} data={restaurants}/>
             :"暂无数据"
             }           
-          </div>:""} 
+          </div>:<Loadding/>} 
         <Footer/>
       </div>
     );

@@ -32,98 +32,100 @@ export const ShopTombstone = () => (
 export class ShopDetailTombstone extends React.Component{
     componentDidMount(){
         document.body.style.overflow = "hidden"
+        document.body.style.position = "relative"
         document.getElementsByTagName('body')[0].style.height = window.innerHeight+'px'
     }
     componentWillMount(){
         document.body.style.overflow = "visible"
+        document.body.style.position = ""
         document.getElementsByTagName('body')[0].style.height = "auto"
     }
     render(){
         return(
-<div className="shop-detail-tombstone">
-        <div className="shop-header">
-            <div className="shop-header-top"></div>
-            <div className="shop-header-center">
-                <div className="shop-img"></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div className="shop-header-bottom">
-                <div></div>
-            </div>
-        </div>
-        <ul className="shop-tab">
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-        <div className="menu-view">
-            <ul className="main-menu">
-                <li>
-                    <div></div>
-                </li>
-                <li>
-                    <div></div>
-                </li>
-                <li>
-                    <div></div>
-                </li>
-                <li>
-                    <div></div>
-                </li>
-                <li>
-                    <div></div>
-                </li>
-                <li>
-                    <div></div>
-                </li>
-                <li>
-                    <div></div>
-                </li>
-                <li>
-                    <div></div>
-                </li>
-            </ul>
-            <div className="sub-menu">
-            <div className="sub-list">
-            <div className="sub-item">
-                    <div className="food-img"></div>
-                    <div className="food-info">
+            <div className="shop-detail-tombstone">
+                <div className="shop-header">
+                    <div className="shop-header-top"></div>
+                    <div className="shop-header-center">
+                        <div className="shop-img"></div>
                         <div></div>
                         <div></div>
                         <div></div>
                     </div>
-                </div>
-                <div className="sub-item">
-                    <div className="food-img"></div>
-                    <div className="food-info">
-                        <div></div>
-                        <div></div>
+                    <div className="shop-header-bottom">
                         <div></div>
                     </div>
                 </div>
-                <div className="sub-item">
-                    <div className="food-img"></div>
-                    <div className="food-info">
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                <ul className="shop-tab">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <div className="menu-view">
+                    <ul className="main-menu">
+                        <li>
+                            <div></div>
+                        </li>
+                        <li>
+                            <div></div>
+                        </li>
+                        <li>
+                            <div></div>
+                        </li>
+                        <li>
+                            <div></div>
+                        </li>
+                        <li>
+                            <div></div>
+                        </li>
+                        <li>
+                            <div></div>
+                        </li>
+                        <li>
+                            <div></div>
+                        </li>
+                        <li>
+                            <div></div>
+                        </li>
+                    </ul>
+                    <div className="sub-menu">
+                    <div className="sub-list">
+                    <div className="sub-item">
+                            <div className="food-img"></div>
+                            <div className="food-info">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div className="sub-item">
+                            <div className="food-img"></div>
+                            <div className="food-info">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div className="sub-item">
+                            <div className="food-img"></div>
+                            <div className="food-info">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div className="sub-item">
+                            <div className="food-img"></div>
+                            <div className="food-info">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
                     </div>
                 </div>
-                <div className="sub-item">
-                    <div className="food-img"></div>
-                    <div className="food-info">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
+                <div className="cart"></div>
             </div>
-            </div>
-        </div>
-        <div className="cart"></div>
-    </div>
         )
     }
 } 
