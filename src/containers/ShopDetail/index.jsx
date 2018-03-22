@@ -43,9 +43,15 @@ class ShopDetail extends Component {
       <div style={{ display: "flex", flexDirection: "column" }}>
         <ShopDetailHeader />
         <ShopDetailTab onClick={this.setTabIndex} />
-        {tabIndex === 0 && menu && <ShopMenu data={menu} />}
-        {tabIndex === 1 && <ShopRating />}
-        {tabIndex === 3 && <ShopInfo />}
+        {tabIndex === 0 && menu &&
+          <ShopMenu data={menu} />
+        }
+        {tabIndex === 1 &&
+          <ShopRating />
+        }
+        {tabIndex === 2 &&
+          <ShopInfo />
+        }
       </div>
     );
   }

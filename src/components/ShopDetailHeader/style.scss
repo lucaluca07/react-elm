@@ -31,7 +31,6 @@
         max-width: 500px;
       }
     }
-
     .shop-info {
       display: flex;
       justify-content: center;
@@ -50,12 +49,60 @@
     display: flex;
     justify-content: space-between;
     padding: 5px 16px;
-    border: 1px solid #eee; /*no*/
+    border: 1px solid #eee;
+    /*no*/
   }
   .shopinfo-modal {
     padding: 50px;
     background: #fff;
     border-radius: 10px;
     width: 600px;
+    color: #333;
+    .title {
+      font-size: 40px;
+      text-align: center;
+    }
+    .info-list {
+      display: flex;
+      text-align: center;
+      justify-content: space-between;
+      margin-top: 38px;
+      .item {
+        h3 {
+          font-size: 30px;
+          margin-bottom: 12px;
+        }
+        p {
+          color: #999;
+        }
+      }
+    }
+    .modal-notice {
+      margin-top: 25px;
+      .title {
+        color: #999;
+        text-align: center;
+        font-size: 24px;
+      }
+      .title:before,
+      .title:after {
+        content: '';
+        position: absolute;
+        top: 52%;
+        background: #999;
+        width: 5%;
+        height: 2px;
+      }
+      .title:before {
+        left: 40%;
+      }
+      .title:after {
+        right: 40%;
+      }
+      .content {
+        margin-top: 15px;
+        color: #666;
+      }
+    }
   }
 }

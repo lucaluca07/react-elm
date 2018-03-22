@@ -65,17 +65,32 @@ export default class ShopDetailHeader extends React.Component {
         {showModal && (
           <Modal callback={this.handleToggleShowModal} displacement={50}>
             <div className="shopinfo-modal">
-              <h3>沙拉谷物碗</h3>
-              <div>
-                <div>5 评分</div>
-                <div>月售111单</div>
-                <div>蜂鸟专送</div>
-                <div>约25分钟</div>
-                <div>距离1.3km</div>
-              </div>
-              <div>
-                <h4>公告</h4>
-                <p>
+              <h3 className="title">沙拉谷物碗</h3>
+              <ul className="info-list">
+                <li className="item">
+                  <h3>5</h3>
+                  <p>评分</p>
+                </li>
+                <li className="item">
+                  <h3>155</h3>
+                  <p>月售</p>
+                </li>
+                <li className="item">
+                  <h3>蜂鸟专送</h3>
+                  <p>约20分钟</p>
+                </li>
+                <li className="item">
+                  <h3>5元</h3>
+                  <p>配送费</p>
+                </li>
+                <li className="item">
+                  <h3>122m</h3>
+                  <p>距离</p>
+                </li>
+              </ul>
+              <div className="modal-notice">
+                <h4 className="title">公告</h4>
+                <p className="content">
                   【沙绿轻食】专业研发，健康均衡配比
                   让你做一个轻体无负担瘦瘦的吃货 暂不支持自选搭配和备注哟～
                   有关发票、VIP优惠等其他问题，可联系公号【沙绿轻食】在线客服

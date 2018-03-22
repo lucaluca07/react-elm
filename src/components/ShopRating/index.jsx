@@ -1,49 +1,34 @@
-import React,{Component} from 'react'
+import React, { Component } from 'react'
+import RatingList from '../RatingList'
+import './style.scss'
 
-export default class ShopRating extends Component{
+export default class ShopRating extends Component {
 
-    render(){
-        return(
-            <div>
-                <div>
-                    <div>
-                        <div>5.0</div>
-                        <div>综合评价</div>
-                        <div>高于周边商家8.2%</div>
+    render() {
+        return (
+            <div className="shop-rating">
+                <div className="overview">
+                    <div className="overview-left">
+                        <strong className="overview-rating">5.0</strong>
+                        <p className="overview-text">综合评价</p>
+                        <p className="overview-left-bottom">高于周边商家8.2%</p>
                     </div>
-                    <div>
-                        <div>服务态度 5.0</div>
-                        <div>菜品评价 4.8</div>
-                        <div>送达时间 31分钟</div>
+                    <div className="overview-right">
+                        <div className="overview-right-item">
+                            <span>服务态度</span>
+                            5.0
+                        </div>
+                        <div className="overview-right-item">
+                            <span>菜品评价</span>
+                            4.8
+                        </div>
+                        <div className="overview-right-item">
+                            <span>送达时间</span>
+                            31分钟
+                        </div>
                     </div>
                 </div>
-                <div>头像</div>
-                <div>
-                    <ul>
-                        <li>全部</li>
-                        <li>满意</li>
-                        <li>不满意</li>
-                        <li>有图</li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <div></div>
-                            <div>
-                                <div>用户名</div>
-                                <div>4星</div>
-                                <div>这是评论</div>
-                                <ul>
-                                    <li>这是图</li>
-                                    <li>这是图</li>
-                                    <li>这是图</li>
-                                </ul>
-                                <ul>
-                                    <li>这是商品名</li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                <RatingList />
             </div>
         )
     }
