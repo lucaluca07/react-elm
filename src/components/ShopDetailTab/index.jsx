@@ -8,6 +8,7 @@ export default class ShopDetailTab extends Component {
   }
   handleClick(index) {
     this.setState({ activityInx: index });
+    this.props.onClick(index);
   }
   render() {
     const tabArr = ["点餐", "评价", "商家"];
