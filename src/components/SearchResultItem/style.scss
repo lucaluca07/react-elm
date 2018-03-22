@@ -1,69 +1,69 @@
 @keyframes fadeIn {
-    from {
-        opacity: 0
-    }
-    to {
-        opacity: 1
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .search-result-item {
-    border-bottom: 2px solid #f1efef;
-    a{
-        color:#333;
-        text-decoration: none;
+  border-bottom: 2px solid #f1efef;
+  a {
+    color: #333;
+    text-decoration: none;
+  }
+  .result-item {
+    display: flex;
+    color: #666;
+    padding: 20px;
+    border-bottom: 1px solid hsla(0, 0%, 89%, 0.5);
+    .result-img {
+      width: 70px;
+      height: 70px;
+      margin-right: 20px;
+      border: 2px solid rgb(211, 209, 209);
+      img {
+        width: 70px;
+        height: 70px;
+        opacity: 0;
+        animation-name: fadeIn;
+        animation-duration: 0.6s;
+        animation-fill-mode: forwards;
+      }
     }
-    .result-item {
+    .result-info {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: 24px;
+      .result-title {
         display: flex;
-        color: #666;
-        padding: 20px;
-        border-bottom: 1px solid hsla(0, 0%, 89%, .5);
-        .result-img {
-            width: 70px;
-            height: 70px;
-            margin-right: 20px;
-            border: 2px solid rgb(211, 209, 209);
-            img {
-                width: 70px;
-                height: 70px;
-                opacity: 0;
-                animation-name: fadeIn;
-                animation-duration: .6s;
-                animation-fill-mode: forwards;
-            }
+        justify-content: space-between;
+        align-items: center;
+        .title {
+          font-size: 28px;
+          font-weight: 700;
+          color: #333;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
-        .result-info {
-            display: flex;
-            flex: 1;
-            flex-direction: column;
-            justify-content: space-between;
-            font-size: 24px;
-            .result-title {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                .title {
-                    font-size: 28px;
-                    font-weight: 700;
-                    color: #333;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                }
-                .top-right {
-                    .delivery {
-                        padding: 0 5px;
-                        transform: scale(0.8)
-                    }
-                }
-            }
-            .result-rate {
-                display: flex;
-                justify-content: space-between;
-                .result-rate-left {
-                    display: flex; // align-items: center;
-                }
-            }
+        .top-right {
+          .delivery {
+            padding: 0 5px;
+            transform: scale(0.8);
+          }
         }
+      }
+      .result-rate {
+        display: flex;
+        justify-content: space-between;
+        .result-rate-left {
+          display: flex; // align-items: center;
+        }
+      }
     }
+  }
 }

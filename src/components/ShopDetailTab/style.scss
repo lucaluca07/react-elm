@@ -1,23 +1,23 @@
-.shop-detail-tab{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 80px;
-    border-bottom: 1px solid #ddd;/*no*/ 
-    position: "sticky";
-    top: 0;
-    z-index: 100;
-    background: #fff;
-    li{
-        font-size: 28px;
-        color:#666;
-        font-weight:300;
-        height: 78px;
-        line-height: 78px;
-    }
-    .activity-tab{
-        color:#333;
-        font-weight:600;
-        border-bottom: 2px solid #2395ff;/*no*/ 
-    }
+.shop-detail-tab {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  border-bottom: 1px solid #ddd; /*no*/
+  position: "sticky";
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  li {
+    font-size: 28px;
+    color: #666;
+    font-weight: 300;
+    height: 78px;
+    line-height: 78px;
+  }
+  .activity-tab {
+    color: #333;
+    font-weight: 600;
+    border-bottom: 2px solid #2395ff; /*no*/
+  }
 }

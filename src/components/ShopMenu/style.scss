@@ -1,57 +1,57 @@
 $gary1: #efeeec;
 $gary2: #f7f6f5;
-.shop-menu-wrap{
-    border-top: 1px solid $gary1;/*no*/
-    flex:1;
-    .main{
-        height: 100%;
-        overflow: hidden;
+.shop-menu-wrap {
+  border-top: 1px solid $gary1; /*no*/
+  flex: 1;
+  .main {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+  }
+  .shop-main-menu {
+    width: 170px;
+    overflow: auto;
+    .main-menu-item {
+      background: $gary2;
+      border-bottom: 1px solid #e8e8e8; /*no*/
+      padding: 35px 15px;
+      line-height: 1.2;
+    }
+  }
+  .shop-sub-menu {
+    flex: 1;
+    margin-right: 15px;
+    overflow: auto;
+    .shop-sub-list {
+      .shop-sub-item {
         display: flex;
-    }
-    .shop-main-menu{
-        width: 170px;
-        overflow: auto;
-        .main-menu-item{
-            background: $gary2;
-            border-bottom:1px solid #e8e8e8;/*no*/
-            padding: 35px 15px;
-            line-height: 1.2;
+        height: 120px;
+        padding: 10px 20px 30px;
+        .food-img {
+          height: 120px;
+          width: 120px;
+          background: $gary1;
+          margin-right: 20px;
         }
-    }
-    .shop-sub-menu{
-        flex:1;
-        margin-right:15px; 
-        overflow: auto;
-        .shop-sub-list{
-            .shop-sub-item{
-                display: flex;
-                height: 120px;
-                padding: 10px 20px 30px;
-                .food-img{
-                    height: 120px;
-                    width: 120px;
-                    background: $gary1;
-                    margin-right: 20px;
-                }
-                .food-info{
-                    flex:1;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    div:nth-child(1){
-                        height: 26px;
-                        background: $gary1;
-                    }
-                    div:nth-child(2){
-                        height: 20px;
-                        background: $gary1;
-                    }
-                    div:nth-child(3){
-                        height: 35px;
-                        background: $gary1;
-                    }
-                }
-            }
+        .food-info {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          div:nth-child(1) {
+            height: 26px;
+            background: $gary1;
+          }
+          div:nth-child(2) {
+            height: 20px;
+            background: $gary1;
+          }
+          div:nth-child(3) {
+            height: 35px;
+            background: $gary1;
+          }
         }
+      }
     }
+  }
 }

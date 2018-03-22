@@ -1,101 +1,101 @@
 @keyframes fadeIn {
-    from {
-        opacity: 0
-    }
-    to {
-        opacity: 1
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .item-wrap {
-    border-bottom: 2px solid #f1efef;
-    padding: 20px;
-    a{
-        text-decoration: none;
+  border-bottom: 2px solid #f1efef;
+  padding: 20px;
+  a {
+    text-decoration: none;
+  }
+  .shop-item {
+    display: flex;
+    color: #666;
+    .shop-img {
+      width: 128px;
+      height: 128px;
+      margin-right: 20px;
+      border: 2px solid rgb(211, 209, 209);
+      img {
+        width: 128px;
+        height: 128px;
+        opacity: 0;
+        animation-name: fadeIn;
+        animation-duration: 0.6s;
+        animation-fill-mode: forwards;
+      }
     }
-    .shop-item {
+    .shop-info {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: 24px;
+      .shop-title {
         display: flex;
-        color: #666;
-        .shop-img {
-            width: 128px;
-            height: 128px;
-            margin-right: 20px;
-            border: 2px solid rgb(211, 209, 209);
-            img {
-                width: 128px;
-                height: 128px;
-                opacity: 0;
-                animation-name: fadeIn;
-                animation-duration: .6s;
-                animation-fill-mode: forwards;
-            }
+        justify-content: space-between;
+        .title {
+          font-size: 28px;
+          font-weight: 700;
+          color: #333;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
-        .shop-info {
-            display: flex;
-            flex: 1;
-            flex-direction: column;
-            justify-content: space-between;
-            font-size: 24px;
-            .shop-title {
-                display: flex;
-                justify-content: space-between;
-                .title {
-                    font-size: 28px;
-                    font-weight: 700;
-                    color: #333;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                }
-                .top-right {
-                    display: flex;
-                    .ad {
-                        height: 32px;
-                        border: 2px solid #dbd8d8;
-                        text-align: center;
-                        color: rgb(177, 176, 176);
-                        transform: scale(0.7);
-                        margin: 0 -4px;
-                    }
-                    .support {
-                        height: 32px;
-                        width: 32px;
-                        border: 2px solid #dbd8d8;
-                        text-align: center;
-                        margin: 0 -4px;
-                        transform: scale(0.7)
-                    }
-                }
-            }
-            .shop-rate {
-                display: flex;
-                justify-content: space-between;
-                .shop-rate-left {
-                    display: flex; // align-items: center;
-                    .star {
-                        margin: -7px 0 0 -7px;
-                    }
-                    .grade {
-                        line-height: 1.2
-                    }
-                    .sell-number {
-                        line-height: 1.2
-                    }
-                }
-                .shop-rate-right {
-                    display: flex;
-                    .delivery {
-                        height: 32px;
-                        padding: 0 6px;
-                        margin: -4px -14px 0 0;
-                        transform: scale(0.7)
-                    }
-                }
-            }
-            .distribution-info {
-                display: flex;
-                justify-content: space-between;
-            }
+        .top-right {
+          display: flex;
+          .ad {
+            height: 32px;
+            border: 2px solid #dbd8d8;
+            text-align: center;
+            color: rgb(177, 176, 176);
+            transform: scale(0.7);
+            margin: 0 -4px;
+          }
+          .support {
+            height: 32px;
+            width: 32px;
+            border: 2px solid #dbd8d8;
+            text-align: center;
+            margin: 0 -4px;
+            transform: scale(0.7);
+          }
         }
+      }
+      .shop-rate {
+        display: flex;
+        justify-content: space-between;
+        .shop-rate-left {
+          display: flex; // align-items: center;
+          .star {
+            margin: -7px 0 0 -7px;
+          }
+          .grade {
+            line-height: 1.2;
+          }
+          .sell-number {
+            line-height: 1.2;
+          }
+        }
+        .shop-rate-right {
+          display: flex;
+          .delivery {
+            height: 32px;
+            padding: 0 6px;
+            margin: -4px -14px 0 0;
+            transform: scale(0.7);
+          }
+        }
+      }
+      .distribution-info {
+        display: flex;
+        justify-content: space-between;
+      }
     }
+  }
 }

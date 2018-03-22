@@ -1,34 +1,38 @@
-@keyframes rotate{
-	from{transform:rotate(0deg)}
-	to{transform:rotate(360deg)}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.current-location{
-    .title{
-        padding: 20px 30px;
-        color:#666;
-        font-weight: normal;
-        line-height: 2;
+.current-location {
+  .title {
+    padding: 20px 30px;
+    color: #666;
+    font-weight: normal;
+    line-height: 2;
+  }
+  .location {
+    padding: 30px 30px;
+    display: flex;
+    background: #fff;
+    font-size: 30px;
+    justify-content: space-between;
+    .refresh-location {
+      font-size: 28px;
+      color: #2395ff;
+      font-weight: normal;
+      display: flex;
+      .icon-ditudingwei:before {
+        display: inline-block;
+        text-align: center;
+        line-height: 1.2;
+      }
+      .rotate-icon:before {
+        animation: rotate infinite 2s linear;
+      }
     }
-    .location{
-        padding: 30px 30px;
-        display: flex;
-        background: #fff;
-        font-size: 30px;
-        justify-content: space-between;
-        .refresh-location{
-            font-size: 28px;
-            color:#2395ff;
-            font-weight: normal;
-            display: flex;
-            .icon-ditudingwei:before{
-                display: inline-block;
-                text-align: center;
-                line-height: 1.2;
-            }
-            .rotate-icon:before{
-                animation: rotate infinite 2s linear;
-            }
-        }
-    }
+  }
 }

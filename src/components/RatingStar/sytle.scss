@@ -1,17 +1,17 @@
-.rating-star{
-    position: relative;
-    .favor{
-        display: flex;
-        top: 0;
-        left: 0;
-    }
-    .favor-fill{
-        display: flex;
-        position: absolute;
-        top: 0;
-        left: 0;
-        color:#ffc30c;
-        overflow: hidden;
-        z-index: 2;
-    }
+.rating-star {
+  position: relative;
+  .favor {
+    display: flex;
+    top: 0;
+    left: 0;
+  }
+  .favor-fill {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ffc30c;
+    overflow: hidden;
+    z-index: 2;
+  }
 }

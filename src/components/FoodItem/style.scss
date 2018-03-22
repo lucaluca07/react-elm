@@ -1,54 +1,54 @@
 @keyframes fadeIn {
-    from {
-        opacity: 0
-    }
-    to {
-        opacity: 1
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .food-item {
+  display: flex;
+  padding: 24px 0;
+  border-bottom: 1px solid hsla(0, 0%, 89%, 0.5);
+  color: #333;
+  .img-wrap {
+    height: 128px;
+    width: 128px;
+    margin-right: 16px;
+    img {
+      height: 128px;
+      width: 128px;
+      opacity: 0;
+      animation-name: fadeIn;
+      animation-duration: 0.6s;
+      animation-fill-mode: forwards;
+    }
+  }
+  .food-item-right {
+    flex: 1;
     display: flex;
-    padding: 24px 0;
-    border-bottom: 1px solid hsla(0, 0%, 89%, .5);
-    color:#333;
-    .img-wrap {
-        height: 128px;
-        width: 128px;
-        margin-right: 16px;
-        img {
-            height: 128px;
-            width: 128px;
-            opacity: 0;
-            animation-name: fadeIn;
-            animation-duration: .6s;
-            animation-fill-mode: forwards;
-        }
+    flex-direction: column;
+    justify-content: space-between;
+    .food-item-name {
+      .highlights {
+        color: #0af;
+      }
     }
-    .food-item-right {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        .food-item-name{
-            .highlights{
-                color:#0af;
-            }
-        }
-        .food-item-price {
-            .price {
-                font-size: 28px;
-                color:#ff5339;
-            }
-            .old-price {
-                text-decoration: line-through;
-                color:#666;
-            }
-            .sale-tag {
-                display: inline-block;
-                padding: 0 5px;
-                transform: scale(0.7)
-            }
-        }
+    .food-item-price {
+      .price {
+        font-size: 28px;
+        color: #ff5339;
+      }
+      .old-price {
+        text-decoration: line-through;
+        color: #666;
+      }
+      .sale-tag {
+        display: inline-block;
+        padding: 0 5px;
+        transform: scale(0.7);
+      }
     }
+  }
 }
