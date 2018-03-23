@@ -2,6 +2,8 @@ import React from "react";
 import "./style.scss";
 import Modal from "../Modal";
 import RatingStar from "../RatingStar";
+import ActivitySheet from "../ActivitySheet";
+import ActivityItem from "../ActivityItem";
 
 export default class ShopDetailHeader extends React.Component {
   constructor() {
@@ -100,14 +102,19 @@ export default class ShopDetailHeader extends React.Component {
           </Modal>
         )}
         {showActivity && (
-          <div>
-            <ul>
-              <li>1</li>
-              <li>1</li>
-              <li>1</li>
-              <li>1</li>
-            </ul>
-          </div>
+          <ActivitySheet>
+            <div>
+              <div className="shop-activity-item" key={0}>
+                <span
+                  className="activity-icon"
+                  style={{ background: `#${'0af'}` }}
+                >
+                  {'测试'}
+                </span>
+                <span className="activity-descripition">{'满减'}</span>
+              </div>
+            </div>
+          </ActivitySheet>
         )}
       </div>
     );

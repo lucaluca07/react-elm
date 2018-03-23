@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.scss";
+import ShopActivityList from "../ShopActivityList";
 
 class ShopActivity extends React.Component {
   constructor() {
@@ -35,33 +36,11 @@ class ShopActivity extends React.Component {
           </div>
           <div className="activities">
             <div className="activity-list">
-              {showMore
-                ? activityList.map((val, index) => (
-                    <div className="shop-activity-item" key={index}>
-                      <span
-                        className="activity-icon"
-                        style={{ background: `#${val.icon_color}` }}
-                      >
-                        {val.icon_name}
-                      </span>
-                      <span className="activity-descripition">
-                        {val.description}
-                      </span>
-                    </div>
-                  ))
-                : activityList.slice(0, 2).map((val, index) => (
-                    <div className="shop-activity-item" key={index}>
-                      <span
-                        className="activity-icon"
-                        style={{ background: `#${val.icon_color}` }}
-                      >
-                        {val.icon_name}
-                      </span>
-                      <span className="activity-descripition">
-                        {val.description}
-                      </span>
-                    </div>
-                  ))}
+              {showMore ? (
+                <ShopActivityList data={activityList} />
+              ) : (
+                <ShopActivityList data={activityList.slice(0, 2)} />
+              )}
             </div>
             {activityList.length > 2 ? (
               <div

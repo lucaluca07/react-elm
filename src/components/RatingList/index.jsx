@@ -16,7 +16,10 @@ export default class RatingList extends Component {
                     <li className="rating-comment-item">
                         <div className="rating-comment-header"></div>
                         <div className="rating-comment-main">
-                            <div className="rating-comment-user">用户名</div>
+                            <div className="rating-comment-user">
+                                <span>用户名</span>
+                                <span className="rating-date">2018-03-26</span>
+                            </div>
                             <div>4星</div>
                             <div className="rating-comment">这是评论</div>
                             <ul className="rating-img-list">

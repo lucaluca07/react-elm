@@ -30,16 +30,22 @@ export default class ShopMenu extends Component {
             ))}
           </ul>
           <div className="shop-sub-menu">
-            {data.map((val, index) => (
+            {data.map((foods, index) => (
               <div className="shop-sub-list" key={index}>
-                <p>{val.description}</p>
-                {val.foods.map(val => (
+                <p>{foods.description}</p>
+                {foods.foods.map(val => (
                   <div key={val.virtual_food_id} className="shop-sub-item">
-                    <div className="food-img" />
+                    <div className="food-img">
+                      <img src={getImgSrc(val.image_path)} alt="food"/>
+                    </div>
                     <div className="food-info">
-                      <div />
-                      <div />
-                      <div />
+                      <div>{val.name}</div>
+                      <div>{val.description}</div>
+                      <div>
+                        <span>{val.month_sales}</span>
+                        <span>{val.satisfy_rate}%</span>
+                      </div>
+                      <div>{val.specfoods[0].price}</div>
                     </div>
                   </div>
                 ))}
