@@ -15,9 +15,21 @@
     .sheet-comment{
         padding: 40px 52px;
         background: #fff;
+        position: relative;
+        .close-tag{
+            position: absolute;
+            top:20px;
+            right: 20px;
+            height: 40px;
+            width: 40px;
+            .icon-close::before{
+                font-size: 40px;
+            }
+        }
         .sheet-title{
             text-align: center;
             margin-bottom: 30px;
+            font-size: 30px;
         }
         .sheet-list{
             height: 400px;

@@ -1,7 +1,9 @@
 $gary1: #efeeec;
 $gary2: #f7f6f5;
 .shop-menu-wrap {
-  border-top: 1px solid $gary1; /*no*/
+  border-top: 1px solid $gary1;/*no*/
+  -webkit-text-size-adjust:none;
+  color:#333;
   flex: 1;
   .main {
     height: 100%;
@@ -11,9 +13,13 @@ $gary2: #f7f6f5;
   .shop-main-menu {
     width: 170px;
     overflow: auto;
+    .activity-menu{
+      background: #fff !important;
+    }
     .main-menu-item {
       background: $gary2;
-      border-bottom: 1px solid #e8e8e8; /*no*/
+      border-bottom: 1px solid #e8e8e8;
+      /*no*/
       padding: 35px 15px;
       line-height: 1.2;
     }
@@ -23,36 +29,67 @@ $gary2: #f7f6f5;
     margin-right: 15px;
     overflow: auto;
     .shop-sub-list {
+      .name{
+        font-weight: 700;
+        margin-right: 5px;
+      }
       .shop-sub-item {
         display: flex;
-        height: 120px;
+        height: 152px;
         padding: 10px 20px 30px;
         .food-img {
           height: 152px;
           width: 152px;
           background: $gary1;
           margin-right: 20px;
-          img{
+          img {
             height: 152px;
             width: 152px;
           }
         }
-        .food-info {
+        .food-detail {
           flex: 1;
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
-          div:nth-child(1) {
-            height: 26px;
-            background: $gary1;
+          .food-name {
+            font-size: 28px;
+            font-weight: 700;
           }
-          div:nth-child(2) {
-            height: 20px;
-            background: $gary1;
+          .description {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color:#999;
+            max-width: 360px;
+            // display: inline-block;
+            transform: scale(0.75);
+            margin-left:-13%;
           }
-          div:nth-child(3) {
-            height: 35px;
-            background: $gary1;
+          .sales {
+            flex: 1;
+            margin: 6px 0;
+            display: inline-block;
+            transform: scale(0.85);
+            margin-left:-8.5%;
+          }
+          .price-wrap {
+            display: flex;
+            justify-content: space-between;
+            .price{
+              font-size: 28px;
+              color: #f60;
+            }
+            .add-cart-btn{
+              display: inline-block;
+              height: 42px;
+              width: 42px;
+              line-height: 40px;
+              text-align: center;
+              font-size: 40px;
+              color: #fff;
+              border-radius: 50%;
+              background: #0af;
+            }
           }
         }
       }

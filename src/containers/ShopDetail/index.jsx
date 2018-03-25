@@ -5,13 +5,15 @@ import ShopDetailHeader from "../../components/ShopDetailHeader";
 import ShopDetailTab from "../../components/ShopDetailTab";
 import ShopMenu from "../../components/ShopMenu";
 import ShopRating from "../../components/ShopRating";
-import ShopInfo from '../../components/ShopInfo'
+import ShopInfo from '../../components/ShopInfo';
+import Cart from '../../components/Cart'
 import {
   getMenu,
   getShopInfo,
   getRating,
   clearRating
 } from "../../actions/shopDetail";
+import {changeCart} from '../../actions/cart'
 
 class ShopDetail extends Component {
   constructor() {
@@ -27,6 +29,7 @@ class ShopDetail extends Component {
     dispatch(await getMenu(shopId, longitude, latitude));
     dispatch(await getShopInfo(shopId, longitude, latitude));
     this.getRatings();
+    dispatch(changeCart(shopId,1234,222))
   }
   async getRatings() {
     const { dispatch, longitude, latitude, offset } = this.props;
@@ -44,7 +47,11 @@ class ShopDetail extends Component {
         <ShopDetailHeader />
         <ShopDetailTab onClick={this.setTabIndex} />
         {tabIndex === 0 && menu &&
+        <div>
           <ShopMenu data={menu} />
+          <Cart/>
+        </div>
+          
         }
         {tabIndex === 1 &&
           <ShopRating />
@@ -52,6 +59,7 @@ class ShopDetail extends Component {
         {tabIndex === 2 &&
           <ShopInfo />
         }
+        
       </div>
     );
   }

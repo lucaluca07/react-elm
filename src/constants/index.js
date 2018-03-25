@@ -27,3 +27,6 @@ export const GET_MENU = "GET_MENU";
 export const GET_SHOPINFO = "GET_SHOPINFO";
 export const GET_RATING = "GET_RATING";
 export const CLEAR_RATING = "CLEAR_RATING";
+
+export const CHANGE_CART = "CHANGE_CART"
+export const CLEAR_CART = "CLEAR_CART"

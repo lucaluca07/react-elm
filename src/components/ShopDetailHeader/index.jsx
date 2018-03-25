@@ -3,7 +3,6 @@ import "./style.scss";
 import Modal from "../Modal";
 import RatingStar from "../RatingStar";
 import ActivitySheet from "../ActivitySheet";
-import ActivityItem from "../ActivityItem";
 
 export default class ShopDetailHeader extends React.Component {
   constructor() {
@@ -102,7 +101,9 @@ export default class ShopDetailHeader extends React.Component {
           </Modal>
         )}
         {showActivity && (
-          <ActivitySheet>
+          <ActivitySheet title="优惠活动"
+            onClick = {this.toggleShowActivity}
+          >
             <div>
               <div className="shop-activity-item" key={0}>
                 <span

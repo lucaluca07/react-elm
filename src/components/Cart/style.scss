@@ -1,0 +1,50 @@
+.cartview{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    .discount-tips{
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        background: #fffad6;
+        border-top: 1px solid #f9e8a3;
+    }
+    .cartview-body{
+        color: #fff;
+        height: 96px;
+        display: flex;
+        padding-left: 158px;
+        background: rgba(61,61,63,.9);
+        .cartview-main{
+            flex:1;
+            display: flex;
+            flex-direction: column;
+            .cartview-total{
+                font-size: 36px;
+            }
+            .cart-delivery{
+                color:#999;
+            }
+        }
+        .submit-btn{
+            width: 210px;
+        }
+        
+    }
+    .cart{
+        height: 90px;
+        width: 90px;
+        border: 4px solid #666;/*no*/
+        background: #333;
+        position: absolute;
+        border-radius: 50%;
+        top:20px;
+        left: 20px;
+        text-align: center;
+        line-height: 90px;
+        .icon-cartfill::before{
+            font-size: 70px;
+            color:#666;
+        }
+    }
+}
