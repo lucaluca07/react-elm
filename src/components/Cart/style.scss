@@ -31,6 +31,12 @@
         }
         
     }
+    .activity-cart{
+        background: #3190e8!important;
+        .icon-cartfill::before{
+            color:#f1f1f1!important;
+        }
+    }
     .cart{
         height: 90px;
         width: 90px;
@@ -45,6 +51,18 @@
         .icon-cartfill::before{
             font-size: 70px;
             color:#666;
+        }
+        .badge{
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background: linear-gradient(-90deg,#ff7416,#ff3c15 98%);
+            color:#fff;
+            line-height: 40px;
+            transform: scale(0.8);
         }
     }
 }

@@ -2,7 +2,6 @@ import * as actionTypes from "../constants";
 const defaultState = {};
 
 function errorReducer(state = defaultState, action) {
-  let result = null;
   switch (action.type) {
     case actionTypes.CHANGE_CART:
       return {
@@ -21,7 +20,6 @@ function errorReducer(state = defaultState, action) {
         }
       };
     default:
-      // console.warn('未定义的异常', action);
       return state;
   }
 }

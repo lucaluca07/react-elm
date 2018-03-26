@@ -30,7 +30,6 @@ class ShopDetail extends Component {
     dispatch(await getMenu(this.shopId, longitude, latitude));
     dispatch(await getShopInfo(this.shopId, longitude, latitude));
     this.getRatings();
-    dispatch(changeCart(this.shopId, 1234, 222));
   }
   async getRatings() {
     const { dispatch, longitude, latitude, offset } = this.props;
@@ -38,7 +37,6 @@ class ShopDetail extends Component {
   }
   increaseDecreaseCart(goodsId, num) {
     const { dispatch, cart } = this.props;
-    console.log("goodsNum", cart[this.shopId][goodsId], num);
     const goodsNum = (cart[this.shopId] && cart[this.shopId][goodsId]) || 0;
     dispatch(changeCart(this.shopId, goodsId, goodsNum + num));
   }
@@ -61,7 +59,7 @@ class ShopDetail extends Component {
                 cart={cartData}
                 changeCart={this.increaseDecreaseCart}
               />
-              <Cart data={cartData} />
+              <Cart data={cartData} menu={menu} />
             </div>
           )}
         {tabIndex === 1 && <ShopRating />}
