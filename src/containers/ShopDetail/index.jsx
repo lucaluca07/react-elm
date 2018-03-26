@@ -16,25 +16,31 @@ import {
 import {changeCart} from '../../actions/cart'
 
 class ShopDetail extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = { tabIndex: 0 };
     this.getRatings = this.getRatings.bind(this);
     this.setTabIndex = this.setTabIndex.bind(this);
+    this.increaseDecreaseCart = this.increaseDecreaseCart.bind(this)
+    this.shopId = this.props.match.params.id;
   }
   async componentDidMount() {
     const { dispatch, longitude, latitude } = this.props;
-    const shopId = this.props.match.params.id;
     dispatch(clearRating());
-    dispatch(await getMenu(shopId, longitude, latitude));
-    dispatch(await getShopInfo(shopId, longitude, latitude));
+    dispatch(await getMenu(this.shopId, longitude, latitude));
+    dispatch(await getShopInfo(this.shopId, longitude, latitude));
     this.getRatings();
-    dispatch(changeCart(shopId,1234,222))
+    dispatch(changeCart(this.shopId,1234,222))
   }
   async getRatings() {
     const { dispatch, longitude, latitude, offset } = this.props;
-    const shopId = this.props.match.params.id;
-    dispatch(await getRating(shopId, offset, 8, longitude, latitude));
+    dispatch(await getRating(this.shopId, offset, 8, longitude, latitude));
+  }
+  increaseDecreaseCart(goodsId,num){
+    const { dispatch,cart } = this.props;
+    console.log("goodsNum",cart[this.shopId][goodsId],num)
+    const goodsNum = (cart[this.shopId]&&cart[this.shopId][goodsId])||0
+    dispatch(changeCart(this.shopId,goodsId,goodsNum+num))
   }
   setTabIndex(index) {
     this.setState({ tabIndex: index });
@@ -42,24 +48,26 @@ class ShopDetail extends Component {
   render() {
     const { menu } = this.props;
     const { tabIndex } = this.state;
+    const cartData = this.props.cart[this.shopId]
     return (
       <div style={{ display: "flex", flexDirection: "column" }}>
         <ShopDetailHeader />
         <ShopDetailTab onClick={this.setTabIndex} />
         {tabIndex === 0 && menu &&
         <div>
-          <ShopMenu data={menu} />
-          <Cart/>
+          <ShopMenu 
+            data={menu} 
+            cart={cartData}
+            changeCart={this.increaseDecreaseCart} />
+          <Cart data={cartData}/>
         </div>
-          
         }
         {tabIndex === 1 &&
           <ShopRating />
         }
         {tabIndex === 2 &&
           <ShopInfo />
-        }
-        
+        }   
       </div>
     );
   }
@@ -69,6 +77,7 @@ const mapStateToProps = state => {
   const { longitude, latitude } = state.location;
   const { shopinfo, menu, rating } = state.shopDetail;
   const { data, hasMore, offset } = rating;
+  const cart = state.cart;
   return {
     longitude,
     latitude,
@@ -76,7 +85,8 @@ const mapStateToProps = state => {
     menu,
     data,
     hasMore,
-    offset
+    offset,
+    cart
   };
 };
 

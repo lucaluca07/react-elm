@@ -41,12 +41,14 @@ export default class ShopMenu extends Component {
     const subMenu = ReactDOM.findDOMNode(this.refs["sub-menu"]);
     subMenu.scrollTo(0, ele.offsetTop - this.top);
   }
-  addCart(){
-    console.log(111111)
+  addCart(id,num){
+    console.log("num",num)
+    this.props.changeCart(id,num)
   }
   render() {
     const data = this.props.data;
     const { height, activityId } = this.state;
+    const cart = this.props.cart 
     return (
       <div className="shop-menu-wrap" style={{ height: height }}>
         <div className="main" ref="main">
@@ -81,9 +83,20 @@ export default class ShopMenu extends Component {
                       </div>
                       <div className="price-wrap">
                         <span className="price">¥{val.specfoods[0].price}</span>
-                        <span className="add-cart-btn"
-                        onClick = {this.addCart}>
+                        {cart&&cart[val.virtual_food_id]
+                        ?<div>
+                          <span className="decrease-cart-btn"
+                          onClick = {this.addCart.bind(this,val.virtual_food_id,-1)}>
+                          -</span>
+                          <span className="goods-num">{cart[val.virtual_food_id]}</span>
+                          <span className="add-cart-btn"
+                          onClick = {this.addCart.bind(this,val.virtual_food_id,1)}>
                           +</span>
+                        </div>
+                        :<span className="add-cart-btn"
+                          onClick = {this.addCart.bind(this,val.virtual_food_id,1)}>
+                          +</span>
+                        }
                       </div>
                     </div>
                   </div>

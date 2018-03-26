@@ -2,7 +2,7 @@ import React from "react";
 
 const ShopActivityList = ({ data }) =>
   data.map((val, index) => (
-    <div className="shop-activity-item">
+    <div key={index} className="shop-activity-item">
       <span
         className="activity-icon"
         style={{ background: `#${val.icon_color}` }}

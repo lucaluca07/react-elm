@@ -79,16 +79,26 @@ $gary2: #f7f6f5;
               font-size: 28px;
               color: #f60;
             }
-            .add-cart-btn{
+            .add-cart-btn,.decrease-cart-btn{
               display: inline-block;
               height: 42px;
               width: 42px;
               line-height: 40px;
               text-align: center;
               font-size: 40px;
-              color: #fff;
               border-radius: 50%;
+              border: 1px solid #999;
+            }
+            .goods-num{
+              display: inline-block;
+              width: 50px;
+              text-align:center;
+              line-height: 40px;
+              font-size: 28px;
+            }
+            .add-cart-btn{
               background: #0af;
+              color: #fff;
             }
           }
         }
