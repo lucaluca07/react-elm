@@ -1,9 +1,10 @@
 $gary1: #efeeec;
 $gary2: #f7f6f5;
 .shop-menu-wrap {
-  border-top: 1px solid $gary1;/*no*/
-  -webkit-text-size-adjust:none;
-  color:#333;
+  border-top: 1px solid $gary1;
+  /*no*/
+  -webkit-text-size-adjust: none;
+  color: #333;
   flex: 1;
   .main {
     height: 100%;
@@ -13,7 +14,7 @@ $gary2: #f7f6f5;
   .shop-main-menu {
     width: 170px;
     overflow: auto;
-    .activity-menu{
+    .activity-menu {
       background: #fff !important;
     }
     .main-menu-item {
@@ -29,7 +30,7 @@ $gary2: #f7f6f5;
     margin-right: 15px;
     overflow: auto;
     .shop-sub-list {
-      .name{
+      .name {
         font-weight: 700;
         margin-right: 5px;
       }
@@ -59,27 +60,27 @@ $gary2: #f7f6f5;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-            color:#999;
-            max-width: 360px;
-            // display: inline-block;
+            color: #999;
+            max-width: 360px; // display: inline-block;
             transform: scale(0.75);
-            margin-left:-13%;
+            margin-left: -13%;
           }
           .sales {
             flex: 1;
             margin: 6px 0;
             display: inline-block;
             transform: scale(0.85);
-            margin-left:-8.5%;
+            margin-left: -8.5%;
           }
           .price-wrap {
             display: flex;
             justify-content: space-between;
-            .price{
+            .price {
               font-size: 28px;
               color: #f60;
             }
-            .add-cart-btn,.decrease-cart-btn{
+            .add-cart-btn,
+            .decrease-cart-btn {
               display: inline-block;
               height: 42px;
               width: 42px;
@@ -89,14 +90,14 @@ $gary2: #f7f6f5;
               border-radius: 50%;
               border: 1px solid #999;
             }
-            .goods-num{
+            .goods-num {
               display: inline-block;
               width: 50px;
-              text-align:center;
+              text-align: center;
               line-height: 40px;
               font-size: 28px;
             }
-            .add-cart-btn{
+            .add-cart-btn {
               background: #0af;
               color: #fff;
             }
