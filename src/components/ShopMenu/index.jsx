@@ -3,13 +3,18 @@ import ReactDOM from "react-dom";
 import "./style.scss";
 import getImgSrc from "../../util/getImgSrc";
 import throttle from "../../util/throttle";
+import Modal from '../Modal'
 
 export default class ShopMenu extends Component {
   constructor(props) {
     super(props);
-    this.state = { height: 500, activityId: 0 };
+    this.state = { height: 500, 
+      activityId: 0, 
+      showModal: false,
+      foodInfo:"" };
     this.handleScroll = this.handleScroll.bind(this);
     this.getEleTop = this.getEleTop.bind(this);
+    this.toggleShowModal = this.toggleShowModal.bind(this);
     this.top = 0;
     this.ids = this.props.data.map(val => val.id);
   }
@@ -42,13 +47,17 @@ export default class ShopMenu extends Component {
     const subMenu = ReactDOM.findDOMNode(this.refs["sub-menu"]);
     subMenu.scrollTo(0, ele.offsetTop - this.top);
   }
+  toggleShowModal(info) {
+    const showModal = this.state.showModal
+    this.setState({ showModal: !showModal,foodInfo:info })
+  }
   addCart(id, num) {
     console.log("num", num);
     this.props.changeCart(id, num);
   }
   render() {
     const data = this.props.data;
-    const { height, activityId } = this.state;
+    const { height, activityId, showModal } = this.state;
     const cart = this.props.cart;
     return (
       <div className="shop-menu-wrap" style={{ height: height }}>
@@ -59,7 +68,7 @@ export default class ShopMenu extends Component {
                 key={index}
                 className={`main-menu-item ${
                   activityId === val.id ? "activity-menu" : ""
-                }`}
+                  }`}
                 onClick={this.handleClick.bind(this, val.id)}
               >
                 {val.name}
@@ -77,7 +86,8 @@ export default class ShopMenu extends Component {
                 {foods.foods.map(val => (
                   <div key={val.virtual_food_id} className="shop-sub-item">
                     <div className="food-img">
-                      <img src={getImgSrc(val.image_path, 140)} alt="food" />
+                      {val.image_path &&
+                        <img src={getImgSrc(val.image_path, 140)} alt="food" />}
                     </div>
                     <div className="food-detail">
                       <div className="food-name">{val.name}</div>
@@ -103,7 +113,12 @@ export default class ShopMenu extends Component {
                             <span className="goods-num">
                               {cart[val.virtual_food_id]}
                             </span>
-                            <span
+                            (val.specfoods.length > 1
+                            ?<span
+                              className="choose-goods-btn"
+                              onClick={() => {this.toggleShowModal(val)}}
+                            >选规格</span>
+                            :<span
                               className="add-cart-btn"
                               onClick={this.addCart.bind(
                                 this,
@@ -112,20 +127,25 @@ export default class ShopMenu extends Component {
                               )}
                             >
                               +
-                            </span>
-                          </div>
-                        ) : (
-                          <span
-                            className="add-cart-btn"
-                            onClick={this.addCart.bind(
-                              this,
-                              val.virtual_food_id,
-                              1
-                            )}
-                          >
-                            +
                           </span>
-                        )}
+                          </div>
+                        ) :
+                          (val.specfoods.length > 1
+                            ? <span
+                              className="choose-goods-btn"
+                              onClick={() => {this.toggleShowModal(val)}}
+                            >选规格</span>
+                            : <span
+                              className="add-cart-btn"
+                              onClick={this.addCart.bind(
+                                this,
+                                val.virtual_food_id,
+                                1
+                              )}
+                            >
+                              +
+                          </span>
+                          )}
                       </div>
                     </div>
                   </div>
@@ -135,6 +155,14 @@ export default class ShopMenu extends Component {
             <div style={{ height: 100 }} />
           </div>
         </div>
+        {showModal &&
+          <Modal callback={this.toggleShowModal}>
+            <div className="specpanle">
+              <div></div>
+              <div></div>
+            </div>
+          </Modal>
+        }
       </div>
     );
   }

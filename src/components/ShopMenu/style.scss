@@ -6,6 +6,10 @@ $gary2: #f7f6f5;
   -webkit-text-size-adjust: none;
   color: #333;
   flex: 1;
+  .specpanle{
+    background: #fff;
+    padding: 20px;
+  }
   .main {
     height: 100%;
     overflow: hidden;
@@ -89,6 +93,17 @@ $gary2: #f7f6f5;
               font-size: 40px;
               border-radius: 50%;
               border: 1px solid #999;
+            }
+            .choose-goods-btn{
+              display: inline-block;
+              height: 42px;
+              border-radius: 21px;
+              line-height: 40px;
+              text-align: center;
+              border: 1px solid #999;
+              background: #0af;
+              color: #fff;
+              padding: 0 20px;
             }
             .goods-num {
               display: inline-block;

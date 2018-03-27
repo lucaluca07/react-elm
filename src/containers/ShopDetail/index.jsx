@@ -35,10 +35,11 @@ class ShopDetail extends Component {
     const { dispatch, longitude, latitude, offset } = this.props;
     dispatch(await getRating(this.shopId, offset, 8, longitude, latitude));
   }
-  increaseDecreaseCart(goodsId, num) {
+  increaseDecreaseCart(goodsId,item_id,sku_id,price,specs,attrs) {
     const { dispatch, cart } = this.props;
-    const goodsNum = (cart[this.shopId] && cart[this.shopId][goodsId]) || 0;
-    dispatch(changeCart(this.shopId, goodsId, goodsNum + num));
+    // const goodsNum = (cart[this.shopId] && cart[this.shopId][goodsId]) || 0;
+    const info = [{quantity:1}]
+    dispatch(changeCart(this.shopId, goodsId, info));
   }
   setTabIndex(index) {
     this.setState({ tabIndex: index });
@@ -46,7 +47,7 @@ class ShopDetail extends Component {
   render() {
     const { menu } = this.props;
     const { tabIndex } = this.state;
-    const cartData = this.props.cart[this.shopId];
+    // const cartData = this.props.cart[this.shopId];
     return (
       <div style={{ display: "flex", flexDirection: "column" }}>
         <ShopDetailHeader />
@@ -56,10 +57,10 @@ class ShopDetail extends Component {
             <div>
               <ShopMenu
                 data={menu}
-                cart={cartData}
+                // cart={cartData}
                 changeCart={this.increaseDecreaseCart}
               />
-              <Cart data={cartData} menu={menu} />
+              <Cart />
             </div>
           )}
         {tabIndex === 1 && <ShopRating />}

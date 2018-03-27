@@ -1,24 +1,20 @@
-module.exports = [
-  {
+module.exports = [{
     description: "大家喜欢吃，才叫真好吃。",
     is_selected: true,
     icon_url: "06a05b267f338acfeb8bd682d16e836dpng",
     name: "热销",
     grey_icon_url: "aba732b4ca103b2521c872442d7e5d4epng",
-    foods: [
-      {
+    foods: [{
         rating: 4.21,
         is_featured: 0,
         virtual_food_id: 1307248606,
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "wangdaojiaoxiangjitui",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 732,
@@ -36,30 +32,28 @@ module.exports = [
         satisfy_count: 123,
         activity: null,
         satisfy_rate: 99,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000120904854247",
-            name: "王道椒香鸡腿",
-            weight: 0,
-            virtual_food_id: 1307248606,
-            pinyin_name: "wangdaojiaoxiangjitui",
-            restaurant_id: 126529,
-            food_id: 1318071146,
-            packing_fee: 0,
-            recent_rating: 4.21,
-            promotion_stock: -1,
-            price: 12,
-            sold_out: false,
-            recent_popularity: 732,
-            is_essential: false,
-            item_id: "200000109822573287",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 889
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000120904854247",
+          name: "王道椒香鸡腿",
+          weight: 0,
+          virtual_food_id: 1307248606,
+          pinyin_name: "wangdaojiaoxiangjitui",
+          restaurant_id: 126529,
+          food_id: 1318071146,
+          packing_fee: 0,
+          recent_rating: 4.21,
+          promotion_stock: -1,
+          price: 12,
+          sold_out: false,
+          recent_popularity: 732,
+          is_essential: false,
+          item_id: "200000109822573287",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 889
+        }],
         category_id: 1229249783
       },
       {
@@ -69,15 +63,12 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "bawangjiheA",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
-        description:
-          "王道嫩香鸡块（四块）+王道椒香鸡腿（一个）+王道川蜀鸡翅（一对）+霸王鸡条鲜辣（四条）",
+        description: "王道嫩香鸡块（四块）+王道椒香鸡腿（一个）+王道川蜀鸡翅（一对）+霸王鸡条鲜辣（四条）",
         month_sales: 595,
         rating_count: 138,
         tips: "138评价 月售595份",
@@ -93,30 +84,28 @@ module.exports = [
         satisfy_count: 137,
         activity: null,
         satisfy_rate: 99,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055045261031",
-            name: "霸王鸡盒A",
-            weight: 0,
-            virtual_food_id: 1250551483,
-            pinyin_name: "bawangjiheA",
-            restaurant_id: 126529,
-            food_id: 1253755137,
-            packing_fee: 0,
-            recent_rating: 4.15,
-            promotion_stock: -1,
-            price: 35,
-            sold_out: false,
-            recent_popularity: 595,
-            is_essential: false,
-            item_id: "200000051764719335",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 897
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055045261031",
+          name: "霸王鸡盒A",
+          weight: 0,
+          virtual_food_id: 1250551483,
+          pinyin_name: "bawangjiheA",
+          restaurant_id: 126529,
+          food_id: 1253755137,
+          packing_fee: 0,
+          recent_rating: 4.15,
+          promotion_stock: -1,
+          price: 35,
+          sold_out: false,
+          recent_popularity: 595,
+          is_essential: false,
+          item_id: "200000051764719335",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 897
+        }],
         category_id: 1229249783
       },
       {
@@ -126,12 +115,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "wangdaonenxiangjikuai",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 491,
@@ -149,30 +136,28 @@ module.exports = [
         satisfy_count: 102,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055037464295",
-            name: "王道嫩香鸡块",
-            weight: 0,
-            virtual_food_id: 1250559046,
-            pinyin_name: "wangdaonenxiangjikuai",
-            restaurant_id: 126529,
-            food_id: 1253747523,
-            packing_fee: 0,
-            recent_rating: 4.19,
-            promotion_stock: -1,
-            price: 11,
-            sold_out: false,
-            recent_popularity: 491,
-            is_essential: false,
-            item_id: "200000051772463847",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 923
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055037464295",
+          name: "王道嫩香鸡块",
+          weight: 0,
+          virtual_food_id: 1250559046,
+          pinyin_name: "wangdaonenxiangjikuai",
+          restaurant_id: 126529,
+          food_id: 1253747523,
+          packing_fee: 0,
+          recent_rating: 4.19,
+          promotion_stock: -1,
+          price: 11,
+          sold_out: false,
+          recent_popularity: 491,
+          is_essential: false,
+          item_id: "200000051772463847",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 923
+        }],
         category_id: 1229249783
       },
       {
@@ -182,12 +167,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "wangdaochuanshujichi",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 439,
@@ -205,30 +188,28 @@ module.exports = [
         satisfy_count: 81,
         activity: null,
         satisfy_rate: 96,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055037472487",
-            name: "王道川蜀鸡翅",
-            weight: 0,
-            virtual_food_id: 1250559054,
-            pinyin_name: "wangdaochuanshujichi",
-            restaurant_id: 126529,
-            food_id: 1253747531,
-            packing_fee: 0,
-            recent_rating: 4.15,
-            promotion_stock: -1,
-            price: 12,
-            sold_out: false,
-            recent_popularity: 439,
-            is_essential: false,
-            item_id: "200000051772472039",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 946
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055037472487",
+          name: "王道川蜀鸡翅",
+          weight: 0,
+          virtual_food_id: 1250559054,
+          pinyin_name: "wangdaochuanshujichi",
+          restaurant_id: 126529,
+          food_id: 1253747531,
+          packing_fee: 0,
+          recent_rating: 4.15,
+          promotion_stock: -1,
+          price: 12,
+          sold_out: false,
+          recent_popularity: 439,
+          is_essential: false,
+          item_id: "200000051772472039",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 946
+        }],
         category_id: 1229249783
       },
       {
@@ -238,12 +219,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "shubawang(da)",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 346,
@@ -261,30 +240,28 @@ module.exports = [
         satisfy_count: 69,
         activity: null,
         satisfy_rate: 98,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055045255911",
-            name: "薯霸王(大)",
-            weight: 0,
-            virtual_food_id: 1250551478,
-            pinyin_name: "shubawang(da)",
-            restaurant_id: 126529,
-            food_id: 1253755132,
-            packing_fee: 0,
-            recent_rating: 4.13,
-            promotion_stock: -1,
-            price: 14,
-            sold_out: false,
-            recent_popularity: 346,
-            is_essential: false,
-            item_id: "200000051764714215",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 940
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055045255911",
+          name: "薯霸王(大)",
+          weight: 0,
+          virtual_food_id: 1250551478,
+          pinyin_name: "shubawang(da)",
+          restaurant_id: 126529,
+          food_id: 1253755132,
+          packing_fee: 0,
+          recent_rating: 4.13,
+          promotion_stock: -1,
+          price: 14,
+          sold_out: false,
+          recent_popularity: 346,
+          is_essential: false,
+          item_id: "200000051764714215",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 940
+        }],
         category_id: 1229249783
       },
       {
@@ -294,12 +271,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "bawangjitiao（xianla）",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 259,
@@ -317,30 +292,28 @@ module.exports = [
         satisfy_count: 50,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055037463271",
-            name: "霸王鸡条（鲜辣）",
-            weight: 0,
-            virtual_food_id: 1250559045,
-            pinyin_name: "bawangjitiao（xianla）",
-            restaurant_id: 126529,
-            food_id: 1253747522,
-            packing_fee: 0,
-            recent_rating: 4.2,
-            promotion_stock: -1,
-            price: 14,
-            sold_out: false,
-            recent_popularity: 259,
-            is_essential: false,
-            item_id: "200000051772462823",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 967
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055037463271",
+          name: "霸王鸡条（鲜辣）",
+          weight: 0,
+          virtual_food_id: 1250559045,
+          pinyin_name: "bawangjitiao（xianla）",
+          restaurant_id: 126529,
+          food_id: 1253747522,
+          packing_fee: 0,
+          recent_rating: 4.2,
+          promotion_stock: -1,
+          price: 14,
+          sold_out: false,
+          recent_popularity: 259,
+          is_essential: false,
+          item_id: "200000051772462823",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 967
+        }],
         category_id: 1229249783
       },
       {
@@ -350,12 +323,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "dezhouyanxunangesihouniubaotaocan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 222,
@@ -373,30 +344,28 @@ module.exports = [
         satisfy_count: 45,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000170861541095",
-            name: "德州烟熏安格斯厚牛堡套餐",
-            weight: 0,
-            virtual_food_id: 1346114292,
-            pinyin_name: "dezhouyanxunangesihouniubaotaocan",
-            restaurant_id: 126529,
-            food_id: 1366856928,
-            packing_fee: 0,
-            recent_rating: 4.2,
-            promotion_stock: -1,
-            price: 55,
-            sold_out: false,
-            recent_popularity: 222,
-            is_essential: false,
-            item_id: "200000149621031655",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 962
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000170861541095",
+          name: "德州烟熏安格斯厚牛堡套餐",
+          weight: 0,
+          virtual_food_id: 1346114292,
+          pinyin_name: "dezhouyanxunangesihouniubaotaocan",
+          restaurant_id: 126529,
+          food_id: 1366856928,
+          packing_fee: 0,
+          recent_rating: 4.2,
+          promotion_stock: -1,
+          price: 55,
+          sold_out: false,
+          recent_popularity: 222,
+          is_essential: false,
+          item_id: "200000149621031655",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 962
+        }],
         category_id: 1229245166
       },
       {
@@ -406,12 +375,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "guomuxiangfengweihuokaojituibao",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 204,
@@ -429,30 +396,28 @@ module.exports = [
         satisfy_count: 50,
         activity: null,
         satisfy_rate: 96,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055041352423",
-            name: "果木香风味火烤鸡腿堡",
-            weight: 0,
-            virtual_food_id: 1250555383,
-            pinyin_name: "guomuxiangfengweihuokaojituibao",
-            restaurant_id: 126529,
-            food_id: 1253751320,
-            packing_fee: 0,
-            recent_rating: 4.13,
-            promotion_stock: -1,
-            price: 19,
-            sold_out: false,
-            recent_popularity: 204,
-            is_essential: false,
-            item_id: "200000051768712935",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 965
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055041352423",
+          name: "果木香风味火烤鸡腿堡",
+          weight: 0,
+          virtual_food_id: 1250555383,
+          pinyin_name: "guomuxiangfengweihuokaojituibao",
+          restaurant_id: 126529,
+          food_id: 1253751320,
+          packing_fee: 0,
+          recent_rating: 4.13,
+          promotion_stock: -1,
+          price: 19,
+          sold_out: false,
+          recent_popularity: 204,
+          is_essential: false,
+          item_id: "200000051768712935",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 965
+        }],
         category_id: 1229245165
       },
       {
@@ -462,12 +427,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "guomuxiangfengweihuokaojituibaotaocan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 188,
@@ -485,30 +448,28 @@ module.exports = [
         satisfy_count: 39,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055041314535",
-            name: "果木香风味火烤鸡腿堡套餐",
-            weight: 0,
-            virtual_food_id: 1250555346,
-            pinyin_name: "guomuxiangfengweihuokaojituibaotaocan",
-            restaurant_id: 126529,
-            food_id: 1253751283,
-            packing_fee: 0,
-            recent_rating: 4.26,
-            promotion_stock: -1,
-            price: 33,
-            sold_out: false,
-            recent_popularity: 188,
-            is_essential: false,
-            item_id: "200000051768675047",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 952
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055041314535",
+          name: "果木香风味火烤鸡腿堡套餐",
+          weight: 0,
+          virtual_food_id: 1250555346,
+          pinyin_name: "guomuxiangfengweihuokaojituibaotaocan",
+          restaurant_id: 126529,
+          food_id: 1253751283,
+          packing_fee: 0,
+          recent_rating: 4.26,
+          promotion_stock: -1,
+          price: 33,
+          sold_out: false,
+          recent_popularity: 188,
+          is_essential: false,
+          item_id: "200000051768675047",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 952
+        }],
         category_id: 1229245166
       },
       {
@@ -518,12 +479,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "bawangjituihuangbao",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 182,
@@ -541,30 +500,28 @@ module.exports = [
         satisfy_count: 38,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055045218023",
-            name: "霸王鸡腿皇堡",
-            weight: 0,
-            virtual_food_id: 1250551441,
-            pinyin_name: "bawangjituihuangbao",
-            restaurant_id: 126529,
-            food_id: 1253755095,
-            packing_fee: 0,
-            recent_rating: 4.32,
-            promotion_stock: -1,
-            price: 23,
-            sold_out: false,
-            recent_popularity: 182,
-            is_essential: false,
-            item_id: "200000051764676327",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 964
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055045218023",
+          name: "霸王鸡腿皇堡",
+          weight: 0,
+          virtual_food_id: 1250551441,
+          pinyin_name: "bawangjituihuangbao",
+          restaurant_id: 126529,
+          food_id: 1253755095,
+          packing_fee: 0,
+          recent_rating: 4.32,
+          promotion_stock: -1,
+          price: 23,
+          sold_out: false,
+          recent_popularity: 182,
+          is_essential: false,
+          item_id: "200000051764676327",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 964
+        }],
         category_id: 1229245165
       }
     ],
@@ -579,23 +536,19 @@ module.exports = [
     icon_url: "b918cf4f67e0e8223931cd595dc932fepng",
     name: "优惠",
     grey_icon_url: "f8ddec5b7355581faa2bf4e24942dcc2png",
-    foods: [
-      {
+    foods: [{
         rating: 4.14,
         is_featured: 0,
         virtual_food_id: 1350553564,
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "banjiashuangrencan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
-        description:
-          "炫辣鸡腿堡+霸王鸡腿皇堡（原味）+薯霸王（大)+百事可乐（中）+美年达（中）",
+        description: "炫辣鸡腿堡+霸王鸡腿皇堡（原味）+薯霸王（大)+百事可乐（中）+美年达（中）",
         month_sales: 107,
         rating_count: 22,
         tips: "22评价 月售107份",
@@ -632,35 +585,32 @@ module.exports = [
           applicable_quantity: 1,
           is_promotion_toast_popup: true,
           activity_type: "",
-          applicable_quantity_detail_text:
-            "每单限1份优惠，超出的份数按原价计算",
+          applicable_quantity_detail_text: "每单限1份优惠，超出的份数按原价计算",
           is_price_changed: false
         },
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: 75,
-            sku_id: "200000176079551207",
-            name: "半价双人餐",
-            weight: 0,
-            virtual_food_id: 1350553564,
-            pinyin_name: "banjiashuangrencan",
-            restaurant_id: 126529,
-            food_id: 1371952694,
-            packing_fee: 0,
-            recent_rating: 4.14,
-            promotion_stock: 27,
-            price: 37.5,
-            sold_out: false,
-            recent_popularity: 107,
-            is_essential: false,
-            item_id: "200000154166841063",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 985
-          }
-        ],
+        specfoods: [{
+          original_price: 75,
+          sku_id: "200000176079551207",
+          name: "半价双人餐",
+          weight: 0,
+          virtual_food_id: 1350553564,
+          pinyin_name: "banjiashuangrencan",
+          restaurant_id: 126529,
+          food_id: 1371952694,
+          packing_fee: 0,
+          recent_rating: 4.14,
+          promotion_stock: 27,
+          price: 37.5,
+          sold_out: false,
+          recent_popularity: 107,
+          is_essential: false,
+          item_id: "200000154166841063",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 985
+        }],
         category_id: 1229245164
       },
       {
@@ -670,12 +620,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "jingdianangesidanrencan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521464400
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521464400
+        }],
         attrs: [],
         description: "经典安格斯厚牛堡（原味）+王道嫩香鸡块+七喜（中）",
         month_sales: 54,
@@ -714,35 +662,32 @@ module.exports = [
           applicable_quantity: 1,
           is_promotion_toast_popup: true,
           activity_type: "",
-          applicable_quantity_detail_text:
-            "每单限1份优惠，超出的份数按原价计算",
+          applicable_quantity_detail_text: "每单限1份优惠，超出的份数按原价计算",
           is_price_changed: true
         },
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: 55,
-            sku_id: "200000192336142055",
-            name: "经典安格斯单人餐",
-            weight: 0,
-            virtual_food_id: 1363883366,
-            pinyin_name: "jingdianangesidanrencan",
-            restaurant_id: 126529,
-            food_id: 1387828267,
-            packing_fee: 0,
-            recent_rating: 4.25,
-            promotion_stock: 975,
-            price: 40.0,
-            sold_out: false,
-            recent_popularity: 54,
-            is_essential: false,
-            item_id: "200000167816573671",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 975
-          }
-        ],
+        specfoods: [{
+          original_price: 55,
+          sku_id: "200000192336142055",
+          name: "经典安格斯单人餐",
+          weight: 0,
+          virtual_food_id: 1363883366,
+          pinyin_name: "jingdianangesidanrencan",
+          restaurant_id: 126529,
+          food_id: 1387828267,
+          packing_fee: 0,
+          recent_rating: 4.25,
+          promotion_stock: 975,
+          price: 40.0,
+          sold_out: false,
+          recent_popularity: 54,
+          is_essential: false,
+          item_id: "200000167816573671",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 975
+        }],
         category_id: 1229245164
       },
       {
@@ -752,12 +697,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "tianjiaohuangbaodanrencan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "天椒皇堡+霸王鸡条（鲜辣）+百事可乐（中）",
         month_sales: 104,
@@ -796,35 +739,32 @@ module.exports = [
           applicable_quantity: 1,
           is_promotion_toast_popup: true,
           activity_type: "",
-          applicable_quantity_detail_text:
-            "每单限1份优惠，超出的份数按原价计算",
+          applicable_quantity_detail_text: "每单限1份优惠，超出的份数按原价计算",
           is_price_changed: true
         },
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: 45.5,
-            sku_id: "200000153625489127",
-            name: "天椒皇堡单人餐",
-            weight: 0,
-            virtual_food_id: 1334048620,
-            pinyin_name: "tianjiaohuangbaodanrencan",
-            restaurant_id: 126529,
-            food_id: 1350024891,
-            packing_fee: 0,
-            recent_rating: 4.29,
-            promotion_stock: 987,
-            price: 34.0,
-            sold_out: false,
-            recent_popularity: 104,
-            is_essential: false,
-            item_id: "200000137265787623",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 987
-          }
-        ],
+        specfoods: [{
+          original_price: 45.5,
+          sku_id: "200000153625489127",
+          name: "天椒皇堡单人餐",
+          weight: 0,
+          virtual_food_id: 1334048620,
+          pinyin_name: "tianjiaohuangbaodanrencan",
+          restaurant_id: 126529,
+          food_id: 1350024891,
+          packing_fee: 0,
+          recent_rating: 4.29,
+          promotion_stock: 987,
+          price: 34.0,
+          sold_out: false,
+          recent_popularity: 104,
+          is_essential: false,
+          item_id: "200000137265787623",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 987
+        }],
         category_id: 1229245164
       },
       {
@@ -834,12 +774,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "wangpaijihecan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "霸王鸡盒+洋葱圈+百事可乐中",
         month_sales: 89,
@@ -878,35 +816,32 @@ module.exports = [
           applicable_quantity: 1,
           is_promotion_toast_popup: true,
           activity_type: "",
-          applicable_quantity_detail_text:
-            "每单限1份优惠，超出的份数按原价计算",
+          applicable_quantity_detail_text: "每单限1份优惠，超出的份数按原价计算",
           is_price_changed: true
         },
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: 52.5,
-            sku_id: "200000120896572135",
-            name: "王牌鸡盒餐",
-            weight: 0,
-            virtual_food_id: 1307255765,
-            pinyin_name: "wangpaijihecan",
-            restaurant_id: 126529,
-            food_id: 1318063058,
-            packing_fee: 0,
-            recent_rating: 4.13,
-            promotion_stock: 988,
-            price: 40.0,
-            sold_out: false,
-            recent_popularity: 89,
-            is_essential: false,
-            item_id: "200000109829904103",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 988
-          }
-        ],
+        specfoods: [{
+          original_price: 52.5,
+          sku_id: "200000120896572135",
+          name: "王牌鸡盒餐",
+          weight: 0,
+          virtual_food_id: 1307255765,
+          pinyin_name: "wangpaijihecan",
+          restaurant_id: 126529,
+          food_id: 1318063058,
+          packing_fee: 0,
+          recent_rating: 4.13,
+          promotion_stock: 988,
+          price: 40.0,
+          sold_out: false,
+          recent_popularity: 89,
+          is_essential: false,
+          item_id: "200000109829904103",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 988
+        }],
         category_id: 1229245164
       },
       {
@@ -916,15 +851,12 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "honghonghuohuoshuangrencan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
-        description:
-          "经典安格斯厚牛堡原味+果木香风味火烤鸡腿堡+王道嫩香鸡块+七喜（中）+百事可乐（中）",
+        description: "经典安格斯厚牛堡原味+果木香风味火烤鸡腿堡+王道嫩香鸡块+七喜（中）+百事可乐（中）",
         month_sales: 72,
         rating_count: 17,
         tips: "17评价 月售72份",
@@ -961,35 +893,32 @@ module.exports = [
           applicable_quantity: 1,
           is_promotion_toast_popup: true,
           activity_type: "",
-          applicable_quantity_detail_text:
-            "每单限1份优惠，超出的份数按原价计算",
+          applicable_quantity_detail_text: "每单限1份优惠，超出的份数按原价计算",
           is_price_changed: true
         },
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: 84,
-            sku_id: "200000170861545191",
-            name: "红红火火双人餐",
-            weight: 0,
-            virtual_food_id: 1346114296,
-            pinyin_name: "honghonghuohuoshuangrencan",
-            restaurant_id: 126529,
-            food_id: 1366856932,
-            packing_fee: 0,
-            recent_rating: 4.24,
-            promotion_stock: 980,
-            price: 67.0,
-            sold_out: false,
-            recent_popularity: 72,
-            is_essential: false,
-            item_id: "200000149621035751",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 980
-          }
-        ],
+        specfoods: [{
+          original_price: 84,
+          sku_id: "200000170861545191",
+          name: "红红火火双人餐",
+          weight: 0,
+          virtual_food_id: 1346114296,
+          pinyin_name: "honghonghuohuoshuangrencan",
+          restaurant_id: 126529,
+          food_id: 1366856932,
+          packing_fee: 0,
+          recent_rating: 4.24,
+          promotion_stock: 980,
+          price: 67.0,
+          sold_out: false,
+          recent_popularity: 72,
+          is_essential: false,
+          item_id: "200000149621035751",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 980
+        }],
         category_id: 1229245164
       },
       {
@@ -999,15 +928,12 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "bawangfenxiangcan（5-6ren）",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
-        description:
-          "双层皇堡+天椒霸王鸡腿皇堡+经典安格斯厚牛堡（原味）+果木香风味火烤鸡腿堡+香脆鳕鱼堡+霸王鸡盒A+薯霸王（大）+洋葱圈8个+阿根廷红虾圈+霸王红薯格（双人份）+瓶装饮料可乐x3",
+        description: "双层皇堡+天椒霸王鸡腿皇堡+经典安格斯厚牛堡（原味）+果木香风味火烤鸡腿堡+香脆鳕鱼堡+霸王鸡盒A+薯霸王（大）+洋葱圈8个+阿根廷红虾圈+霸王红薯格（双人份）+瓶装饮料可乐x3",
         month_sales: 3,
         rating_count: 0,
         tips: "0评价 月售3份",
@@ -1044,35 +970,32 @@ module.exports = [
           applicable_quantity: 1,
           is_promotion_toast_popup: true,
           activity_type: "",
-          applicable_quantity_detail_text:
-            "每单限1份优惠，超出的份数按原价计算",
+          applicable_quantity_detail_text: "每单限1份优惠，超出的份数按原价计算",
           is_price_changed: true
         },
         satisfy_rate: 0,
-        specfoods: [
-          {
-            original_price: 249,
-            sku_id: "200000187037581031",
-            name: "霸王分享餐（5-6人）",
-            weight: 0,
-            virtual_food_id: 1359504137,
-            pinyin_name: "bawangfenxiangcan（5-6ren）",
-            restaurant_id: 126529,
-            food_id: 1382653831,
-            packing_fee: 0,
-            recent_rating: 0.0,
-            promotion_stock: 999,
-            price: 199.0,
-            sold_out: false,
-            recent_popularity: 3,
-            is_essential: false,
-            item_id: "200000163332267751",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 1000
-          }
-        ],
+        specfoods: [{
+          original_price: 249,
+          sku_id: "200000187037581031",
+          name: "霸王分享餐（5-6人）",
+          weight: 0,
+          virtual_food_id: 1359504137,
+          pinyin_name: "bawangfenxiangcan（5-6ren）",
+          restaurant_id: 126529,
+          food_id: 1382653831,
+          packing_fee: 0,
+          recent_rating: 0.0,
+          promotion_stock: 999,
+          price: 199.0,
+          sold_out: false,
+          recent_popularity: 3,
+          is_essential: false,
+          item_id: "200000163332267751",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 1000
+        }],
         category_id: 1229245164
       },
       {
@@ -1082,15 +1005,12 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "huangbaoshuangrentaocan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521464400
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521464400
+        }],
         attrs: [],
-        description:
-          "炫辣鸡腿堡+皇堡+王道嫩香鸡块+美国红薯格（双人）+百事可乐（中）+七喜（中）",
+        description: "炫辣鸡腿堡+皇堡+王道嫩香鸡块+美国红薯格（双人）+百事可乐（中）+七喜（中）",
         month_sales: 17,
         rating_count: 7,
         tips: "7评价 月售17份",
@@ -1127,35 +1047,32 @@ module.exports = [
           applicable_quantity: 1,
           is_promotion_toast_popup: true,
           activity_type: "",
-          applicable_quantity_detail_text:
-            "每单限1份优惠，超出的份数按原价计算",
+          applicable_quantity_detail_text: "每单限1份优惠，超出的份数按原价计算",
           is_price_changed: true
         },
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: 81,
-            sku_id: "200000192354505447",
-            name: "皇堡双人套餐",
-            weight: 0,
-            virtual_food_id: 1363900829,
-            pinyin_name: "huangbaoshuangrentaocan",
-            restaurant_id: 126529,
-            food_id: 1387846202,
-            packing_fee: 0,
-            recent_rating: 4.0,
-            promotion_stock: 995,
-            price: 65.0,
-            sold_out: false,
-            recent_popularity: 17,
-            is_essential: false,
-            item_id: "200000167834455783",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 995
-          }
-        ],
+        specfoods: [{
+          original_price: 81,
+          sku_id: "200000192354505447",
+          name: "皇堡双人套餐",
+          weight: 0,
+          virtual_food_id: 1363900829,
+          pinyin_name: "huangbaoshuangrentaocan",
+          restaurant_id: 126529,
+          food_id: 1387846202,
+          packing_fee: 0,
+          recent_rating: 4.0,
+          promotion_stock: 995,
+          price: 65.0,
+          sold_out: false,
+          recent_popularity: 17,
+          is_essential: false,
+          item_id: "200000167834455783",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 995
+        }],
         category_id: 1229245164
       }
     ],
@@ -1170,20 +1087,17 @@ module.exports = [
     icon_url: "",
     name: "汉堡王品质节",
     grey_icon_url: "",
-    foods: [
-      {
+    foods: [{
         rating: 4.13,
         is_featured: 0,
         virtual_food_id: 1307255765,
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "wangpaijihecan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "霸王鸡盒+洋葱圈+百事可乐中",
         month_sales: 89,
@@ -1222,35 +1136,32 @@ module.exports = [
           applicable_quantity: 1,
           is_promotion_toast_popup: true,
           activity_type: "",
-          applicable_quantity_detail_text:
-            "每单限1份优惠，超出的份数按原价计算",
+          applicable_quantity_detail_text: "每单限1份优惠，超出的份数按原价计算",
           is_price_changed: true
         },
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: 52.5,
-            sku_id: "200000120896572135",
-            name: "王牌鸡盒餐",
-            weight: 0,
-            virtual_food_id: 1307255765,
-            pinyin_name: "wangpaijihecan",
-            restaurant_id: 126529,
-            food_id: 1318063058,
-            packing_fee: 0,
-            recent_rating: 4.13,
-            promotion_stock: 988,
-            price: 40.0,
-            sold_out: false,
-            recent_popularity: 89,
-            is_essential: false,
-            item_id: "200000109829904103",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 988
-          }
-        ],
+        specfoods: [{
+          original_price: 52.5,
+          sku_id: "200000120896572135",
+          name: "王牌鸡盒餐",
+          weight: 0,
+          virtual_food_id: 1307255765,
+          pinyin_name: "wangpaijihecan",
+          restaurant_id: 126529,
+          food_id: 1318063058,
+          packing_fee: 0,
+          recent_rating: 4.13,
+          promotion_stock: 988,
+          price: 40.0,
+          sold_out: false,
+          recent_popularity: 89,
+          is_essential: false,
+          item_id: "200000109829904103",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 988
+        }],
         category_id: 1229245164
       },
       {
@@ -1260,12 +1171,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "zhouwuhaoshichengshuangjikuaimaiyisongyi",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "王道嫩香鸡块x2",
         month_sales: 125,
@@ -1283,30 +1192,28 @@ module.exports = [
         satisfy_count: 27,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000158727236327",
-            name: "周五好事成双鸡块买一送一",
-            weight: 0,
-            virtual_food_id: 1336396962,
-            pinyin_name: "zhouwuhaoshichengshuangjikuaimaiyisongyi",
-            restaurant_id: 126529,
-            food_id: 1355007066,
-            packing_fee: 0,
-            recent_rating: 4.19,
-            promotion_stock: -1,
-            price: 22,
-            sold_out: false,
-            recent_popularity: 125,
-            is_essential: false,
-            item_id: "200000139670489831",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 979
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000158727236327",
+          name: "周五好事成双鸡块买一送一",
+          weight: 0,
+          virtual_food_id: 1336396962,
+          pinyin_name: "zhouwuhaoshichengshuangjikuaimaiyisongyi",
+          restaurant_id: 126529,
+          food_id: 1355007066,
+          packing_fee: 0,
+          recent_rating: 4.19,
+          promotion_stock: -1,
+          price: 22,
+          sold_out: false,
+          recent_popularity: 125,
+          is_essential: false,
+          item_id: "200000139670489831",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 979
+        }],
         category_id: 1229245164
       },
       {
@@ -1316,15 +1223,12 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "honghonghuohuoshuangrencan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
-        description:
-          "经典安格斯厚牛堡原味+果木香风味火烤鸡腿堡+王道嫩香鸡块+七喜（中）+百事可乐（中）",
+        description: "经典安格斯厚牛堡原味+果木香风味火烤鸡腿堡+王道嫩香鸡块+七喜（中）+百事可乐（中）",
         month_sales: 72,
         rating_count: 17,
         tips: "17评价 月售72份",
@@ -1361,35 +1265,32 @@ module.exports = [
           applicable_quantity: 1,
           is_promotion_toast_popup: true,
           activity_type: "",
-          applicable_quantity_detail_text:
-            "每单限1份优惠，超出的份数按原价计算",
+          applicable_quantity_detail_text: "每单限1份优惠，超出的份数按原价计算",
           is_price_changed: true
         },
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: 84,
-            sku_id: "200000170861545191",
-            name: "红红火火双人餐",
-            weight: 0,
-            virtual_food_id: 1346114296,
-            pinyin_name: "honghonghuohuoshuangrencan",
-            restaurant_id: 126529,
-            food_id: 1366856932,
-            packing_fee: 0,
-            recent_rating: 4.24,
-            promotion_stock: 980,
-            price: 67.0,
-            sold_out: false,
-            recent_popularity: 72,
-            is_essential: false,
-            item_id: "200000149621035751",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 980
-          }
-        ],
+        specfoods: [{
+          original_price: 84,
+          sku_id: "200000170861545191",
+          name: "红红火火双人餐",
+          weight: 0,
+          virtual_food_id: 1346114296,
+          pinyin_name: "honghonghuohuoshuangrencan",
+          restaurant_id: 126529,
+          food_id: 1366856932,
+          packing_fee: 0,
+          recent_rating: 4.24,
+          promotion_stock: 980,
+          price: 67.0,
+          sold_out: false,
+          recent_popularity: 72,
+          is_essential: false,
+          item_id: "200000149621035751",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 980
+        }],
         category_id: 1229245164
       },
       {
@@ -1399,15 +1300,12 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "banjiashuangrencan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
-        description:
-          "炫辣鸡腿堡+霸王鸡腿皇堡（原味）+薯霸王（大)+百事可乐（中）+美年达（中）",
+        description: "炫辣鸡腿堡+霸王鸡腿皇堡（原味）+薯霸王（大)+百事可乐（中）+美年达（中）",
         month_sales: 107,
         rating_count: 22,
         tips: "22评价 月售107份",
@@ -1444,35 +1342,32 @@ module.exports = [
           applicable_quantity: 1,
           is_promotion_toast_popup: true,
           activity_type: "",
-          applicable_quantity_detail_text:
-            "每单限1份优惠，超出的份数按原价计算",
+          applicable_quantity_detail_text: "每单限1份优惠，超出的份数按原价计算",
           is_price_changed: false
         },
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: 75,
-            sku_id: "200000176079551207",
-            name: "半价双人餐",
-            weight: 0,
-            virtual_food_id: 1350553564,
-            pinyin_name: "banjiashuangrencan",
-            restaurant_id: 126529,
-            food_id: 1371952694,
-            packing_fee: 0,
-            recent_rating: 4.14,
-            promotion_stock: 27,
-            price: 37.5,
-            sold_out: false,
-            recent_popularity: 107,
-            is_essential: false,
-            item_id: "200000154166841063",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 985
-          }
-        ],
+        specfoods: [{
+          original_price: 75,
+          sku_id: "200000176079551207",
+          name: "半价双人餐",
+          weight: 0,
+          virtual_food_id: 1350553564,
+          pinyin_name: "banjiashuangrencan",
+          restaurant_id: 126529,
+          food_id: 1371952694,
+          packing_fee: 0,
+          recent_rating: 4.14,
+          promotion_stock: 27,
+          price: 37.5,
+          sold_out: false,
+          recent_popularity: 107,
+          is_essential: false,
+          item_id: "200000154166841063",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 985
+        }],
         category_id: 1229245164
       },
       {
@@ -1482,12 +1377,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "tianjiaohuangbaodanrencan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "天椒皇堡+霸王鸡条（鲜辣）+百事可乐（中）",
         month_sales: 104,
@@ -1526,35 +1419,32 @@ module.exports = [
           applicable_quantity: 1,
           is_promotion_toast_popup: true,
           activity_type: "",
-          applicable_quantity_detail_text:
-            "每单限1份优惠，超出的份数按原价计算",
+          applicable_quantity_detail_text: "每单限1份优惠，超出的份数按原价计算",
           is_price_changed: true
         },
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: 45.5,
-            sku_id: "200000153625489127",
-            name: "天椒皇堡单人餐",
-            weight: 0,
-            virtual_food_id: 1334048620,
-            pinyin_name: "tianjiaohuangbaodanrencan",
-            restaurant_id: 126529,
-            food_id: 1350024891,
-            packing_fee: 0,
-            recent_rating: 4.29,
-            promotion_stock: 987,
-            price: 34.0,
-            sold_out: false,
-            recent_popularity: 104,
-            is_essential: false,
-            item_id: "200000137265787623",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 987
-          }
-        ],
+        specfoods: [{
+          original_price: 45.5,
+          sku_id: "200000153625489127",
+          name: "天椒皇堡单人餐",
+          weight: 0,
+          virtual_food_id: 1334048620,
+          pinyin_name: "tianjiaohuangbaodanrencan",
+          restaurant_id: 126529,
+          food_id: 1350024891,
+          packing_fee: 0,
+          recent_rating: 4.29,
+          promotion_stock: 987,
+          price: 34.0,
+          sold_out: false,
+          recent_popularity: 104,
+          is_essential: false,
+          item_id: "200000137265787623",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 987
+        }],
         category_id: 1229245164
       },
       {
@@ -1564,15 +1454,12 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "bawangfenxiangcan（5-6ren）",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
-        description:
-          "双层皇堡+天椒霸王鸡腿皇堡+经典安格斯厚牛堡（原味）+果木香风味火烤鸡腿堡+香脆鳕鱼堡+霸王鸡盒A+薯霸王（大）+洋葱圈8个+阿根廷红虾圈+霸王红薯格（双人份）+瓶装饮料可乐x3",
+        description: "双层皇堡+天椒霸王鸡腿皇堡+经典安格斯厚牛堡（原味）+果木香风味火烤鸡腿堡+香脆鳕鱼堡+霸王鸡盒A+薯霸王（大）+洋葱圈8个+阿根廷红虾圈+霸王红薯格（双人份）+瓶装饮料可乐x3",
         month_sales: 3,
         rating_count: 0,
         tips: "0评价 月售3份",
@@ -1609,35 +1496,32 @@ module.exports = [
           applicable_quantity: 1,
           is_promotion_toast_popup: true,
           activity_type: "",
-          applicable_quantity_detail_text:
-            "每单限1份优惠，超出的份数按原价计算",
+          applicable_quantity_detail_text: "每单限1份优惠，超出的份数按原价计算",
           is_price_changed: true
         },
         satisfy_rate: 0,
-        specfoods: [
-          {
-            original_price: 249,
-            sku_id: "200000187037581031",
-            name: "霸王分享餐（5-6人）",
-            weight: 0,
-            virtual_food_id: 1359504137,
-            pinyin_name: "bawangfenxiangcan（5-6ren）",
-            restaurant_id: 126529,
-            food_id: 1382653831,
-            packing_fee: 0,
-            recent_rating: 0.0,
-            promotion_stock: 999,
-            price: 199.0,
-            sold_out: false,
-            recent_popularity: 3,
-            is_essential: false,
-            item_id: "200000163332267751",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 1000
-          }
-        ],
+        specfoods: [{
+          original_price: 249,
+          sku_id: "200000187037581031",
+          name: "霸王分享餐（5-6人）",
+          weight: 0,
+          virtual_food_id: 1359504137,
+          pinyin_name: "bawangfenxiangcan（5-6ren）",
+          restaurant_id: 126529,
+          food_id: 1382653831,
+          packing_fee: 0,
+          recent_rating: 0.0,
+          promotion_stock: 999,
+          price: 199.0,
+          sold_out: false,
+          recent_popularity: 3,
+          is_essential: false,
+          item_id: "200000163332267751",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 1000
+        }],
         category_id: 1229245164
       },
       {
@@ -1647,12 +1531,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "jingdianangesidanrencan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521464400
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521464400
+        }],
         attrs: [],
         description: "经典安格斯厚牛堡（原味）+王道嫩香鸡块+七喜（中）",
         month_sales: 54,
@@ -1691,35 +1573,32 @@ module.exports = [
           applicable_quantity: 1,
           is_promotion_toast_popup: true,
           activity_type: "",
-          applicable_quantity_detail_text:
-            "每单限1份优惠，超出的份数按原价计算",
+          applicable_quantity_detail_text: "每单限1份优惠，超出的份数按原价计算",
           is_price_changed: true
         },
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: 55,
-            sku_id: "200000192336142055",
-            name: "经典安格斯单人餐",
-            weight: 0,
-            virtual_food_id: 1363883366,
-            pinyin_name: "jingdianangesidanrencan",
-            restaurant_id: 126529,
-            food_id: 1387828267,
-            packing_fee: 0,
-            recent_rating: 4.25,
-            promotion_stock: 975,
-            price: 40.0,
-            sold_out: false,
-            recent_popularity: 54,
-            is_essential: false,
-            item_id: "200000167816573671",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 975
-          }
-        ],
+        specfoods: [{
+          original_price: 55,
+          sku_id: "200000192336142055",
+          name: "经典安格斯单人餐",
+          weight: 0,
+          virtual_food_id: 1363883366,
+          pinyin_name: "jingdianangesidanrencan",
+          restaurant_id: 126529,
+          food_id: 1387828267,
+          packing_fee: 0,
+          recent_rating: 4.25,
+          promotion_stock: 975,
+          price: 40.0,
+          sold_out: false,
+          recent_popularity: 54,
+          is_essential: false,
+          item_id: "200000167816573671",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 975
+        }],
         category_id: 1229245164
       },
       {
@@ -1729,15 +1608,12 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "huangbaoshuangrentaocan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521464400
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521464400
+        }],
         attrs: [],
-        description:
-          "炫辣鸡腿堡+皇堡+王道嫩香鸡块+美国红薯格（双人）+百事可乐（中）+七喜（中）",
+        description: "炫辣鸡腿堡+皇堡+王道嫩香鸡块+美国红薯格（双人）+百事可乐（中）+七喜（中）",
         month_sales: 17,
         rating_count: 7,
         tips: "7评价 月售17份",
@@ -1774,35 +1650,32 @@ module.exports = [
           applicable_quantity: 1,
           is_promotion_toast_popup: true,
           activity_type: "",
-          applicable_quantity_detail_text:
-            "每单限1份优惠，超出的份数按原价计算",
+          applicable_quantity_detail_text: "每单限1份优惠，超出的份数按原价计算",
           is_price_changed: true
         },
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: 81,
-            sku_id: "200000192354505447",
-            name: "皇堡双人套餐",
-            weight: 0,
-            virtual_food_id: 1363900829,
-            pinyin_name: "huangbaoshuangrentaocan",
-            restaurant_id: 126529,
-            food_id: 1387846202,
-            packing_fee: 0,
-            recent_rating: 4.0,
-            promotion_stock: 995,
-            price: 65.0,
-            sold_out: false,
-            recent_popularity: 17,
-            is_essential: false,
-            item_id: "200000167834455783",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 995
-          }
-        ],
+        specfoods: [{
+          original_price: 81,
+          sku_id: "200000192354505447",
+          name: "皇堡双人套餐",
+          weight: 0,
+          virtual_food_id: 1363900829,
+          pinyin_name: "huangbaoshuangrentaocan",
+          restaurant_id: 126529,
+          food_id: 1387846202,
+          packing_fee: 0,
+          recent_rating: 4.0,
+          promotion_stock: 995,
+          price: 65.0,
+          sold_out: false,
+          recent_popularity: 17,
+          is_essential: false,
+          item_id: "200000167834455783",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 995
+        }],
         category_id: 1229245164
       }
     ],
@@ -1817,20 +1690,17 @@ module.exports = [
     icon_url: "",
     name: "单品汉堡",
     grey_icon_url: "",
-    foods: [
-      {
+    foods: [{
         rating: 4.32,
         is_featured: 0,
         virtual_food_id: 1250551441,
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "bawangjituihuangbao",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 182,
@@ -1848,30 +1718,28 @@ module.exports = [
         satisfy_count: 38,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055045218023",
-            name: "霸王鸡腿皇堡",
-            weight: 0,
-            virtual_food_id: 1250551441,
-            pinyin_name: "bawangjituihuangbao",
-            restaurant_id: 126529,
-            food_id: 1253755095,
-            packing_fee: 0,
-            recent_rating: 4.32,
-            promotion_stock: -1,
-            price: 23,
-            sold_out: false,
-            recent_popularity: 182,
-            is_essential: false,
-            item_id: "200000051764676327",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 964
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055045218023",
+          name: "霸王鸡腿皇堡",
+          weight: 0,
+          virtual_food_id: 1250551441,
+          pinyin_name: "bawangjituihuangbao",
+          restaurant_id: 126529,
+          food_id: 1253755095,
+          packing_fee: 0,
+          recent_rating: 4.32,
+          promotion_stock: -1,
+          price: 23,
+          sold_out: false,
+          recent_popularity: 182,
+          is_essential: false,
+          item_id: "200000051764676327",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 964
+        }],
         category_id: 1229245165
       },
       {
@@ -1881,12 +1749,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "guomuxiangfengweihuokaojituibao",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 204,
@@ -1904,30 +1770,28 @@ module.exports = [
         satisfy_count: 50,
         activity: null,
         satisfy_rate: 96,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055041352423",
-            name: "果木香风味火烤鸡腿堡",
-            weight: 0,
-            virtual_food_id: 1250555383,
-            pinyin_name: "guomuxiangfengweihuokaojituibao",
-            restaurant_id: 126529,
-            food_id: 1253751320,
-            packing_fee: 0,
-            recent_rating: 4.13,
-            promotion_stock: -1,
-            price: 19,
-            sold_out: false,
-            recent_popularity: 204,
-            is_essential: false,
-            item_id: "200000051768712935",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 965
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055041352423",
+          name: "果木香风味火烤鸡腿堡",
+          weight: 0,
+          virtual_food_id: 1250555383,
+          pinyin_name: "guomuxiangfengweihuokaojituibao",
+          restaurant_id: 126529,
+          food_id: 1253751320,
+          packing_fee: 0,
+          recent_rating: 4.13,
+          promotion_stock: -1,
+          price: 19,
+          sold_out: false,
+          recent_popularity: 204,
+          is_essential: false,
+          item_id: "200000051768712935",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 965
+        }],
         category_id: 1229245165
       },
       {
@@ -1937,12 +1801,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "peigenzhishihuangbao",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 74,
@@ -1960,30 +1822,28 @@ module.exports = [
         satisfy_count: 14,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055033005799",
-            name: "培根芝士皇堡",
-            weight: 0,
-            virtual_food_id: 1250546934,
-            pinyin_name: "peigenzhishihuangbao",
-            restaurant_id: 126529,
-            food_id: 1253743169,
-            packing_fee: 0,
-            recent_rating: 4.43,
-            promotion_stock: -1,
-            price: 32,
-            sold_out: false,
-            recent_popularity: 74,
-            is_essential: false,
-            item_id: "200000051760061159",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 995
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055033005799",
+          name: "培根芝士皇堡",
+          weight: 0,
+          virtual_food_id: 1250546934,
+          pinyin_name: "peigenzhishihuangbao",
+          restaurant_id: 126529,
+          food_id: 1253743169,
+          packing_fee: 0,
+          recent_rating: 4.43,
+          promotion_stock: -1,
+          price: 32,
+          sold_out: false,
+          recent_popularity: 74,
+          is_essential: false,
+          item_id: "200000051760061159",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 995
+        }],
         category_id: 1229245165
       },
       {
@@ -1993,12 +1853,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "xiangcuixueyubao",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 134,
@@ -2016,30 +1874,28 @@ module.exports = [
         satisfy_count: 34,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055033007847",
-            name: "香脆鳕鱼堡",
-            weight: 0,
-            virtual_food_id: 1250546936,
-            pinyin_name: "xiangcuixueyubao",
-            restaurant_id: 126529,
-            food_id: 1253743171,
-            packing_fee: 0,
-            recent_rating: 4.24,
-            promotion_stock: -1,
-            price: 18,
-            sold_out: false,
-            recent_popularity: 134,
-            is_essential: false,
-            item_id: "200000051760063207",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 981
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055033007847",
+          name: "香脆鳕鱼堡",
+          weight: 0,
+          virtual_food_id: 1250546936,
+          pinyin_name: "xiangcuixueyubao",
+          restaurant_id: 126529,
+          food_id: 1253743171,
+          packing_fee: 0,
+          recent_rating: 4.24,
+          promotion_stock: -1,
+          price: 18,
+          sold_out: false,
+          recent_popularity: 134,
+          is_essential: false,
+          item_id: "200000051760063207",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 981
+        }],
         category_id: 1229245165
       },
       {
@@ -2049,12 +1905,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "sancengtianjiaohuangbao",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 28,
@@ -2072,30 +1926,28 @@ module.exports = [
         satisfy_count: 5,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055037438695",
-            name: "三层天椒皇堡",
-            weight: 0,
-            virtual_food_id: 1250559021,
-            pinyin_name: "sancengtianjiaohuangbao",
-            restaurant_id: 126529,
-            food_id: 1253747498,
-            packing_fee: 0,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 41,
-            sold_out: false,
-            recent_popularity: 28,
-            is_essential: false,
-            item_id: "200000051772438247",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 995
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055037438695",
+          name: "三层天椒皇堡",
+          weight: 0,
+          virtual_food_id: 1250559021,
+          pinyin_name: "sancengtianjiaohuangbao",
+          restaurant_id: 126529,
+          food_id: 1253747498,
+          packing_fee: 0,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 41,
+          sold_out: false,
+          recent_popularity: 28,
+          is_essential: false,
+          item_id: "200000051772438247",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 995
+        }],
         category_id: 1229245165
       },
       {
@@ -2105,12 +1957,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "shuangcengtianjiaohuangbao",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 79,
@@ -2128,30 +1978,28 @@ module.exports = [
         satisfy_count: 11,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055045231335",
-            name: "双层天椒皇堡",
-            weight: 0,
-            virtual_food_id: 1250551454,
-            pinyin_name: "shuangcengtianjiaohuangbao",
-            restaurant_id: 126529,
-            food_id: 1253755108,
-            packing_fee: 0,
-            recent_rating: 4.55,
-            promotion_stock: -1,
-            price: 32,
-            sold_out: false,
-            recent_popularity: 79,
-            is_essential: false,
-            item_id: "200000051764689639",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 986
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055045231335",
+          name: "双层天椒皇堡",
+          weight: 0,
+          virtual_food_id: 1250551454,
+          pinyin_name: "shuangcengtianjiaohuangbao",
+          restaurant_id: 126529,
+          food_id: 1253755108,
+          packing_fee: 0,
+          recent_rating: 4.55,
+          promotion_stock: -1,
+          price: 32,
+          sold_out: false,
+          recent_popularity: 79,
+          is_essential: false,
+          item_id: "200000051764689639",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 986
+        }],
         category_id: 1229245165
       },
       {
@@ -2161,12 +2009,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "sancenghuangbao",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 39,
@@ -2184,30 +2030,28 @@ module.exports = [
         satisfy_count: 9,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055041364711",
-            name: "三层皇堡",
-            weight: 0,
-            virtual_food_id: 1250555395,
-            pinyin_name: "sancenghuangbao",
-            restaurant_id: 126529,
-            food_id: 1253751332,
-            packing_fee: 0,
-            recent_rating: 4.11,
-            promotion_stock: -1,
-            price: 41,
-            sold_out: false,
-            recent_popularity: 39,
-            is_essential: false,
-            item_id: "200000051768725223",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 999
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055041364711",
+          name: "三层皇堡",
+          weight: 0,
+          virtual_food_id: 1250555395,
+          pinyin_name: "sancenghuangbao",
+          restaurant_id: 126529,
+          food_id: 1253751332,
+          packing_fee: 0,
+          recent_rating: 4.11,
+          promotion_stock: -1,
+          price: 41,
+          sold_out: false,
+          recent_popularity: 39,
+          is_essential: false,
+          item_id: "200000051768725223",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 999
+        }],
         category_id: 1229245165
       },
       {
@@ -2217,12 +2061,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "shuangcenghuangbao",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 103,
@@ -2240,30 +2082,28 @@ module.exports = [
         satisfy_count: 23,
         activity: null,
         satisfy_rate: 95,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055033012967",
-            name: "双层皇堡",
-            weight: 0,
-            virtual_food_id: 1250546941,
-            pinyin_name: "shuangcenghuangbao",
-            restaurant_id: 126529,
-            food_id: 1253743176,
-            packing_fee: 0,
-            recent_rating: 4.04,
-            promotion_stock: -1,
-            price: 32,
-            sold_out: false,
-            recent_popularity: 103,
-            is_essential: false,
-            item_id: "200000051760068327",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 981
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055033012967",
+          name: "双层皇堡",
+          weight: 0,
+          virtual_food_id: 1250546941,
+          pinyin_name: "shuangcenghuangbao",
+          restaurant_id: 126529,
+          food_id: 1253743176,
+          packing_fee: 0,
+          recent_rating: 4.04,
+          promotion_stock: -1,
+          price: 32,
+          sold_out: false,
+          recent_popularity: 103,
+          is_essential: false,
+          item_id: "200000051760068327",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 981
+        }],
         category_id: 1229245165
       },
       {
@@ -2273,12 +2113,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "tianjiaohuangbao",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 58,
@@ -2296,30 +2134,28 @@ module.exports = [
         satisfy_count: 10,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055045235431",
-            name: "天椒皇堡",
-            weight: 0,
-            virtual_food_id: 1250551458,
-            pinyin_name: "tianjiaohuangbao",
-            restaurant_id: 126529,
-            food_id: 1253755112,
-            packing_fee: 0,
-            recent_rating: 4.2,
-            promotion_stock: -1,
-            price: 23,
-            sold_out: false,
-            recent_popularity: 58,
-            is_essential: false,
-            item_id: "200000051764692711",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 992
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055045235431",
+          name: "天椒皇堡",
+          weight: 0,
+          virtual_food_id: 1250551458,
+          pinyin_name: "tianjiaohuangbao",
+          restaurant_id: 126529,
+          food_id: 1253755112,
+          packing_fee: 0,
+          recent_rating: 4.2,
+          promotion_stock: -1,
+          price: 23,
+          sold_out: false,
+          recent_popularity: 58,
+          is_essential: false,
+          item_id: "200000051764692711",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 992
+        }],
         category_id: 1229245165
       },
       {
@@ -2329,12 +2165,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "huangbao",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 121,
@@ -2352,30 +2186,28 @@ module.exports = [
         satisfy_count: 27,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055041367783",
-            name: "皇堡",
-            weight: 0,
-            virtual_food_id: 1250555398,
-            pinyin_name: "huangbao",
-            restaurant_id: 126529,
-            food_id: 1253751335,
-            packing_fee: 0,
-            recent_rating: 4.22,
-            promotion_stock: -1,
-            price: 23,
-            sold_out: false,
-            recent_popularity: 121,
-            is_essential: false,
-            item_id: "200000051768728295",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 978
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055041367783",
+          name: "皇堡",
+          weight: 0,
+          virtual_food_id: 1250555398,
+          pinyin_name: "huangbao",
+          restaurant_id: 126529,
+          food_id: 1253751335,
+          packing_fee: 0,
+          recent_rating: 4.22,
+          promotion_stock: -1,
+          price: 23,
+          sold_out: false,
+          recent_popularity: 121,
+          is_essential: false,
+          item_id: "200000051768728295",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 978
+        }],
         category_id: 1229245165
       },
       {
@@ -2385,12 +2217,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "tianjiaoxiaohuangbao",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 42,
@@ -2408,30 +2238,28 @@ module.exports = [
         satisfy_count: 8,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055045236455",
-            name: "天椒小皇堡",
-            weight: 0,
-            virtual_food_id: 1250551459,
-            pinyin_name: "tianjiaoxiaohuangbao",
-            restaurant_id: 126529,
-            food_id: 1253755113,
-            packing_fee: 0,
-            recent_rating: 4.12,
-            promotion_stock: -1,
-            price: 15,
-            sold_out: false,
-            recent_popularity: 42,
-            is_essential: false,
-            item_id: "200000051764694759",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 992
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055045236455",
+          name: "天椒小皇堡",
+          weight: 0,
+          virtual_food_id: 1250551459,
+          pinyin_name: "tianjiaoxiaohuangbao",
+          restaurant_id: 126529,
+          food_id: 1253755113,
+          packing_fee: 0,
+          recent_rating: 4.12,
+          promotion_stock: -1,
+          price: 15,
+          sold_out: false,
+          recent_popularity: 42,
+          is_essential: false,
+          item_id: "200000051764694759",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 992
+        }],
         category_id: 1229245165
       },
       {
@@ -2441,12 +2269,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "xiaohuangbao",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 179,
@@ -2464,30 +2290,28 @@ module.exports = [
         satisfy_count: 40,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055045237479",
-            name: "小皇堡",
-            weight: 0,
-            virtual_food_id: 1250551460,
-            pinyin_name: "xiaohuangbao",
-            restaurant_id: 126529,
-            food_id: 1253755114,
-            packing_fee: 0,
-            recent_rating: 4.3,
-            promotion_stock: -1,
-            price: 15,
-            sold_out: false,
-            recent_popularity: 179,
-            is_essential: false,
-            item_id: "200000051764695783",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 972
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055045237479",
+          name: "小皇堡",
+          weight: 0,
+          virtual_food_id: 1250551460,
+          pinyin_name: "xiaohuangbao",
+          restaurant_id: 126529,
+          food_id: 1253755114,
+          packing_fee: 0,
+          recent_rating: 4.3,
+          promotion_stock: -1,
+          price: 15,
+          sold_out: false,
+          recent_popularity: 179,
+          is_essential: false,
+          item_id: "200000051764695783",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 972
+        }],
         category_id: 1229245165
       },
       {
@@ -2497,12 +2321,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "xuanlajituibao",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 128,
@@ -2520,30 +2342,28 @@ module.exports = [
         satisfy_count: 27,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055037446887",
-            name: "炫辣鸡腿堡",
-            weight: 0,
-            virtual_food_id: 1250559029,
-            pinyin_name: "xuanlajituibao",
-            restaurant_id: 126529,
-            food_id: 1253747506,
-            packing_fee: 0,
-            recent_rating: 4.11,
-            promotion_stock: -1,
-            price: 18,
-            sold_out: false,
-            recent_popularity: 128,
-            is_essential: false,
-            item_id: "200000051772446439",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 987
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055037446887",
+          name: "炫辣鸡腿堡",
+          weight: 0,
+          virtual_food_id: 1250559029,
+          pinyin_name: "xuanlajituibao",
+          restaurant_id: 126529,
+          food_id: 1253747506,
+          packing_fee: 0,
+          recent_rating: 4.11,
+          promotion_stock: -1,
+          price: 18,
+          sold_out: false,
+          recent_popularity: 128,
+          is_essential: false,
+          item_id: "200000051772446439",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 987
+        }],
         category_id: 1229245165
       },
       {
@@ -2553,12 +2373,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "meishijipaibao",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 153,
@@ -2576,30 +2394,28 @@ module.exports = [
         satisfy_count: 22,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055037448935",
-            name: "美式鸡排堡",
-            weight: 0,
-            virtual_food_id: 1250559031,
-            pinyin_name: "meishijipaibao",
-            restaurant_id: 126529,
-            food_id: 1253747508,
-            packing_fee: 0,
-            recent_rating: 4.05,
-            promotion_stock: -1,
-            price: 12,
-            sold_out: false,
-            recent_popularity: 153,
-            is_essential: false,
-            item_id: "200000051772448487",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 981
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055037448935",
+          name: "美式鸡排堡",
+          weight: 0,
+          virtual_food_id: 1250559031,
+          pinyin_name: "meishijipaibao",
+          restaurant_id: 126529,
+          food_id: 1253747508,
+          packing_fee: 0,
+          recent_rating: 4.05,
+          promotion_stock: -1,
+          price: 12,
+          sold_out: false,
+          recent_popularity: 153,
+          is_essential: false,
+          item_id: "200000051772448487",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 981
+        }],
         category_id: 1229245165
       },
       {
@@ -2609,12 +2425,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "tianjiaobawangjituihuangbao",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 41,
@@ -2632,30 +2446,28 @@ module.exports = [
         satisfy_count: 9,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055045243623",
-            name: "天椒霸王鸡腿皇堡",
-            weight: 0,
-            virtual_food_id: 1250551466,
-            pinyin_name: "tianjiaobawangjituihuangbao",
-            restaurant_id: 126529,
-            food_id: 1253755120,
-            packing_fee: 0,
-            recent_rating: 4.11,
-            promotion_stock: -1,
-            price: 23,
-            sold_out: false,
-            recent_popularity: 41,
-            is_essential: false,
-            item_id: "200000051764701927",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 990
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055045243623",
+          name: "天椒霸王鸡腿皇堡",
+          weight: 0,
+          virtual_food_id: 1250551466,
+          pinyin_name: "tianjiaobawangjituihuangbao",
+          restaurant_id: 126529,
+          food_id: 1253755120,
+          packing_fee: 0,
+          recent_rating: 4.11,
+          promotion_stock: -1,
+          price: 23,
+          sold_out: false,
+          recent_popularity: 41,
+          is_essential: false,
+          item_id: "200000051764701927",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 990
+        }],
         category_id: 1229245165
       },
       {
@@ -2665,12 +2477,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "fennudehuangbao（la）",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 28,
@@ -2688,30 +2498,28 @@ module.exports = [
         satisfy_count: 5,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055041370855",
-            name: "愤怒的皇堡（辣）",
-            weight: 0,
-            virtual_food_id: 1250555401,
-            pinyin_name: "fennudehuangbao（la）",
-            restaurant_id: 126529,
-            food_id: 1253751338,
-            packing_fee: 0,
-            recent_rating: 4.4,
-            promotion_stock: -1,
-            price: 28,
-            sold_out: false,
-            recent_popularity: 28,
-            is_essential: false,
-            item_id: "200000051768731367",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 994
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055041370855",
+          name: "愤怒的皇堡（辣）",
+          weight: 0,
+          virtual_food_id: 1250555401,
+          pinyin_name: "fennudehuangbao（la）",
+          restaurant_id: 126529,
+          food_id: 1253751338,
+          packing_fee: 0,
+          recent_rating: 4.4,
+          promotion_stock: -1,
+          price: 28,
+          sold_out: false,
+          recent_popularity: 28,
+          is_essential: false,
+          item_id: "200000051768731367",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 994
+        }],
         category_id: 1229245165
       },
       {
@@ -2721,12 +2529,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "jingdianangesihouniubao（tianjiao）",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 55,
@@ -2744,30 +2550,28 @@ module.exports = [
         satisfy_count: 7,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000170852633319",
-            name: "经典安格斯厚牛堡（天椒）",
-            weight: 0,
-            virtual_food_id: 1346102318,
-            pinyin_name: "jingdianangesihouniubao（tianjiao）",
-            restaurant_id: 126529,
-            food_id: 1366848252,
-            packing_fee: 0,
-            recent_rating: 4.43,
-            promotion_stock: -1,
-            price: 34,
-            sold_out: false,
-            recent_popularity: 55,
-            is_essential: false,
-            item_id: "200000149608792807",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 995
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000170852633319",
+          name: "经典安格斯厚牛堡（天椒）",
+          weight: 0,
+          virtual_food_id: 1346102318,
+          pinyin_name: "jingdianangesihouniubao（tianjiao）",
+          restaurant_id: 126529,
+          food_id: 1366848252,
+          packing_fee: 0,
+          recent_rating: 4.43,
+          promotion_stock: -1,
+          price: 34,
+          sold_out: false,
+          recent_popularity: 55,
+          is_essential: false,
+          item_id: "200000149608792807",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 995
+        }],
         category_id: 1229245165
       },
       {
@@ -2777,12 +2581,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "jingdianangesihouniubao（yuanwei）",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 158,
@@ -2800,30 +2602,28 @@ module.exports = [
         satisfy_count: 41,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000170865487591",
-            name: "经典安格斯厚牛堡（原味）",
-            weight: 0,
-            virtual_food_id: 1346111143,
-            pinyin_name: "jingdianangesihouniubao（yuanwei）",
-            restaurant_id: 126529,
-            food_id: 1366860856,
-            packing_fee: 0,
-            recent_rating: 4.27,
-            promotion_stock: -1,
-            price: 34,
-            sold_out: false,
-            recent_popularity: 158,
-            is_essential: false,
-            item_id: "200000149617788647",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 967
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000170865487591",
+          name: "经典安格斯厚牛堡（原味）",
+          weight: 0,
+          virtual_food_id: 1346111143,
+          pinyin_name: "jingdianangesihouniubao（yuanwei）",
+          restaurant_id: 126529,
+          food_id: 1366860856,
+          packing_fee: 0,
+          recent_rating: 4.27,
+          promotion_stock: -1,
+          price: 34,
+          sold_out: false,
+          recent_popularity: 158,
+          is_essential: false,
+          item_id: "200000149617788647",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 967
+        }],
         category_id: 1229245165
       },
       {
@@ -2833,12 +2633,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "dezhouyanxunangesihouniubao",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 99,
@@ -2856,30 +2654,28 @@ module.exports = [
         satisfy_count: 21,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000170861542119",
-            name: "德州烟熏安格斯厚牛堡",
-            weight: 0,
-            virtual_food_id: 1346114293,
-            pinyin_name: "dezhouyanxunangesihouniubao",
-            restaurant_id: 126529,
-            food_id: 1366856929,
-            packing_fee: 0,
-            recent_rating: 4.14,
-            promotion_stock: -1,
-            price: 41,
-            sold_out: false,
-            recent_popularity: 99,
-            is_essential: false,
-            item_id: "200000149621032679",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 984
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000170861542119",
+          name: "德州烟熏安格斯厚牛堡",
+          weight: 0,
+          virtual_food_id: 1346114293,
+          pinyin_name: "dezhouyanxunangesihouniubao",
+          restaurant_id: 126529,
+          food_id: 1366856929,
+          packing_fee: 0,
+          recent_rating: 4.14,
+          promotion_stock: -1,
+          price: 41,
+          sold_out: false,
+          recent_popularity: 99,
+          is_essential: false,
+          item_id: "200000149621032679",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 984
+        }],
         category_id: 1229245165
       },
       {
@@ -2889,12 +2685,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "langmuzhishikaojibao",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 67,
@@ -2912,30 +2706,28 @@ module.exports = [
         satisfy_count: 18,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000170865497831",
-            name: "朗姆芝士烤鸡堡",
-            weight: 0,
-            virtual_food_id: 1346111152,
-            pinyin_name: "langmuzhishikaojibao",
-            restaurant_id: 126529,
-            food_id: 1366860866,
-            packing_fee: 0,
-            recent_rating: 4.33,
-            promotion_stock: -1,
-            price: 27,
-            sold_out: false,
-            recent_popularity: 67,
-            is_essential: false,
-            item_id: "200000149617797863",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 0
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000170865497831",
+          name: "朗姆芝士烤鸡堡",
+          weight: 0,
+          virtual_food_id: 1346111152,
+          pinyin_name: "langmuzhishikaojibao",
+          restaurant_id: 126529,
+          food_id: 1366860866,
+          packing_fee: 0,
+          recent_rating: 4.33,
+          promotion_stock: -1,
+          price: 27,
+          sold_out: false,
+          recent_popularity: 67,
+          is_essential: false,
+          item_id: "200000149617797863",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 0
+        }],
         category_id: 1229245165
       }
     ],
@@ -2950,20 +2742,17 @@ module.exports = [
     icon_url: "",
     name: "套餐汉堡",
     grey_icon_url: "",
-    foods: [
-      {
+    foods: [{
         rating: 4.33,
         is_featured: 0,
         virtual_food_id: 1250555343,
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "tianjiaobawangjituihuangbaotaocan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 49,
@@ -2981,30 +2770,28 @@ module.exports = [
         satisfy_count: 3,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055041311463",
-            name: "天椒霸王鸡腿皇堡套餐",
-            weight: 0,
-            virtual_food_id: 1250555343,
-            pinyin_name: "tianjiaobawangjituihuangbaotaocan",
-            restaurant_id: 126529,
-            food_id: 1253751280,
-            packing_fee: 0,
-            recent_rating: 4.33,
-            promotion_stock: -1,
-            price: 37,
-            sold_out: false,
-            recent_popularity: 49,
-            is_essential: false,
-            item_id: "200000051768671975",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 989
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055041311463",
+          name: "天椒霸王鸡腿皇堡套餐",
+          weight: 0,
+          virtual_food_id: 1250555343,
+          pinyin_name: "tianjiaobawangjituihuangbaotaocan",
+          restaurant_id: 126529,
+          food_id: 1253751280,
+          packing_fee: 0,
+          recent_rating: 4.33,
+          promotion_stock: -1,
+          price: 37,
+          sold_out: false,
+          recent_popularity: 49,
+          is_essential: false,
+          item_id: "200000051768671975",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 989
+        }],
         category_id: 1229245166
       },
       {
@@ -3014,12 +2801,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "bawangjituihuangbaotaocan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 100,
@@ -3037,30 +2822,28 @@ module.exports = [
         satisfy_count: 15,
         activity: null,
         satisfy_rate: 88,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055037393639",
-            name: "霸王鸡腿皇堡套餐",
-            weight: 0,
-            virtual_food_id: 1250543977,
-            pinyin_name: "bawangjituihuangbaotaocan",
-            restaurant_id: 126529,
-            food_id: 1253747454,
-            packing_fee: 0,
-            recent_rating: 3.94,
-            promotion_stock: -1,
-            price: 37,
-            sold_out: false,
-            recent_popularity: 100,
-            is_essential: false,
-            item_id: "200000051757033191",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 986
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055037393639",
+          name: "霸王鸡腿皇堡套餐",
+          weight: 0,
+          virtual_food_id: 1250543977,
+          pinyin_name: "bawangjituihuangbaotaocan",
+          restaurant_id: 126529,
+          food_id: 1253747454,
+          packing_fee: 0,
+          recent_rating: 3.94,
+          promotion_stock: -1,
+          price: 37,
+          sold_out: false,
+          recent_popularity: 100,
+          is_essential: false,
+          item_id: "200000051757033191",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 986
+        }],
         category_id: 1229245166
       },
       {
@@ -3070,12 +2853,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "guomuxiangfengweihuokaojituibaotaocan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 188,
@@ -3093,30 +2874,28 @@ module.exports = [
         satisfy_count: 39,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055041314535",
-            name: "果木香风味火烤鸡腿堡套餐",
-            weight: 0,
-            virtual_food_id: 1250555346,
-            pinyin_name: "guomuxiangfengweihuokaojituibaotaocan",
-            restaurant_id: 126529,
-            food_id: 1253751283,
-            packing_fee: 0,
-            recent_rating: 4.26,
-            promotion_stock: -1,
-            price: 33,
-            sold_out: false,
-            recent_popularity: 188,
-            is_essential: false,
-            item_id: "200000051768675047",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 952
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055041314535",
+          name: "果木香风味火烤鸡腿堡套餐",
+          weight: 0,
+          virtual_food_id: 1250555346,
+          pinyin_name: "guomuxiangfengweihuokaojituibaotaocan",
+          restaurant_id: 126529,
+          food_id: 1253751283,
+          packing_fee: 0,
+          recent_rating: 4.26,
+          promotion_stock: -1,
+          price: 33,
+          sold_out: false,
+          recent_popularity: 188,
+          is_essential: false,
+          item_id: "200000051768675047",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 952
+        }],
         category_id: 1229245166
       },
       {
@@ -3126,12 +2905,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "peigenzhishihuangbaotaocan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 66,
@@ -3149,30 +2926,28 @@ module.exports = [
         satisfy_count: 14,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055041322727",
-            name: "培根芝士皇堡套餐",
-            weight: 0,
-            virtual_food_id: 1250555354,
-            pinyin_name: "peigenzhishihuangbaotaocan",
-            restaurant_id: 126529,
-            food_id: 1253751291,
-            packing_fee: 0,
-            recent_rating: 4.07,
-            promotion_stock: -1,
-            price: 46,
-            sold_out: false,
-            recent_popularity: 66,
-            is_essential: false,
-            item_id: "200000051768683239",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 990
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055041322727",
+          name: "培根芝士皇堡套餐",
+          weight: 0,
+          virtual_food_id: 1250555354,
+          pinyin_name: "peigenzhishihuangbaotaocan",
+          restaurant_id: 126529,
+          food_id: 1253751291,
+          packing_fee: 0,
+          recent_rating: 4.07,
+          promotion_stock: -1,
+          price: 46,
+          sold_out: false,
+          recent_popularity: 66,
+          is_essential: false,
+          item_id: "200000051768683239",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 990
+        }],
         category_id: 1229245166
       },
       {
@@ -3182,12 +2957,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "xiangcuixueyubaotaocan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 46,
@@ -3205,30 +2978,28 @@ module.exports = [
         satisfy_count: 11,
         activity: null,
         satisfy_rate: 91,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055041325799",
-            name: "香脆鳕鱼堡套餐",
-            weight: 0,
-            virtual_food_id: 1250555357,
-            pinyin_name: "xiangcuixueyubaotaocan",
-            restaurant_id: 126529,
-            food_id: 1253751294,
-            packing_fee: 0,
-            recent_rating: 4.08,
-            promotion_stock: -1,
-            price: 32,
-            sold_out: false,
-            recent_popularity: 46,
-            is_essential: false,
-            item_id: "200000051768686311",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 989
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055041325799",
+          name: "香脆鳕鱼堡套餐",
+          weight: 0,
+          virtual_food_id: 1250555357,
+          pinyin_name: "xiangcuixueyubaotaocan",
+          restaurant_id: 126529,
+          food_id: 1253751294,
+          packing_fee: 0,
+          recent_rating: 4.08,
+          promotion_stock: -1,
+          price: 32,
+          sold_out: false,
+          recent_popularity: 46,
+          is_essential: false,
+          item_id: "200000051768686311",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 989
+        }],
         category_id: 1229245166
       },
       {
@@ -3238,12 +3009,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "sancengtianjiaohuangbaotaocan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 26,
@@ -3261,30 +3030,28 @@ module.exports = [
         satisfy_count: 5,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055045195495",
-            name: "三层天椒皇堡套餐",
-            weight: 0,
-            virtual_food_id: 1250551419,
-            pinyin_name: "sancengtianjiaohuangbaotaocan",
-            restaurant_id: 126529,
-            food_id: 1253755073,
-            packing_fee: 0,
-            recent_rating: 4.2,
-            promotion_stock: -1,
-            price: 55,
-            sold_out: false,
-            recent_popularity: 26,
-            is_essential: false,
-            item_id: "200000051764653799",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 994
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055045195495",
+          name: "三层天椒皇堡套餐",
+          weight: 0,
+          virtual_food_id: 1250551419,
+          pinyin_name: "sancengtianjiaohuangbaotaocan",
+          restaurant_id: 126529,
+          food_id: 1253755073,
+          packing_fee: 0,
+          recent_rating: 4.2,
+          promotion_stock: -1,
+          price: 55,
+          sold_out: false,
+          recent_popularity: 26,
+          is_essential: false,
+          item_id: "200000051764653799",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 994
+        }],
         category_id: 1229245166
       },
       {
@@ -3294,12 +3061,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "shuangcengtianjiaohuangbaotaocan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 71,
@@ -3317,30 +3082,28 @@ module.exports = [
         satisfy_count: 15,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055032970983",
-            name: "双层天椒皇堡套餐",
-            weight: 0,
-            virtual_food_id: 1250546900,
-            pinyin_name: "shuangcengtianjiaohuangbaotaocan",
-            restaurant_id: 126529,
-            food_id: 1253743135,
-            packing_fee: 0,
-            recent_rating: 4.2,
-            promotion_stock: -1,
-            price: 46,
-            sold_out: false,
-            recent_popularity: 71,
-            is_essential: false,
-            item_id: "200000051760026343",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 993
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055032970983",
+          name: "双层天椒皇堡套餐",
+          weight: 0,
+          virtual_food_id: 1250546900,
+          pinyin_name: "shuangcengtianjiaohuangbaotaocan",
+          restaurant_id: 126529,
+          food_id: 1253743135,
+          packing_fee: 0,
+          recent_rating: 4.2,
+          promotion_stock: -1,
+          price: 46,
+          sold_out: false,
+          recent_popularity: 71,
+          is_essential: false,
+          item_id: "200000051760026343",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 993
+        }],
         category_id: 1229245166
       },
       {
@@ -3350,12 +3113,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "sancenghuangbaotaocan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 45,
@@ -3373,30 +3134,28 @@ module.exports = [
         satisfy_count: 11,
         activity: null,
         satisfy_rate: 91,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055032972007",
-            name: "三层皇堡套餐",
-            weight: 0,
-            virtual_food_id: 1250546901,
-            pinyin_name: "sancenghuangbaotaocan",
-            restaurant_id: 126529,
-            food_id: 1253743136,
-            packing_fee: 0,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 55,
-            sold_out: false,
-            recent_popularity: 45,
-            is_essential: false,
-            item_id: "200000051760027367",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 989
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055032972007",
+          name: "三层皇堡套餐",
+          weight: 0,
+          virtual_food_id: 1250546901,
+          pinyin_name: "sancenghuangbaotaocan",
+          restaurant_id: 126529,
+          food_id: 1253743136,
+          packing_fee: 0,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 55,
+          sold_out: false,
+          recent_popularity: 45,
+          is_essential: false,
+          item_id: "200000051760027367",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 989
+        }],
         category_id: 1229245166
       },
       {
@@ -3406,12 +3165,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "shuangcenghuangbaotaocan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 103,
@@ -3429,30 +3186,28 @@ module.exports = [
         satisfy_count: 18,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055037405927",
-            name: "双层皇堡套餐",
-            weight: 0,
-            virtual_food_id: 1250543989,
-            pinyin_name: "shuangcenghuangbaotaocan",
-            restaurant_id: 126529,
-            food_id: 1253747466,
-            packing_fee: 0,
-            recent_rating: 4.28,
-            promotion_stock: -1,
-            price: 46,
-            sold_out: false,
-            recent_popularity: 103,
-            is_essential: false,
-            item_id: "200000051757045479",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 990
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055037405927",
+          name: "双层皇堡套餐",
+          weight: 0,
+          virtual_food_id: 1250543989,
+          pinyin_name: "shuangcenghuangbaotaocan",
+          restaurant_id: 126529,
+          food_id: 1253747466,
+          packing_fee: 0,
+          recent_rating: 4.28,
+          promotion_stock: -1,
+          price: 46,
+          sold_out: false,
+          recent_popularity: 103,
+          is_essential: false,
+          item_id: "200000051757045479",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 990
+        }],
         category_id: 1229245166
       },
       {
@@ -3462,12 +3217,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "tianjiaohuangbaotaocan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 38,
@@ -3485,30 +3238,28 @@ module.exports = [
         satisfy_count: 4,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055032973031",
-            name: "天椒皇堡套餐",
-            weight: 0,
-            virtual_food_id: 1250546902,
-            pinyin_name: "tianjiaohuangbaotaocan",
-            restaurant_id: 126529,
-            food_id: 1253743137,
-            packing_fee: 0,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 37,
-            sold_out: false,
-            recent_popularity: 38,
-            is_essential: false,
-            item_id: "200000051760028391",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 996
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055032973031",
+          name: "天椒皇堡套餐",
+          weight: 0,
+          virtual_food_id: 1250546902,
+          pinyin_name: "tianjiaohuangbaotaocan",
+          restaurant_id: 126529,
+          food_id: 1253743137,
+          packing_fee: 0,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 37,
+          sold_out: false,
+          recent_popularity: 38,
+          is_essential: false,
+          item_id: "200000051760028391",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 996
+        }],
         category_id: 1229245166
       },
       {
@@ -3518,12 +3269,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "huangbaotaocan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 64,
@@ -3541,30 +3290,28 @@ module.exports = [
         satisfy_count: 19,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055045199591",
-            name: "皇堡套餐",
-            weight: 0,
-            virtual_food_id: 1250551423,
-            pinyin_name: "huangbaotaocan",
-            restaurant_id: 126529,
-            food_id: 1253755077,
-            packing_fee: 0,
-            recent_rating: 4.11,
-            promotion_stock: -1,
-            price: 37,
-            sold_out: false,
-            recent_popularity: 64,
-            is_essential: false,
-            item_id: "200000051764657895",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 990
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055045199591",
+          name: "皇堡套餐",
+          weight: 0,
+          virtual_food_id: 1250551423,
+          pinyin_name: "huangbaotaocan",
+          restaurant_id: 126529,
+          food_id: 1253755077,
+          packing_fee: 0,
+          recent_rating: 4.11,
+          promotion_stock: -1,
+          price: 37,
+          sold_out: false,
+          recent_popularity: 64,
+          is_essential: false,
+          item_id: "200000051764657895",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 990
+        }],
         category_id: 1229245166
       },
       {
@@ -3574,12 +3321,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "tianjiaoxiaohuangbaotaocan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 30,
@@ -3597,30 +3342,28 @@ module.exports = [
         satisfy_count: 4,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055037407975",
-            name: "天椒小皇堡套餐",
-            weight: 0,
-            virtual_food_id: 1250543991,
-            pinyin_name: "tianjiaoxiaohuangbaotaocan",
-            restaurant_id: 126529,
-            food_id: 1253747468,
-            packing_fee: 0,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 29,
-            sold_out: false,
-            recent_popularity: 30,
-            is_essential: false,
-            item_id: "200000051757047527",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 995
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055037407975",
+          name: "天椒小皇堡套餐",
+          weight: 0,
+          virtual_food_id: 1250543991,
+          pinyin_name: "tianjiaoxiaohuangbaotaocan",
+          restaurant_id: 126529,
+          food_id: 1253747468,
+          packing_fee: 0,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 29,
+          sold_out: false,
+          recent_popularity: 30,
+          is_essential: false,
+          item_id: "200000051757047527",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 995
+        }],
         category_id: 1229245166
       },
       {
@@ -3630,12 +3373,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "xiaohuangbaotaocan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 56,
@@ -3653,30 +3394,28 @@ module.exports = [
         satisfy_count: 7,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055041337063",
-            name: "小皇堡套餐",
-            weight: 0,
-            virtual_food_id: 1250555368,
-            pinyin_name: "xiaohuangbaotaocan",
-            restaurant_id: 126529,
-            food_id: 1253751305,
-            packing_fee: 0,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 29,
-            sold_out: false,
-            recent_popularity: 56,
-            is_essential: false,
-            item_id: "200000051768697575",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 991
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055041337063",
+          name: "小皇堡套餐",
+          weight: 0,
+          virtual_food_id: 1250555368,
+          pinyin_name: "xiaohuangbaotaocan",
+          restaurant_id: 126529,
+          food_id: 1253751305,
+          packing_fee: 0,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 29,
+          sold_out: false,
+          recent_popularity: 56,
+          is_essential: false,
+          item_id: "200000051768697575",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 991
+        }],
         category_id: 1229245166
       },
       {
@@ -3686,12 +3425,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "xuanlajituibaotaocan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 56,
@@ -3709,30 +3446,28 @@ module.exports = [
         satisfy_count: 6,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055037412071",
-            name: "炫辣鸡腿堡套餐",
-            weight: 0,
-            virtual_food_id: 1250543996,
-            pinyin_name: "xuanlajituibaotaocan",
-            restaurant_id: 126529,
-            food_id: 1253747472,
-            packing_fee: 0,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 32,
-            sold_out: false,
-            recent_popularity: 56,
-            is_essential: false,
-            item_id: "200000051757052647",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 990
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055037412071",
+          name: "炫辣鸡腿堡套餐",
+          weight: 0,
+          virtual_food_id: 1250543996,
+          pinyin_name: "xuanlajituibaotaocan",
+          restaurant_id: 126529,
+          food_id: 1253747472,
+          packing_fee: 0,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 32,
+          sold_out: false,
+          recent_popularity: 56,
+          is_essential: false,
+          item_id: "200000051757052647",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 990
+        }],
         category_id: 1229245166
       },
       {
@@ -3742,12 +3477,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "meishijipaibaotaocan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 55,
@@ -3765,30 +3498,28 @@ module.exports = [
         satisfy_count: 10,
         activity: null,
         satisfy_rate: 90,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055037415143",
-            name: "美式鸡排堡套餐",
-            weight: 0,
-            virtual_food_id: 1250543998,
-            pinyin_name: "meishijipaibaotaocan",
-            restaurant_id: 126529,
-            food_id: 1253747475,
-            packing_fee: 0,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 26,
-            sold_out: false,
-            recent_popularity: 55,
-            is_essential: false,
-            item_id: "200000051757054695",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 992
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055037415143",
+          name: "美式鸡排堡套餐",
+          weight: 0,
+          virtual_food_id: 1250543998,
+          pinyin_name: "meishijipaibaotaocan",
+          restaurant_id: 126529,
+          food_id: 1253747475,
+          packing_fee: 0,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 26,
+          sold_out: false,
+          recent_popularity: 55,
+          is_essential: false,
+          item_id: "200000051757054695",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 992
+        }],
         category_id: 1229245166
       },
       {
@@ -3798,12 +3529,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "fennudehuangbao（la）taocan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 22,
@@ -3821,30 +3550,28 @@ module.exports = [
         satisfy_count: 3,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055045207783",
-            name: "愤怒的皇堡（辣）套餐",
-            weight: 0,
-            virtual_food_id: 1250551431,
-            pinyin_name: "fennudehuangbao（la）taocan",
-            restaurant_id: 126529,
-            food_id: 1253755085,
-            packing_fee: 0,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 42,
-            sold_out: false,
-            recent_popularity: 22,
-            is_essential: false,
-            item_id: "200000051764666087",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 995
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055045207783",
+          name: "愤怒的皇堡（辣）套餐",
+          weight: 0,
+          virtual_food_id: 1250551431,
+          pinyin_name: "fennudehuangbao（la）taocan",
+          restaurant_id: 126529,
+          food_id: 1253755085,
+          packing_fee: 0,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 42,
+          sold_out: false,
+          recent_popularity: 22,
+          is_essential: false,
+          item_id: "200000051764666087",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 995
+        }],
         category_id: 1229245166
       },
       {
@@ -3854,12 +3581,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "dezhouyanxunangesihouniubaotaocan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 222,
@@ -3877,30 +3602,28 @@ module.exports = [
         satisfy_count: 45,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000170861541095",
-            name: "德州烟熏安格斯厚牛堡套餐",
-            weight: 0,
-            virtual_food_id: 1346114292,
-            pinyin_name: "dezhouyanxunangesihouniubaotaocan",
-            restaurant_id: 126529,
-            food_id: 1366856928,
-            packing_fee: 0,
-            recent_rating: 4.2,
-            promotion_stock: -1,
-            price: 55,
-            sold_out: false,
-            recent_popularity: 222,
-            is_essential: false,
-            item_id: "200000149621031655",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 962
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000170861541095",
+          name: "德州烟熏安格斯厚牛堡套餐",
+          weight: 0,
+          virtual_food_id: 1346114292,
+          pinyin_name: "dezhouyanxunangesihouniubaotaocan",
+          restaurant_id: 126529,
+          food_id: 1366856928,
+          packing_fee: 0,
+          recent_rating: 4.2,
+          promotion_stock: -1,
+          price: 55,
+          sold_out: false,
+          recent_popularity: 222,
+          is_essential: false,
+          item_id: "200000149621031655",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 962
+        }],
         category_id: 1229245166
       },
       {
@@ -3910,12 +3633,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "jingdianangesihouniubao（tianjiao）taocan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 36,
@@ -3933,30 +3654,28 @@ module.exports = [
         satisfy_count: 5,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000170852631271",
-            name: "经典安格斯厚牛堡（天椒）套餐",
-            weight: 0,
-            virtual_food_id: 1346102316,
-            pinyin_name: "jingdianangesihouniubao（tianjiao）taocan",
-            restaurant_id: 126529,
-            food_id: 1366848250,
-            packing_fee: 0,
-            recent_rating: 4.4,
-            promotion_stock: -1,
-            price: 48,
-            sold_out: false,
-            recent_popularity: 36,
-            is_essential: false,
-            item_id: "200000149608790759",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 996
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000170852631271",
+          name: "经典安格斯厚牛堡（天椒）套餐",
+          weight: 0,
+          virtual_food_id: 1346102316,
+          pinyin_name: "jingdianangesihouniubao（tianjiao）taocan",
+          restaurant_id: 126529,
+          food_id: 1366848250,
+          packing_fee: 0,
+          recent_rating: 4.4,
+          promotion_stock: -1,
+          price: 48,
+          sold_out: false,
+          recent_popularity: 36,
+          is_essential: false,
+          item_id: "200000149608790759",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 996
+        }],
         category_id: 1229245166
       },
       {
@@ -3966,12 +3685,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "jingdianangesihouniubao（yuanwei）taocan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 122,
@@ -3989,30 +3706,28 @@ module.exports = [
         satisfy_count: 28,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000170852632295",
-            name: "经典安格斯厚牛堡（原味）套餐",
-            weight: 0,
-            virtual_food_id: 1346102317,
-            pinyin_name: "jingdianangesihouniubao（yuanwei）taocan",
-            restaurant_id: 126529,
-            food_id: 1366848251,
-            packing_fee: 0,
-            recent_rating: 4.39,
-            promotion_stock: -1,
-            price: 48,
-            sold_out: false,
-            recent_popularity: 122,
-            is_essential: false,
-            item_id: "200000149608791783",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 982
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000170852632295",
+          name: "经典安格斯厚牛堡（原味）套餐",
+          weight: 0,
+          virtual_food_id: 1346102317,
+          pinyin_name: "jingdianangesihouniubao（yuanwei）taocan",
+          restaurant_id: 126529,
+          food_id: 1366848251,
+          packing_fee: 0,
+          recent_rating: 4.39,
+          promotion_stock: -1,
+          price: 48,
+          sold_out: false,
+          recent_popularity: 122,
+          is_essential: false,
+          item_id: "200000149608791783",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 982
+        }],
         category_id: 1229245166
       },
       {
@@ -4022,12 +3737,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "langmuzhishikaojibaotaocan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 42,
@@ -4045,30 +3758,28 @@ module.exports = [
         satisfy_count: 13,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000170861552359",
-            name: "朗姆芝士烤鸡堡套餐",
-            weight: 0,
-            virtual_food_id: 1346114303,
-            pinyin_name: "langmuzhishikaojibaotaocan",
-            restaurant_id: 126529,
-            food_id: 1366856939,
-            packing_fee: 0,
-            recent_rating: 4.23,
-            promotion_stock: -1,
-            price: 41,
-            sold_out: false,
-            recent_popularity: 42,
-            is_essential: false,
-            item_id: "200000149621042919",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 0
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000170861552359",
+          name: "朗姆芝士烤鸡堡套餐",
+          weight: 0,
+          virtual_food_id: 1346114303,
+          pinyin_name: "langmuzhishikaojibaotaocan",
+          restaurant_id: 126529,
+          food_id: 1366856939,
+          packing_fee: 0,
+          recent_rating: 4.23,
+          promotion_stock: -1,
+          price: 41,
+          sold_out: false,
+          recent_popularity: 42,
+          is_essential: false,
+          item_id: "200000149621042919",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 0
+        }],
         category_id: 1229245166
       }
     ],
@@ -4083,20 +3794,17 @@ module.exports = [
     icon_url: "",
     name: "甜点小吃",
     grey_icon_url: "",
-    foods: [
-      {
+    foods: [{
         rating: 4.2,
         is_featured: 0,
         virtual_food_id: 1250559045,
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "bawangjitiao（xianla）",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 259,
@@ -4114,30 +3822,28 @@ module.exports = [
         satisfy_count: 50,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055037463271",
-            name: "霸王鸡条（鲜辣）",
-            weight: 0,
-            virtual_food_id: 1250559045,
-            pinyin_name: "bawangjitiao（xianla）",
-            restaurant_id: 126529,
-            food_id: 1253747522,
-            packing_fee: 0,
-            recent_rating: 4.2,
-            promotion_stock: -1,
-            price: 14,
-            sold_out: false,
-            recent_popularity: 259,
-            is_essential: false,
-            item_id: "200000051772462823",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 967
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055037463271",
+          name: "霸王鸡条（鲜辣）",
+          weight: 0,
+          virtual_food_id: 1250559045,
+          pinyin_name: "bawangjitiao（xianla）",
+          restaurant_id: 126529,
+          food_id: 1253747522,
+          packing_fee: 0,
+          recent_rating: 4.2,
+          promotion_stock: -1,
+          price: 14,
+          sold_out: false,
+          recent_popularity: 259,
+          is_essential: false,
+          item_id: "200000051772462823",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 967
+        }],
         category_id: 1229249783
       },
       {
@@ -4147,12 +3853,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "wangdaonenxiangjikuai",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 491,
@@ -4170,30 +3874,28 @@ module.exports = [
         satisfy_count: 102,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055037464295",
-            name: "王道嫩香鸡块",
-            weight: 0,
-            virtual_food_id: 1250559046,
-            pinyin_name: "wangdaonenxiangjikuai",
-            restaurant_id: 126529,
-            food_id: 1253747523,
-            packing_fee: 0,
-            recent_rating: 4.19,
-            promotion_stock: -1,
-            price: 11,
-            sold_out: false,
-            recent_popularity: 491,
-            is_essential: false,
-            item_id: "200000051772463847",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 923
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055037464295",
+          name: "王道嫩香鸡块",
+          weight: 0,
+          virtual_food_id: 1250559046,
+          pinyin_name: "wangdaonenxiangjikuai",
+          restaurant_id: 126529,
+          food_id: 1253747523,
+          packing_fee: 0,
+          recent_rating: 4.19,
+          promotion_stock: -1,
+          price: 11,
+          sold_out: false,
+          recent_popularity: 491,
+          is_essential: false,
+          item_id: "200000051772463847",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 923
+        }],
         category_id: 1229249783
       },
       {
@@ -4203,12 +3905,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "xinshucaisela（jianbeizhimakouwei）.",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 17,
@@ -4226,30 +3926,28 @@ module.exports = [
         satisfy_count: 2,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055041380071",
-            name: "新蔬菜色拉（煎焙芝麻口味）.",
-            weight: 0,
-            virtual_food_id: 1250555410,
-            pinyin_name: "xinshucaisela（jianbeizhimakouwei）.",
-            restaurant_id: 126529,
-            food_id: 1253751347,
-            packing_fee: 0,
-            recent_rating: 4.5,
-            promotion_stock: -1,
-            price: 14,
-            sold_out: false,
-            recent_popularity: 17,
-            is_essential: false,
-            item_id: "200000051768740583",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 1000
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055041380071",
+          name: "新蔬菜色拉（煎焙芝麻口味）.",
+          weight: 0,
+          virtual_food_id: 1250555410,
+          pinyin_name: "xinshucaisela（jianbeizhimakouwei）.",
+          restaurant_id: 126529,
+          food_id: 1253751347,
+          packing_fee: 0,
+          recent_rating: 4.5,
+          promotion_stock: -1,
+          price: 14,
+          sold_out: false,
+          recent_popularity: 17,
+          is_essential: false,
+          item_id: "200000051768740583",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 1000
+        }],
         category_id: 1229249783
       },
       {
@@ -4259,12 +3957,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "xinshucaisela（rishikouwei）.",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 5,
@@ -4282,30 +3978,28 @@ module.exports = [
         satisfy_count: 0,
         activity: null,
         satisfy_rate: 0,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "322848133863",
-            name: "新蔬菜色拉（日式口味）.",
-            weight: 0,
-            virtual_food_id: 677330638,
-            pinyin_name: "xinshucaisela（rishikouwei）.",
-            restaurant_id: 126529,
-            food_id: 705554818,
-            packing_fee: 0,
-            recent_rating: 0.0,
-            promotion_stock: -1,
-            price: 14,
-            sold_out: false,
-            recent_popularity: 5,
-            is_essential: false,
-            item_id: "280364237543",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 1000
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "322848133863",
+          name: "新蔬菜色拉（日式口味）.",
+          weight: 0,
+          virtual_food_id: 677330638,
+          pinyin_name: "xinshucaisela（rishikouwei）.",
+          restaurant_id: 126529,
+          food_id: 705554818,
+          packing_fee: 0,
+          recent_rating: 0.0,
+          promotion_stock: -1,
+          price: 14,
+          sold_out: false,
+          recent_popularity: 5,
+          is_essential: false,
+          item_id: "280364237543",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 1000
+        }],
         category_id: 1229249783
       },
       {
@@ -4315,12 +4009,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "shubawang(da)",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 346,
@@ -4338,30 +4030,28 @@ module.exports = [
         satisfy_count: 69,
         activity: null,
         satisfy_rate: 98,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055045255911",
-            name: "薯霸王(大)",
-            weight: 0,
-            virtual_food_id: 1250551478,
-            pinyin_name: "shubawang(da)",
-            restaurant_id: 126529,
-            food_id: 1253755132,
-            packing_fee: 0,
-            recent_rating: 4.13,
-            promotion_stock: -1,
-            price: 14,
-            sold_out: false,
-            recent_popularity: 346,
-            is_essential: false,
-            item_id: "200000051764714215",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 940
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055045255911",
+          name: "薯霸王(大)",
+          weight: 0,
+          virtual_food_id: 1250551478,
+          pinyin_name: "shubawang(da)",
+          restaurant_id: 126529,
+          food_id: 1253755132,
+          packing_fee: 0,
+          recent_rating: 4.13,
+          promotion_stock: -1,
+          price: 14,
+          sold_out: false,
+          recent_popularity: 346,
+          is_essential: false,
+          item_id: "200000051764714215",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 940
+        }],
         category_id: 1229249783
       },
       {
@@ -4371,12 +4061,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "shubawang(xiao)",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 137,
@@ -4394,30 +4082,28 @@ module.exports = [
         satisfy_count: 32,
         activity: null,
         satisfy_rate: 96,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055033035495",
-            name: "薯霸王(小)",
-            weight: 0,
-            virtual_food_id: 1250546963,
-            pinyin_name: "shubawang(xiao)",
-            restaurant_id: 126529,
-            food_id: 1253743198,
-            packing_fee: 0,
-            recent_rating: 4.09,
-            promotion_stock: -1,
-            price: 10,
-            sold_out: false,
-            recent_popularity: 137,
-            is_essential: false,
-            item_id: "200000051760090855",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 984
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055033035495",
+          name: "薯霸王(小)",
+          weight: 0,
+          virtual_food_id: 1250546963,
+          pinyin_name: "shubawang(xiao)",
+          restaurant_id: 126529,
+          food_id: 1253743198,
+          packing_fee: 0,
+          recent_rating: 4.09,
+          promotion_stock: -1,
+          price: 10,
+          sold_out: false,
+          recent_popularity: 137,
+          is_essential: false,
+          item_id: "200000051760090855",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 984
+        }],
         category_id: 1229249783
       },
       {
@@ -4427,12 +4113,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "yangcongquan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 168,
@@ -4450,30 +4134,28 @@ module.exports = [
         satisfy_count: 39,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055041382119",
-            name: "洋葱圈",
-            weight: 0,
-            virtual_food_id: 1250555412,
-            pinyin_name: "yangcongquan",
-            restaurant_id: 126529,
-            food_id: 1253751349,
-            packing_fee: 0,
-            recent_rating: 4.15,
-            promotion_stock: -1,
-            price: 11,
-            sold_out: false,
-            recent_popularity: 168,
-            is_essential: false,
-            item_id: "200000051768742631",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 967
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055041382119",
+          name: "洋葱圈",
+          weight: 0,
+          virtual_food_id: 1250555412,
+          pinyin_name: "yangcongquan",
+          restaurant_id: 126529,
+          food_id: 1253751349,
+          packing_fee: 0,
+          recent_rating: 4.15,
+          promotion_stock: -1,
+          price: 11,
+          sold_out: false,
+          recent_popularity: 168,
+          is_essential: false,
+          item_id: "200000051768742631",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 967
+        }],
         category_id: 1229249783
       },
       {
@@ -4483,12 +4165,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "wangdaochuanshujichi",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 439,
@@ -4506,30 +4186,28 @@ module.exports = [
         satisfy_count: 81,
         activity: null,
         satisfy_rate: 96,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055037472487",
-            name: "王道川蜀鸡翅",
-            weight: 0,
-            virtual_food_id: 1250559054,
-            pinyin_name: "wangdaochuanshujichi",
-            restaurant_id: 126529,
-            food_id: 1253747531,
-            packing_fee: 0,
-            recent_rating: 4.15,
-            promotion_stock: -1,
-            price: 12,
-            sold_out: false,
-            recent_popularity: 439,
-            is_essential: false,
-            item_id: "200000051772472039",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 946
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055037472487",
+          name: "王道川蜀鸡翅",
+          weight: 0,
+          virtual_food_id: 1250559054,
+          pinyin_name: "wangdaochuanshujichi",
+          restaurant_id: 126529,
+          food_id: 1253747531,
+          packing_fee: 0,
+          recent_rating: 4.15,
+          promotion_stock: -1,
+          price: 12,
+          sold_out: false,
+          recent_popularity: 439,
+          is_essential: false,
+          item_id: "200000051772472039",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 946
+        }],
         category_id: 1229249783
       },
       {
@@ -4539,12 +4217,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "wangdaojiaoxiangjitui",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 732,
@@ -4562,30 +4238,28 @@ module.exports = [
         satisfy_count: 123,
         activity: null,
         satisfy_rate: 99,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000120904854247",
-            name: "王道椒香鸡腿",
-            weight: 0,
-            virtual_food_id: 1307248606,
-            pinyin_name: "wangdaojiaoxiangjitui",
-            restaurant_id: 126529,
-            food_id: 1318071146,
-            packing_fee: 0,
-            recent_rating: 4.21,
-            promotion_stock: -1,
-            price: 12,
-            sold_out: false,
-            recent_popularity: 732,
-            is_essential: false,
-            item_id: "200000109822573287",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 889
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000120904854247",
+          name: "王道椒香鸡腿",
+          weight: 0,
+          virtual_food_id: 1307248606,
+          pinyin_name: "wangdaojiaoxiangjitui",
+          restaurant_id: 126529,
+          food_id: 1318071146,
+          packing_fee: 0,
+          recent_rating: 4.21,
+          promotion_stock: -1,
+          price: 12,
+          sold_out: false,
+          recent_popularity: 732,
+          is_essential: false,
+          item_id: "200000109822573287",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 889
+        }],
         category_id: 1229249783
       },
       {
@@ -4595,12 +4269,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "shubawang(zhong)",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 46,
@@ -4618,30 +4290,28 @@ module.exports = [
         satisfy_count: 9,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000120904856295",
-            name: "薯霸王(中)",
-            weight: 0,
-            virtual_food_id: 1307248608,
-            pinyin_name: "shubawang(zhong)",
-            restaurant_id: 126529,
-            food_id: 1318071148,
-            packing_fee: 0,
-            recent_rating: 4.11,
-            promotion_stock: -1,
-            price: 12,
-            sold_out: false,
-            recent_popularity: 46,
-            is_essential: false,
-            item_id: "200000109822575335",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 987
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000120904856295",
+          name: "薯霸王(中)",
+          weight: 0,
+          virtual_food_id: 1307248608,
+          pinyin_name: "shubawang(zhong)",
+          restaurant_id: 126529,
+          food_id: 1318071148,
+          packing_fee: 0,
+          recent_rating: 4.11,
+          promotion_stock: -1,
+          price: 12,
+          sold_out: false,
+          recent_popularity: 46,
+          is_essential: false,
+          item_id: "200000109822575335",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 987
+        }],
         category_id: 1229249783
       },
       {
@@ -4651,15 +4321,12 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "bawangjiheA",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
-        description:
-          "王道嫩香鸡块（四块）+王道椒香鸡腿（一个）+王道川蜀鸡翅（一对）+霸王鸡条鲜辣（四条）",
+        description: "王道嫩香鸡块（四块）+王道椒香鸡腿（一个）+王道川蜀鸡翅（一对）+霸王鸡条鲜辣（四条）",
         month_sales: 595,
         rating_count: 138,
         tips: "138评价 月售595份",
@@ -4675,30 +4342,28 @@ module.exports = [
         satisfy_count: 137,
         activity: null,
         satisfy_rate: 99,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055045261031",
-            name: "霸王鸡盒A",
-            weight: 0,
-            virtual_food_id: 1250551483,
-            pinyin_name: "bawangjiheA",
-            restaurant_id: 126529,
-            food_id: 1253755137,
-            packing_fee: 0,
-            recent_rating: 4.15,
-            promotion_stock: -1,
-            price: 35,
-            sold_out: false,
-            recent_popularity: 595,
-            is_essential: false,
-            item_id: "200000051764719335",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 897
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055045261031",
+          name: "霸王鸡盒A",
+          weight: 0,
+          virtual_food_id: 1250551483,
+          pinyin_name: "bawangjiheA",
+          restaurant_id: 126529,
+          food_id: 1253755137,
+          packing_fee: 0,
+          recent_rating: 4.15,
+          promotion_stock: -1,
+          price: 35,
+          sold_out: false,
+          recent_popularity: 595,
+          is_essential: false,
+          item_id: "200000051764719335",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 897
+        }],
         category_id: 1229249783
       },
       {
@@ -4708,12 +4373,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "bawanghongshuge（danrenfen）",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 66,
@@ -4731,30 +4394,28 @@ module.exports = [
         satisfy_count: 14,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000172467363559",
-            name: "霸王红薯格（单人份）",
-            weight: 0,
-            virtual_food_id: 1347423652,
-            pinyin_name: "bawanghongshuge（danrenfen）",
-            restaurant_id: 126529,
-            food_id: 1368425162,
-            packing_fee: 0,
-            recent_rating: 4.21,
-            promotion_stock: -1,
-            price: 13,
-            sold_out: false,
-            recent_popularity: 66,
-            is_essential: false,
-            item_id: "200000150961817319",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 991
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000172467363559",
+          name: "霸王红薯格（单人份）",
+          weight: 0,
+          virtual_food_id: 1347423652,
+          pinyin_name: "bawanghongshuge（danrenfen）",
+          restaurant_id: 126529,
+          food_id: 1368425162,
+          packing_fee: 0,
+          recent_rating: 4.21,
+          promotion_stock: -1,
+          price: 13,
+          sold_out: false,
+          recent_popularity: 66,
+          is_essential: false,
+          item_id: "200000150961817319",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 991
+        }],
         category_id: 1229249783
       },
       {
@@ -4764,12 +4425,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "bawanghongshuge（shuangrenfen）",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 80,
@@ -4787,30 +4446,28 @@ module.exports = [
         satisfy_count: 19,
         activity: null,
         satisfy_rate: 86,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000172467365607",
-            name: "霸王红薯格（双人份）",
-            weight: 0,
-            virtual_food_id: 1347423654,
-            pinyin_name: "bawanghongshuge（shuangrenfen）",
-            restaurant_id: 126529,
-            food_id: 1368425164,
-            packing_fee: 0,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 19,
-            sold_out: false,
-            recent_popularity: 80,
-            is_essential: false,
-            item_id: "200000150961819367",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 987
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000172467365607",
+          name: "霸王红薯格（双人份）",
+          weight: 0,
+          virtual_food_id: 1347423654,
+          pinyin_name: "bawanghongshuge（shuangrenfen）",
+          restaurant_id: 126529,
+          food_id: 1368425164,
+          packing_fee: 0,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 19,
+          sold_out: false,
+          recent_popularity: 80,
+          is_essential: false,
+          item_id: "200000150961819367",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 987
+        }],
         category_id: 1229249783
       },
       {
@@ -4820,12 +4477,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "agentinghongxiaquan",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 120,
@@ -4843,30 +4498,28 @@ module.exports = [
         satisfy_count: 38,
         activity: null,
         satisfy_rate: 97,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000172467366631",
-            name: "阿根廷红虾圈",
-            weight: 0,
-            virtual_food_id: 1347423655,
-            pinyin_name: "agentinghongxiaquan",
-            restaurant_id: 126529,
-            food_id: 1368425165,
-            packing_fee: 0,
-            recent_rating: 4.1,
-            promotion_stock: -1,
-            price: 14,
-            sold_out: false,
-            recent_popularity: 120,
-            is_essential: false,
-            item_id: "200000150961820391",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 990
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000172467366631",
+          name: "阿根廷红虾圈",
+          weight: 0,
+          virtual_food_id: 1347423655,
+          pinyin_name: "agentinghongxiaquan",
+          restaurant_id: 126529,
+          food_id: 1368425165,
+          packing_fee: 0,
+          recent_rating: 4.1,
+          promotion_stock: -1,
+          price: 14,
+          sold_out: false,
+          recent_popularity: 120,
+          is_essential: false,
+          item_id: "200000150961820391",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 990
+        }],
         category_id: 1229249783
       }
     ],
@@ -4881,20 +4534,17 @@ module.exports = [
     icon_url: "",
     name: "饮品系列",
     grey_icon_url: "",
-    foods: [
-      {
+    foods: [{
         rating: 4.0,
         is_featured: 0,
         virtual_food_id: 1250546975,
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "baishibeizhuangqixi（zhongbei)",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 16,
@@ -4912,30 +4562,28 @@ module.exports = [
         satisfy_count: 3,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055033047783",
-            name: "百事杯装七喜（中杯)",
-            weight: 0,
-            virtual_food_id: 1250546975,
-            pinyin_name: "baishibeizhuangqixi（zhongbei)",
-            restaurant_id: 126529,
-            food_id: 1253743210,
-            packing_fee: 0,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 10,
-            sold_out: false,
-            recent_popularity: 16,
-            is_essential: false,
-            item_id: "200000051760103143",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 998
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055033047783",
+          name: "百事杯装七喜（中杯)",
+          weight: 0,
+          virtual_food_id: 1250546975,
+          pinyin_name: "baishibeizhuangqixi（zhongbei)",
+          restaurant_id: 126529,
+          food_id: 1253743210,
+          packing_fee: 0,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 10,
+          sold_out: false,
+          recent_popularity: 16,
+          is_essential: false,
+          item_id: "200000051760103143",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 998
+        }],
         category_id: 1229254453
       },
       {
@@ -4945,12 +4593,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "baishibeizhuangmeinianda（zhongbei）",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 15,
@@ -4968,30 +4614,28 @@ module.exports = [
         satisfy_count: 2,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055045273319",
-            name: "百事杯装美年达（中杯）",
-            weight: 0,
-            virtual_food_id: 1250551495,
-            pinyin_name: "baishibeizhuangmeinianda（zhongbei）",
-            restaurant_id: 126529,
-            food_id: 1253755149,
-            packing_fee: 0,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 10,
-            sold_out: false,
-            recent_popularity: 15,
-            is_essential: false,
-            item_id: "200000051764731623",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 999
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055045273319",
+          name: "百事杯装美年达（中杯）",
+          weight: 0,
+          virtual_food_id: 1250551495,
+          pinyin_name: "baishibeizhuangmeinianda（zhongbei）",
+          restaurant_id: 126529,
+          food_id: 1253755149,
+          packing_fee: 0,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 10,
+          sold_out: false,
+          recent_popularity: 15,
+          is_essential: false,
+          item_id: "200000051764731623",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 999
+        }],
         category_id: 1229254453
       },
       {
@@ -5001,12 +4645,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "baishibeizhuangkele（zhongbei)",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 32,
@@ -5024,30 +4666,28 @@ module.exports = [
         satisfy_count: 4,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055033049831",
-            name: "百事杯装可乐（中杯)",
-            weight: 0,
-            virtual_food_id: 1250546977,
-            pinyin_name: "baishibeizhuangkele（zhongbei)",
-            restaurant_id: 126529,
-            food_id: 1253743212,
-            packing_fee: 0,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 10,
-            sold_out: false,
-            recent_popularity: 32,
-            is_essential: false,
-            item_id: "200000051760105191",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 995
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055033049831",
+          name: "百事杯装可乐（中杯)",
+          weight: 0,
+          virtual_food_id: 1250546977,
+          pinyin_name: "baishibeizhuangkele（zhongbei)",
+          restaurant_id: 126529,
+          food_id: 1253743212,
+          packing_fee: 0,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 10,
+          sold_out: false,
+          recent_popularity: 32,
+          is_essential: false,
+          item_id: "200000051760105191",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 995
+        }],
         category_id: 1229254453
       },
       {
@@ -5057,12 +4697,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "gangshinaicha(336ml)",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 35,
@@ -5080,30 +4718,28 @@ module.exports = [
         satisfy_count: 5,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055033053927",
-            name: "港式奶茶(336ml)",
-            weight: 0,
-            virtual_food_id: 1250546981,
-            pinyin_name: "gangshinaicha(336ml)",
-            restaurant_id: 126529,
-            food_id: 1253743216,
-            packing_fee: 0,
-            recent_rating: 4.2,
-            promotion_stock: -1,
-            price: 11,
-            sold_out: false,
-            recent_popularity: 35,
-            is_essential: false,
-            item_id: "200000051760109287",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 995
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055033053927",
+          name: "港式奶茶(336ml)",
+          weight: 0,
+          virtual_food_id: 1250546981,
+          pinyin_name: "gangshinaicha(336ml)",
+          restaurant_id: 126529,
+          food_id: 1253743216,
+          packing_fee: 0,
+          recent_rating: 4.2,
+          promotion_stock: -1,
+          price: 11,
+          sold_out: false,
+          recent_popularity: 35,
+          is_essential: false,
+          item_id: "200000051760109287",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 995
+        }],
         category_id: 1229254453
       },
       {
@@ -5113,12 +4749,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "lidunrehongcha",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 10,
@@ -5136,30 +4770,28 @@ module.exports = [
         satisfy_count: 3,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055045277415",
-            name: "立顿热红茶",
-            weight: 0,
-            virtual_food_id: 1250551499,
-            pinyin_name: "lidunrehongcha",
-            restaurant_id: 126529,
-            food_id: 1253755153,
-            packing_fee: 0,
-            recent_rating: 4.33,
-            promotion_stock: -1,
-            price: 9,
-            sold_out: false,
-            recent_popularity: 10,
-            is_essential: false,
-            item_id: "200000051764735719",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 999
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055045277415",
+          name: "立顿热红茶",
+          weight: 0,
+          virtual_food_id: 1250551499,
+          pinyin_name: "lidunrehongcha",
+          restaurant_id: 126529,
+          food_id: 1253755153,
+          packing_fee: 0,
+          recent_rating: 4.33,
+          promotion_stock: -1,
+          price: 9,
+          sold_out: false,
+          recent_popularity: 10,
+          is_essential: false,
+          item_id: "200000051764735719",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 999
+        }],
         category_id: 1229254453
       },
       {
@@ -5169,12 +4801,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "zhenxuandoujiang(8oz)",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 48,
@@ -5192,30 +4822,28 @@ module.exports = [
         satisfy_count: 10,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055037490919",
-            name: "臻选豆浆(8oz)",
-            weight: 0,
-            virtual_food_id: 1250559072,
-            pinyin_name: "zhenxuandoujiang(8oz)",
-            restaurant_id: 126529,
-            food_id: 1253747549,
-            packing_fee: 0,
-            recent_rating: 4.3,
-            promotion_stock: -1,
-            price: 8,
-            sold_out: false,
-            recent_popularity: 48,
-            is_essential: false,
-            item_id: "200000051772490471",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 992
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055037490919",
+          name: "臻选豆浆(8oz)",
+          weight: 0,
+          virtual_food_id: 1250559072,
+          pinyin_name: "zhenxuandoujiang(8oz)",
+          restaurant_id: 126529,
+          food_id: 1253747549,
+          packing_fee: 0,
+          recent_rating: 4.3,
+          promotion_stock: -1,
+          price: 8,
+          sold_out: false,
+          recent_popularity: 48,
+          is_essential: false,
+          item_id: "200000051772490471",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 992
+        }],
         category_id: 1229254453
       },
       {
@@ -5225,12 +4853,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "baishibeizhuangkele（xiaobei)",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 17,
@@ -5248,30 +4874,28 @@ module.exports = [
         satisfy_count: 2,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055033058023",
-            name: "百事杯装可乐（小杯)",
-            weight: 0,
-            virtual_food_id: 1250546985,
-            pinyin_name: "baishibeizhuangkele（xiaobei)",
-            restaurant_id: 126529,
-            food_id: 1253743220,
-            packing_fee: 0,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 8,
-            sold_out: false,
-            recent_popularity: 17,
-            is_essential: false,
-            item_id: "200000051760113383",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 997
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055033058023",
+          name: "百事杯装可乐（小杯)",
+          weight: 0,
+          virtual_food_id: 1250546985,
+          pinyin_name: "baishibeizhuangkele（xiaobei)",
+          restaurant_id: 126529,
+          food_id: 1253743220,
+          packing_fee: 0,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 8,
+          sold_out: false,
+          recent_popularity: 17,
+          is_essential: false,
+          item_id: "200000051760113383",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 997
+        }],
         category_id: 1229254453
       },
       {
@@ -5281,12 +4905,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "baishibeizhuangkele（dabei)",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 30,
@@ -5304,30 +4926,28 @@ module.exports = [
         satisfy_count: 7,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055041397479",
-            name: "百事杯装可乐（大杯)",
-            weight: 0,
-            virtual_food_id: 1250555427,
-            pinyin_name: "baishibeizhuangkele（dabei)",
-            restaurant_id: 126529,
-            food_id: 1253751364,
-            packing_fee: 0,
-            recent_rating: 4.14,
-            promotion_stock: -1,
-            price: 12,
-            sold_out: false,
-            recent_popularity: 30,
-            is_essential: false,
-            item_id: "200000051768757991",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 997
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055041397479",
+          name: "百事杯装可乐（大杯)",
+          weight: 0,
+          virtual_food_id: 1250555427,
+          pinyin_name: "baishibeizhuangkele（dabei)",
+          restaurant_id: 126529,
+          food_id: 1253751364,
+          packing_fee: 0,
+          recent_rating: 4.14,
+          promotion_stock: -1,
+          price: 12,
+          sold_out: false,
+          recent_popularity: 30,
+          is_essential: false,
+          item_id: "200000051768757991",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 997
+        }],
         category_id: 1229254453
       },
       {
@@ -5337,12 +4957,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "baishibeizhuangmeinianda（xiaobei）",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 4,
@@ -5360,30 +4978,28 @@ module.exports = [
         satisfy_count: 1,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055037496039",
-            name: "百事杯装美年达（小杯）",
-            weight: 0,
-            virtual_food_id: 1250559077,
-            pinyin_name: "baishibeizhuangmeinianda（xiaobei）",
-            restaurant_id: 126529,
-            food_id: 1253747554,
-            packing_fee: 0,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 8,
-            sold_out: false,
-            recent_popularity: 4,
-            is_essential: false,
-            item_id: "200000051772495591",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 1000
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055037496039",
+          name: "百事杯装美年达（小杯）",
+          weight: 0,
+          virtual_food_id: 1250559077,
+          pinyin_name: "baishibeizhuangmeinianda（xiaobei）",
+          restaurant_id: 126529,
+          food_id: 1253747554,
+          packing_fee: 0,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 8,
+          sold_out: false,
+          recent_popularity: 4,
+          is_essential: false,
+          item_id: "200000051772495591",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 1000
+        }],
         category_id: 1229254453
       },
       {
@@ -5393,12 +5009,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "baishibeizhuangmeinianda（dabei）",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 13,
@@ -5416,30 +5030,28 @@ module.exports = [
         satisfy_count: 1,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055041399527",
-            name: "百事杯装美年达（大杯）",
-            weight: 0,
-            virtual_food_id: 1250555429,
-            pinyin_name: "baishibeizhuangmeinianda（dabei）",
-            restaurant_id: 126529,
-            food_id: 1253751366,
-            packing_fee: 0,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 12,
-            sold_out: false,
-            recent_popularity: 13,
-            is_essential: false,
-            item_id: "200000051768760039",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 997
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055041399527",
+          name: "百事杯装美年达（大杯）",
+          weight: 0,
+          virtual_food_id: 1250555429,
+          pinyin_name: "baishibeizhuangmeinianda（dabei）",
+          restaurant_id: 126529,
+          food_id: 1253751366,
+          packing_fee: 0,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 12,
+          sold_out: false,
+          recent_popularity: 13,
+          is_essential: false,
+          item_id: "200000051768760039",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 997
+        }],
         category_id: 1229254453
       },
       {
@@ -5449,12 +5061,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "baishibeizhuangqixi（xiaobei)",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 6,
@@ -5472,30 +5082,28 @@ module.exports = [
         satisfy_count: 3,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055033059047",
-            name: "百事杯装七喜（小杯)",
-            weight: 0,
-            virtual_food_id: 1250546986,
-            pinyin_name: "baishibeizhuangqixi（xiaobei)",
-            restaurant_id: 126529,
-            food_id: 1253743221,
-            packing_fee: 0,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 8,
-            sold_out: false,
-            recent_popularity: 6,
-            is_essential: false,
-            item_id: "200000051760114407",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 999
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055033059047",
+          name: "百事杯装七喜（小杯)",
+          weight: 0,
+          virtual_food_id: 1250546986,
+          pinyin_name: "baishibeizhuangqixi（xiaobei)",
+          restaurant_id: 126529,
+          food_id: 1253743221,
+          packing_fee: 0,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 8,
+          sold_out: false,
+          recent_popularity: 6,
+          is_essential: false,
+          item_id: "200000051760114407",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 999
+        }],
         category_id: 1229254453
       },
       {
@@ -5505,12 +5113,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "baishibeizhuangqixi（dabei）",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 3,
@@ -5528,30 +5134,28 @@ module.exports = [
         satisfy_count: 1,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055037502183",
-            name: "百事杯装七喜（大杯）",
-            weight: 0,
-            virtual_food_id: 1250559083,
-            pinyin_name: "baishibeizhuangqixi（dabei）",
-            restaurant_id: 126529,
-            food_id: 1253747560,
-            packing_fee: 0,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 12,
-            sold_out: false,
-            recent_popularity: 3,
-            is_essential: false,
-            item_id: "200000051772501735",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 1000
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055037502183",
+          name: "百事杯装七喜（大杯）",
+          weight: 0,
+          virtual_food_id: 1250559083,
+          pinyin_name: "baishibeizhuangqixi（dabei）",
+          restaurant_id: 126529,
+          food_id: 1253747560,
+          packing_fee: 0,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 12,
+          sold_out: false,
+          recent_popularity: 3,
+          is_essential: false,
+          item_id: "200000051772501735",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 1000
+        }],
         category_id: 1229254453
       },
       {
@@ -5561,12 +5165,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "chunjingshui",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 11,
@@ -5584,30 +5186,28 @@ module.exports = [
         satisfy_count: 1,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055045283559",
-            name: "纯净水",
-            weight: 0,
-            virtual_food_id: 1250551505,
-            pinyin_name: "chunjingshui",
-            restaurant_id: 126529,
-            food_id: 1253755159,
-            packing_fee: 0,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 5,
-            sold_out: false,
-            recent_popularity: 11,
-            is_essential: false,
-            item_id: "200000051764741863",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 996
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055045283559",
+          name: "纯净水",
+          weight: 0,
+          virtual_food_id: 1250551505,
+          pinyin_name: "chunjingshui",
+          restaurant_id: 126529,
+          food_id: 1253755159,
+          packing_fee: 0,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 5,
+          sold_out: false,
+          recent_popularity: 11,
+          is_essential: false,
+          item_id: "200000051764741863",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 996
+        }],
         category_id: 1229254453
       },
       {
@@ -5617,12 +5217,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "jidukele（ping）",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 6,
@@ -5640,30 +5238,28 @@ module.exports = [
         satisfy_count: 3,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055041400551",
-            name: "极度可乐（瓶）",
-            weight: 0,
-            virtual_food_id: 1250555430,
-            pinyin_name: "jidukele（ping）",
-            restaurant_id: 126529,
-            food_id: 1253751367,
-            packing_fee: 0,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 10,
-            sold_out: false,
-            recent_popularity: 6,
-            is_essential: false,
-            item_id: "200000051768761063",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 999
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055041400551",
+          name: "极度可乐（瓶）",
+          weight: 0,
+          virtual_food_id: 1250555430,
+          pinyin_name: "jidukele（ping）",
+          restaurant_id: 126529,
+          food_id: 1253751367,
+          packing_fee: 0,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 10,
+          sold_out: false,
+          recent_popularity: 6,
+          is_essential: false,
+          item_id: "200000051768761063",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 999
+        }],
         category_id: 1229254453
       },
       {
@@ -5673,12 +5269,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "baishikele（ping）",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 11,
@@ -5696,30 +5290,28 @@ module.exports = [
         satisfy_count: 0,
         activity: null,
         satisfy_rate: 0,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055045288679",
-            name: "百事可乐（瓶）",
-            weight: 0,
-            virtual_food_id: 1250551510,
-            pinyin_name: "baishikele（ping）",
-            restaurant_id: 126529,
-            food_id: 1253755164,
-            packing_fee: 0,
-            recent_rating: 0.0,
-            promotion_stock: -1,
-            price: 10,
-            sold_out: false,
-            recent_popularity: 11,
-            is_essential: false,
-            item_id: "200000051764746983",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 999
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055045288679",
+          name: "百事可乐（瓶）",
+          weight: 0,
+          virtual_food_id: 1250551510,
+          pinyin_name: "baishikele（ping）",
+          restaurant_id: 126529,
+          food_id: 1253755164,
+          packing_fee: 0,
+          recent_rating: 0.0,
+          promotion_stock: -1,
+          price: 10,
+          sold_out: false,
+          recent_popularity: 11,
+          is_essential: false,
+          item_id: "200000051764746983",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 999
+        }],
         category_id: 1229254453
       },
       {
@@ -5729,12 +5321,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "kamanjuguopaoyin(448ml)",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 18,
@@ -5752,30 +5342,28 @@ module.exports = [
         satisfy_count: 2,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000055045290727",
-            name: "卡曼橘果泡饮(448ml)",
-            weight: 0,
-            virtual_food_id: 1250551512,
-            pinyin_name: "kamanjuguopaoyin(448ml)",
-            restaurant_id: 126529,
-            food_id: 1253755166,
-            packing_fee: 0,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 11,
-            sold_out: false,
-            recent_popularity: 18,
-            is_essential: false,
-            item_id: "200000051764749031",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 999
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000055045290727",
+          name: "卡曼橘果泡饮(448ml)",
+          weight: 0,
+          virtual_food_id: 1250551512,
+          pinyin_name: "kamanjuguopaoyin(448ml)",
+          restaurant_id: 126529,
+          food_id: 1253755166,
+          packing_fee: 0,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 11,
+          sold_out: false,
+          recent_popularity: 18,
+          is_essential: false,
+          item_id: "200000051764749031",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 999
+        }],
         category_id: 1229254453
       },
       {
@@ -5785,12 +5373,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "dapianboluoxiancuicha（616ml）",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 6,
@@ -5808,30 +5394,28 @@ module.exports = [
         satisfy_count: 1,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000195452109543",
-            name: "大片菠萝鲜萃茶（616ml）",
-            weight: 0,
-            virtual_food_id: 1366500337,
-            pinyin_name: "dapianboluoxiancuicha（616ml）",
-            restaurant_id: 126529,
-            food_id: 1390871202,
-            packing_fee: 0,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 16,
-            sold_out: false,
-            recent_popularity: 6,
-            is_essential: false,
-            item_id: "200000170496340711",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 995
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000195452109543",
+          name: "大片菠萝鲜萃茶（616ml）",
+          weight: 0,
+          virtual_food_id: 1366500337,
+          pinyin_name: "dapianboluoxiancuicha（616ml）",
+          restaurant_id: 126529,
+          food_id: 1390871202,
+          packing_fee: 0,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 16,
+          sold_out: false,
+          recent_popularity: 6,
+          is_essential: false,
+          item_id: "200000170496340711",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 995
+        }],
         category_id: 1229254453
       }
     ],
@@ -5846,20 +5430,17 @@ module.exports = [
     icon_url: "",
     name: "现磨咖啡",
     grey_icon_url: "",
-    foods: [
-      {
+    foods: [{
         rating: 4.0,
         is_featured: 0,
         virtual_food_id: 1347012516,
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "remeishirekafei16oz",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 17,
@@ -5877,30 +5458,28 @@ module.exports = [
         satisfy_count: 3,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000171968112359",
-            name: "热美式热咖啡16oz",
-            weight: 0,
-            virtual_food_id: 1347012516,
-            pinyin_name: "remeishirekafei16oz",
-            restaurant_id: 126529,
-            food_id: 1367937608,
-            packing_fee: 2,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 18,
-            sold_out: false,
-            recent_popularity: 17,
-            is_essential: false,
-            item_id: "200000150540815079",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 994
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000171968112359",
+          name: "热美式热咖啡16oz",
+          weight: 0,
+          virtual_food_id: 1347012516,
+          pinyin_name: "remeishirekafei16oz",
+          restaurant_id: 126529,
+          food_id: 1367937608,
+          packing_fee: 2,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 18,
+          sold_out: false,
+          recent_popularity: 17,
+          is_essential: false,
+          item_id: "200000150540815079",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 994
+        }],
         category_id: 1238656152
       },
       {
@@ -5910,12 +5489,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "bingmeishikafei16oz",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "16oz冰 ",
         month_sales: 6,
@@ -5933,30 +5510,28 @@ module.exports = [
         satisfy_count: 4,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000171980024551",
-            name: "冰美式咖啡16oz",
-            weight: 0,
-            virtual_food_id: 1346998991,
-            pinyin_name: "bingmeishikafei16oz",
-            restaurant_id: 126529,
-            food_id: 1367949242,
-            packing_fee: 2,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 20,
-            sold_out: false,
-            recent_popularity: 6,
-            is_essential: false,
-            item_id: "200000150526967527",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 999
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000171980024551",
+          name: "冰美式咖啡16oz",
+          weight: 0,
+          virtual_food_id: 1346998991,
+          pinyin_name: "bingmeishikafei16oz",
+          restaurant_id: 126529,
+          food_id: 1367949242,
+          packing_fee: 2,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 20,
+          sold_out: false,
+          recent_popularity: 6,
+          is_essential: false,
+          item_id: "200000150526967527",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 999
+        }],
         category_id: 1238656152
       },
       {
@@ -5966,12 +5541,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "renatie16oz",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 11,
@@ -5989,30 +5562,28 @@ module.exports = [
         satisfy_count: 2,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000171971831527",
-            name: "热拿铁16oz",
-            weight: 0,
-            virtual_food_id: 1347016188,
-            pinyin_name: "renatie16oz",
-            restaurant_id: 126529,
-            food_id: 1367941241,
-            packing_fee: 2,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 20,
-            sold_out: false,
-            recent_popularity: 11,
-            is_essential: false,
-            item_id: "200000150544579303",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 999
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000171971831527",
+          name: "热拿铁16oz",
+          weight: 0,
+          virtual_food_id: 1347016188,
+          pinyin_name: "renatie16oz",
+          restaurant_id: 126529,
+          food_id: 1367941241,
+          packing_fee: 2,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 20,
+          sold_out: false,
+          recent_popularity: 11,
+          is_essential: false,
+          item_id: "200000150544579303",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 999
+        }],
         category_id: 1238656152
       },
       {
@@ -6022,12 +5593,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "bingnatie16oz",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "16oz冰 ",
         month_sales: 11,
@@ -6045,30 +5614,28 @@ module.exports = [
         satisfy_count: 4,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000171980027623",
-            name: "冰拿铁16oz",
-            weight: 0,
-            virtual_food_id: 1346998993,
-            pinyin_name: "bingnatie16oz",
-            restaurant_id: 126529,
-            food_id: 1367949245,
-            packing_fee: 2,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 22,
-            sold_out: false,
-            recent_popularity: 11,
-            is_essential: false,
-            item_id: "200000150526969575",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 999
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000171980027623",
+          name: "冰拿铁16oz",
+          weight: 0,
+          virtual_food_id: 1346998993,
+          pinyin_name: "bingnatie16oz",
+          restaurant_id: 126529,
+          food_id: 1367949245,
+          packing_fee: 2,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 22,
+          sold_out: false,
+          recent_popularity: 11,
+          is_essential: false,
+          item_id: "200000150526969575",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 999
+        }],
         category_id: 1238656152
       },
       {
@@ -6078,12 +5645,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "rekabujinuo16oz",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 5,
@@ -6101,30 +5666,28 @@ module.exports = [
         satisfy_count: 0,
         activity: null,
         satisfy_rate: 0,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000171980029671",
-            name: "热卡布基诺16oz",
-            weight: 0,
-            virtual_food_id: 1346998995,
-            pinyin_name: "rekabujinuo16oz",
-            restaurant_id: 126529,
-            food_id: 1367949247,
-            packing_fee: 2,
-            recent_rating: 0.0,
-            promotion_stock: -1,
-            price: 20,
-            sold_out: false,
-            recent_popularity: 5,
-            is_essential: false,
-            item_id: "200000150526971623",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 1000
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000171980029671",
+          name: "热卡布基诺16oz",
+          weight: 0,
+          virtual_food_id: 1346998995,
+          pinyin_name: "rekabujinuo16oz",
+          restaurant_id: 126529,
+          food_id: 1367949247,
+          packing_fee: 2,
+          recent_rating: 0.0,
+          promotion_stock: -1,
+          price: 20,
+          sold_out: false,
+          recent_popularity: 5,
+          is_essential: false,
+          item_id: "200000150526971623",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 1000
+        }],
         category_id: 1238656152
       },
       {
@@ -6134,12 +5697,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "refashijiaotangnatie16oz",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "",
         month_sales: 9,
@@ -6157,30 +5718,28 @@ module.exports = [
         satisfy_count: 3,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000171971835623",
-            name: "热法式焦糖拿铁16oz",
-            weight: 0,
-            virtual_food_id: 1347016192,
-            pinyin_name: "refashijiaotangnatie16oz",
-            restaurant_id: 126529,
-            food_id: 1367941245,
-            packing_fee: 2,
-            recent_rating: 4.33,
-            promotion_stock: -1,
-            price: 22,
-            sold_out: false,
-            recent_popularity: 9,
-            is_essential: false,
-            item_id: "200000150544583399",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 1000
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000171971835623",
+          name: "热法式焦糖拿铁16oz",
+          weight: 0,
+          virtual_food_id: 1347016192,
+          pinyin_name: "refashijiaotangnatie16oz",
+          restaurant_id: 126529,
+          food_id: 1367941245,
+          packing_fee: 2,
+          recent_rating: 4.33,
+          promotion_stock: -1,
+          price: 22,
+          sold_out: false,
+          recent_popularity: 9,
+          is_essential: false,
+          item_id: "200000150544583399",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 1000
+        }],
         category_id: 1238656152
       },
       {
@@ -6190,12 +5749,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "bingfashijiaotangnatie16oz",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "16oz冰 ",
         month_sales: 11,
@@ -6213,30 +5770,28 @@ module.exports = [
         satisfy_count: 5,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000171971836647",
-            name: "冰法式焦糖拿铁16oz",
-            weight: 0,
-            virtual_food_id: 1347016193,
-            pinyin_name: "bingfashijiaotangnatie16oz",
-            restaurant_id: 126529,
-            food_id: 1367941246,
-            packing_fee: 2,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 24,
-            sold_out: false,
-            recent_popularity: 11,
-            is_essential: false,
-            item_id: "200000150544584423",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 999
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000171971836647",
+          name: "冰法式焦糖拿铁16oz",
+          weight: 0,
+          virtual_food_id: 1347016193,
+          pinyin_name: "bingfashijiaotangnatie16oz",
+          restaurant_id: 126529,
+          food_id: 1367941246,
+          packing_fee: 2,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 24,
+          sold_out: false,
+          recent_popularity: 11,
+          is_essential: false,
+          item_id: "200000150544584423",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 999
+        }],
         category_id: 1238656152
       },
       {
@@ -6246,12 +5801,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "natiexiaoshizuhecan（xiaoshi3zhe）",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "拿铁（16oz）+王道川蜀鸡翅",
         month_sales: 7,
@@ -6269,30 +5822,28 @@ module.exports = [
         satisfy_count: 1,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000172471544551",
-            name: "拿铁小食组合餐（小食3折）",
-            weight: 0,
-            virtual_food_id: 1347431563,
-            pinyin_name: "natiexiaoshizuhecan（xiaoshi3zhe）",
-            restaurant_id: 126529,
-            food_id: 1368429240,
-            packing_fee: 2,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 35,
-            sold_out: false,
-            recent_popularity: 7,
-            is_essential: false,
-            item_id: "200000150969916135",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 1000
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000172471544551",
+          name: "拿铁小食组合餐（小食3折）",
+          weight: 0,
+          virtual_food_id: 1347431563,
+          pinyin_name: "natiexiaoshizuhecan（xiaoshi3zhe）",
+          restaurant_id: 126529,
+          food_id: 1368429240,
+          packing_fee: 2,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 35,
+          sold_out: false,
+          recent_popularity: 7,
+          is_essential: false,
+          item_id: "200000150969916135",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 1000
+        }],
         category_id: 1238656152
       },
       {
@@ -6302,12 +5853,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "natieshuangrencan（xiaoshi4.5zhe）",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "拿铁(16oz)两杯+霸王鸡盒A",
         month_sales: 5,
@@ -6325,30 +5874,28 @@ module.exports = [
         satisfy_count: 1,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000172462732007",
-            name: "拿铁双人餐（小食4.5折）",
-            weight: 0,
-            virtual_food_id: 1347418914,
-            pinyin_name: "natieshuangrencan（xiaoshi4.5zhe）",
-            restaurant_id: 126529,
-            food_id: 1368420622,
-            packing_fee: 4,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 81,
-            sold_out: false,
-            recent_popularity: 5,
-            is_essential: false,
-            item_id: "200000150956979943",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 1000
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000172462732007",
+          name: "拿铁双人餐（小食4.5折）",
+          weight: 0,
+          virtual_food_id: 1347418914,
+          pinyin_name: "natieshuangrencan（xiaoshi4.5zhe）",
+          restaurant_id: 126529,
+          food_id: 1368420622,
+          packing_fee: 4,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 81,
+          sold_out: false,
+          recent_popularity: 5,
+          is_essential: false,
+          item_id: "200000150956979943",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 1000
+        }],
         category_id: 1238656152
       },
       {
@@ -6358,12 +5905,10 @@ module.exports = [
         cold_box: null,
         restaurant_id: 126529,
         pinyin_name: "natietehuican",
-        display_times: [
-          {
-            begin: 1521424800,
-            end: 1521468000
-          }
-        ],
+        display_times: [{
+          begin: 1521424800,
+          end: 1521468000
+        }],
         attrs: [],
         description: "拿铁（16oz） 买3 送 1",
         month_sales: 1,
@@ -6381,30 +5926,28 @@ module.exports = [
         satisfy_count: 1,
         activity: null,
         satisfy_rate: 100,
-        specfoods: [
-          {
-            original_price: null,
-            sku_id: "200000172467369703",
-            name: "拿铁特惠餐",
-            weight: 0,
-            virtual_food_id: 1347423658,
-            pinyin_name: "natietehuican",
-            restaurant_id: 126529,
-            food_id: 1368425168,
-            packing_fee: 6,
-            recent_rating: 4.0,
-            promotion_stock: -1,
-            price: 92,
-            sold_out: false,
-            recent_popularity: 1,
-            is_essential: false,
-            item_id: "200000150961823463",
-            checkout_mode: 1,
-            specs: [],
-            partial_reduce_activity_id: null,
-            stock: 1000
-          }
-        ],
+        specfoods: [{
+          original_price: null,
+          sku_id: "200000172467369703",
+          name: "拿铁特惠餐",
+          weight: 0,
+          virtual_food_id: 1347423658,
+          pinyin_name: "natietehuican",
+          restaurant_id: 126529,
+          food_id: 1368425168,
+          packing_fee: 6,
+          recent_rating: 4.0,
+          promotion_stock: -1,
+          price: 92,
+          sold_out: false,
+          recent_popularity: 1,
+          is_essential: false,
+          item_id: "200000150961823463",
+          checkout_mode: 1,
+          specs: [],
+          partial_reduce_activity_id: null,
+          stock: 1000
+        }],
         category_id: 1238656152
       }
     ],

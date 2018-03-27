@@ -4,39 +4,41 @@ import "./style.scss";
 export default class Cart extends Component {
   constructor(){
     super()
-    this.getObjInfo = this.getObjInfo.bind(this)
+    // this.getObjInfo = this.getObjInfo.bind(this)
   }
-  getObjLength(obj){
-    let length = 0;
-    Object.keys(obj).forEach(val =>{
-      length+=obj[val]
-    })
-    return length
-  }
-  getObjInfo(){
-    const {menu,data} = this.props
-    let foods = []
-    let info = {}
-    const dataKeys = data&&Object.keys(data)
-    menu.forEach(val => {
-      foods = foods.concat(val.foods)
-    })
-    if(data){
-      console.log(111111)
-      foods.forEach(val => {
-        const virtual_food_id = val.virtual_food_id
-        if(dataKeys.indexOf(virtual_food_id) > -1){
-          info[virtual_food_id] = {price:val.specfoods[0].price,name:val.name,num:data[virtual_food_id]}
-        }
-      })
-    }
-    console.log(info)
-  }
+  // getObjLength(obj){
+  //   let length = 0;
+  //   Object.keys(obj).forEach(val =>{
+  //     length+=obj[val].quantity
+  //     console.log(obj[val])
+  //   })
+    
+  //   return 1
+  // }
+  // getObjInfo(){
+  //   const {menu,data} = this.props
+  //   let foods = []
+  //   let info = {}
+  //   const dataKeys = data&&Object.keys(data)
+  //   menu.forEach(val => {
+  //     foods = foods.concat(val.foods)
+  //   })
+  //   if(data){
+  //     console.log(111111)
+  //     foods.forEach(val => {
+  //       const virtual_food_id = val.virtual_food_id
+  //       if(dataKeys.indexOf(virtual_food_id) > -1){
+  //         info[virtual_food_id] = {price:val.specfoods[0].price,name:val.name,num:data[virtual_food_id]}
+  //       }
+  //     })
+  //   }
+  //   console.log(info)
+  // }
   render() {
-    console.log("data",this.props.data)
+    // console.log("data",this.props.data)
     const {data}=this.props
     const arr = data&&this.getObjLength(data)
-    this.getObjInfo()
+    // this.getObjInfo()
     return (
       <div className="cartview">
         <div className="discount-tips">满75减30</div>
