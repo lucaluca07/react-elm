@@ -8,10 +8,12 @@ import Modal from '../Modal'
 export default class ShopMenu extends Component {
   constructor(props) {
     super(props);
-    this.state = { height: 500, 
-      activityId: 0, 
+    this.state = {
+      height: 500,
+      activityId: 0,
       showModal: false,
-      foodInfo:"" };
+      foodInfo: ""
+    };
     this.handleScroll = this.handleScroll.bind(this);
     this.getEleTop = this.getEleTop.bind(this);
     this.toggleShowModal = this.toggleShowModal.bind(this);
@@ -49,7 +51,7 @@ export default class ShopMenu extends Component {
   }
   toggleShowModal(info) {
     const showModal = this.state.showModal
-    this.setState({ showModal: !showModal,foodInfo:info })
+    this.setState({ showModal: !showModal, foodInfo: info })
   }
   addCart(id, num) {
     console.log("num", num);
@@ -116,7 +118,7 @@ export default class ShopMenu extends Component {
                             (val.specfoods.length > 1
                             ?<span
                               className="choose-goods-btn"
-                              onClick={() => {this.toggleShowModal(val)}}
+                              onClick={() => { this.toggleShowModal(val) }}
                             >选规格</span>
                             :<span
                               className="add-cart-btn"
@@ -133,7 +135,7 @@ export default class ShopMenu extends Component {
                           (val.specfoods.length > 1
                             ? <span
                               className="choose-goods-btn"
-                              onClick={() => {this.toggleShowModal(val)}}
+                              onClick={() => { this.toggleShowModal(val) }}
                             >选规格</span>
                             : <span
                               className="add-cart-btn"
@@ -159,19 +161,27 @@ export default class ShopMenu extends Component {
           <Modal callback={this.toggleShowModal}>
             <div className="specpanle">
               <h2 className="specpanle-title">{foodInfo.name}</h2>
-              <div>规格</div>
-              <ul className="specpanle-specs">{foodInfo.specfoods.map((val,index) => (
+              <div style={{ padding: "0 20px" }}>规格</div>
+              <ul className="specpanle-specs">{foodInfo.specfoods.map((val, index) => (
                 <li className="spec-item" key={index}>{val.specs[0].value}</li>
               ))}</ul>
-              {foodInfo.attrs.length > 0 && 
-              <div>
-                {foodInfo.attrs.map((val,index) => (
-                  <div key={index}>
-                    <div>{val.name}</div>
-                  </div>
-                ))}
-              </div>
+              {foodInfo.attrs.length > 0 &&
+                <div className="attr-wrap">
+                  {foodInfo.attrs.map((val, index) => (
+                    <div key={index}>
+                      <div className="spec-attr-name">{val.name}</div>
+                      <ul className="spec-attrs">{val.values.map((attr, index) => (
+                        <li className="spec-attr-item" key={index}>{attr}</li>
+                      ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
               }
+              <div className="specpanle-footer">
+                <div className="price">¥15</div>
+                <div className="submit-btn">选好了</div>
+              </div>
             </div>
           </Modal>
         }
