@@ -57,7 +57,7 @@ export default class ShopMenu extends Component {
   }
   render() {
     const data = this.props.data;
-    const { height, activityId, showModal } = this.state;
+    const { height, activityId, showModal, foodInfo } = this.state;
     const cart = this.props.cart;
     return (
       <div className="shop-menu-wrap" style={{ height: height }}>
@@ -158,8 +158,20 @@ export default class ShopMenu extends Component {
         {showModal &&
           <Modal callback={this.toggleShowModal}>
             <div className="specpanle">
-              <div></div>
-              <div></div>
+              <h2 className="specpanle-title">{foodInfo.name}</h2>
+              <div>规格</div>
+              <ul className="specpanle-specs">{foodInfo.specfoods.map((val,index) => (
+                <li className="spec-item" key={index}>{val.specs[0].value}</li>
+              ))}</ul>
+              {foodInfo.attrs.length > 0 && 
+              <div>
+                {foodInfo.attrs.map((val,index) => (
+                  <div key={index}>
+                    <div>{val.name}</div>
+                  </div>
+                ))}
+              </div>
+              }
             </div>
           </Modal>
         }

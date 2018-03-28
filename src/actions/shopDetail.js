@@ -48,3 +48,9 @@ export const clearRating = () => {
     type: actionTypes.CLEAR_RATING
   };
 };
+
+export const clearMenu = () => {
+  return {
+    type:actionTypes.CLEAR_MENU
+  }
+}

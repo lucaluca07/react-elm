@@ -9,6 +9,25 @@ $gary2: #f7f6f5;
   .specpanle{
     background: #fff;
     padding: 20px;
+    width: 600px;
+    border-radius: 10px;
+    .specpanle-title{
+      text-align: center;
+      font-size: 32px;
+      padding: 20px 0;
+    }
+    .specpanle-specs{
+      display: flex;
+      flex-wrap:wrap;
+      .spec-item{
+        line-height: 46px;
+        padding: 0 18px;
+        height: 46px;
+        border-radius: 23px;
+        border:1px solid #eee;/*no*/
+        margin: 13px 30px 0 0;
+      }
+    }
   }
   .main {
     height: 100%;

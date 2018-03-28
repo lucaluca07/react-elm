@@ -11,7 +11,8 @@ import {
   getMenu,
   getShopInfo,
   getRating,
-  clearRating
+  clearRating,
+  clearMenu
 } from "../../actions/shopDetail";
 import { changeCart } from "../../actions/cart";
 
@@ -26,6 +27,7 @@ class ShopDetail extends Component {
   }
   async componentDidMount() {
     const { dispatch, longitude, latitude } = this.props;
+    dispatch(clearMenu())
     dispatch(clearRating());
     dispatch(await getMenu(this.shopId, longitude, latitude));
     dispatch(await getShopInfo(this.shopId, longitude, latitude));

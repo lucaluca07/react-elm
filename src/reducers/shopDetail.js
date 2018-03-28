@@ -39,6 +39,11 @@ const shopDetail = (state = defaultState, action) => {
           hasMore: false
         }
       };
+    case actionTypes.CLEAR_MENU:
+      return {
+        ...state,
+        menu:false
+      }
     default:
       return state;
   }
