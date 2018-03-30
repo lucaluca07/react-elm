@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./style.scss";
 import getImgSrc from "../../util/getImgSrc";
 import throttle from "../../util/throttle";
-import Modal from '../Modal'
+import Modal from "../Modal";
 
 export default class ShopMenu extends Component {
   constructor(props) {
@@ -12,7 +12,9 @@ export default class ShopMenu extends Component {
       height: 500,
       activityId: 0,
       showModal: false,
-      foodInfo: ""
+      foodInfo: "",
+      spec: 0,
+      attrs: []
     };
     this.handleScroll = this.handleScroll.bind(this);
     this.getEleTop = this.getEleTop.bind(this);
@@ -50,8 +52,34 @@ export default class ShopMenu extends Component {
     subMenu.scrollTo(0, ele.offsetTop - this.top);
   }
   toggleShowModal(info) {
-    const showModal = this.state.showModal
-    this.setState({ showModal: !showModal, foodInfo: info })
+    const showModal = this.state.showModal;
+    if (!showModal) {
+      const attrs = {};
+      info.attrs.length > 0 &&
+        info.attrs.forEach(element => {
+          attrs[element.name] = element.values[0];
+        });
+      this.setState({
+        attrs: attrs
+      });
+    }
+    this.setState({
+      showModal: !showModal,
+      foodInfo: info
+    });
+  }
+  setSpecState(index){
+    var event = window.event || arguments.callee.caller.arguments[0]
+    event.preventDefault()
+    this.setState({spec:index});
+  }
+  setAttrs(name,value){
+    var event = window.event || arguments.callee.caller.arguments[0]
+    event.preventDefault()
+    const attrs = this.state.attrs
+    attrs[name] = value
+    this.setState({attrs:attrs})
+    return false ;
   }
   addCart(id, num) {
     console.log("num", num);
@@ -59,8 +87,9 @@ export default class ShopMenu extends Component {
   }
   render() {
     const data = this.props.data;
-    const { height, activityId, showModal, foodInfo } = this.state;
+    const { height, activityId, showModal, foodInfo, spec, attrs } = this.state;
     const cart = this.props.cart;
+    // console.log(spec, attrs);
     return (
       <div className="shop-menu-wrap" style={{ height: height }}>
         <div className="main" ref="main">
@@ -70,7 +99,7 @@ export default class ShopMenu extends Component {
                 key={index}
                 className={`main-menu-item ${
                   activityId === val.id ? "activity-menu" : ""
-                  }`}
+                }`}
                 onClick={this.handleClick.bind(this, val.id)}
               >
                 {val.name}
@@ -88,8 +117,9 @@ export default class ShopMenu extends Component {
                 {foods.foods.map(val => (
                   <div key={val.virtual_food_id} className="shop-sub-item">
                     <div className="food-img">
-                      {val.image_path &&
-                        <img src={getImgSrc(val.image_path, 140)} alt="food" />}
+                      {val.image_path && (
+                        <img src={getImgSrc(val.image_path, 140)} alt="food" />
+                      )}
                     </div>
                     <div className="food-detail">
                       <div className="food-name">{val.name}</div>
@@ -115,11 +145,14 @@ export default class ShopMenu extends Component {
                             <span className="goods-num">
                               {cart[val.virtual_food_id]}
                             </span>
-                            (val.specfoods.length > 1
-                            ?<span
+                            (val.specfoods.length > 1 ?<span
                               className="choose-goods-btn"
-                              onClick={() => { this.toggleShowModal(val) }}
-                            >选规格</span>
+                              onClick={() => {
+                                this.toggleShowModal(val);
+                              }}
+                            >
+                              选规格
+                            </span>
                             :<span
                               className="add-cart-btn"
                               onClick={this.addCart.bind(
@@ -129,25 +162,29 @@ export default class ShopMenu extends Component {
                               )}
                             >
                               +
-                          </span>
+                            </span>
                           </div>
-                        ) :
-                          (val.specfoods.length > 1
-                            ? <span
-                              className="choose-goods-btn"
-                              onClick={() => { this.toggleShowModal(val) }}
-                            >选规格</span>
-                            : <span
-                              className="add-cart-btn"
-                              onClick={this.addCart.bind(
-                                this,
-                                val.virtual_food_id,
-                                1
-                              )}
-                            >
-                              +
+                        ) : val.specfoods.length > 1 ? (
+                          <span
+                            className="choose-goods-btn"
+                            onClick={() => {
+                              this.toggleShowModal(val);
+                            }}
+                          >
+                            选规格
                           </span>
-                          )}
+                        ) : (
+                          <span
+                            className="add-cart-btn"
+                            onClick={this.addCart.bind(
+                              this,
+                              val.virtual_food_id,
+                              1
+                            )}
+                          >
+                            +
+                          </span>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -157,34 +194,53 @@ export default class ShopMenu extends Component {
             <div style={{ height: 100 }} />
           </div>
         </div>
-        {showModal &&
+        {showModal && (
           <Modal callback={this.toggleShowModal}>
             <div className="specpanle">
               <h2 className="specpanle-title">{foodInfo.name}</h2>
               <div style={{ padding: "0 20px" }}>规格</div>
-              <ul className="specpanle-specs">{foodInfo.specfoods.map((val, index) => (
-                <li className="spec-item" key={index}>{val.specs[0].value}</li>
-              ))}</ul>
-              {foodInfo.attrs.length > 0 &&
+              <ul className="specpanle-specs">
+                {foodInfo.specfoods.map((val, index) => (
+                  <li
+                    onTouchStart = {this.setSpecState.bind(this,index)}
+                    className={`spec-item ${
+                      spec === index ? "item-activity" : ""
+                    }`}
+                    key={index}
+                  >
+                    {val.specs[0].value}
+                  </li>
+                ))}
+              </ul>
+              {foodInfo.attrs.length > 0 && (
                 <div className="attr-wrap">
                   {foodInfo.attrs.map((val, index) => (
                     <div key={index}>
                       <div className="spec-attr-name">{val.name}</div>
-                      <ul className="spec-attrs">{val.values.map((attr, index) => (
-                        <li className="spec-attr-item" key={index}>{attr}</li>
-                      ))}
+                      <ul className="spec-attrs">
+                        {val.values.map((attr, index) => (
+                          <li
+                            onTouchStart = {this.setAttrs.bind(this,val.name,attr)}
+                            className={`spec-attr-item ${
+                              attr === attrs[val.name] ? "item-activity" : ""
+                            }`}
+                            key={index}
+                          >
+                            {attr}
+                          </li>
+                        ))}
                       </ul>
                     </div>
                   ))}
                 </div>
-              }
+              )}
               <div className="specpanle-footer">
-                <div className="price">¥15</div>
+                <div className="price">￥{foodInfo.specfoods[spec].price}</div>
                 <div className="submit-btn">选好了</div>
               </div>
             </div>
           </Modal>
-        }
+        )}
       </div>
     );
   }
