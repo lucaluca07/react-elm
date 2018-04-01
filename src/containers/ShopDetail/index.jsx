@@ -37,11 +37,69 @@ class ShopDetail extends Component {
     const { dispatch, longitude, latitude, offset } = this.props;
     dispatch(await getRating(this.shopId, offset, 8, longitude, latitude));
   }
-  increaseDecreaseCart(goodsId,item_id,sku_id,price,specs,attrs) {
+  increaseDecreaseCart(goodsId, num, info, attrs) {
     const { dispatch, cart } = this.props;
-    // const goodsNum = (cart[this.shopId] && cart[this.shopId][goodsId]) || 0;
-    const info = [{quantity:1}]
-    dispatch(changeCart(this.shopId, goodsId, info));
+    const { food_id,
+      item_id,
+      name,
+      sku_id,
+      original_price,
+      specs,
+      weight,
+      price,
+      packing_fee,
+      stock } = info
+    const foods = cart[this.shopId] && cart[this.shopId][goodsId]||[]
+    const quantity = 1;
+    const food = {
+      id:food_id,
+      item_id,
+      name,
+      sku_id,
+      original_price,
+      specs,
+      weight,
+      price,
+      packing_fee,
+      stock,
+      quantity,
+      attrs
+    };
+    const skuIds = foods.map(element => element.sku_id);
+    // console.log(skuIds)
+    if (skuIds.indexOf(sku_id) > -1) {
+      const index = skuIds.indexOf(sku_id)
+      const ids = skuIds.map((element,index) => {   
+        // console.log(element)                                                                                                                                 
+        if(element === sku_id){
+          return index
+        }
+      })
+      console.log("attrs",attrs)
+      console.log("ids",ids)
+      if (foods[index].attrs.length > 0 ) {
+        const flag = ids.some(id => {
+          console.log("id",foods[id].attrs)
+          console.log(attrs)
+          return (
+          foods[id].attrs.every((element,index) =>
+            { console.log("attrs index:::",attrs[index])
+              return element.value === attrs[index].value})
+        )})
+        console.log("flag",flag)
+        if(flag){
+            foods[index].quantity += num
+        }else{
+            console.log("food",food)
+            foods.push(food)
+        }
+      } else {
+        foods[index].quantity += num
+      }
+    } else {
+      foods.push(food)
+    }
+    dispatch(changeCart(this.shopId, goodsId,foods));
   }
   setTabIndex(index) {
     this.setState({ tabIndex: index });

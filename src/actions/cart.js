@@ -1,10 +1,10 @@
 import * as actionType from "../constants";
 
-export const changeCart = (shopId,goodsId,num) => ({
+export const changeCart = (shopId,goodsId,info) => ({
   type: actionType.CHANGE_CART,
   shopId,
   goodsId,
-  num
+  info
 });
 
 export const clearCart = shopId => ({

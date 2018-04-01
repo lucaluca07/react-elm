@@ -54,42 +54,53 @@ export default class ShopMenu extends Component {
   toggleShowModal(info) {
     const showModal = this.state.showModal;
     if (!showModal) {
-      const attrs = {};
+      const attrs = [];
       info.attrs.length > 0 &&
         info.attrs.forEach(element => {
-          attrs[element.name] = element.values[0];
+          attrs.push({ name: element.name, value: element.values[0] })
         });
       this.setState({
-        attrs: attrs
+        attrs: attrs,
+        showModal: !showModal,
+        foodInfo: info
+      });
+    } else {
+      this.setState({
+        attrs: [],
+        spec: 0,
+        showModal: !showModal,
+        foodInfo: info
       });
     }
+  }
+  setSpecState(index) {
+    var event = window.event || arguments.callee.caller.arguments[0]
+    event.preventDefault()
+    this.setState({ spec: index });
+  }
+  setAttrs(name, value) {
+    var event = window.event || arguments.callee.caller.arguments[0]
+    event.preventDefault()
+    const attrs = this.state.attrs.map((val) => (
+      val.name === name ? { name, value } : val
+    ))
+    this.setState({ attrs: attrs })
+  }
+  addCart(info, num) {
+    var event = window.event || arguments.callee.caller.arguments[0]
+    const { spec, attrs } = this.state
+    const { virtual_food_id, specfoods } = info;
     this.setState({
-      showModal: !showModal,
-      foodInfo: info
-    });
-  }
-  setSpecState(index){
-    var event = window.event || arguments.callee.caller.arguments[0]
-    event.preventDefault()
-    this.setState({spec:index});
-  }
-  setAttrs(name,value){
-    var event = window.event || arguments.callee.caller.arguments[0]
-    event.preventDefault()
-    const attrs = this.state.attrs
-    attrs[name] = value
-    this.setState({attrs:attrs})
-    return false ;
-  }
-  addCart(id, num) {
-    console.log("num", num);
-    this.props.changeCart(id, num);
+      spec:0,
+      attrs:[],
+      showModal:false
+    })
+    this.props.changeCart(virtual_food_id, num, specfoods[spec], attrs);
   }
   render() {
     const data = this.props.data;
     const { height, activityId, showModal, foodInfo, spec, attrs } = this.state;
     const cart = this.props.cart;
-    // console.log(spec, attrs);
     return (
       <div className="shop-menu-wrap" style={{ height: height }}>
         <div className="main" ref="main">
@@ -99,7 +110,7 @@ export default class ShopMenu extends Component {
                 key={index}
                 className={`main-menu-item ${
                   activityId === val.id ? "activity-menu" : ""
-                }`}
+                  }`}
                 onClick={this.handleClick.bind(this, val.id)}
               >
                 {val.name}
@@ -136,7 +147,7 @@ export default class ShopMenu extends Component {
                               className="decrease-cart-btn"
                               onClick={this.addCart.bind(
                                 this,
-                                val.virtual_food_id,
+                                val,
                                 -1
                               )}
                             >
@@ -157,7 +168,7 @@ export default class ShopMenu extends Component {
                               className="add-cart-btn"
                               onClick={this.addCart.bind(
                                 this,
-                                val.virtual_food_id,
+                                val,
                                 1
                               )}
                             >
@@ -174,17 +185,17 @@ export default class ShopMenu extends Component {
                             选规格
                           </span>
                         ) : (
-                          <span
-                            className="add-cart-btn"
-                            onClick={this.addCart.bind(
-                              this,
-                              val.virtual_food_id,
-                              1
-                            )}
-                          >
-                            +
+                              <span
+                                className="add-cart-btn"
+                                onClick={this.addCart.bind(
+                                  this,
+                                  val,
+                                  1
+                                )}
+                              >
+                                +
                           </span>
-                        )}
+                            )}
                       </div>
                     </div>
                   </div>
@@ -202,10 +213,10 @@ export default class ShopMenu extends Component {
               <ul className="specpanle-specs">
                 {foodInfo.specfoods.map((val, index) => (
                   <li
-                    onTouchStart = {this.setSpecState.bind(this,index)}
+                    onTouchStart={this.setSpecState.bind(this, index)}
                     className={`spec-item ${
                       spec === index ? "item-activity" : ""
-                    }`}
+                      }`}
                     key={index}
                   >
                     {val.specs[0].value}
@@ -214,16 +225,16 @@ export default class ShopMenu extends Component {
               </ul>
               {foodInfo.attrs.length > 0 && (
                 <div className="attr-wrap">
-                  {foodInfo.attrs.map((val, index) => (
-                    <div key={index}>
+                  {foodInfo.attrs.map((val, ind) => (
+                    <div key={ind}>
                       <div className="spec-attr-name">{val.name}</div>
                       <ul className="spec-attrs">
                         {val.values.map((attr, index) => (
                           <li
-                            onTouchStart = {this.setAttrs.bind(this,val.name,attr)}
+                            onTouchStart={this.setAttrs.bind(this, val.name, attr)}
                             className={`spec-attr-item ${
-                              attr === attrs[val.name] ? "item-activity" : ""
-                            }`}
+                              attr === attrs[ind].value ? "item-activity" : ""
+                              }`}
                             key={index}
                           >
                             {attr}
@@ -236,7 +247,7 @@ export default class ShopMenu extends Component {
               )}
               <div className="specpanle-footer">
                 <div className="price">￥{foodInfo.specfoods[spec].price}</div>
-                <div className="submit-btn">选好了</div>
+                <div className="submit-btn" onTouchEnd={this.addCart.bind(this,foodInfo,1)}>选好了</div>
               </div>
             </div>
           </Modal>

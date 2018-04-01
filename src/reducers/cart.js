@@ -8,7 +8,7 @@ function errorReducer(state = defaultState, action) {
         ...state,
         [action.shopId]: {
           ...state[action.shopId],
-          [action.goodsId]: action.num
+          [action.goodsId]: action.info
         }
       };
     case actionTypes.CLEAR_CART:
@@ -16,7 +16,7 @@ function errorReducer(state = defaultState, action) {
         ...state,
         [action.shopId]: {
           ...state[action.shopId],
-          [action.goodsId]: action.num
+          [action.goodsId]: action.info
         }
       };
     default:

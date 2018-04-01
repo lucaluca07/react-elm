@@ -33,7 +33,7 @@ export default class Modal extends Component {
     document.getElementsByTagName("body")[0].style.height =
       window.innerHeight + "px";
   }
-  componentWillMount() {
+  componentWillUnmount(){
     document.body.style.overflow = "visible";
     document.getElementsByTagName("body")[0].style.height = "auto";
   }
