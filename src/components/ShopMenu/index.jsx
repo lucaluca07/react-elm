@@ -128,8 +128,8 @@ export default class ShopMenu extends Component {
                   {foods.description}
                 </p>
                 {foods.foods.map(val => (
-                  <LazyLoad>
-                    <div key={val.virtual_food_id} className="shop-sub-item">
+                  <LazyLoad key={val.virtual_food_id}>
+                    <div className="shop-sub-item">
                       <div className="food-img">
                         {val.image_path && (
                           <img

@@ -28,6 +28,14 @@
         }
         .submit-btn{
             width: 210px;
+            text-align: center;
+            line-height: 96px;
+            font-size: 32px;
+            color:#fff;
+            background: rgba($color: #555, $alpha: 1.0);
+        }
+        .activity-btn{
+            background: rgba($color: #4cd964, $alpha: 1.0)
         }
         
     }

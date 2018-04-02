@@ -103,11 +103,7 @@ class ShopDetail extends Component {
     const { menu, shopinfo } = this.props;
     const { tabIndex } = this.state;
     const cartData = this.props.cart[this.shopId];
-    const cartList = [];
-    console.log("cartData",cartData)
-    cartData&&cartData.forEach(val =>{
-      console.log(val)
-    })
+
     return (
       <div>
         {shopinfo ? (
@@ -126,7 +122,7 @@ class ShopDetail extends Component {
                   cart={cartData}
                   changeCart={this.increaseDecreaseCart}
                 />
-                <Cart />
+                <Cart data={cartData} minOrderAmount={shopinfo&&shopinfo.float_minimum_order_amount}/>
               </li>
               <li
                 style={{
