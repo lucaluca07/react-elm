@@ -7,6 +7,7 @@ import ShopMenu from "../../components/ShopMenu";
 import ShopRating from "../../components/ShopRating";
 import ShopInfo from "../../components/ShopInfo";
 import Cart from "../../components/Cart";
+import { ShopDetailTombstone } from "../../components/Tombstone";
 import {
   getMenu,
   getShopInfo,
@@ -27,7 +28,7 @@ class ShopDetail extends Component {
   }
   async componentDidMount() {
     const { dispatch, longitude, latitude } = this.props;
-    dispatch(clearMenu())
+    dispatch(clearMenu());
     dispatch(clearRating());
     dispatch(await getMenu(this.shopId, longitude, latitude));
     dispatch(await getShopInfo(this.shopId, longitude, latitude));
@@ -39,7 +40,8 @@ class ShopDetail extends Component {
   }
   increaseDecreaseCart(goodsId, num, info, attrs) {
     const { dispatch, cart } = this.props;
-    const { food_id,
+    const {
+      food_id,
       item_id,
       name,
       sku_id,
@@ -48,11 +50,12 @@ class ShopDetail extends Component {
       weight,
       price,
       packing_fee,
-      stock } = info
-    const foods = cart[this.shopId] && cart[this.shopId][goodsId]||[]
+      stock
+    } = info;
+    const foods = (cart[this.shopId] && cart[this.shopId][goodsId]) || [];
     const quantity = 1;
     const food = {
-      id:food_id,
+      id: food_id,
       item_id,
       name,
       sku_id,
@@ -66,65 +69,86 @@ class ShopDetail extends Component {
       attrs
     };
     const skuIds = foods.map(element => element.sku_id);
-    // console.log(skuIds)
     if (skuIds.indexOf(sku_id) > -1) {
-      const index = skuIds.indexOf(sku_id)
-      const ids = skuIds.map((element,index) => {   
-        // console.log(element)                                                                                                                                 
-        if(element === sku_id){
-          return index
+      const index = skuIds.indexOf(sku_id);
+      const ids = [];
+      skuIds.forEach((element, index) => {
+        if (element === sku_id) {
+          ids.push(index);
         }
-      })
-      console.log("attrs",attrs)
-      console.log("ids",ids)
-      if (foods[index].attrs.length > 0 ) {
-        const flag = ids.some(id => {
-          console.log("id",foods[id].attrs)
-          console.log(attrs)
-          return (
-          foods[id].attrs.every((element,index) =>
-            { console.log("attrs index:::",attrs[index])
-              return element.value === attrs[index].value})
-        )})
-        console.log("flag",flag)
-        if(flag){
-            foods[index].quantity += num
-        }else{
-            console.log("food",food)
-            foods.push(food)
+      });
+      if (attrs.length > 0) {
+        const flag = ids.some(id =>
+          foods[id].attrs.every(
+            (element, index) => element.value === attrs[index].value
+          )
+        );
+        if (flag) {
+          foods[index].quantity += num;
+        } else {
+          foods.push(food);
         }
       } else {
-        foods[index].quantity += num
+        foods[index].quantity += num;
       }
     } else {
-      foods.push(food)
+      foods.push(food);
     }
-    dispatch(changeCart(this.shopId, goodsId,foods));
+    dispatch(changeCart(this.shopId, goodsId, foods));
   }
   setTabIndex(index) {
     this.setState({ tabIndex: index });
   }
   render() {
-    const { menu } = this.props;
+    const { menu, shopinfo } = this.props;
     const { tabIndex } = this.state;
-    // const cartData = this.props.cart[this.shopId];
+    const cartData = this.props.cart[this.shopId];
+    const cartList = [];
+    console.log("cartData",cartData)
+    cartData&&cartData.forEach(val =>{
+      console.log(val)
+    })
     return (
-      <div style={{ display: "flex", flexDirection: "column" }}>
-        <ShopDetailHeader />
-        <ShopDetailTab onClick={this.setTabIndex} />
-        {tabIndex === 0 &&
-          menu && (
-            <div>
-              <ShopMenu
-                data={menu}
-                // cart={cartData}
-                changeCart={this.increaseDecreaseCart}
-              />
-              <Cart />
-            </div>
-          )}
-        {tabIndex === 1 && <ShopRating />}
-        {tabIndex === 2 && <ShopInfo />}
+      <div>
+        {shopinfo ? (
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <ShopDetailHeader data={shopinfo} />
+            <ShopDetailTab onClick={this.setTabIndex} />
+            <ul>
+              <li
+                style={{
+                  height: `${tabIndex !== 0 ? 0 : "auto"}`,
+                  visibility: `${tabIndex !== 0 && menu ? "hidden" : "visible"}`
+                }}
+              >
+                <ShopMenu
+                  data={menu}
+                  cart={cartData}
+                  changeCart={this.increaseDecreaseCart}
+                />
+                <Cart />
+              </li>
+              <li
+                style={{
+                  height: `${tabIndex !== 1 ? 0 : "auto"}`,
+                  visibility: `${tabIndex !== 1 ? "hidden" : "visible"}`
+                }}
+              >
+                <ShopRating />
+              </li>
+              <li
+                style={{
+                  height: `${tabIndex !== 2 ? 0 : "auto"}`,
+                  visibility: `${tabIndex !== 2 ? "hidden" : "visible"}`
+                }}
+              >
+                <ShopInfo />
+              </li>
+            </ul>
+          </div>
+        ) : (
+          <ShopDetailTombstone />
+        )}
       </div>
     );
   }

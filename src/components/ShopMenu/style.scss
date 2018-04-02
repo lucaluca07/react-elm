@@ -11,11 +11,11 @@ $gary2: #f7f6f5;
     width: 600px;
     border-radius: 10px;
     font-size: 26px;
-    color:#666;
-    .item-activity{
-      border-color:#3199e8 !important;
-      background:#f6fbff ;
-      color:#3199e8;
+    color: #666;
+    .item-activity {
+      border-color: #3199e8 !important;
+      background: #f6fbff;
+      color: #3199e8;
     }
     .specpanle-title {
       text-align: center;
@@ -27,55 +27,55 @@ $gary2: #f7f6f5;
       flex-wrap: wrap;
       padding: 0 20px;
       .spec-item {
+        display: inline-block;
+        height: 44px;
+        border-radius: 22px;
+        line-height: 44px;
         text-align: center;
-        line-height: 46px;
-        padding: 0 18px;
-        height: 46px;
-        border-radius: 23px;
         border: 1px solid #eee;/*no*/
+        padding: 0 20px;
         margin: 13px 30px 0 0;
-        min-width: 62px;
       }
     }
-    .attr-wrap{
+    .attr-wrap {
       padding: 0 20px;
-      .spec-attr-name{
+      .spec-attr-name {
         margin-top: 15px;
       }
       .spec-attrs {
         display: flex;
         flex-wrap: wrap;
         .spec-attr-item {
+          display: inline-block;
+          height: 44px;
+          border-radius: 22px;
+          line-height: 44px;
           text-align: center;
-          line-height: 46px;
-          padding: 0 18px;
-          height: 46px;
-          border-radius: 23px;
           border: 1px solid #eee;/*no*/
+          padding: 0 20px;
           margin: 13px 30px 0 0;
-          min-width: 62px;
         }
       }
     }
-    .specpanle-footer{
+    .specpanle-footer {
       height: 65px;
       padding: 25px 30px;
       margin-top: 20px;
-      border-top: 1px solid #eee;/*no*/
+      border-top: 1px solid #eee; /*no*/
       display: flex;
-      justify-content: space-between; 
+      justify-content: space-between;
       line-height: 65px;
       background: #f9f9f9;
-      .price{
+      .price {
         font-size: 40px;
         color: #f60000;
       }
-      .submit-btn{
+      .submit-btn {
         background: #3199e8;
         padding: 0 25px;
         border-radius: 6px;
         font-size: 28px;
-        color:#fff;
+        color: #fff;
       }
     }
   }
@@ -94,100 +94,105 @@ $gary2: #f7f6f5;
       background: $gary2;
       border-bottom: 1px solid #e8e8e8;
       /*no*/
-          padding: 35px 15px;
-          line-height: 1.2;
-        }
+      padding: 35px 15px;
+      line-height: 1.2;
+    }
+  }
+  .shop-sub-menu {
+    flex: 1;
+    margin-right: 15px;
+    overflow: auto;
+    .shop-sub-list {
+      .name {
+        font-weight: 700;
+        margin-right: 5px;
       }
-      .shop-sub-menu {
-        flex: 1;
-        margin-right: 15px;
-        overflow: auto;
-        .shop-sub-list {
-          .name {
-            font-weight: 700;
-            margin-right: 5px;
-          }
-          .shop-sub-item {
-            display: flex;
+      .shop-sub-item {
+        display: flex;
+        height: 152px;
+        padding: 10px 20px 30px;
+        .food-img {
+          height: 152px;
+          width: 152px;
+          background: $gary1;
+          margin-right: 20px;
+          img {
             height: 152px;
-            padding: 10px 20px 30px;
-            .food-img {
-              height: 152px;
-              width: 152px;
-              background: $gary1;
-              margin-right: 20px;
-              img {
-                height: 152px;
-                width: 152px;
-              }
+            width: 152px;
+          }
+        }
+        .food-detail {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          .food-name {
+            font-size: 28px;
+            font-weight: 700;
+          }
+          .description {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: #999;
+            max-width: 360px; // display: inline-block;
+            transform: scale(0.8);
+            margin-left: -13%;
+          }
+          .sales {
+            flex: 1;
+            margin: 6px 0;
+            display: inline-block;
+            transform: scale(0.85);
+            margin-left: -8.5%;
+          }
+          .price-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .price {
+              font-size: 28px;
+              color: #f60;
             }
-            .food-detail {
-              flex: 1;
+            .btn-warp {
               display: flex;
-              flex-direction: column;
-              .food-name {
-                font-size: 28px;
-                font-weight: 700;
-              }
-              .description {
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                color: #999;
-                max-width: 360px; // display: inline-block;
-                transform: scale(0.75);
-                margin-left: -13%;
-              }
-              .sales {
-                flex: 1;
-                margin: 6px 0;
-                display: inline-block;
-                transform: scale(0.85);
-                margin-left: -8.5%;
-              }
-              .price-wrap {
-                display: flex;
-                justify-content: space-between;
-                .price {
-                  font-size: 28px;
-                  color: #f60;
-                }
-                .add-cart-btn,
-                .decrease-cart-btn {
-                  display: inline-block;
-                  height: 42px;
-                  width: 42px;
-                  line-height: 40px;
-                  text-align: center;
-                  font-size: 40px;
-                  border-radius: 50%;
-                  border: 1px solid #999;
-                }
-                .choose-goods-btn {
-                  display: inline-block;
-                  height: 42px;
-                  border-radius: 21px;
-                  line-height: 40px;
-                  text-align: center;
-                  border: 1px solid #999;
-                  background: #0af;
-                  color: #fff;
-                  padding: 0 20px;
-                }
-                .goods-num {
-                  display: inline-block;
-                  width: 50px;
-                  text-align: center;
-                  line-height: 40px;
-                  font-size: 28px;
-                }
-                .add-cart-btn {
-                  background: #0af;
-                  color: #fff;
-                }
-              }
+              align-items: center;
+            }
+            .add-cart-btn,
+            .decrease-cart-btn {
+              display: inline-block;
+              height: 38px;
+              width: 40px;
+              line-height: 40px;
+              text-align: center;
+              font-size: 32px;
+              border-radius: 50%;
+              border: 1px solid #0af; /*no*/
+            }
+            .choose-goods-btn {
+              display: inline-block;
+              height: 42px;
+              border-radius: 21px;
+              line-height: 42px;
+              text-align: center;
+              border: 1px solid #0af;
+              background: #0af;
+              color: #fff;
+              padding: 0 20px;
+            }
+            .goods-num {
+              display: inline-block;
+              width: 50px;
+              text-align: center;
+              line-height: 42px;
+              font-size: 28px;
+            }
+            .add-cart-btn {
+              background: #0af;
+              color: #fff;
             }
           }
         }
       }
     }
+  }
+}

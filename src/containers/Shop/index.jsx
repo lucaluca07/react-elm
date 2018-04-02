@@ -167,7 +167,6 @@ class Shop extends Component {
       mainCategoryId,
       subCategoryId
     } = this.props;
-    console.log(longitude, latitude);
     const { delivery, activity, support_ids, cost, openCategory } = this.state;
     return (
       <div>

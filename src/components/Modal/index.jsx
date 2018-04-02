@@ -40,7 +40,7 @@ export default class Modal extends Component {
   handleTouchStart(e) {
     e.preventDefault();
     e.nativeEvent.stopImmediatePropagation();
-    // console.log("start", e.touches[0].pageY)
+    
     this.setState({ startY: e.touches[0].pageY });
   }
   handleTouchMove(e) {

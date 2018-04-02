@@ -1,8 +1,8 @@
 import React from "react";
 import "./style.scss";
 import Modal from "../Modal";
-import RatingStar from "../RatingStar";
 import ActivitySheet from "../ActivitySheet";
+import getImgSrc from "../../util/getImgSrc.js";
 
 export default class ShopDetailHeader extends React.Component {
   constructor() {
@@ -24,6 +24,7 @@ export default class ShopDetailHeader extends React.Component {
   }
   render() {
     const { showModal, showActivity } = this.state;
+    const { data } = this.props;
     return (
       <div className="shop-detail-header">
         <div className="header" />
@@ -31,89 +32,102 @@ export default class ShopDetailHeader extends React.Component {
           className="shop-header-center"
           onClick={this.handleToggleShowModal}
         >
-          <div className="shop-img">{/* <img src="" alt="shop"/> */}</div>
+          <div className="shop-img">
+            <img src={getImgSrc(data.image_path)} alt="shop" />
+          </div>
           <h3 className="shop-name">
-            <span className="name-text">
-              沙拉谷物碗沙拉谷物碗沙拉谷物碗沙拉谷物碗沙拉谷物碗沙拉谷物碗
-            </span>
+            <span className="name-text">{data.name}</span>
             <div>
               <i className="iconfont icon-playfill" />
             </div>
           </h3>
           <div className="shop-info">
-            <RatingStar scale={0.9} />
-            <span>月售111单&nbsp;</span>
-            <span>蜂鸟专送&nbsp;</span>
-            <span>约25分钟&nbsp;</span>
-            <span>距离1.3km&nbsp;</span>
+            <span>{data.rating}&nbsp;</span>
+            <span>月售{data.recent_order_num}单&nbsp;</span>
+            <span>{data.delivery_mode.text}&nbsp;</span>
+            <span>约{data.order_lead_time}分钟&nbsp;</span>
+            <span>
+              距离{data.distance > 1000
+                ? `${(data.distance / 1000).toFixed(1)}km`
+                : `${data.distance}m`}&nbsp;
+            </span>
           </div>
           <p className="shop-notice">
-            【沙绿轻食】专业研发，健康均衡配比 让你做一个轻体无负担瘦瘦的吃货
-            暂不支持自选搭配和备注哟～
-            有关发票、VIP优惠等其他问题，可联系公号【沙绿轻食】在线客服
+            {data.promotion_info || "欢迎光临，用餐高峰期请提前下单，谢谢。"}
           </p>
         </div>
         <div className="activity-btn" onClick={this.toggleShowActivity}>
           <div>
-            <span>满减</span>
-            <span>满35减6，满65减10，满85减15</span>
+            <span
+              style={{
+                color: "#fff",
+                marginRight: "5px",
+                background: `#${data.activities[0].icon_color}`
+              }}
+            >
+              {data.activities[0].icon_name}
+            </span>
+            <span>{data.activities[0].description}</span>
           </div>
           <div>
-            <span>6个优惠</span>
+            <span>{data.activities.length}个优惠</span>
             <i className="iconfont icon-sanjiao1" />
           </div>
         </div>
         {showModal && (
           <Modal callback={this.handleToggleShowModal} displacement={50}>
             <div className="shopinfo-modal">
-              <h3 className="title">沙拉谷物碗</h3>
+              <h3 className="title">{data.name}</h3>
               <ul className="info-list">
                 <li className="item">
-                  <h3>5</h3>
+                  <h3>{data.rating}</h3>
                   <p>评分</p>
                 </li>
                 <li className="item">
-                  <h3>155</h3>
+                  <h3>{data.recent_order_num}</h3>
                   <p>月售</p>
                 </li>
                 <li className="item">
                   <h3>蜂鸟专送</h3>
-                  <p>约20分钟</p>
+                  <p>约{data.order_lead_time}分钟</p>
                 </li>
                 <li className="item">
-                  <h3>5元</h3>
+                  <h3>{data.float_delivery_fee}元</h3>
                   <p>配送费</p>
                 </li>
                 <li className="item">
-                  <h3>122m</h3>
+                  <h3>
+                    {data.distance > 1000
+                      ? `${(data.distance / 1000).toFixed(1)}km`
+                      : `${data.distance}m`}
+                  </h3>
                   <p>距离</p>
                 </li>
               </ul>
               <div className="modal-notice">
-                <h4 className="title">公告</h4>
+                <h4 className="title">—&nbsp;公告&nbsp;—</h4>
                 <p className="content">
-                  【沙绿轻食】专业研发，健康均衡配比
-                  让你做一个轻体无负担瘦瘦的吃货 暂不支持自选搭配和备注哟～
-                  有关发票、VIP优惠等其他问题，可联系公号【沙绿轻食】在线客服
+                  {data.promotion_info ||
+                    "欢迎光临，用餐高峰期请提前下单，谢谢。"}
                 </p>
               </div>
             </div>
           </Modal>
         )}
         {showActivity && (
-          <ActivitySheet title="优惠活动"
-            onClick = {this.toggleShowActivity}
-          >
+          <ActivitySheet title="优惠活动" onClick={this.toggleShowActivity}>
             <div>
-              <div className="shop-activity-item" key={0}>
+              {data.activities.map((val,index) => (
+                <div className="shop-activity-item" key={index}>
                 <span
                   className="activity-icon"
-                  style={{ background: `#${'0af'}` }}
+                  style={{ background: `#${val.icon_color}` }}
                 >
-                  {'测试'}
+                  {val.icon_name}
                 </span>
-                <span className="activity-descripition">{'满减'}</span>
+                <span className="activity-descripition">{val.description}</span>
               </div>
+              ))}
             </div>
           </ActivitySheet>
         )}

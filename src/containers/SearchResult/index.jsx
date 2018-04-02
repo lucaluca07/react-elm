@@ -134,7 +134,6 @@ class SearchResult extends Component {
       hasMore,
       highlights
     } = this.props;
-    console.log("restaurant_with_foods", restaurant_with_foods);
     const { delivery, activity, support_ids, cost } = this.state;
     return (
       <div>

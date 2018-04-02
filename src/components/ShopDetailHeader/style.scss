@@ -16,6 +16,11 @@
       left: 50%;
       margin-left: -55px;
       background: #fff;
+      overflow: hidden;
+      img{
+        height: 110px;
+        width: 110px;
+      }
     }
     .shop-name {
       text-align: center;
@@ -84,25 +89,22 @@
         text-align: center;
         font-size: 24px;
       }
-      .title:before,
-      .title:after {
-        content: '';
-        position: absolute;
-        top: 52%;
-        background: #999;
-        width: 5%;
-        height: 2px;
-      }
-      .title:before {
-        left: 40%;
-      }
-      .title:after {
-        right: 40%;
-      }
       .content {
         margin-top: 15px;
         color: #666;
       }
+    }
+  }
+  .shop-activity-item{
+    height: 35px;
+    margin-bottom: 23px;
+    .activity-icon{
+      color:#fff;
+      margin:0 10px 2px 0;
+      
+    }
+    .activity-descripition{
+      font-size: 26px;
     }
   }
 }
