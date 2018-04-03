@@ -26,13 +26,25 @@ class ShopDetail extends Component {
     this.increaseDecreaseCart = this.increaseDecreaseCart.bind(this);
     this.shopId = this.props.match.params.id;
   }
-  async componentDidMount() {
-    const { dispatch, longitude, latitude } = this.props;
+  componentWillMount(){
+    const { dispatch } = this.props;
     dispatch(clearMenu());
     dispatch(clearRating());
+  }
+  async componentDidMount() {
+    document.body.style.overflow = "hidden";
+    document.body.style.position = "relative";
+    document.getElementsByTagName("body")[0].style.height =
+      window.screen.height + "px";
+    const { dispatch, longitude, latitude } = this.props;
     dispatch(await getMenu(this.shopId, longitude, latitude));
     dispatch(await getShopInfo(this.shopId, longitude, latitude));
     this.getRatings();
+  }
+  componentWillUnmount(){
+    document.body.style.overflow = "visible";
+    document.body.style.position = "";
+    document.getElementsByTagName("body")[0].style.height = "auto";
   }
   async getRatings() {
     const { dispatch, longitude, latitude, offset } = this.props;
@@ -55,7 +67,7 @@ class ShopDetail extends Component {
     const foods = (cart[this.shopId] && cart[this.shopId][goodsId]) || [];
     const quantity = 1;
     const food = {
-      id: food_id,
+      food_id,
       item_id,
       name,
       sku_id,
@@ -84,12 +96,20 @@ class ShopDetail extends Component {
           )
         );
         if (flag) {
-          foods[index].quantity += num;
+          if(foods[index].quantity + num === 0){
+            foods.splice(index,1)
+          }else{
+            foods[index].quantity += num;
+          }
         } else {
           foods.push(food);
         }
       } else {
-        foods[index].quantity += num;
+        if(foods[index].quantity + num === 0){
+          foods.splice(index,1)
+        }else{
+          foods[index].quantity += num;
+        }
       }
     } else {
       foods.push(food);
@@ -114,15 +134,19 @@ class ShopDetail extends Component {
               <li
                 style={{
                   height: `${tabIndex !== 0 ? 0 : "auto"}`,
-                  visibility: `${tabIndex !== 0 && menu ? "hidden" : "visible"}`
+                  visibility: `${tabIndex !== 0 ? "hidden" : "visible"}`
                 }}
               >
-                <ShopMenu
+                {menu&&<ShopMenu
                   data={menu}
                   cart={cartData}
                   changeCart={this.increaseDecreaseCart}
+                />}
+                <Cart 
+                  data={cartData} 
+                  minOrderAmount={shopinfo&&shopinfo.float_minimum_order_amount}
+                  changeCart={this.increaseDecreaseCart}
                 />
-                <Cart data={cartData} minOrderAmount={shopinfo&&shopinfo.float_minimum_order_amount}/>
               </li>
               <li
                 style={{

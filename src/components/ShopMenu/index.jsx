@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import LazyLoad from "react-lazyload";
 import "./style.scss";
 import getImgSrc from "../../util/getImgSrc";
 import throttle from "../../util/throttle";
@@ -128,105 +127,102 @@ export default class ShopMenu extends Component {
                   {foods.description}
                 </p>
                 {foods.foods.map(val => (
-                  <LazyLoad key={val.virtual_food_id}>
-                    <div className="shop-sub-item">
-                      <div className="food-img">
-                        {val.image_path && (
-                          <img
-                            src={getImgSrc(val.image_path, 140)}
-                            alt="food"
-                          />
+                  <div className="shop-sub-item" key={val.virtual_food_id}>
+                    <div className="food-img">
+                      {val.image_path && (
+                        <img src={getImgSrc(val.image_path, 140)} alt="food" />
+                      )}
+                    </div>
+                    <div className="food-detail">
+                      <div className="food-name">{val.name}</div>
+                      <div className="description">{val.description}</div>
+                      <div className="sales">
+                        <span>月售{val.month_sales}份</span>&nbsp;
+                        <span>好评率{val.satisfy_rate}%</span>
+                      </div>
+                      <div className="price-wrap">
+                        <span className="price">
+                          {val.specfoods.length > 1
+                            ? `¥${Math.min(
+                                ...val.specfoods.map(item => item.price)
+                              )}起`
+                            : `¥${val.specfoods[0].price}`}
+                        </span>
+
+                        {cart &&
+                        cart[val.virtual_food_id] &&
+                        cart[val.virtual_food_id].length > 0 &&
+                        (cart[val.virtual_food_id].length > 1
+                          ? cart[val.virtual_food_id].reduce(
+                              (accumulator, current) =>
+                                accumulator + current.quantity,
+                              0
+                            )
+                          : cart[val.virtual_food_id][0].quantity) > 0 ? (
+                          <div className="btn-warp">
+                            <span
+                              className="decrease-cart-btn"
+                              onClick={
+                                cart[val.virtual_food_id].length > 1
+                                  ? () => {
+                                      console.log(1111111222222);
+                                    }
+                                  : this.addCart.bind(this, val, -1)
+                              }
+                            >
+                              <i className="iconfont icon-jian1" />
+                            </span>
+                            <span className="goods-num">
+                              {cart[val.virtual_food_id].length > 1
+                                ? cart[val.virtual_food_id].reduce(
+                                    (accumulator, current) =>
+                                      accumulator + current.quantity,
+                                    0
+                                  )
+                                : cart[val.virtual_food_id][0].quantity}
+                            </span>
+                            {val.specfoods.length > 1 ? (
+                              <span
+                                className="choose-goods-btn"
+                                onClick={() => {
+                                  this.toggleShowModal(val);
+                                }}
+                              >
+                                选规格
+                              </span>
+                            ) : (
+                              <span
+                                className="add-cart-btn"
+                                onClick={this.addCart.bind(this, val, 1)}
+                              >
+                                <i className="iconfont icon-tianjia" />
+                              </span>
+                            )}
+                          </div>
+                        ) : (
+                          <div>
+                            {val.specfoods.length > 1 ? (
+                              <span
+                                className="choose-goods-btn"
+                                onClick={() => {
+                                  this.toggleShowModal(val);
+                                }}
+                              >
+                                选规格
+                              </span>
+                            ) : (
+                              <span
+                                className="add-cart-btn"
+                                onClick={this.addCart.bind(this, val, 1)}
+                              >
+                                <i className="iconfont icon-tianjia" />
+                              </span>
+                            )}
+                          </div>
                         )}
                       </div>
-                      <div className="food-detail">
-                        <div className="food-name">{val.name}</div>
-                        <div className="description">{val.description}</div>
-                        <div className="sales">
-                          <span>月售{val.month_sales}份</span>&nbsp;
-                          <span>好评率{val.satisfy_rate}%</span>
-                        </div>
-                        <div className="price-wrap">
-                          <span className="price">
-                            {val.specfoods.length > 1
-                              ? `¥${Math.min(
-                                  ...val.specfoods.map(item => item.price)
-                                )}起`
-                              : `¥${val.specfoods[0].price}`}
-                          </span>
-                          {cart &&
-                          cart[val.virtual_food_id] &&
-                          (cart[val.virtual_food_id].length > 1
-                            ? cart[val.virtual_food_id].reduce(
-                                (accumulator, current) =>
-                                  accumulator + current.quantity,
-                                0
-                              )
-                            : cart[val.virtual_food_id][0].quantity) > 0 ? (
-                            <div className="btn-warp">
-                              <span
-                                className="decrease-cart-btn"
-                                onClick={
-                                  cart[val.virtual_food_id].length > 1
-                                    ? () => {
-                                        console.log(1111111222222);
-                                      }
-                                    : this.addCart.bind(this, val, -1)
-                                }
-                              >
-                                <i className="iconfont icon-jian1" />
-                              </span>
-                              <span className="goods-num">
-                                {cart[val.virtual_food_id].length > 1
-                                  ? cart[val.virtual_food_id].reduce(
-                                      (accumulator, current) =>
-                                        accumulator + current.quantity,
-                                      0
-                                    )
-                                  : cart[val.virtual_food_id][0].quantity}
-                              </span>
-                              {val.specfoods.length > 1 ? (
-                                <span
-                                  className="choose-goods-btn"
-                                  onClick={() => {
-                                    this.toggleShowModal(val);
-                                  }}
-                                >
-                                  选规格
-                                </span>
-                              ) : (
-                                <span
-                                  className="add-cart-btn"
-                                  onClick={this.addCart.bind(this, val, 1)}
-                                >
-                                  <i className="iconfont icon-tianjia" />
-                                </span>
-                              )}
-                            </div>
-                          ) : (
-                            <div>
-                              {val.specfoods.length > 1 ? (
-                                <span
-                                  className="choose-goods-btn"
-                                  onClick={() => {
-                                    this.toggleShowModal(val);
-                                  }}
-                                >
-                                  选规格
-                                </span>
-                              ) : (
-                                <span
-                                  className="add-cart-btn"
-                                  onClick={this.addCart.bind(this, val, 1)}
-                                >
-                                  <i className="iconfont icon-tianjia" />
-                                </span>
-                              )}
-                            </div>
-                          )}
-                        </div>
-                      </div>
                     </div>
-                  </LazyLoad>
+                  </div>
                 ))}
               </div>
             ))}

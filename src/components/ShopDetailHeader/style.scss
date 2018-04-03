@@ -2,6 +2,10 @@
   color: #333;
   .header {
     height: 120px;
+    padding-left: 30px;
+    i:before{
+      font-size: 40px;
+    }
   }
   .shop-header-center {
     position: relative;
@@ -97,6 +101,7 @@
   }
   .shop-activity-item{
     height: 35px;
+    padding:  0 52px;
     margin-bottom: 23px;
     .activity-icon{
       color:#fff;

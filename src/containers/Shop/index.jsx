@@ -156,8 +156,6 @@ class Shop extends Component {
   render() {
     const targetName = this.splitSearch("target_name");
     const {
-      longitude,
-      latitude,
       restaurants,
       hasMore,
       filterMore,
@@ -229,7 +227,6 @@ class Shop extends Component {
 }
 
 const mapStateToProps = state => {
-  const { longitude, latitude } = state.location;
   const { result, filterMore } = state.shop;
   const { offset, hasMore, restaurants } = result;
   const {
@@ -240,8 +237,6 @@ const mapStateToProps = state => {
     subCategoryId
   } = state.category;
   return {
-    longitude,
-    latitude,
     offset,
     restaurants,
     siftFactors,

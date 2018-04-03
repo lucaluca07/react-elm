@@ -22,12 +22,18 @@ export default class ShopDetailHeader extends React.Component {
     const showActivity = this.state.showActivity;
     this.setState({ showActivity: !showActivity });
   }
+  handleback(){
+    window.history.go(-1)
+  }
   render() {
     const { showModal, showActivity } = this.state;
     const { data } = this.props;
     return (
       <div className="shop-detail-header">
-        <div className="header" />
+        <div className="header">
+          <i className="iconfont icon-fanhuijiantou"
+          onClick={this.handleback}></i>
+        </div>
         <div
           className="shop-header-center"
           onClick={this.handleToggleShowModal}
