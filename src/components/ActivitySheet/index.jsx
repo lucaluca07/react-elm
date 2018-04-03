@@ -7,15 +7,18 @@ export default class ActivitySheet extends Component {
     zIndex:1000
   };
   componentDidMount() {
+    this.overflow = document.body.style.overflow;
+    this.position = document.body.style.position;
+    this.height = document.getElementsByTagName("body")[0].style.height
     document.body.style.overflow = "hidden";
     document.body.style.position = "relative";
     document.getElementsByTagName("body")[0].style.height =
       window.screen.height + "px";
   }
   componentWillUnmount() {
-    document.body.style.overflow = "visible";
-    document.body.style.position = "";
-    document.getElementsByTagName("body")[0].style.height = "auto";
+    document.body.style.overflow = this.overflow;
+    document.body.style.position = this.position;
+    document.getElementsByTagName("body")[0].style.height = this.height;
   }
   handleClick() {
     this.props.onClick && this.props.onClick();

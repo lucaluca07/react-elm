@@ -6,10 +6,12 @@ export default class Modal extends Component {
   static propTypes = {
     displacement: PropTypes.number,
     children: PropTypes.element,
-    callback: PropTypes.func
+    callback: PropTypes.func,
+    onTouch:PropTypes.bool
   };
   static defaultProps = {
     displacement: 100,
+    onTouch: true,
     children: (
       <div style={{ height: "300px", width: "200px", background: "#fff" }} />
     )
@@ -29,13 +31,15 @@ export default class Modal extends Component {
     this.handleCotentClick = this.handleCotentClick.bind(this);
   }
   componentDidMount() {
+    this.overflow = document.body.style.overflow;
+    this.height = document.getElementsByTagName("body")[0].style.height
     document.body.style.overflow = "hidden";
     document.getElementsByTagName("body")[0].style.height =
       window.innerHeight + "px";
   }
   componentWillUnmount(){
-    document.body.style.overflow = "visible";
-    document.getElementsByTagName("body")[0].style.height = "auto";
+    document.body.style.overflow = this.overflow;
+    document.getElementsByTagName("body")[0].style.height = this.height;
   }
   handleTouchStart(e) {
     e.preventDefault();
@@ -69,23 +73,25 @@ export default class Modal extends Component {
   }
   handleModalClick() {
     const { callback } = this.props;
+    console.log(111111)
     callback && callback();
   }
   handleCotentClick(e) {
-    e.preventDefault();
+    e.stopPropagation();
   }
 
   render() {
     const { top, showTips, tipsText } = this.state;
+    const {onTouch} = this.props
     return (
       <div className="modal" onClick={this.handleModalClick}>
         <div
           className="content"
           ref="content"
           style={{ marginTop: top }}
-          onTouchStart={this.handleTouchStart}
-          onTouchMove={this.handleTouchMove}
-          onTouchEnd={this.handleTouchEnd}
+          onTouchStart={onTouch?this.handleTouchStart:null}
+          onTouchMove={onTouch?this.handleTouchMove:null}
+          onTouchEnd={onTouch?this.handleTouchEnd:null}
           onClick={this.handleCotentClick}
         >
           {showTips && <div className="tips">{tipsText}</div>}

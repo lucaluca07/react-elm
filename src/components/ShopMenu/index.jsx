@@ -74,21 +74,15 @@ export default class ShopMenu extends Component {
     }
   }
   setSpecState(index) {
-    var event = window.event;
-    event.preventDefault();
     this.setState({ spec: index });
   }
   setAttrs(name, value) {
-    var event = window.event;
-    event.preventDefault();
     const attrs = this.state.attrs.map(
       val => (val.name === name ? { name, value } : val)
     );
     this.setState({ attrs: attrs });
   }
   addCart(info, num) {
-    var event = window.event;
-    event.preventDefault();
     const { spec, attrs } = this.state;
     const { virtual_food_id, specfoods } = info;
     this.setState({
@@ -230,14 +224,14 @@ export default class ShopMenu extends Component {
           </div>
         </div>
         {showModal && (
-          <Modal callback={this.toggleShowModal}>
+          <Modal onTouch={false} callback={this.toggleShowModal}>
             <div className="specpanle">
               <h2 className="specpanle-title">{foodInfo.name}</h2>
               <div style={{ padding: "0 20px" }}>规格</div>
               <ul className="specpanle-specs">
                 {foodInfo.specfoods.map((val, index) => (
                   <li
-                    onTouchStart={this.setSpecState.bind(this, index)}
+                    onClick={this.setSpecState.bind(this, index)}
                     className={`spec-item ${
                       spec === index ? "item-activity" : ""
                     }`}
@@ -255,7 +249,7 @@ export default class ShopMenu extends Component {
                       <ul className="spec-attrs">
                         {val.values.map((attr, index) => (
                           <li
-                            onTouchStart={this.setAttrs.bind(
+                          onClick={this.setAttrs.bind(
                               this,
                               val.name,
                               attr
@@ -277,7 +271,7 @@ export default class ShopMenu extends Component {
                 <div className="price">￥{foodInfo.specfoods[spec].price}</div>
                 <div
                   className="submit-btn"
-                  onTouchEnd={this.addCart.bind(this, foodInfo, 1)}
+                  onClick={this.addCart.bind(this, foodInfo, 1)}
                 >
                   选好了
                 </div>

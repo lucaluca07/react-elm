@@ -41,6 +41,7 @@ class ShopDetail extends Component {
     dispatch(await getShopInfo(this.shopId, longitude, latitude));
     this.getRatings();
   }
+  
   componentWillUnmount(){
     document.body.style.overflow = "visible";
     document.body.style.position = "";
