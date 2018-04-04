@@ -13,7 +13,7 @@
 - onTouchStart、onClick时间冲突：<br/>
 当父元素添加了onTouchStart(onTouchMove/onTouchEnd)事件后, 子元素的onClick事件不会被触发。<br/>
 原因：<br/>
-onTouchStart的执行顺序在onClick事件之前。执行顺序onTouchStart > onTouchMove > onTouchEnd > onClick
+onTouchStart的执行顺序在onClick事件之前,执行顺序onTouchStart > onTouchMove > onTouchEnd > onClick。 <br/>
 解决方法：<br/>
   1. 把子元素触发onClick的事件放在onTouchStart上触发;
   2. 阻止子元素的onTouchStart事件冒泡,使用 event.e.stopPropagation()
