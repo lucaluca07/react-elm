@@ -4,9 +4,9 @@
 
 ### 项目遇到的坑
 - 安装node-sass报错：<br/>
-原因:<br/>
+原因:
 安装node-sass时会去GitHub上面拉去代码,由于国内环境不稳定(大家懂的)下载时间可能过长导致超时失败。<br/>
-解决办法:<br/>
+解决办法:
 使用下面命令安装(其他的解决方法请自行搜索) <br/> 
 > SASS_BINARY_SITE=https://npm.taobao.org/mirrors/node-sass/ npm install node-sass
 
