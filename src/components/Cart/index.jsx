@@ -42,7 +42,7 @@ export default class Cart extends Component {
     this.props.clearCart();
   }
   render() {
-    const { data, minOrderAmount, changeCart, clearCart } = this.props;
+    const { data, minOrderAmount, changeCart } = this.props;
     const { showGoods } = this.state;
     console.log("data", data);
     const arr = data && this.getObjLength(data);
