@@ -8,14 +8,14 @@
     text-align: center;
     line-height: 40px;
     background: #fff;
-    border-top: 1px solid #fff;
+    opacity: 0.8;
   }
   .cartview-body {
     color: #fff;
     height: 96px;
     display: flex;
     padding-left: 158px;
-    background: rgba(61, 61, 63, 0.9);
+    background: #444;
     .cartview-main {
       flex: 1;
       display: flex;
@@ -33,10 +33,10 @@
       line-height: 96px;
       font-size: 32px;
       color: #fff;
-      background: rgba($color: #555, $alpha: 1);
+      background: #555;
     }
     .activity-btn {
-      background: rgba($color: #4cd964, $alpha: 1);
+      background: #4cd964;
     }
   }
   .activity-cart {
@@ -103,7 +103,6 @@
         }
       }
     .goods {
-      
       display: flex;
       justify-content: space-between;
       color: #333;

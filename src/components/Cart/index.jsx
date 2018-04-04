@@ -7,6 +7,7 @@ export default class Cart extends Component {
     super();
     this.state = { showGoogs: false };
     this.toggleShowGoodsList = this.toggleShowGoodsList.bind(this);
+    this.clearClick = this.clearClick.bind(this);
   }
   getObjLength(obj) {
     let length = 0;
@@ -30,9 +31,20 @@ export default class Cart extends Component {
     const { showGoods } = this.state;
     this.setState({ showGoods: !showGoods });
   }
+  handleRemoveClick(ele, val, attrs, arr) {
+    if (arr <= 1) {
+      this.setState({ showGoods: false });
+    }
+    this.props.changeCart(ele, -1, val, attrs);
+  }
+  clearClick() {
+    this.setState({ showGoods: false });
+    this.props.clearCart();
+  }
   render() {
-    const { data, minOrderAmount, changeCart } = this.props;
+    const { data, minOrderAmount, changeCart, clearCart } = this.props;
     const { showGoods } = this.state;
+    console.log("data", data);
     const arr = data && this.getObjLength(data);
     const total = (data && this.getMoney(data)) || 0;
     return (
@@ -64,63 +76,71 @@ export default class Cart extends Component {
             {arr > 0 && <div className="badge">{arr}</div>}
           </div>
         </div>
-        {showGoods &&
-          arr > 0 && (
-            <ActivitySheet
-              zIndex={998}
-              close={false}
-              onClick={this.toggleShowGoodsList}
-            >
-              <div className="goods-wrap">
-                <div className="goods-header">
-                  <div className="header-text">已选商品</div>
-                  <div className="clear-all">清空</div>
+        {showGoods && (
+          <ActivitySheet
+            zIndex={998}
+            close={false}
+            onClick={this.toggleShowGoodsList}
+          >
+            <div className="goods-wrap">
+              <div className="goods-header">
+                <div className="header-text">已选商品</div>
+                <div className="clear-all" onClick={this.clearClick}>
+                  <i className="iconfont icon-lajixiang" />
+                  <span>清空</span>
                 </div>
-                <ul className="goods-list">
-                  {data &&
-                    Object.keys(data).map(ele =>
-                      data[ele].map((val, index) => (
-                        <li className="goods-item" key={index}>
-                          <div className="goods">
-                            <span className="name">{val.name}</span>
-                            <span className="price">
-                              ￥{val.price * val.quantity}
+              </div>
+              <ul className="goods-list">
+                {data &&
+                  Object.keys(data).map(ele =>
+                    data[ele].map((val, index) => (
+                      <li className="goods-item" key={index}>
+                        <div className="goods">
+                          <span className="name">{val.name}</span>
+                          <span className="price">
+                            ￥{val.price * val.quantity}
+                          </span>
+                          <div className="quantity">
+                            <span
+                              className="decrease-cart-btn"
+                              onClick={this.handleRemoveClick.bind(
+                                this,
+                                ele,
+                                val,
+                                val.attrs,
+                                arr
+                              )}
+                            >
+                              <i className="iconfont icon-jian1" />
                             </span>
-                            <div className="quantity">
-                              <span
-                                className="decrease-cart-btn"
-                                onClick={() => {
-                                  changeCart(ele, -1, val, val.attrs);
-                                }}
-                              >
-                                <i className="iconfont icon-jian1" />
-                              </span>
-                              <span className="goods-num">{val.quantity}</span>
-                              <span
-                                className="add-cart-btn"
-                                onClick={() => {
-                                  changeCart(ele, 1, val, val.attrs);
-                                }}
-                              >
-                                <i className="iconfont icon-tianjia" />
-                              </span>
-                            </div>
+                            <span className="goods-num">{val.quantity}</span>
+                            <span
+                              className="add-cart-btn"
+                              onClick={() => {
+                                changeCart(ele, 1, val, val.attrs);
+                              }}
+                            >
+                              <i className="iconfont icon-tianjia" />
+                            </span>
                           </div>
-                          {val.specs[0]&&<div className="goods-spec">
+                        </div>
+                        {val.specs[0] && (
+                          <div className="goods-spec">
                             {val.specs[0].value}
                             /{val.attrs.map(attr => attr.value).join("/")}
-                          </div>}
-                        </li>
-                      ))
-                    )}
-                  {/* {goods.map((val, index) => (
+                          </div>
+                        )}
+                      </li>
+                    ))
+                  )}
+                {/* {goods.map((val, index) => (
                   
                 ))} */}
-                </ul>
-                <div className="box" />
-              </div>
-            </ActivitySheet>
-          )}
+              </ul>
+              <div className="box" />
+            </div>
+          </ActivitySheet>
+        )}
       </div>
     );
   }

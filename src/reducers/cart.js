@@ -14,10 +14,7 @@ function errorReducer(state = defaultState, action) {
     case actionTypes.CLEAR_CART:
       return {
         ...state,
-        [action.shopId]: {
-          ...state[action.shopId],
-          [action.goodsId]: action.info
-        }
+        [action.shopId]: false
       };
     default:
       return state;

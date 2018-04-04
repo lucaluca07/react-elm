@@ -15,7 +15,7 @@ import {
   clearRating,
   clearMenu
 } from "../../actions/shopDetail";
-import { changeCart } from "../../actions/cart";
+import { changeCart, clearCart } from "../../actions/cart";
 
 class ShopDetail extends Component {
   constructor(props) {
@@ -24,6 +24,7 @@ class ShopDetail extends Component {
     this.getRatings = this.getRatings.bind(this);
     this.setTabIndex = this.setTabIndex.bind(this);
     this.increaseDecreaseCart = this.increaseDecreaseCart.bind(this);
+    this.clearShopCart = this.clearShopCart.bind(this)
     this.shopId = this.props.match.params.id;
   }
   componentWillMount(){
@@ -117,6 +118,11 @@ class ShopDetail extends Component {
     }
     dispatch(changeCart(this.shopId, goodsId, foods));
   }
+  clearShopCart(){
+    const {dispatch} = this.props
+    const shopId = this.shopId
+    dispatch(clearCart(shopId))
+  }
   setTabIndex(index) {
     this.setState({ tabIndex: index });
   }
@@ -147,6 +153,7 @@ class ShopDetail extends Component {
                   data={cartData} 
                   minOrderAmount={shopinfo&&shopinfo.float_minimum_order_amount}
                   changeCart={this.increaseDecreaseCart}
+                  clearCart={this.clearShopCart}
                 />
               </li>
               <li

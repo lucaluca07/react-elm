@@ -8,6 +8,6 @@ export const changeCart = (shopId,goodsId,info) => ({
 });
 
 export const clearCart = shopId => ({
-    type:actionType.CHANGE_CART,
+    type:actionType.CLEAR_CART,
     shopId
 })
