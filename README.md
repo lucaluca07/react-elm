@@ -17,6 +17,11 @@
 - 安卓浏览器不支持元素添加scrollTo事件：
 这个暂时还没解决,这个方法用在了ShopMenu组件中,目前待定的解决方案是使用swiper替代原来的方案。
 
+### 项目运行
+运行mock服务器: npm run server
+运行本地项目: npm start
+编译项目: npm run build
+
 ### 完成进度
 
 - [x] 定位功能
