@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import "./style.scss";
+import CSSModules from 'react-css-modules';
+import style from "./style.scss";
 import Loadding from "../Loadding";
 import getImgSrc from "../../util/getImgSrc";
 
-export default class AllCategory extends Component {
+class AllCategory extends Component {
   componentDidMount() {
     document.body.style.overflow = "hidden";
     document.body.style.position = "relative";
@@ -28,9 +29,9 @@ export default class AllCategory extends Component {
       category &&
       category.filter(element => element.id === mainMenuId)[0].sub_categories;
     return (
-      <div className="filter-category">
+      <div styleName="filter-category">
         {top && (
-          <div className="top">
+          <div styleName="top">
             <span>请选择分类</span>
             <i
               onClick={() => {
@@ -40,43 +41,43 @@ export default class AllCategory extends Component {
             />
           </div>
         )}
-        <div className="scroller-wrap">
+        <div styleName="scroller-wrap">
           {category ? (
-            <div className="filter-scroller">
-              <ul className="main-menu">
+            <div styleName="filter-scroller">
+              <ul styleName="main-menu">
                 {category &&
                   category.map((val, index) => (
                     <li
                       key={index}
-                      className={`main-menu-item ${val.id === mainMenuId &&
-                        "main-menu-activity"}`}
+                      styleName={`main-menu-item ${val.id === mainMenuId ?
+                        "main-menu-activity":""}`}
                       onClick={() => {
                         setMainMenuId && setMainMenuId(val.id);
                       }}
                     >
-                      <span className="menu-name">{val.name}</span>
-                      <span className="count">{val.count}</span>
+                      <span styleName="menu-name">{val.name}</span>
+                      <span styleName="count">{val.count}</span>
                     </li>
                   ))}
               </ul>
-              <ul className="sub-menu">
+              <ul styleName="sub-menu">
                 {submenu &&
                   submenu.map((val, index) => (
                     <li
                       key={index}
-                      className={`sub-menu-item ${val.id === subMenuId &&
-                        "sub-menu-activity"}`}
+                      styleName={`sub-menu-item ${val.id === subMenuId ?
+                        "sub-menu-activity":""}`}
                       onClick={() => {
                         setSubMenuId && setSubMenuId(val.id, submenu);
                       }}
                     >
                       <img
-                        className="menu-img"
+                        styleName="menu-img"
                         src={getImgSrc(val.image_url)}
                         alt="category"
                       />
-                      <span className="menu-name">{val.name}</span>
-                      <span className="count">{val.count}</span>
+                      <span styleName="menu-name">{val.name}</span>
+                      <span styleName="count">{val.count}</span>
                     </li>
                   ))}
               </ul>
@@ -86,7 +87,7 @@ export default class AllCategory extends Component {
           )}
         </div>
         <div
-          className="shade"
+          styleName="shade"
           onClick={() => {
             this.props.closeCategory();
           }}
@@ -95,3 +96,4 @@ export default class AllCategory extends Component {
     );
   }
 }
+export default CSSModules(AllCategory,style,{allowMultiple:true});

@@ -1,9 +1,10 @@
 import React from "react";
 import LazyLoad from "react-lazyload";
+import CSSModules from 'react-css-modules';
 import ShopItem from "../ShopItem";
 import InfiniteScroll from "../ScrollList";
 import { ShopTombstone } from "../Tombstone";
-import "./style.scss";
+import styles from "./style.scss";
 import load from "../../static/image/loadding.gif";
 
 class ShopList extends React.Component {
@@ -40,4 +41,5 @@ class ShopList extends React.Component {
     );
   }
 }
-export default ShopList;
+
+export default CSSModules(ShopList,styles,{allowMultiple:true});

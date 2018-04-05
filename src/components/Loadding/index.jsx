@@ -1,10 +1,13 @@
 import React from "react";
-import "./style.scss";
+import CSSModules from 'react-css-modules';
+import styles from "./style.scss";
 
 const Loadding = () => (
-  <div className="loadding">
-    <i className="iconfont icon-loading" />
+  <div styleName="loadding">
+    <div styleName="loadding-animate">
+      <i className="iconfont icon-loading" />
+    </div>
   </div>
 );
 
-export default Loadding;
+export default CSSModules(Loadding,styles);

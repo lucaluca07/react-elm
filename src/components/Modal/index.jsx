@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import CSSModules from 'react-css-modules';
 import PropTypes from "prop-types";
-import "./style.scss";
+import styles from "./style.scss";
 
-export default class Modal extends Component {
+class Modal extends Component {
   static propTypes = {
     displacement: PropTypes.number,
     children: PropTypes.element,
@@ -84,9 +85,9 @@ export default class Modal extends Component {
     const { top, showTips, tipsText } = this.state;
     const {onTouch} = this.props
     return (
-      <div className="modal" onClick={this.handleModalClick}>
+      <div styleName="modal" onClick={this.handleModalClick}>
         <div
-          className="content"
+          styleName="content"
           ref="content"
           style={{ marginTop: top }}
           onTouchStart={onTouch?this.handleTouchStart:null}
@@ -94,10 +95,12 @@ export default class Modal extends Component {
           onTouchEnd={onTouch?this.handleTouchEnd:null}
           onClick={this.handleCotentClick}
         >
-          {showTips && <div className="tips">{tipsText}</div>}
+          {showTips && <div styleName="tips">{tipsText}</div>}
           {this.props.children}
         </div>
       </div>
     );
   }
 }
+
+export default CSSModules(Modal,styles);

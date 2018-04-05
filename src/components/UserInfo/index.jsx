@@ -1,7 +1,8 @@
 import React,{Component} from 'react';
-import './style.scss'
+import CSSModules from 'react-css-modules';
+import styles from './style.scss'
 
-export default class UserInfo extends Component{
+class UserInfo extends Component{
 
     render(){
         return(
@@ -16,3 +17,5 @@ export default class UserInfo extends Component{
         )
     }
 }
+
+export default CSSModules(UserInfo,styles,{allowMultiple:true});

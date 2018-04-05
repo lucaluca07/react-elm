@@ -1,6 +1,7 @@
 import React from "react";
-import "./style.scss";
+import CSSModules from 'react-css-modules';
+import styles from "./style.scss";
 
 const ShopInfo = () => <div>商户信息</div>;
 
-export default ShopInfo;
+export default CSSModules(ShopInfo,styles,{allowMultiple:true});

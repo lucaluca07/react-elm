@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import "./style.scss";
+import CSSModules from 'react-css-modules';
+import style from "./style.scss";
 
-export default class FilterNav extends Component {
+class FilterNav extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -47,7 +48,6 @@ export default class FilterNav extends Component {
       averageCosts: "",
       supportIds: []
     });
-    // this.props.setFilterMore("","",[],"")
   }
   handleSubmit() {
     const { activityId, delivery, averageCosts, supportIds } = this.state;
@@ -64,16 +64,16 @@ export default class FilterNav extends Component {
     } = fliterMore;
     const { activityId, delivery, averageCosts, supportIds } = this.state;
     return (
-      <div className="filter-nav">
-        <div className="filter-wrap">
+      <div styleName="filter-nav">
+        <div styleName="filter-wrap">
           {delivery_mode && (
-            <dl className="filter-item ">
-              <dt className="title">配送方式</dt>
-              <dd className="content">
+            <dl styleName="filter-item ">
+              <dt styleName="title">配送方式</dt>
+              <dd styleName="content">
                 {
                   <div
-                    className={`more-filter ${delivery === delivery_mode.id &&
-                      "filter-activity"}`}
+                    styleName={`more-filter ${delivery === delivery_mode.id ?
+                      "filter-activity":""}`}
                     onClick={this.handleClick.bind(
                       this,
                       "delivery",
@@ -95,9 +95,9 @@ export default class FilterNav extends Component {
             </dl>
           )}
           {activity_types.length > 0 && (
-            <dl className="filter-item">
-              <dt className="title">优惠活动</dt>
-              <dd className="content">
+            <dl styleName="filter-item">
+              <dt styleName="title">优惠活动</dt>
+              <dd styleName="content">
                 {activity_types.map((val, index) => (
                   <div
                     key={index}
@@ -112,14 +112,14 @@ export default class FilterNav extends Component {
                           ? "none"
                           : "1px solid #e4e3e3"
                     }}
-                    className={`more-filter ${activityId === val.id &&
-                      "filter-activity"}`}
+                    styleName={`more-filter ${activityId === val.id ?
+                      "filter-activity":""}`}
                   >
                     {activityId === val.id ? (
                       <i className="iconfont icon-finish" />
                     ) : (
                       <div
-                        className="activity-icon"
+                        styleName="activity-icon"
                         style={{ background: `#${val.icon_color}` }}
                       >
                         {val.icon_name}
@@ -132,9 +132,9 @@ export default class FilterNav extends Component {
             </dl>
           )}
           {average_costs.length > 0 && (
-            <dl className="filter-item">
-              <dt className="title">人均消费</dt>
-              <dd className="content">
+            <dl styleName="filter-item">
+              <dt styleName="title">人均消费</dt>
+              <dd styleName="content">
                 {average_costs.map((val, index) => (
                   <div
                     key={index}
@@ -153,22 +153,22 @@ export default class FilterNav extends Component {
                           ? "none"
                           : "1px solid #e4e3e3"
                     }}
-                    className={`more-filter ${averageCosts === val.id &&
-                      "filter-activity"}`}
+                    styleName={`more-filter ${averageCosts === val.id ?
+                      "filter-activity":""}`}
                   >
                     {averageCosts === val.id && (
                       <i className="iconfont icon-finish" />
                     )}
-                    <span className="average-costs">{val.description}</span>
+                    <span styleName="average-costs">{val.description}</span>
                   </div>
                 ))}
               </dd>
             </dl>
           )}
           {supports.length > 0 && (
-            <dl className="filter-item">
-              <dt className="title">商家属性</dt>
-              <dd className="content">
+            <dl styleName="filter-item">
+              <dt styleName="title">商家属性</dt>
+              <dd styleName="content">
                 {supports.map((val, index) => (
                   <div
                     key={index}
@@ -183,14 +183,14 @@ export default class FilterNav extends Component {
                           ? "none"
                           : "1px solid #e4e3e3"
                     }}
-                    className={`more-filter ${supportIds.indexOf(val.id) !==
-                      -1 && "filter-activity"}`}
+                    styleName={`more-filter ${supportIds.indexOf(val.id) !==
+                      -1 ? "filter-activity":""}`}
                   >
                     {supportIds.indexOf(val.id) !== -1 ? (
                       <i className="iconfont icon-finish" />
                     ) : (
                       <div
-                        className="support-icon"
+                        styleName="support-icon"
                         style={{
                           color: `#${val.icon_color}`,
                           borderColor: `#${val.icon_color}`
@@ -206,9 +206,9 @@ export default class FilterNav extends Component {
             </dl>
           )}
         </div>
-        <div className="filter-btn">
+        <div styleName="filter-btn">
           <div
-            className="clear-btn"
+            styleName="clear-btn"
             onClick={this.handleClearState}
             style={{
               color:
@@ -222,7 +222,7 @@ export default class FilterNav extends Component {
           >
             清空
           </div>
-          <div className="submit-btn" onClick={this.handleSubmit}>
+          <div styleName="submit-btn" onClick={this.handleSubmit}>
             确定
           </div>
         </div>
@@ -230,3 +230,5 @@ export default class FilterNav extends Component {
     );
   }
 }
+
+export default CSSModules(FilterNav,style,{allowMultiple:true});

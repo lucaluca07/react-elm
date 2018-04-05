@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+import CSSModules from 'react-css-modules';
 import SearchComponent from "../SearchComponent";
-import "./style.scss";
+import styles from "./style.scss";
 
 class SearchHeader extends Component {
   handleClick() {
@@ -9,11 +10,11 @@ class SearchHeader extends Component {
   }
   render() {
     return (
-      <div className="search-header">
-        <div className="search-back" onClick={this.handleClick.bind(this)}>
+      <div styleName="search-header">
+        <div styleName="search-back" onClick={this.handleClick.bind(this)}>
           <i className="iconfont icon-fanhuijiantou back" />
         </div>
-        <div className="search-comp-box">
+        <div styleName="search-comp-box">
           <SearchComponent
             value={this.props.value}
             onEnter={this.props.onEnter}
@@ -22,10 +23,10 @@ class SearchHeader extends Component {
             placeholder={"输入商家、商品名称"}
           />
         </div>
-        <div className="search-btn">搜索</div>
+        <div styleName="search-btn">搜索</div>
       </div>
     );
   }
 }
 
-export default withRouter(SearchHeader);
+export default withRouter(CSSModules(SearchHeader,styles));

@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
+import CSSModules from 'react-css-modules';
 import throttle from "../../util/throttle";
-import "./style.scss";
+import styles from "./style.scss";
 
 class FirstPageHeader extends React.Component {
   constructor(props) {
@@ -32,26 +33,26 @@ class FirstPageHeader extends React.Component {
     const searchFixed = this.state.searchFixed;
     const address = this.props.address;
     return (
-      <div className="first-page-header">
+      <div styleName="first-page-header">
         <Link to={"/location"}>
-          <div className="header-address" ref="address">
+          <div styleName="header-address" ref="address">
             <i className="iconfont icon-coordinates_fill coordinates" />
-            <span className="address">{address ? address : "正在定位..."}</span>
+            <span styleName="address">{address ? address : "正在定位..."}</span>
           </div>
         </Link>
-        {searchFixed ? <div className="header-search" /> : ""}
+        {searchFixed ? <div styleName="header-search" /> : ""}
         <Link to={"/search"}>
           <div
-            className={`header-search-input ${
+            styleName={`header-search-input ${
               searchFixed ? "search-fixed" : ""
             }`}
           >
-            <div className="search-left" />
-            <div className="search-btn">
+            <div styleName="search-left" />
+            <div styleName="search-btn">
               <i className="iconfont icon-sousuoxiao" />
               <span>搜索商家、商品名称</span>
             </div>
-            <div className="search-right" />
+            <div styleName="search-right" />
           </div>
         </Link>
       </div>
@@ -59,4 +60,4 @@ class FirstPageHeader extends React.Component {
   }
 }
 
-export default FirstPageHeader;
+export default CSSModules(FirstPageHeader,styles,{allowMultiple:true});

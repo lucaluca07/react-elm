@@ -1,3 +1,13 @@
+:global .icon-birdxiaoniao:before {
+  color: #3190e8;
+  font-size: 28px;
+  margin: 0 5px 0 30px;
+}
+
+:global .icon-finish::before {
+  margin: 0 5px 0 30px;
+}
+
 .filter-nav {
   background: #fafafa;
   color: #333;
@@ -25,9 +35,6 @@
         flex: 0 0 33.11%;
         display: flex;
         align-items: center;
-        .icon-finish::before {
-          margin: 0 5px 0 30px;
-        }
         .activity-icon {
           height: 30px;
           width: 30px;
@@ -50,11 +57,6 @@
           margin: 0 5px 0 30px;
           border-width: 1px; /*no*/
           border-style: solid;
-        }
-        .icon-birdxiaoniao:before {
-          color: #3190e8;
-          font-size: 28px;
-          margin: 0 5px 0 30px;
         }
       }
     }

@@ -1,36 +1,37 @@
 import React, { Component } from 'react';
-import './style.scss';
+import CSSModules from 'react-css-modules';
+import styles from './style.scss';
 
-export default class RatingList extends Component {
+class RatingList extends Component {
 
     render() {
         return (
-            <div className="rating-list">
-                <ul className="rating-tag-list">
-                    <li className="rating-tag activity-tag">全部</li>
-                    <li className="rating-tag">满意</li>
-                    <li className="rating-tag">不满意</li>
-                    <li className="rating-tag">有图</li>
+            <div styleName="rating-list">
+                <ul styleName="rating-tag-list">
+                    <li styleName="rating-tag activity-tag">全部</li>
+                    <li styleName="rating-tag">满意</li>
+                    <li styleName="rating-tag">不满意</li>
+                    <li styleName="rating-tag">有图</li>
                 </ul>
-                <ul className="rating-comment-list">
-                    <li className="rating-comment-item">
-                        <div className="rating-comment-header"></div>
-                        <div className="rating-comment-main">
-                            <div className="rating-comment-user">
+                <ul styleName="rating-comment-list">
+                    <li styleName="rating-comment-item">
+                        <div styleName="rating-comment-header"></div>
+                        <div styleName="rating-comment-main">
+                            <div styleName="rating-comment-user">
                                 <span>用户名</span>
-                                <span className="rating-date">2018-03-26</span>
+                                <span styleName="rating-date">2018-03-26</span>
                             </div>
                             <div>4星</div>
-                            <div className="rating-comment">这是评论</div>
-                            <ul className="rating-img-list">
-                                <li className="rating-img-item">这是图</li>
-                                <li className="rating-img-item">这是图</li>
-                                <li className="rating-img-item">这是图</li>
+                            <div styleName="rating-comment">这是评论</div>
+                            <ul styleName="rating-img-list">
+                                <li styleName="rating-img-item">这是图</li>
+                                <li styleName="rating-img-item">这是图</li>
+                                <li styleName="rating-img-item">这是图</li>
                             </ul>
-                            <ul className="rating-goods-list">
-                                <li className="rating-goods">这是商品名</li>
-                                <li className="rating-goods">这是商品名</li>
-                                <li className="rating-goods">这是商品名</li>
+                            <ul styleName="rating-goods-list">
+                                <li styleName="rating-goods">这是商品名</li>
+                                <li styleName="rating-goods">这是商品名</li>
+                                <li styleName="rating-goods">这是商品名</li>
                             </ul>
                         </div>
                     </li>
@@ -39,3 +40,5 @@ export default class RatingList extends Component {
         )
     }
 }
+
+export default CSSModules(RatingList,styles,{allowMultiple:true});

@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import CSSModules from 'react-css-modules';
 import FilterNav from "../FilterNav";
 import AllCategory from "../AllCategory";
-import "./style.scss";
+import styles from "./style.scss";
 
-export default class ResultFilterBar extends Component {
+class ResultFilterBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -74,8 +75,8 @@ export default class ResultFilterBar extends Component {
     } = this.props;
     const fliterMore = this.props.filterMore;
     return (
-      <div className="result-filter-bar">
-        <ul className="filter">
+      <div styleName="result-filter-bar">
+        <ul styleName="filter">
           <li
             style={{ color: showFliter === "category" ? "#3190e8" : "#333" }}
             onClick={this.handleCilck.bind(this, "category")}
@@ -102,9 +103,9 @@ export default class ResultFilterBar extends Component {
           </li>
         </ul>
         {!!showFliter && (
-          <div className="filter-extend">
+          <div styleName="filter-extend">
             {showFliter === "sort" ? (
-              <ul className="sort-list">
+              <ul styleName="sort-list">
                 {orderArr.map((val, index) => (
                   <li
                     key={index}
@@ -136,10 +137,12 @@ export default class ResultFilterBar extends Component {
                 subMenuId={subCategoryId}
               />
             )}
-            <div className="shade" onClick={this.handleHiddenFilter} />
+            <div styleName="shade" onClick={this.handleHiddenFilter} />
           </div>
         )}
       </div>
     );
   }
 }
+
+export default CSSModules(ResultFilterBar,styles);

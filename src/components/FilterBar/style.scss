@@ -1,3 +1,10 @@
+:global .icon-huangguan:before {
+  color: rgb(233, 218, 12);
+  font-size: 28px;
+}
+:global .icon-shaixuan{
+  font-size: 28px;
+}
 .filter-bar {
   background: #fff;
   width: 100%;
@@ -11,12 +18,6 @@
     display: flex;
     justify-content: space-between;
     padding: 0 32px;
-    .icon-huangguan:before {
-      color: rgb(233, 218, 12);
-    }
-    .iconfont:before {
-      font-size: 28px;
-    }
   }
   .filter-extend {
     position: absolute;

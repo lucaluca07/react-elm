@@ -41,9 +41,7 @@
   }
   .activity-cart {
     background: #3190e8 !important;
-    .icon-cartfill::before {
-      color: #f1f1f1 !important;
-    }
+    color: #f1f1f1 !important;  
   }
   .cart {
     height: 90px;
@@ -56,10 +54,7 @@
     left: 20px;
     text-align: center;
     line-height: 90px;
-    .icon-cartfill::before {
-      font-size: 70px;
-      color: #666;
-    }
+    color: #666;
     .badge {
       position: absolute;
       top: -10px;
@@ -143,5 +138,11 @@
   }
   .box {
     height: 100px;
+  }
+}
+
+:global{
+  .icon-cartfill::before {
+    font-size: 70px;
   }
 }

@@ -1,9 +1,10 @@
 import React from "react";
 import LazyLoad from "react-lazyload";
+import CSSModules from 'react-css-modules';
 import SearchResultItem from "../SearchResultItem";
 import InfiniteScroll from "../ScrollList";
 import { ShopTombstone } from "../Tombstone";
-import "./style.scss";
+import styles from "./style.scss";
 import load from "../../static/image/loadding.gif";
 
 class SearchResultList extends React.Component {
@@ -40,4 +41,5 @@ class SearchResultList extends React.Component {
     );
   }
 }
-export default SearchResultList;
+
+export default CSSModules(SearchResultList,styles);

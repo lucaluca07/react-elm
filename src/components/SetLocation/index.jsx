@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import "./style.scss";
+import CSSModules from 'react-css-modules';
+import styles from "./style.scss";
 
-export default class SetLocation extends Component {
+class SetLocation extends Component {
   constructor() {
     super();
     this.handleClick = this.handleClick.bind(this);
@@ -18,6 +19,7 @@ export default class SetLocation extends Component {
     this.setState({ rotate: true });
     const { onClick } = this.props;
     onClick(this.stopRotate);
+    console.log(onClick)
   }
   stopRotate() {
     this.setState({ rotate: false });
@@ -28,14 +30,15 @@ export default class SetLocation extends Component {
     const { name } = currentAddress;
     const rotate = this.state.rotate;
     return (
-      <div className="current-location">
-        <h4 className="title">当前位置</h4>
-        <div className="location">
+      <div styleName="current-location">
+        <h4 styleName="title">当前位置</h4>
+        <div styleName="location">
           <div onClick={this.handleClick}>{name}</div>
-          <div className="refresh-location" onClick={this.refreshLocation}>
-            <i
-              className={`iconfont icon-ditudingwei ${rotate && "rotate-icon"}`}
-            />
+          <div styleName="refresh-location" onClick={this.refreshLocation}>
+            <div styleName={rotate? "rotate-animate":"rotate-icon"}>
+              <i className="iconfont icon-ditudingwei"/>
+            </div>
+            
             <span>重新定位</span>
           </div>
         </div>
@@ -43,3 +46,5 @@ export default class SetLocation extends Component {
     );
   }
 }
+
+export default CSSModules(SetLocation,styles,{allowMultiple:true});

@@ -1,22 +1,23 @@
 import React, { Component } from "react";
-import "./style.scss";
+import CSSModules from 'react-css-modules';
+import styles from "./style.scss";
 
-export default class SearchTips extends Component {
+class SearchTips extends Component {
   render() {
     const { keyword, restaurants, words, search_word } = this.props;
     return (
-      <div className="search-tips">
+      <div styleName="search-tips">
         {restaurants || words ? (
-          <div className="tips">
+          <div styleName="tips">
             {restaurants.map((val, index) => (
-              <div key={index} className="shop-tips">
+              <div key={index} styleName="shop-tips">
                 <img
-                  className="shop-img"
+                  styleName="shop-img"
                   src="https://fuss10.elemecdn.com/a/a9/e6089ce3150798b80b44cb622ff95png.png?imageMogr/format/webp/thumbnail/48x/"
                   alt="ele"
                 />
-                <div className="shop-info">
-                  <div className="shop-name">
+                <div styleName="shop-info">
+                  <div styleName="shop-name">
                     <p
                       dangerouslySetInnerHTML={{
                         __html: val.name
@@ -24,17 +25,17 @@ export default class SearchTips extends Component {
                           .join(`<span class="keyword">${search_word}</span>`)
                       }}
                     />
-                    <span className="tag">减</span>
+                    <span styleName="tag">减</span>
                   </div>
-                  <div className="rate">评价4.8</div>
+                  <div styleName="rate">评价4.8</div>
                 </div>
               </div>
             ))}
             {words.map((val, index) => (
-              <div key={index} className="word-tips">
+              <div key={index} styleName="word-tips">
                 <i className="iconfont icon-sousuoxiao" />
                 <p
-                  className="word"
+                  styleName="word"
                   dangerouslySetInnerHTML={{
                     __html: val
                       .split(search_word)
@@ -45,12 +46,14 @@ export default class SearchTips extends Component {
             ))}
           </div>
         ) : (
-          <div className="search-word">
+          <div styleName="search-word">
             <i className="iconfont icon-sousuoxiao" />
-            查找<span className="keyword">“{keyword}“</span>
+            查找<span styleName="keyword">“{keyword}“</span>
           </div>
         )}
       </div>
     );
   }
 }
+
+export default CSSModules(SearchTips,styles,{allowMultiple:true});

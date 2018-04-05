@@ -54,12 +54,12 @@
         overflow: hidden;
         font-size: 24px;
         margin-top: -5px;
-        .rotate180:before {
+        .rotate180 {
           transition: All 0.4s ease-in-out;
           display: inline-block;
           transform: rotate(180deg);
         }
-        .rotate0:before {
+        .rotate0 {
           transition: All 0.4s ease-in-out;
           display: inline-block;
           transform: rotate(0deg);

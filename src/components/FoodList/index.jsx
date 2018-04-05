@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import CSSModules from 'react-css-modules';
 import FoodItem from "../FoodItem";
-import "./style.scss";
+import style from "./style.scss";
 
-export default class FoodList extends Component {
+class FoodList extends Component {
   constructor() {
     super();
     this.state = { showMore: false };
@@ -17,7 +18,7 @@ export default class FoodList extends Component {
     const { data, highlights } = this.props;
     const showMore = this.state.showMore;
     return (
-      <div className="food-list">
+      <div styleName="food-list">
         {data.length > 2 ? (
           <div>
             {showMore
@@ -29,7 +30,7 @@ export default class FoodList extends Component {
                   .map((val, index) => (
                     <FoodItem key={index} data={val} highlights={highlights} />
                   ))}
-            <div className="showmore-btn" onClick={this.handleClick}>
+            <div styleName="showmore-btn" onClick={this.handleClick}>
               {showMore ? (
                 <div>
                   <span>收起</span>
@@ -50,3 +51,5 @@ export default class FoodList extends Component {
     );
   }
 }
+
+export default CSSModules(FoodList,style);

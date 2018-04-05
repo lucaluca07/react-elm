@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import CSSModules from 'react-css-modules';
 import FilterNav from "../FilterNav";
-import "./style.scss";
+import style from "./style.scss";
 
-export default class FilterBar extends Component {
+class FilterBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -67,8 +68,8 @@ export default class FilterBar extends Component {
     const { delivery, activity, support_ids, cost } = this.props;
     const fliterMore = this.props.filterMore;
     return (
-      <div className="filter-bar">
-        <ul className="filter">
+      <div styleName="filter-bar">
+        <ul styleName="filter">
           <li
             style={{
               fontWeight:
@@ -105,9 +106,9 @@ export default class FilterBar extends Component {
           </li>
         </ul>
         {!!showFliter && (
-          <div className="filter-extend">
+          <div styleName="filter-extend">
             {showFliter === "sort" ? (
-              <ul className="sort-list">
+              <ul styleName="sort-list">
                 {orderArr.map((val, index) => (
                   <li
                     key={index}
@@ -131,10 +132,12 @@ export default class FilterBar extends Component {
                 cost={cost}
               />
             )}
-            <div className="shade" onClick={this.handleHiddenFilter} />
+            <div styleName="shade" onClick={this.handleHiddenFilter} />
           </div>
         )}
       </div>
     );
   }
 }
+
+export default CSSModules(FilterBar,style);

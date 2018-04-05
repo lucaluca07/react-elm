@@ -1,12 +1,13 @@
 import React from "react";
-import "./style.scss";
+import CSSModules from 'react-css-modules';
+import style from "./style.scss";
 import monkeyKing from "../../static/image/timg.png";
 
 const DevelopmengPending = () => (
-  <div className="delay-page">
-    <img className="monkeyking" src={monkeyKing} alt="monkeyKing" />
-    <div className="tips">页面待开发...</div>
+  <div styleName="delay-page">
+    <img styleName="monkeyking" src={monkeyKing} alt="monkeyKing" />
+    <div styleName="tips">页面待开发...</div>
   </div>
 );
 
-export default DevelopmengPending;
+export default CSSModules(DevelopmengPending,style);

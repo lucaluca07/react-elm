@@ -1,18 +1,20 @@
 import React from "react";
-import "./style.scss";
+import CSSModules from 'react-css-modules';
+import styles from "./style.scss";
 
 const Header = ({ title }) => (
-  <div className="header">
+  <div styleName="header">
     <div
-      className="header-back"
+      styleName="header-back"
       onClick={() => {
         window.history.go(-1);
       }}
     >
       <i className="iconfont icon-fanhuijiantou back" />
     </div>
-    <div className="header-title">{title}</div>
-    <div className="add-address" />
+    <div styleName="header-title">{title}</div>
+    <div styleName="add-address" />
   </div>
 );
-export default Header;
+
+export default CSSModules(Header,styles);

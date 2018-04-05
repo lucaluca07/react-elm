@@ -1,5 +1,6 @@
 import React from "react";
-import "./style.scss";
+import CSSModules from 'react-css-modules';
+import style from "./style.scss";
 import getImgSrc from "../../util/getImgSrc";
 
 const showHighlights = (ele, name) => {
@@ -24,26 +25,26 @@ const FoodItem = ({ data, highlights }) => {
   } = data;
   const innerHtml = showHighlights(highlights, name);
   return (
-    <div className="food-item">
-      <div className="img-wrap">
+    <div styleName="food-item">
+      <div styleName="img-wrap">
         <img src={getImgSrc(image_path)} alt="food" />
       </div>
-      <div className="food-item-right">
+      <div styleName="food-item-right">
         <h4
-          className="food-item-name"
+          styleName="food-item-name"
           dangerouslySetInnerHTML={{ __html: innerHtml }}
         />
-        <div className="food-item-rate">
+        <div>
           <span>月售{month_sales}份</span>&nbsp;
           <span>好评率{satisfy_rate}%</span>
         </div>
-        <div className="food-item-price">
-          <span className="price">¥{price}</span>&nbsp;
+        <div styleName="food-item-price">
+          <span styleName="price">¥{price}</span>&nbsp;
           {original_price && (
-            <span className="old-price">¥{original_price}</span>
+            <span styleName="old-price">¥{original_price}</span>
           )}
           <span
-            className="sale-tag"
+            styleName="sale-tag"
             style={{
               border:
                 activities[0] && activities[0].icon_color
@@ -65,4 +66,4 @@ const FoodItem = ({ data, highlights }) => {
   );
 };
 
-export default FoodItem;
+export default CSSModules(FoodItem,style);

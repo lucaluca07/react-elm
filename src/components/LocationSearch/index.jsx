@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import CSSModules from 'react-css-modules';
 import SearchComponent from "../SearchComponent";
-import "./style.scss";
+import styles from "./style.scss";
 
-export default class LocationSearch extends Component {
+class LocationSearch extends Component {
   handleClick(address, latitude, longitude) {
     const onClick = this.props.onClick;
     onClick && onClick(address, latitude, longitude);
@@ -10,14 +11,14 @@ export default class LocationSearch extends Component {
   render() {
     const locationList = this.props.locationList;
     return (
-      <div className="location-search">
-        <div className="search-comp">
+      <div styleName="location-search">
+        <div styleName="search-comp">
           <SearchComponent
             onEnter={this.props.onEnter}
             placeholder={"请输入地址"}
           />
         </div>
-        <div className="location-list">
+        <div styleName="location-list">
           {locationList.map((val, index) => (
             <div
               onClick={this.handleClick.bind(
@@ -26,11 +27,11 @@ export default class LocationSearch extends Component {
                 val.latitude,
                 val.longitude
               )}
-              className="location-item"
+              styleName="location-item"
               key={index}
             >
-              <div className="location-name">{val.name}</div>
-              <div className="location-address">{val.address}</div>
+              <div styleName="location-name">{val.name}</div>
+              <div styleName="location-address">{val.address}</div>
             </div>
           ))}
         </div>
@@ -38,3 +39,5 @@ export default class LocationSearch extends Component {
     );
   }
 }
+
+export default CSSModules(LocationSearch,styles);

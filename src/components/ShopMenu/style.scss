@@ -103,6 +103,9 @@ $gary2: #f7f6f5;
     margin-right: 15px;
     overflow: auto;
     .shop-sub-list {
+      .title{
+        margin: 10px 0;
+      }
       .name {
         font-weight: 700;
         margin-right: 5px;
@@ -110,7 +113,7 @@ $gary2: #f7f6f5;
       .shop-sub-item {
         display: flex;
         height: 152px;
-        padding: 10px 20px 30px;
+        padding: 10px 20px 40px;
         .food-img {
           height: 152px;
           width: 152px;

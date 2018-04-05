@@ -1,12 +1,13 @@
 import React from "react";
-import "./style.scss";
+import CSSModules from 'react-css-modules';
+import styles from "./style.scss";
 
 const ShopListTitle = () => (
-  <div className="shop-list-title">
-    <div className="title-left" />
-    <div className="list-title">推荐商家</div>
-    <div className="title-right" />
+  <div styleName="shop-list-title">
+    <div styleName="title-left" />
+    <div styleName="list-title">推荐商家</div>
+    <div styleName="title-right" />
   </div>
 );
 
-export default ShopListTitle;
+export default CSSModules(ShopListTitle,styles,{allowMultiple:true});

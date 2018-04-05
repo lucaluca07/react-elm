@@ -1,22 +1,23 @@
 import React from "react";
+import CSSModules from 'react-css-modules';
 import Carousel from "nuka-carousel";
 import { Link } from "react-router-dom";
 import { sliceArray } from "../../util/sliceArray";
-import "./style.scss";
+import styles from "./style.scss";
 
 const Swiper = ({ foodentry }) => {
   const arr = sliceArray(foodentry, 10);
   return (
     <Carousel>
       {arr.map((item, index) => (
-        <div className="carousel-item" key={index}>
+        <div styleName="carousel-item" key={index}>
           {item.map((val, index) => (
-            <div key={index} className="item-child">
+            <div key={index} styleName="item-child">
               <Link to={`/shop?target_name=${val.name}&entry_id=${val.id}`}>
-                <div className="container">
+                <div styleName="container">
                   <img src={val.image_hash} alt={val.description} />
                 </div>
-                <div className="title">{val.name}</div>
+                <div styleName="title">{val.name}</div>
               </Link>
             </div>
           ))}
@@ -26,4 +27,4 @@ const Swiper = ({ foodentry }) => {
   );
 };
 
-export default Swiper;
+export default CSSModules(Swiper,styles,{allowMultiple:true});

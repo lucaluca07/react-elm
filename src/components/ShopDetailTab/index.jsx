@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import "./style.scss";
+import CSSModules from 'react-css-modules';
+import styles from "./style.scss";
 
-export default class ShopDetailTab extends Component {
+class ShopDetailTab extends Component {
   constructor() {
     super();
     this.state = { activityInx: 0 };
@@ -14,10 +15,10 @@ export default class ShopDetailTab extends Component {
     const tabArr = ["点餐", "评价", "商家"];
     const activityInx = this.state.activityInx;
     return (
-      <ul className="shop-detail-tab">
+      <ul styleName="shop-detail-tab">
         {tabArr.map((val, index) => (
           <li
-            className={activityInx === index ? "activity-tab" : ""}
+            styleName={activityInx === index ? "activity-tab" : ""}
             onClick={this.handleClick.bind(this, index)}
             key={index}
           >
@@ -28,3 +29,5 @@ export default class ShopDetailTab extends Component {
     );
   }
 }
+
+export default CSSModules(ShopDetailTab,styles,{allowMultiple:true});

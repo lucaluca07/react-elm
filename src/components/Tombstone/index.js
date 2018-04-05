@@ -1,38 +1,39 @@
 import React from "react";
-import "./style.scss";
+import CSSModules from 'react-css-modules';
+import styles from "./style.scss";
 
-export const FoodentryTombstone = () => (
-  <div className="foodentry-tombstone">
+export const FoodentryTombstone = CSSModules(() => (
+  <div styleName="foodentry-tombstone">
     {[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map(val => (
-      <div key={val} className="foodentry-item">
-        <div className="stone-container" />
-        <div className="stone-title" />
+      <div key={val} styleName="foodentry-item">
+        <div styleName="stone-container" />
+        <div styleName="stone-title" />
       </div>
     ))}
   </div>
-);
+),styles);
 
-export const ShopTombstone = () => (
-  <div className="shop-item-stone">
-    <div className="img-stone" />
-    <div className="info-stone">
-      <div className="item-stone-top">
-        <div className="top-left" />
-        <div className="top-right" />
+export const ShopTombstone = CSSModules(() => (
+  <div styleName="shop-item-stone">
+    <div styleName="img-stone" />
+    <div styleName="info-stone">
+      <div styleName="item-stone-top">
+        <div styleName="top-left" />
+        <div styleName="top-right" />
       </div>
-      <div className="item-stone-center">
-        <div className="center-left" />
-        <div className="center-right" />
+      <div styleName="item-stone-center">
+        <div styleName="center-left" />
+        <div styleName="center-right" />
       </div>
-      <div className="item-stone-bottom">
-        <div className="bottom-left" />
-        <div className="bottom-right" />
+      <div styleName="item-stone-bottom">
+        <div styleName="bottom-left" />
+        <div styleName="bottom-right" />
       </div>
     </div>
   </div>
-);
+),styles);
 
-export class ShopDetailTombstone extends React.Component {
+class ShopDetail extends React.Component {
   componentDidMount() {
     document.body.style.overflow = "hidden";
     document.body.style.position = "relative";
@@ -46,26 +47,26 @@ export class ShopDetailTombstone extends React.Component {
   }
   render() {
     return (
-      <div className="shop-detail-tombstone">
-        <div className="shop-header">
-          <div className="shop-header-top" />
-          <div className="shop-header-center">
-            <div className="shop-img" />
+      <div styleName="shop-detail-tombstone">
+        <div styleName="shop-header">
+          <div styleName="shop-header-top" />
+          <div styleName="shop-header-center">
+            <div styleName="shop-img" />
             <div />
             <div />
             <div />
           </div>
-          <div className="shop-header-bottom">
+          <div styleName="shop-header-bottom">
             <div />
           </div>
         </div>
-        <ul className="shop-tab">
+        <ul styleName="shop-tab">
           <li />
           <li />
           <li />
         </ul>
-        <div className="menu-view">
-          <ul className="main-menu">
+        <div styleName="menu-view">
+          <ul styleName="main-menu">
             <li>
               <div />
             </li>
@@ -91,35 +92,35 @@ export class ShopDetailTombstone extends React.Component {
               <div />
             </li>
           </ul>
-          <div className="sub-menu">
-            <div className="sub-list">
-              <div className="sub-item">
-                <div className="food-img" />
-                <div className="food-info">
+          <div styleName="sub-menu">
+            <div styleName="sub-list">
+              <div styleName="sub-item">
+                <div styleName="food-img" />
+                <div styleName="food-info">
                   <div />
                   <div />
                   <div />
                 </div>
               </div>
-              <div className="sub-item">
-                <div className="food-img" />
-                <div className="food-info">
+              <div styleName="sub-item">
+                <div styleName="food-img" />
+                <div styleName="food-info">
                   <div />
                   <div />
                   <div />
                 </div>
               </div>
-              <div className="sub-item">
-                <div className="food-img" />
-                <div className="food-info">
+              <div styleName="sub-item">
+                <div styleName="food-img" />
+                <div styleName="food-info">
                   <div />
                   <div />
                   <div />
                 </div>
               </div>
-              <div className="sub-item">
-                <div className="food-img" />
-                <div className="food-info">
+              <div styleName="sub-item">
+                <div styleName="food-img" />
+                <div styleName="food-info">
                   <div />
                   <div />
                   <div />
@@ -128,8 +129,10 @@ export class ShopDetailTombstone extends React.Component {
             </div>
           </div>
         </div>
-        <div className="cart" />
+        <div styleName="cart" />
       </div>
     );
   }
 }
+
+export const ShopDetailTombstone = CSSModules(ShopDetail,styles);

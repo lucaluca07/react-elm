@@ -1,5 +1,6 @@
 import React from "react";
-import "./style.scss";
+import CSSModules from 'react-css-modules';
+import styles from "./style.scss";
 import RatingStar from "../RatingStar";
 import ShopActivity from "../ShopActivity";
 import { Link } from "react-router-dom";
@@ -22,21 +23,21 @@ const ShopItem = ({ shopData }) => {
     activities
   } = restaurant;
   return (
-    <div className="item-wrap">
+    <div styleName="item-wrap">
       <Link to={`/shop/${id}`}>
-        <div className="shop-item">
-          <div className="shop-img">
+        <div styleName="shop-item">
+          <div styleName="shop-img">
             <img src={image_path} alt="shop" />
           </div>
-          <div className="shop-info">
-            <div className="shop-title">
-              <h3 className="title">{name}</h3>
-              <ul className="top-right">
-                {recommend.is_ad ? <li className="ad">广告</li> : ""}
+          <div styleName="shop-info">
+            <div styleName="shop-title">
+              <h3 styleName="title">{name}</h3>
+              <ul styleName="top-right">
+                {recommend.is_ad ? <li styleName="ad">广告</li> : ""}
                 {supports.length > 0
                   ? supports.map((val, index) => (
                       <li
-                        className="support"
+                        styleName="support"
                         key={index}
                         style={{ color: `#${val.icon_color}` }}
                       >
@@ -46,18 +47,18 @@ const ShopItem = ({ shopData }) => {
                   : ""}
               </ul>
             </div>
-            <div className="shop-rate">
-              <div className="shop-rate-left">
-                <div className="star">
+            <div styleName="shop-rate">
+              <div styleName="shop-rate-left">
+                <div styleName="star">
                   <RatingStar rate={rating} scale={0.9} />
                 </div>
-                <div className="grade">{rating}</div>&nbsp;
-                <div className="sell-number">月售{recent_order_num}单</div>
+                <div styleName="grade">{rating}</div>&nbsp;
+                <div styleName="sell-number">月售{recent_order_num}单</div>
               </div>
-              <div className="shop-rate-right">
+              <div styleName="shop-rate-right">
                 {delivery_mode ? (
                   <div
-                    className="delivery"
+                    styleName="delivery"
                     style={{
                       color: `#${delivery_mode.text_color}`,
                       background: `linear-gradient(to right, #${
@@ -72,12 +73,12 @@ const ShopItem = ({ shopData }) => {
                 )}
               </div>
             </div>
-            <div className="distribution-info">
-              <div className="distribution-left">
+            <div styleName="distribution-info">
+              <div>
                 <span>¥{float_minimum_order_amount}起送</span>&nbsp;|&nbsp;
                 <span>配送费¥{float_delivery_fee}</span>
               </div>
-              <div className="distribution-right">
+              <div>
                 <span>
                   {distance < 1000
                     ? `${distance}m`
@@ -93,4 +94,5 @@ const ShopItem = ({ shopData }) => {
     </div>
   );
 };
-export default ShopItem;
+
+export default CSSModules(ShopItem,styles,{allowMultiple:true});

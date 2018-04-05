@@ -1,8 +1,8 @@
-.slider-decorator-0,
-.slider-decorator-1 {
+:global .slider-decorator-0,
+:global .slider-decorator-1 {
   display: none;
 }
-.slider-decorator-2 {
+:global .slider-decorator-2 {
   ul {
     top: 20px !important;
     button {

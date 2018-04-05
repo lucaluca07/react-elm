@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import CSSModules from 'react-css-modules';
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 import throttle from "../../util/throttle";
 import debounce from "../../util/debounce";
-import "./style.scss";
+import styles from "./style.scss";
 
-export default class InfiniteScroll extends Component {
+class InfiniteScroll extends Component {
   static propTypes = {
     pageStart: PropTypes.number,
     threshold: PropTypes.number,
@@ -178,7 +179,7 @@ export default class InfiniteScroll extends Component {
         {!hasMore && noMore}
         <div ref="loadmore" />
         {showGoTop ? (
-          <div className="back-top" onClick={this.backTop.bind(this)}>
+          <div styleName="back-top" onClick={this.backTop.bind(this)}>
             <i className="iconfont icon-huidaodingbu" />
           </div>
         ) : (
@@ -188,3 +189,5 @@ export default class InfiniteScroll extends Component {
     );
   }
 }
+
+export default CSSModules(InfiniteScroll,styles);
