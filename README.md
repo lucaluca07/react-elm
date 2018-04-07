@@ -54,7 +54,7 @@ onTouchStart的执行顺序在onClick事件之前,执行顺序onTouchStart > onT
 ### 项目state结构
 
 
-<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/state.png" width = "740" height="550"s alt="图片名称" align=left />
+<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/state.png" width = "740" height="550" alt="图片名称" align=left />
 
 
 ### 首页
