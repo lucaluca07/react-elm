@@ -1,8 +1,8 @@
-### 项目背景
+## 项目背景
 此项目主要是利用业余时间完成，主要使用了react, redux, router完成, 大部分组件是纯手工完成[流汗], 主要目的是为了练习react全家桶的使用,练习一下在公司项目上不能使(xia)用(gao)的技术; 另外也是体验一下一个人完成一个完整的项目的难度(比我想象中的难了一(hen)点(duo))。
 项目中也遇到了很多的坑, 后面我会把项目中遇到的坑整理出来, 目前的目标是先完成整体的功能。由于在项目开始时对整个项目的复杂性考虑不够周全,导致现在的项目结构不能很好的发挥redux的优势, 在整体功能完成之后我准备对项目的整体结构进行一次调整,之后再对代码进行优化整合。
 
-### 项目遇到的坑
+## 项目遇到的坑
 - 安装node-sass报错：<br/>
 原因:
 安装node-sass时会去GitHub上面拉去代码,由于国内环境不稳定(大家懂的)下载时间可能过长导致超时失败。<br/>
@@ -21,12 +21,12 @@ onTouchStart的执行顺序在onClick事件之前,执行顺序onTouchStart > onT
 - 安卓浏览器不支持元素添加scrollTo事件：<br/>
 这个暂时还没解决,这个方法用在了ShopMenu组件中,目前待定的解决方案是使用swiper替代原来的方案。
 
-### 项目运行
+## 项目运行
 - 运行mock服务器: npm run server
 - 运行本地项目: npm start
 - 编译项目: npm run build
 
-### 完成进度
+## 完成进度
 
 - [x] 定位功能
 - [x] 搜索切换城市
@@ -48,35 +48,44 @@ onTouchStart的执行顺序在onClick事件之前,执行顺序onTouchStart > onT
 - [ ] 添加、删除、修改收货地址
 - [ ] 上传头像
 
-### 项目截图
-
-<div>
-  <h4>项目state结构</h4>
-  <img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/state.png" width = "700" alt="图片名称" align=left />
-</div>
-<div>
-  <h4>首页</h4> 
-  <img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/home.png" width = "350" alt="图片名称" align=left />
-  <img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/home2.png" width = "350" alt="图片名称" align=left />
-</div>
+## 项目截图
 
 
-<div>
-  <h4>选择城市</h4> 
-  <img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/city.png" width = "350" alt="图片名称" align=left />
-</div>
-<div>
-  <h4>搜索页</h4> 
-  <img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/search.png" width = "350" alt="图片名称" align=left />
-</div>
-<div>
-  <h4>搜索结果</h4> 
-  <img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/search-result.png" width = "350" alt="图片名称" align=left />
-  <img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/category.png" width = "350" alt="图片名称" align=left />
-  <img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/filter.png" width = "350" alt="图片名称" align=left />
-</div>
-<div>
-  <h4>店铺详情页</h4> 
-  <img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/shop-detail.png" width = "350" alt="图片名称" align=left />
-  <img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/cart.png" width = "350" alt="图片名称" align=left />
-</div> 
+### 项目state结构
+
+
+<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/state.png" width = "700" alt="图片名称" align=left />
+
+
+### 首页
+
+
+<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/home.png" width = "350" alt="图片名称" align=left />
+<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/home2.png" width = "350" alt="图片名称" align=left />
+
+
+### 选择城市
+
+
+<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/city.png" width = "350" alt="图片名称" align=left />
+
+
+### 搜索页
+
+
+<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/search.png" width = "350" alt="图片名称" align=left />
+
+
+### 搜索结果
+
+
+<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/search-result.png" width = "350" alt="图片名称" align=left />
+<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/category.png" width = "350" alt="图片名称" align=left />
+<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/filter.png" width = "350" alt="图片名称" align=left />
+
+
+### 店铺详情页
+
+
+<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/shop-detail.png" width = "350" alt="图片名称" align=left />
+<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/cart.png" width = "350" alt="图片名称" align=left />
