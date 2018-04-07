@@ -53,36 +53,36 @@ onTouchStart的执行顺序在onClick事件之前,执行顺序onTouchStart > onT
 
 ### State结构
 
-<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/state.png" width="740" height="550"/> 
+<img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/state.png" width="740" height="550"/> 
 
 
 ### 首页
 
-<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/home.png" width="365" height="619"/> <img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/home.gif" width="365" height="619"/>
+<img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/home.png" width="365" height="619"/> <img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/home.gif" width="365" height="619"/>
 
 
 
 ### 选择城市
 
-<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/city.png" width="365" height="619"/>
+<img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/city.png" width="365" height="619"/>
 
 
 ### 店铺列表
 
-<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/shoplist.png" width="365" height="619"/> <img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/shoplist.gif" width="365" height="619"/>
+<img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/shoplist.png" width="365" height="619"/> <img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/shoplist.gif" width="365" height="619"/>
 
 
 ### 搜索页
 
-<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/search.png" width="365" height="619"/>
+<img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/search.png" width="365" height="619"/>
 
 
 ### 搜索结果页
 
-<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/search-result.png" width="365" height="619"/> <img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/result2.png" width="365" height="619"/> 
+<img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/search-result.png" width="365" height="619"/> <img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/result2.png" width="365" height="619"/> 
 
 
 ### 店铺详情页
 
-<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/shop-detail.png" width="365" height="619"/> <img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/shop-detail.gif" width="365" height="619"/>
+<img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/shop-detail.png" width="365" height="619"/> <img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/shop-detail.gif" width="365" height="619"/>
 
