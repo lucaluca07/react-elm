@@ -51,13 +51,20 @@ onTouchStart的执行顺序在onClick事件之前,执行顺序onTouchStart > onT
 ### 项目截图
 
 #### 项目state结构
-
+![image](https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/state.png)
 #### 首页
-
+![image](https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/home.png)
+![image](https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/WX20180407-145556%402x.png)
 #### 选择城市
-
+![image](https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/city.png)
 #### 搜索页
-
+![image](https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/search.png)
+![image](https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/state.png)
 #### 搜索结果
+![image](https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/search-result.png)
+![image](https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/category.png)
 
+![image](https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/filter.png)
 #### 店铺详情页
+![image](https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/shop-detail.png)
+![image](https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/cart s.png)
