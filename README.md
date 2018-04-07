@@ -58,7 +58,7 @@ onTouchStart的执行顺序在onClick事件之前,执行顺序onTouchStart > onT
 
 ### 首页
 
-<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/home.png" width="365" height="619"/> <img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/home2.gif" width="365" height="619"/>
+<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/home.png" width="365" height="619"/> <img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/home2.png" width="365" height="619"/>
 
 
 
@@ -73,10 +73,10 @@ onTouchStart的执行顺序在onClick事件之前,执行顺序onTouchStart > onT
 
 ### 搜索结果页
 
-<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/search-result.png" width="365" height="619"/> <img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/category.gif" width="365" height="619"/> <img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/filter.gif" width="365" height="619"/>
+<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/search-result.png" width="365" height="619"/> <img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/category.png" width="365" height="619"/> <img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/filter.png" width="365" height="619"/>
 
 
 ### 店铺详情页
 
-<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/shop-detail.png" width="365" height="619"/> <img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/cart.gif" width="365" height="619"/>
+<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/shop-detail.png" width="365" height="619"/> <img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/cart.png" width="365" height="619"/>
 
