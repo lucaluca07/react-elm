@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-// import {ShopDetailTombstone} from '../../components/Tombstone'
+import ReactDOM from 'react-dom'
 import ShopDetailHeader from "../../components/ShopDetailHeader";
 import ShopDetailTab from "../../components/ShopDetailTab";
 import ShopMenu from "../../components/ShopMenu";
@@ -25,6 +25,7 @@ class ShopDetail extends Component {
     this.setTabIndex = this.setTabIndex.bind(this);
     this.increaseDecreaseCart = this.increaseDecreaseCart.bind(this);
     this.clearShopCart = this.clearShopCart.bind(this)
+    this.height = 300;
     this.shopId = this.props.match.params.id;
   }
   componentWillMount(){
@@ -40,6 +41,8 @@ class ShopDetail extends Component {
     const { dispatch, longitude, latitude } = this.props;
     dispatch(await getMenu(this.shopId, longitude, latitude));
     dispatch(await getShopInfo(this.shopId, longitude, latitude));
+    console.log(111111,ReactDOM.findDOMNode(this.refs.tab).getBoundingClientRect().top)
+    this.height = window.screen.height - ReactDOM.findDOMNode(this.refs.tab).getBoundingClientRect().top
     this.getRatings();
   }
   
@@ -127,7 +130,7 @@ class ShopDetail extends Component {
     this.setState({ tabIndex: index });
   }
   render() {
-    const { menu, shopinfo } = this.props;
+    const { menu, shopinfo, rating } = this.props;
     const { tabIndex } = this.state;
     const cartData = this.props.cart[this.shopId];
 
@@ -137,11 +140,10 @@ class ShopDetail extends Component {
           <div style={{ display: "flex", flexDirection: "column" }}>
             <ShopDetailHeader data={shopinfo} />
             <ShopDetailTab onClick={this.setTabIndex} />
-            <ul>
+            <ul ref="tab" style={{height:this.height,overflow:"auto"}}>
               <li
                 style={{
-                  height: `${tabIndex !== 0 ? 0 : "auto"}`,
-                  visibility: `${tabIndex !== 0 ? "hidden" : "visible"}`
+                  display: `${tabIndex !== 0 ? "none" : ""}`
                 }}
               >
                 {menu&&<ShopMenu
@@ -158,16 +160,14 @@ class ShopDetail extends Component {
               </li>
               <li
                 style={{
-                  height: `${tabIndex !== 1 ? 0 : "auto"}`,
-                  visibility: `${tabIndex !== 1 ? "hidden" : "visible"}`
+                  display: `${tabIndex !== 1 ? "none" : ""}`
                 }}
               >
-                <ShopRating />
+                <ShopRating rating={rating} loadNext={this.getRatings}/>
               </li>
               <li
                 style={{
-                  height: `${tabIndex !== 2 ? 0 : "auto"}`,
-                  visibility: `${tabIndex !== 2 ? "hidden" : "visible"}`
+                  display: `${tabIndex !== 2 ? "none" : ""}`
                 }}
               >
                 <ShopInfo />
@@ -192,8 +192,7 @@ const mapStateToProps = state => {
     latitude,
     shopinfo,
     menu,
-    data,
-    hasMore,
+    rating:{data,hasMore},
     offset,
     cart
   };

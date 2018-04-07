@@ -6,6 +6,7 @@ import styles from './style.scss';
 class ShopRating extends Component {
 
     render() {
+        const {rating, loadNext} = this.props
         return (
             <div styleName="shop-rating">
                 <div styleName="overview">
@@ -29,7 +30,7 @@ class ShopRating extends Component {
                         </div>
                     </div>
                 </div>
-                <RatingList />
+                {rating&&<RatingList data={rating} loadNext={loadNext}/>}
             </div>
         )
     }

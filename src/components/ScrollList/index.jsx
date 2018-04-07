@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 import throttle from "../../util/throttle";
 import debounce from "../../util/debounce";
+import getScrollerParent from "../../util/getScrollerParent"
 import styles from "./style.scss";
 
 class InfiniteScroll extends Component {
@@ -46,6 +47,7 @@ class InfiniteScroll extends Component {
       showGoTop: false
     };
     this.showBackTop = this.showBackTop.bind(this);
+    this.getScroller = this.getScroller.bind(this)
   }
 
   componentWillMount() {
@@ -58,6 +60,7 @@ class InfiniteScroll extends Component {
   }
 
   componentDidMount() {
+    this.scrollNode = this.getScroller()
     this.attachScrollEvent();
   }
 
@@ -92,18 +95,10 @@ class InfiniteScroll extends Component {
     let offset;
     const el = ReactDOM.findDOMNode(this.refs.loadmore);
     const { loading } = this.state;
-    let scrollTop =
-      window.pageYOffset !== undefined
-        ? window.pageYOffset
-        : (
-            document.documentElement ||
-            document.body.parentNode ||
-            document.body
-          ).scrollTop;
-    offset =
-      this.calcTop(el) + el.offsetHeight - scrollTop - window.innerHeight;
+    const top = el.getBoundingClientRect().top
+    offset = top - window.screen.height;
     if (offset < Number(this.props.threshold)) {
-      this.detachScrollEvent();
+      // this.detachScrollEvent();
       //如果正在请求不会发起下次请求
       if (typeof this.props.loadNext === "function") {
         this.setState({
@@ -131,16 +126,23 @@ class InfiniteScroll extends Component {
       this.setState({ showGoTop: false });
     }
   }
-
+  getScroller(){
+    const node = ReactDOM.findDOMNode(this) ;
+    const parent = getScrollerParent(node)
+    if(parent === document.documentElement){
+      return window
+    }else{
+      return parent
+    } 
+  }
   attachScrollEvent = () => {
     if (!this.props.hasMore) {
       return;
     }
-
-    window.addEventListener("scroll", this.scroller, false);
+    this.scrollNode.addEventListener("scroll", this.scroller, false);
     window.addEventListener("resize", this.scroller, false);
     //改变尺寸不会改变scrolltop大小,只需要监听滚动事件即可
-    window.addEventListener("scroll", this.finalShowbackTop, false);
+    this.scrollNode.addEventListener("scroll", this.finalShowbackTop, false);
 
     if (this.props.autoLoad && !this.autoLoaded) {
       this.autoLoaded = true;
@@ -149,9 +151,9 @@ class InfiniteScroll extends Component {
   };
 
   detachScrollEvent = () => {
-    window.removeEventListener("scroll", this.scroller, false);
+    this.scrollNode.removeEventListener("scroll", this.scroller, false);
     window.removeEventListener("resize", this.scroller, false);
-    window.removeEventListener("scroll", this.finalShowbackTop, false);
+    this.scrollNode.removeEventListener("scroll", this.finalShowbackTop, false);
   };
 
   backTop() {

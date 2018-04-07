@@ -40,7 +40,7 @@ class ShopDetail extends React.Component {
     document.getElementsByTagName("body")[0].style.height =
       window.innerHeight + "px";
   }
-  componentWillMount() {
+  componentWillUnMount() {
     document.body.style.overflow = "visible";
     document.body.style.position = "";
     document.getElementsByTagName("body")[0].style.height = "auto";

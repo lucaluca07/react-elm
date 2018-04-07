@@ -32,7 +32,18 @@
         background: #999;
       }
       .rating-comment-main {
-          flex:1;
+        flex:1;
+        .rating-star{
+          display: flex;
+          margin-left: -20px; 
+          span{
+            display: inline-block;
+            transform: scale(0.8);
+            color:#6d7885;
+            margin-left: -20px;
+          }
+
+        }
         .rating-comment-user {
             .rating-date{
                 display: inline-block;
@@ -61,8 +72,10 @@
           align-content: flex-start;
           width: 100%;
           color: #6d7885;
+          margin-top: 10px;
           .rating-goods {
             margin: 7px ;
+            flex: 0 0 20%;
             padding: 8px 20px;
             text-align: center;
             border: 1px solid #eee; /*no*/

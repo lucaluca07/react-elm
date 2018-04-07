@@ -23,6 +23,8 @@
         padding: 15px 0;
         font-size:16px;
         background: linear-gradient(to right, #0af, #0085ff);
+        position: sticky;
+        top: 0;
         display: flex;
         .search-left,.search-right{
             width: 28px;

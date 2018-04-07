@@ -27,7 +27,7 @@ class SearchTips extends Component {
                     />
                     <span styleName="tag">减</span>
                   </div>
-                  <div styleName="rate">评价4.8</div>
+                  <div>评价4.8</div>
                 </div>
               </div>
             ))}

@@ -104,6 +104,9 @@
       font-size: 30px;
       .name {
         flex: 2;
+        overflow: hidden; 
+        text-overflow:ellipsis; 
+        white-space: nowrap;
       }
       .price {
         flex: 1;

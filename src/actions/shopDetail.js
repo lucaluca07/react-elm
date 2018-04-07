@@ -39,7 +39,7 @@ export const getRating = async (
     type: actionTypes.GET_RATING,
     rating: result,
     offset: offset + limit,
-    hasMore: result.length === limit
+    hasMore: result.length <= limit
   };
 };
 
