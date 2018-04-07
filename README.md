@@ -51,19 +51,18 @@ onTouchStart的执行顺序在onClick事件之前,执行顺序onTouchStart > onT
 ### 项目截图
 
 #### 项目state结构
-<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/state.png" width = "300" height = "200" alt="图片名称" align=left />
+<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/state.png" width = "300" alt="图片名称" align=left />
 #### 首页
-![image](https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/home.png)
-![image](https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/WX20180407-145556%402x.png)
+<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/home.png" width = "150" alt="图片名称" align=left />
+<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/state.png" width = "150" alt="图片名称" align=left />
 #### 选择城市
-![image](https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/city.png)
+<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/city.png" width = "150" alt="图片名称" align=left />
 #### 搜索页
-![image](https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/search.png)
+<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/search.png" width = "150" alt="图片名称" align=left />
 #### 搜索结果
-![image](https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/search-result.png)
-![image](https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/category.png)
-
-![image](https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/filter.png)
+<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/seach-result.png" width = "150" alt="图片名称" align=left />
+<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/category.png" width = "150" alt="图片名称" align=left />
+<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/filter.png" width = "150" alt="图片名称" align=left />
 #### 店铺详情页
-![image](https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/shop-detail.png)
-![image](https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/cart s.png)
+<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/shop-detail.png" width = "150" alt="图片名称" align=left />
+<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/cart.png" width = "150" alt="图片名称" align=left />
