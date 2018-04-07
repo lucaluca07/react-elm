@@ -51,41 +51,36 @@ onTouchStart的执行顺序在onClick事件之前,执行顺序onTouchStart > onT
 ## 项目截图
 
 
-### 项目state结构
+### 商铺列表页
+
+<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/msite.png" width="365" height="619"/> <img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/msite.gif" width="365" height="619"/>
 
 
-<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/state.png" width = "740" height="550" alt="图片名称" align=left />
+### 商铺筛选页
+
+<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/food.png" width="365" height="619"/> <img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/food.gif" width="365" height="619"/>
 
 
-### 首页
 
+### 餐馆食品列表与购物车
 
-<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/home.png" width = "370" height="655" alt="图片名称" align=left />
-<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/home2.png" width = "370" height="655" alt="图片名称" align=left />
+<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/shop_cart.png" width="365" height="619"/> <img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/shop_cart.gif" width="365" height="619"/>
 
+### 确认订单页
 
-### 选择城市
-
-
-<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/city.png" width = "370" height="655" alt="图片名称" align=left />
+<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/confirm1.png" width="365" height="619"/> <img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/confirmOrder.gif" width="365" height="619"/>
 
 
 ### 搜索页
 
-
-<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/search.png" width = "370" height="655" alt="图片名称" align=left />
-
-
-### 搜索结果
+<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/search.png" width="365" height="619"/> <img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/search.gif" width="365" height="619"/>
 
 
-<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/search-result.png" width = "370" height="655" alt="图片名称" align=left />
-<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/category.png" width = "370" height="655" alt="图片名称" align=left />
-<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/filter.png" width = "370" height="655" alt="图片名称" align=left />
+### 登录页
+
+<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/login1.png" width="365" height="619"/> <img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/login.gif" width="365" height="619"/>
 
 
-### 店铺详情页
+### 个人中心
 
-
-<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/shop-detail.png" width = "370" alt="图片名称" align=left />
-<img src="https://github.com/volcanoliuc/react-elm/blob/css-module/screenshot/cart.png" width = "370" alt="图片名称" align=left />
+<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/profile.png" width="365" height="619"/> <img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/profile.gif" width="365" height="619"/>
