@@ -10,6 +10,7 @@ import Shop from "../containers/Shop";
 import Footer from "../components/Footer";
 import SearchResult from "../containers/SearchResult";
 import ShopDetail from "../containers/ShopDetail";
+import Login from "../containers/Login"
 
 export default class RouterMap extends React.Component {
   render() {
@@ -29,6 +30,7 @@ export default class RouterMap extends React.Component {
               <Route path="/location" component={Location} />
               <Route exact path="/shop" component={Shop} />
               <Route path="/shop/:id" component={ShopDetail} />
+              <Route path="/login/:redirect?" component={Login} />
               <Footer />
             </Switch>
           </div>

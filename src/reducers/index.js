@@ -4,7 +4,8 @@ import location from "./location";
 import search from "./search";
 import category from "./category";
 import shopDetail from "./shopDetail";
-import cart from './cart'
+import cart from "./cart";
+import userinfo from "./userinfo";
 import errorReducer from "./errorReducer";
 
 const rootReducer = combineReducers({
@@ -14,6 +15,7 @@ const rootReducer = combineReducers({
   category,
   shopDetail,
   cart,
+  userinfo,
   errorReducer
 });
 

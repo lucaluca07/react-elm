@@ -27,7 +27,14 @@ export const GET_MENU = "GET_MENU";
 export const GET_SHOPINFO = "GET_SHOPINFO";
 export const GET_RATING = "GET_RATING";
 export const CLEAR_RATING = "CLEAR_RATING";
-export const CLEAR_MENU = "CLEAR_MENU"
+export const CLEAR_MENU = "CLEAR_MENU";
 
 export const CHANGE_CART = "CHANGE_CART";
 export const CLEAR_CART = "CLEAR_CART";
+
+export const LOGIN = "LOGIN";
+export const LOGOUT = "LOGOUT";
+export const GET_ADDRESS = "GET_ADDRESS";
+export const ADD_ADDRESS = "ADD_ADDRESS";
+export const DELETE_ADDRESS = "DELETE_ADDRESS";
+export const MODIFY_ADDRESS = "MODIFY_ADDRESS";
