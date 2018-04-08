@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import CSSModules from "react-css-modules";
 import styles from "./style.scss";
+import Toast from "../Toast"
 
 class UserInfo extends Component {
   static defaultProps = {
@@ -24,6 +25,7 @@ class UserInfo extends Component {
         <div styleName="user-btn">
           <i className="iconfont icon-jinrujiantou" />
         </div>
+        <Toast><span>Ceshifdhdjkafahfka</span></Toast>
       </div>
     );
   }

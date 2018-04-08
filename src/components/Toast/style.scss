@@ -1,0 +1,13 @@
+.toast{
+    position: fixed;
+    top:30%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .info{
+        border-radius: 10px;
+        padding: 20px 30px;
+        text-align: center;
+        background: rgba(0,0,0,0.7)
+    }
+}
