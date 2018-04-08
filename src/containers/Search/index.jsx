@@ -112,6 +112,7 @@ class Search extends Component {
               words={words}
               search_word={search_word}
               keyword={keyword}
+              onClick={this.handleEnter}
             />
           </div>
         )}

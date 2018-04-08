@@ -1,8 +1,14 @@
 import React, { Component } from "react";
-import CSSModules from 'react-css-modules';
+import CSSModules from "react-css-modules";
+import { Link } from "react-router-dom";
+import getImgSrc from "../../util/getImgSrc";
 import styles from "./style.scss";
 
 class SearchTips extends Component {
+  handleClickWord(keyword) {
+    const onClick = this.props.onClick;
+    onClick && onClick(keyword);
+  }
   render() {
     const { keyword, restaurants, words, search_word } = this.props;
     return (
@@ -10,29 +16,42 @@ class SearchTips extends Component {
         {restaurants || words ? (
           <div styleName="tips">
             {restaurants.map((val, index) => (
-              <div key={index} styleName="shop-tips">
-                <img
-                  styleName="shop-img"
-                  src="https://fuss10.elemecdn.com/a/a9/e6089ce3150798b80b44cb622ff95png.png?imageMogr/format/webp/thumbnail/48x/"
-                  alt="ele"
-                />
-                <div styleName="shop-info">
-                  <div styleName="shop-name">
-                    <p
-                      dangerouslySetInnerHTML={{
-                        __html: val.name
-                          .split(search_word)
-                          .join(`<span class="keyword">${search_word}</span>`)
-                      }}
-                    />
-                    <span styleName="tag">减</span>
+              <Link key={index} to={`/shop/${val.id}`}>
+                <div styleName="shop-tips">
+                  <img
+                    styleName="shop-img"
+                    src={getImgSrc(val.image_path)}
+                    alt="ele"
+                  />
+                  <div styleName="shop-info">
+                    <div styleName="shop-name">
+                      <p
+                        dangerouslySetInnerHTML={{
+                          __html: val.name
+                            .split(search_word)
+                            .join(`<span class="keyword">${search_word}</span>`)
+                        }}
+                      />
+                      {val.tags.map(val => (
+                        <span
+                          styleName="tag"
+                          style={{ background: `#${val.name_color}` }}
+                        >
+                          {val.name}
+                        </span>
+                      ))}
+                    </div>
+                    <div>评价{val.rating}</div>
                   </div>
-                  <div>评价4.8</div>
                 </div>
-              </div>
+              </Link>
             ))}
             {words.map((val, index) => (
-              <div key={index} styleName="word-tips">
+              <div
+                key={index}
+                styleName="word-tips"
+                onClick={this.handleClickWord.bind(this, val)}
+              >
                 <i className="iconfont icon-sousuoxiao" />
                 <p
                   styleName="word"
@@ -56,4 +75,4 @@ class SearchTips extends Component {
   }
 }
 
-export default CSSModules(SearchTips,styles,{allowMultiple:true});
+export default CSSModules(SearchTips, styles, { allowMultiple: true });
