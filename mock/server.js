@@ -4,6 +4,7 @@ const app = new Koa();
 const Router = require("koa-router");
 
 let router = new Router();
+let captcha_code = false;
 
 function parsePostData(ctx) {
   return new Promise((resolve, reject) => {
@@ -201,17 +202,29 @@ router.get("/api/shopping/shop/ratings/:shop_id", async ctx => {
 //     message: "提交成功"
 //   };
 // });
+
+router.get("/api/captchas", async ctx => {
+  captcha_code = "000000"
+  setTimeout(() => {captcha_code = false},20000)
+  ctx.body = {code:200};
+})
+
 // //登录验证
-// let userinfo = require("./user/userinfo.js");
-// router.post("/api/login", async ctx => {
-//   let postData = await parsePostData(ctx);
-//   console.log("登录", postData);
-//   let result = { data:userinfo, code: 200, message: "登录成功" };
-//   if (postData.username === "" || postData.password === "123") {
-//     result = { code: 400, message: "登录失败,用户名或密码错误" };
-//   }
-//   ctx.body = result;
-// });
+let userinfo = require("./user/userinfo.js");
+router.post("/api/login", async ctx => {
+  let postData = await parsePostData(ctx);
+  let result = userinfo();
+  if(postData.captcha_code){
+    if(!captcha_code || postData.captcha_code !== captcha_code){
+      result = { code: 400, message: "验证码错误" };
+    }
+  }else{
+    if (postData.username === "" || postData.password === "123") {
+      result = { code: 400, message: "登录失败,用户名或密码错误" };
+    }
+  }
+  ctx.body = result;
+});
 
 // 加载路由中间件
 app.use(router.routes()).use(router.allowedMethods());

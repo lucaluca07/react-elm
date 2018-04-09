@@ -6,11 +6,16 @@ const defaultState = {
   newUser: false,
   username: false,
   mobile: false,
-  address: []
+  address: [],
+  captchas:false
 };
 
 const userinfo = (state = defaultState, action) => {
   switch (action.type) {
+    case actionTypes.GET_CAPTCHAS:
+      return {...state,
+        captchas:action.captchas
+      }
     case actionTypes.LOGIN:
       return { ...state };
     case actionTypes.LOGOUT:

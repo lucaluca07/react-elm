@@ -38,3 +38,4 @@ export const GET_ADDRESS = "GET_ADDRESS";
 export const ADD_ADDRESS = "ADD_ADDRESS";
 export const DELETE_ADDRESS = "DELETE_ADDRESS";
 export const MODIFY_ADDRESS = "MODIFY_ADDRESS";
+export const GET_CAPTCHAS = "GET_CAPTCHAS";
