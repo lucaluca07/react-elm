@@ -8,6 +8,9 @@ class UserInfo extends Component {
     name: "登录/注册",
     mobile: "登陆后享受更多特权"
   };
+  componentDidMount(){
+    Toast.success(1111222233333,5)
+  }
   render() {
     const { name, mobile, onClick } = this.props;
     return (
@@ -25,7 +28,6 @@ class UserInfo extends Component {
         <div styleName="user-btn">
           <i className="iconfont icon-jinrujiantou" />
         </div>
-        <Toast><span>Ceshifdhdjkafahfka</span></Toast>
       </div>
     );
   }

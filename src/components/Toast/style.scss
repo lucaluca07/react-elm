@@ -1,13 +1,26 @@
-.toast{
-    position: fixed;
-    top:30%;
-    width: 100%;
+:global {
+  .toast {
     display: flex;
     justify-content: center;
-    .info{
-        border-radius: 10px;
-        padding: 20px 30px;
-        text-align: center;
-        background: rgba(0,0,0,0.7)
+    padding: 0 50px;
+    color: #fff;
+    font-size: 28px;
+    .text {
+      min-width: 150px;
+      border-radius: 10px;
+      padding: 20px 30px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.7);
+      border:1px solid #000;/*no*/
     }
+    .success{
+        border-color:blue!important
+    }
+    .warn{
+        border-color:yellow!important
+    }
+    .error{
+        border-color:red!important
+    }
+  }
 }

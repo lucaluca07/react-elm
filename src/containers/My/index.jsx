@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import Header from "../../components/Header";
 import UserInfo from "../../components/UserInfo";
+import Toast from "../../components/Toast"
 
 class My extends Component {
   constructor(){
@@ -23,6 +24,7 @@ class My extends Component {
       <div>
         <Header title="我的" />
         <UserInfo name={username} mobile={mobile} onClick={this.handleClickUserInfo}/>
+        {/* <Toast/> */}
       </div>
     );
   }
