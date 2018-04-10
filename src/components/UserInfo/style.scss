@@ -20,6 +20,17 @@
     background: #fff;
     color: #e1e1e7;
   }
+  .avatar {
+    height: 96px;
+    width: 96px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #fff;
+    img {
+        width: 180px;
+        border-radius: 50%;
+    }
+}
   .user {
     flex: 1;
     margin-left: 36px;

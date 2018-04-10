@@ -240,7 +240,8 @@ router.post("/api/user/:shop_id/avatar", async ( ctx ) => {
       fileType: 'album',
       path: serverFilePath
     })
-    ctx.body = result
+    userinfo.avatar = result.avatar;
+    ctx.body = result;
 });
 // 加载路由中间件
 app.use(router.routes()).use(router.allowedMethods());

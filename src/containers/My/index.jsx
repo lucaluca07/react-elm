@@ -28,23 +28,25 @@ class My extends Component {
   render() {
   const username = this.props.username||"登录/注册"; 
   const mobile = this.props.mobile||"登陆后享受更多特权";
+  const avatar = this.props.avatar
     return (
       <div>
         <Header title="我的" />
-        <UserInfo name={username} mobile={mobile} onClick={this.handleClickUserInfo}/>
+        <UserInfo name={username} mobile={mobile} avatar={avatar} onClick={this.handleClickUserInfo}/>
       </div>
     );
   }
 }
 
 const mapStateToProps = state => {
-  const { id, username, mobile, address } = state.userinfo;
+  const { id, username, mobile, address,avatar } = state.userinfo;
 
   return {
     id,
     username,
     mobile,
-    address
+    address,
+    avatar
   };
 };
 export default connect(mapStateToProps)(My);

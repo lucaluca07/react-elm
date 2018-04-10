@@ -8,12 +8,14 @@ class UserInfo extends Component {
     mobile: "登陆后享受更多特权"
   };
   render() {
-    const { name, mobile, onClick } = this.props;
+    const { name, mobile, avatar, onClick } = this.props;
     return (
       <div styleName="userinfo" onClick={onClick}>
-        <div styleName="head-icon">
-          <i className="iconfont icon-touxiang" />
-        </div>
+      {!!avatar?<div styleName="avatar"><img src={avatar} alt=""/></div>
+      :<div styleName="head-icon">
+      <i className="iconfont icon-touxiang" />
+    </div>}
+        
         <div styleName="user">
           <div styleName="name">{name}</div>
           <div>

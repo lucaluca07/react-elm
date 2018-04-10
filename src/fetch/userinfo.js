@@ -25,13 +25,14 @@ let UserModel = {
   },
 
   async uploadAvatar(user_id, data) {
-    let result = {code:400, message:"上传失败"};
+    let result ;
     try {
-      result = await fetch(`/api/user/${user_id}/avatar`, {
+      const response = await fetch(`/api/user/${user_id}/avatar`, {
         method: "POST",
         credentials: "include",
         body: data
       });
+      result = await response.json()
     } catch (error) {
       throw new Error(error);
     }

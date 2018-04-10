@@ -61,16 +61,12 @@ export const getUserinfo = async user_id => {
 };
 export const uploadAvatar = async (user_id, data) => {
   try {
-    const { result } = await UserModel.uploadAvatar(user_id, data);
-    if (result.code !== 200) {
-      Toast.info("上传失败");
-    }
+    const result  = await UserModel.uploadAvatar(user_id, data);
     return {
       type: actionTypes.UPLOAD_AVATAR,
       avatar: result.avatar
     };
   } catch (e) {
-    console.log(44444444)
     return e;
   }
 };

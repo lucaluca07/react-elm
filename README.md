@@ -46,7 +46,7 @@ onTouchStart的执行顺序在onClick事件之前,执行顺序onTouchStart > onT
 - [ ] 评价订单
 - [ ] 下载App
 - [ ] 添加、删除、修改收货地址
-- [ ] 上传头像
+- [x] 上传头像
 
 ## 项目截图
 

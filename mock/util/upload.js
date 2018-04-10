@@ -69,7 +69,7 @@ function uploadFile(ctx, options) {
       // 文件写入事件结束
       file.on("end", function() {
         result.code = 200;
-        result.avatar = `http://${ctx.host}/image/${fileType}/${fileName}`;
+        result.avatar = `http://${ctx.host.replace("3000","9000")}/image/${fileType}/${fileName}`;
 
         console.log("文件上传成功！");
         resolve(result);
