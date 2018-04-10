@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import CSSModules from "react-css-modules";
 import styles from "./style.scss";
-import Toast from "../Toast"
 
 class UserInfo extends Component {
   static defaultProps = {

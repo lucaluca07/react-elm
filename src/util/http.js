@@ -5,7 +5,7 @@ export default class Http {
   static async send(url, option) {
     const param = {
       method: "GET",
-      credentials: "same-origin",
+      credentials: "include",
       headers: {
         "Content-Type": "application/json"
       },
@@ -15,7 +15,6 @@ export default class Http {
     Object.assign(param, option);
 
     let _url = url;
-
     if (param.body) {
       if (param.method === "GET") {
         param.body = QueryString.stringify(param.body);

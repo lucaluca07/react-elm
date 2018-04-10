@@ -39,3 +39,6 @@ export const ADD_ADDRESS = "ADD_ADDRESS";
 export const DELETE_ADDRESS = "DELETE_ADDRESS";
 export const MODIFY_ADDRESS = "MODIFY_ADDRESS";
 export const GET_CAPTCHAS = "GET_CAPTCHAS";
+export const GET_CURRENT_USER = "GET_CURRENT_USER";
+export const GET_USERINFO = "GET_USERINFO";
+export const UPLOAD_AVATAR = "UPLOAD_AVATAR";

@@ -10,7 +10,8 @@ import Shop from "../containers/Shop";
 import Footer from "../components/Footer";
 import SearchResult from "../containers/SearchResult";
 import ShopDetail from "../containers/ShopDetail";
-import Login from "../containers/Login"
+import Login from "../containers/Login";
+import User from "../containers/User"
 
 export default class RouterMap extends React.Component {
   render() {
@@ -31,6 +32,7 @@ export default class RouterMap extends React.Component {
               <Route exact path="/shop" component={Shop} />
               <Route path="/shop/:id" component={ShopDetail} />
               <Route path="/login/:redirect?" component={Login} />
+              <Route path="/user" component={User} />
               <Footer />
             </Switch>
           </div>

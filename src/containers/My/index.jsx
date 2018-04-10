@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import {getCurrentUser, getUserinfo} from "../../actions/userinfo"
 import Header from "../../components/Header";
 import UserInfo from "../../components/UserInfo";
 
@@ -8,9 +9,17 @@ class My extends Component {
     super()
     this.handleClickUserInfo = this.handleClickUserInfo.bind(this)
   }
+  async componentDidMount(){
+    const {dispatch} = this.props
+    dispatch(await getCurrentUser())
+    const userId = this.props.id
+    if(!!userId){
+      dispatch(await getUserinfo(userId))
+    }
+  }
   handleClickUserInfo(){
-    const {user_id,history} = this.props
-    if(!!user_id){
+    const {id,history} = this.props
+    if(!!id){
       history.push("/user")
     }else{
       history.push("/login")
@@ -29,10 +38,10 @@ class My extends Component {
 }
 
 const mapStateToProps = state => {
-  const { user_id, username, mobile, address } = state.userinfo;
+  const { id, username, mobile, address } = state.userinfo;
 
   return {
-    user_id,
+    id,
     username,
     mobile,
     address

@@ -1,49 +1,79 @@
-import React, {Component} from "react";
-import {connect} from 'react-redux';
-import {getCaptchas} from "../../actions/userinfo"
-import LoginInput from "../../components/LoginInput"
-import LoginHeader from "../../components/LoginHeader"
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { getCaptchas, login } from "../../actions/userinfo";
+import LoginInput from "../../components/LoginInput";
+import LoginHeader from "../../components/LoginHeader";
 
 class Login extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       loginByMessage: true,
-      mobile:"",
-      code:false
-    }
-    this.toggleLoginStyle = this
-      .toggleLoginStyle
-      .bind(this)
-    this.getMobile = this.getMobile.bind(this)
-    this.getCaptchas = this.getCaptchas.bind(this) 
+      mobile: "",
+      code: false
+    };
+    this.toggleLoginStyle = this.toggleLoginStyle.bind(this);
+    this.getMobile = this.getMobile.bind(this);
+    this.getCaptchas = this.getCaptchas.bind(this);
+    this.login = this.login.bind(this);
   }
 
-  getMobile(mobile){
-    this.setState({mobile})
+  componentDidMount() {
+    console.log(1111111, this.props.id);
   }
-  async getCaptchas(){
-    const {dispatch} = this.props
-    const {mobile} = this.state
-    dispatch(await getCaptchas(mobile))
+
+  componentDidUpdate() {
+    const { id, history } = this.props;
+    const router = this.props.match.params.router;
+    if (!!id) {
+      if (router) {
+        //替换router参数中的 && 为 /
+        const url = router.replace("&&", "/");
+        history.push("/" + url);
+      } else {
+        history.push("/my");
+      }
+    }
   }
+
+  getMobile(mobile) {
+    this.setState({ mobile });
+  }
+
+  async getCaptchas() {
+    const { dispatch } = this.props;
+    const { mobile } = this.state;
+    dispatch(await getCaptchas(mobile));
+  }
+
+  async login(mobile, pwd, messageLogin) {
+    const { dispatch } = this.props;
+    dispatch(await login(mobile, pwd, messageLogin));
+  }
+
   toggleLoginStyle(flag) {
-    this.setState({loginByMessage: flag})
+    this.setState({ loginByMessage: flag });
   }
+
   render() {
-    const {loginByMessage} = this.state
+    const { loginByMessage } = this.state;
     return (
       <div>
-        <LoginHeader onClick={this.toggleLoginStyle}/>
-        <LoginInput loginByMessage={loginByMessage} getMobile = {this.getMobile} msgClick={this.getCaptchas}/>
+        <LoginHeader onClick={this.toggleLoginStyle} />
+        <LoginInput
+          loginByMessage={loginByMessage}
+          getMobile={this.getMobile}
+          msgClick={this.getCaptchas}
+          submit={this.login}
+        />
       </div>
     );
   }
 }
-const mapStateToProps = (state) => {
-  const {captchas} = state.userinfo
+const mapStateToProps = state => {
+  const { id } = state.userinfo;
   return {
-    captchas
-  }
-}
-export default connect()(Login)
+    id
+  };
+};
+export default connect(mapStateToProps)(Login);
