@@ -53,7 +53,9 @@ export const getUserinfo = async user_id => {
       user_id: result.user_id,
       mobile: result.mobile,
       gift_amount: result.gift_amount,
-      avatar: result.avatar
+      avatar: result.avatar,
+      point:result.point,
+      balance:result.balance
     };
   } catch (e) {
     return e;
@@ -76,6 +78,18 @@ export const signout = async (user_id, data) => {
     await UserModel.signout();
     return {
       type: actionTypes.SIGNOUT
+    };
+  } catch (e) {
+    return e;
+  }
+};
+
+export const getAddresses = async (user_id) => {
+  try {
+    const {result} = await UserModel.getAddresses(user_id);
+    return {
+      type: actionTypes.GET_ADDRESS,
+      addresses:result
     };
   } catch (e) {
     return e;

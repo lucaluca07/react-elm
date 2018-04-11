@@ -1,8 +1,17 @@
 import React, { Component } from "react";
+import {connect} from 'react-redux';
+import {getAddresses} from "../../actions/userinfo"
 import DevelopmengPending from "../../components/DevelopmentPending";
 import Header from "../../components/Header";
 
-export default class Address extends Component {
+class Address extends Component {
+  async componentDidMount(){
+    const {dispatch,history,id} = this.props
+    // if(!id){
+    //   history.push("/login/user&&address")
+    // }
+    dispatch(await getAddresses(id))
+  }
   render() {
     return (
       <div>
@@ -12,3 +21,11 @@ export default class Address extends Component {
     );
   }
 }
+const mapStateToProps = (state) => {
+  const {id, address} = state.userinfo;
+  return {
+    id,
+    address
+  }
+}
+export default connect()(Address);

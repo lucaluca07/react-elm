@@ -41,9 +41,14 @@ let UserModel = {
   async signout(){
     const result = await Http.get(`/api/signout`);
     return result;
+  },
+  async getAddresses(user_id){
+    const result = await Http.get(`/api/user/${user_id}/addresses`);
+    return result;
   }
-  
 };
+
+
 
 
 export default UserModel;

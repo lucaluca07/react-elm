@@ -36,6 +36,21 @@
         color: #666;
         margin-top: 15px;
       }
+      .info{
+        span:nth-child(1){
+          font-size: 50px;
+          font-weight: 700;
+        }
+      }
+      .burse-color{
+        color:#ff9003;
+      }
+      .gift-color{
+        color:#fe512a;
+      }
+      .point-color{
+        color:#3fc42f;
+      }
     }
   }
   .item {

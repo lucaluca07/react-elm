@@ -246,6 +246,13 @@ router.post("/api/user/:user_id/avatar", async ( ctx ) => {
     userdata.avatar = result.avatar;
     ctx.body = result;
 });
+let addresses = require("./user/address")
+router.get("/api/user/:user_id/addresses", async ( ctx ) => {
+  // 上传文件请求处理
+  const { user_id } = ctx.params;
+  console.log("user_id::::",user_id)
+  ctx.body = addresses;
+});
 // 加载路由中间件
 app.use(router.routes()).use(router.allowedMethods());
 

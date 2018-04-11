@@ -8,6 +8,7 @@ const defaultState = {
   mobile: false,
   avatar:false,
   point:0,
+  balance:0,
   address: []
 };
 
@@ -22,7 +23,9 @@ const userinfo = (state = defaultState, action) => {
         id:action.user_id,
         mobile:action.mobile,
         gift_amount:action.gift_amount,
-        avatar:action.avatar
+        avatar:action.avatar,
+        point:action.point,
+        balance:action.balance
       };
     case actionTypes.GET_CURRENT_USER:
       return {...state,
@@ -35,6 +38,10 @@ const userinfo = (state = defaultState, action) => {
     case actionTypes.ERROR_401:
     case actionTypes.SIGNOUT:
       return { ...state,...defaultState };
+    case actionTypes.GET_ADDRESS:
+      return {...state,
+        address:action.addresses
+      }
     default:
       return state;
   }
