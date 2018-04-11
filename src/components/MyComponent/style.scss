@@ -1,0 +1,62 @@
+.index {
+  .wrap {
+      background: #fff;
+    display: flex;
+    border-bottom: 1px solid #eee; /*no*/
+    li:nth-child(1),
+    li:nth-child(2) {
+      border-right: 1px solid #eee; /*no*/
+    }
+    li {
+      flex: 1;
+      text-align: center;
+      padding: 30px 0;
+      .icon {
+        height: 55px;
+        width: 55px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 55px;
+        color: #fff;
+        margin: 0 auto;
+        i:before {
+          font-size: 26px;
+        }
+      }
+      .burse {
+        background: #ff9003;
+      }
+      .gift_amount {
+        background: #fe512a;
+      }
+      .point {
+        background: #3fc42f;
+      }
+      .name {
+        color: #666;
+        margin-top: 15px;
+      }
+    }
+  }
+  .item {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    color:#333;
+    font-size: 28px;
+    margin-top: 30px;
+    i{
+        padding:30px 20px 0 ; 
+    }
+    .content{
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        padding: 28px 20px 28px 0;
+        border-bottom: 1px solid #eee;/*no*/ 
+        i{
+            padding: 0 ; 
+        }
+    }
+  }
+}

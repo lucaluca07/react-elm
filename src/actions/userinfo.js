@@ -70,3 +70,14 @@ export const uploadAvatar = async (user_id, data) => {
     return e;
   }
 };
+
+export const signout = async (user_id, data) => {
+  try {
+    await UserModel.signout();
+    return {
+      type: actionTypes.SIGNOUT
+    };
+  } catch (e) {
+    return e;
+  }
+};

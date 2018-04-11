@@ -19,12 +19,16 @@ class Login extends Component {
   }
 
   componentDidMount() {
-    console.log(1111111, this.props.id);
+    const { id, history } = this.props;
+    if (!!id) {
+      history.push("/my");
+    }
   }
 
   componentDidUpdate() {
     const { id, history } = this.props;
-    const router = this.props.match.params.router;
+    const router = this.props.match.params.redirect;
+    console.log("router",router)
     if (!!id) {
       if (router) {
         //替换router参数中的 && 为 /

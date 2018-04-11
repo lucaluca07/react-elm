@@ -50,15 +50,15 @@
         }
       }
     }
-    .active {
-      color: #0089dc;
-      .discover-icon,
-      .order-icon {
-        font-weight: bold;
-      }
-    }
   }
 }
 .box {
   height: 80px;
+}
+:global .active {
+  color: #0089dc !important;
+  .discover-icon,
+  .order-icon {
+    font-weight: bold !important;
+  }
 }

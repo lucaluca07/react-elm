@@ -37,7 +37,13 @@ let UserModel = {
       throw new Error(error);
     }
     return result;
+  },
+  async signout(){
+    const result = await Http.get(`/api/signout`);
+    return result;
   }
+  
 };
+
 
 export default UserModel;

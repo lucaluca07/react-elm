@@ -12,6 +12,7 @@ import SearchResult from "../containers/SearchResult";
 import ShopDetail from "../containers/ShopDetail";
 import Login from "../containers/Login";
 import User from "../containers/User"
+import Address from "../containers/Address"
 
 export default class RouterMap extends React.Component {
   render() {
@@ -23,7 +24,7 @@ export default class RouterMap extends React.Component {
               <Route exact path="/" component={Home} />
               <Route path="/discover" component={Discover} />
               <Route path="/order" component={Order} />
-              <Route path="/my" component={My} />
+              <Route exact path="/my" component={My} />
             </Switch>
             <Switch>
               <Route exact path="/search" component={Search} />
@@ -33,6 +34,7 @@ export default class RouterMap extends React.Component {
               <Route path="/shop/:id" component={ShopDetail} />
               <Route path="/login/:redirect?" component={Login} />
               <Route path="/user" component={User} />
+              <Route exact path="/my/address" component={Address} />
               <Footer />
             </Switch>
           </div>

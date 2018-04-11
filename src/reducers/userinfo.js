@@ -7,6 +7,7 @@ const defaultState = {
   username: false,
   mobile: false,
   avatar:false,
+  point:0,
   address: []
 };
 
@@ -31,8 +32,9 @@ const userinfo = (state = defaultState, action) => {
       return {...state,
         avatar:action.avatar
       }
-    case actionTypes.LOGOUT:
-      return { ...state };
+    case actionTypes.ERROR_401:
+    case actionTypes.SIGNOUT:
+      return { ...state,...defaultState };
     default:
       return state;
   }

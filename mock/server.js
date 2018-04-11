@@ -169,16 +169,6 @@ router.get("/api/shopping/shop/ratings/:shop_id", async ctx => {
   ctx.body = rating;
 });
 
-// //提交评论
-// router.post("/api/submitAssess", async ctx => {
-//   let postData = await parsePostData(ctx);
-//   console.log("提交评论", postData);
-//   ctx.body = {
-//     code: 200,
-//     message: "提交成功"
-//   };
-// });
-
 router.get("/api/captchas", async ctx => {
   captcha_code = "000000";
   setTimeout(() => {
@@ -189,9 +179,10 @@ router.get("/api/captchas", async ctx => {
 
 // 登录验证
 let userinfo = require("./user/userinfo.js");
+let userdata = userinfo()
 router.post("/api/login", async ctx => {
   let postData = await parsePostData(ctx);
-  let result = userinfo();
+  let result = userdata;
   if (postData.captcha_code) {
     if (!captcha_code || postData.captcha_code !== captcha_code) {
       result = { code: 400, message: "验证码错误" };
@@ -205,8 +196,7 @@ router.post("/api/login", async ctx => {
     const userid = result.user_id;
     ctx.cookies.set("userid", userid, {
       path: "/", // 写cookie所在的路径
-      maxAge: 10 * 60 * 1000, // cookie有效时长
-      expires: new Date("2017-02-15"), // cookie失效时间
+      maxAge: 60 * 60 * 1000, // cookie有效时长
       httpOnly: false, // 是否只用于http请求中获取
       overwrite: false // 是否允许重写
     });
@@ -214,6 +204,19 @@ router.post("/api/login", async ctx => {
   ctx.body = result;
 });
 
+router.get("/api/signout", async ctx => {
+  const userid = ctx.cookies.get("userid")
+  console.log("userid::::",userid)
+  if (!!userid) {
+    ctx.cookies.set("userid", null, {
+      path: "/", // 写cookie所在的路径
+      maxAge: 0, // cookie有效时长
+      httpOnly: false, // 是否只用于http请求中获取
+      overwrite: false // 是否允许重写
+    });
+  }
+  ctx.body = {code:200};
+});
 //
 router.get("/api/current_user", async ctx => {
   const userid = ctx.cookies.get("userid")
@@ -226,11 +229,11 @@ router.get("/api/current_user", async ctx => {
 
 router.get("/api/userinfo", async ctx => {
   const { user_id } = ctx.query;
-  let result = userinfo();
+  let result = userdata;
   ctx.body = result;
 });
 
-router.post("/api/user/:shop_id/avatar", async ( ctx ) => {
+router.post("/api/user/:user_id/avatar", async ( ctx ) => {
     // 上传文件请求处理
     let result = { success: false }
     let serverFilePath = path.join( __dirname, 'static/image' )
@@ -240,7 +243,7 @@ router.post("/api/user/:shop_id/avatar", async ( ctx ) => {
       fileType: 'album',
       path: serverFilePath
     })
-    userinfo.avatar = result.avatar;
+    userdata.avatar = result.avatar;
     ctx.body = result;
 });
 // 加载路由中间件
