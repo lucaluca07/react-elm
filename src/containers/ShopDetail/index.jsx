@@ -135,7 +135,7 @@ class ShopDetail extends Component {
     const cartData = this.props.cart[this.shopId];
 
     return (
-      <div>
+      <div >
         {shopinfo ? (
           <div style={{ display: "flex", flexDirection: "column" }}>
             <ShopDetailHeader data={shopinfo} />

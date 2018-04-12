@@ -3,6 +3,7 @@
   height: 354px;
   flex-flow: row wrap;
   align-content: flex-start;
+  background: #fff;
   .foodentry-item {
     box-sizing: border-box;
     background-color: white;
@@ -29,6 +30,7 @@
   display: flex;
   border-bottom: 1px solid #fdfdfd;
   padding: 20px;
+  background: #fff;
   .img-stone {
     width: 100px;
     height: 100px;
@@ -90,6 +92,7 @@ $gary2: #f7f6f5;
 .shop-detail-tombstone {
   min-height: 100vh;
   position: relative;
+  background: #fff;
   .shop-header {
     .shop-header-top {
       height: 120px;

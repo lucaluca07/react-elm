@@ -82,7 +82,12 @@ class Search extends Component {
     const { showSearchWord, keyword, historySearch } = this.state;
     const { restaurants, words, search_word } = typeahead;
     return (
-      <div>
+      <div style={{
+        position: "absolute",
+        height: "100%",
+        width: "100%",
+        background: "#fff"
+      }}>
         <SearchHeader
           onChange={this.handleChange}
           onEnter={this.handleEnter}

@@ -62,7 +62,12 @@ class Login extends Component {
   render() {
     const { loginByMessage } = this.state;
     return (
-      <div>
+      <div style={{
+        position: "absolute",
+        height: "100%",
+        width: "100%",
+        background: "#fff"
+      }}>
         <LoginHeader onClick={this.toggleLoginStyle} />
         <LoginInput
           loginByMessage={loginByMessage}

@@ -13,6 +13,7 @@ import ShopDetail from "../containers/ShopDetail";
 import Login from "../containers/Login";
 import User from "../containers/User"
 import Address from "../containers/Address"
+import AddAddress from "../containers/AddAddress"
 
 export default class RouterMap extends React.Component {
   render() {
@@ -35,6 +36,7 @@ export default class RouterMap extends React.Component {
               <Route path="/login/:redirect?" component={Login} />
               <Route path="/user" component={User} />
               <Route exact path="/my/address" component={Address} />
+              <Route exact path="/my/address/add" component={AddAddress} />
               <Footer />
             </Switch>
           </div>

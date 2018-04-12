@@ -59,13 +59,7 @@ class My extends Component {
     const mobile = this.props.mobile || "登陆后享受更多特权";
     const {avatar, id, point, balance, gift_amount} = this.props;
     return (
-      <div
-        style={{
-        position: "absolute",
-        height: "100%",
-        width: "100%",
-        background: "#f5f5f5"
-      }}>
+      <div>
         <Header title="我的" link="/"/>
         <UserInfo
           name={username}

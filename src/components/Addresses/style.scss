@@ -1,0 +1,15 @@
+.add{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3190e8;
+    line-height: 100px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top:1px solid #eee;/*no*/
+    font-size: 32px;
+    i:before{
+        font-size: 45px;
+    }
+}

@@ -1,22 +1,26 @@
 import React, { Component } from "react";
 import {connect} from 'react-redux';
-import {getAddresses} from "../../actions/userinfo"
-import DevelopmengPending from "../../components/DevelopmentPending";
+import {getAddresses,getCurrentUser} from "../../actions/userinfo"
+import Addresses from "../../components/Addresses";
 import Header from "../../components/Header";
 
 class Address extends Component {
   async componentDidMount(){
-    const {dispatch,history,id} = this.props
-    // if(!id){
-    //   history.push("/login/user&&address")
-    // }
+    const {dispatch,history} = this.props
+    dispatch(await getCurrentUser())
+    const id = this.props.id
+    console.log("id:::::",id)
+    if(!id){
+      history.push("/login/my&&address")
+    }
     dispatch(await getAddresses(id))
   }
   render() {
+    const {address} = this.props
     return (
       <div>
-        <Header title="收货地址" />
-        <DevelopmengPending />
+        <Header title="我的地址" />
+        <Addresses data={address} />
       </div>
     );
   }
@@ -28,4 +32,4 @@ const mapStateToProps = (state) => {
     address
   }
 }
-export default connect()(Address);
+export default connect(mapStateToProps)(Address);

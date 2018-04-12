@@ -84,7 +84,7 @@ class Home extends Component {
           <div>
             <Swiper foodentry={foodentry} />
             <img
-              style={{ width: "100%", height: "100%" }}
+              style={{ width: "100%", height: "100%",padding:"5px 0",background:"#fff"}}
               src={newUser}
               alt="新用户"
             />
