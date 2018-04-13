@@ -41,8 +41,7 @@ class ShopDetail extends Component {
     const { dispatch, longitude, latitude } = this.props;
     dispatch(await getMenu(this.shopId, longitude, latitude));
     dispatch(await getShopInfo(this.shopId, longitude, latitude));
-    console.log(111111,ReactDOM.findDOMNode(this.refs.tab).getBoundingClientRect().top)
-    this.height = window.screen.height - ReactDOM.findDOMNode(this.refs.tab).getBoundingClientRect().top
+    this.height = window.screen.height - ReactDOM.findDOMNode(this.tab).getBoundingClientRect().top
     this.getRatings();
   }
   
@@ -140,7 +139,7 @@ class ShopDetail extends Component {
           <div style={{ display: "flex", flexDirection: "column" }}>
             <ShopDetailHeader data={shopinfo} />
             <ShopDetailTab onClick={this.setTabIndex} />
-            <ul ref="tab" style={{height:this.height,overflow:"auto"}}>
+            <ul ref={(node) => {this.tab = node}} style={{height:this.height,overflow:"auto"}}>
               <li
                 style={{
                   display: `${tabIndex !== 0 ? "none" : ""}`

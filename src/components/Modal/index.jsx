@@ -88,7 +88,7 @@ class Modal extends Component {
       <div styleName="modal" onClick={this.handleModalClick}>
         <div
           styleName="content"
-          ref="content"
+          // ref="content"
           style={{ marginTop: top }}
           onTouchStart={onTouch?this.handleTouchStart:null}
           onTouchMove={onTouch?this.handleTouchMove:null}

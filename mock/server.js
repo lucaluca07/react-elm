@@ -223,7 +223,8 @@ router.get("/api/current_user", async ctx => {
   if(!!userid){
     ctx.body = { user_id:userid };
   }else{
-    ctx.body = { code: 200 };
+    ctx.status = 401
+    ctx.body = { code: 401 };
   }
 });
 

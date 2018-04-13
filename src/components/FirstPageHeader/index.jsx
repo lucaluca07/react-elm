@@ -20,7 +20,7 @@ class FirstPageHeader extends React.Component {
     window.removeEventListener("scroll", this.scroll, false);
   }
   handleScroll() {
-    const node = ReactDOM.findDOMNode(this.refs.address);
+    const node = ReactDOM.findDOMNode(this.address);
     const { bottom } = node.getBoundingClientRect();
     if (bottom <= 0) {
       this.setState({ searchFixed: true });
@@ -35,7 +35,7 @@ class FirstPageHeader extends React.Component {
     return (
       <div styleName="first-page-header">
         <Link to={"/location"}>
-          <div styleName="header-address" ref="address">
+          <div styleName="header-address" ref={(node) => {this.address = node}}>
             <i className="iconfont icon-coordinates_fill coordinates" />
             <span styleName="address">{address ? address : "正在定位..."}</span>
           </div>

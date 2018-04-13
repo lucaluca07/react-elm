@@ -93,7 +93,7 @@ class InfiniteScroll extends Component {
 
   scrollHandler = () => {
     let offset;
-    const el = ReactDOM.findDOMNode(this.refs.loadmore);
+    const el = ReactDOM.findDOMNode(this.loadmore);
     const { loading } = this.state;
     const top = el.getBoundingClientRect().top
     offset = top - window.screen.height;
@@ -179,7 +179,7 @@ class InfiniteScroll extends Component {
         {loading &&
           hasMore && <div style={{ textAlign: "center" }}>{spinLoader}</div>}
         {!hasMore && noMore}
-        <div ref="loadmore" />
+        <div ref={(node) => {this.loadmore = node}} />
         {showGoTop ? (
           <div styleName="back-top" onClick={this.backTop.bind(this)}>
             <i className="iconfont icon-huidaodingbu" />

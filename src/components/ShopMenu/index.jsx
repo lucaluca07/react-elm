@@ -24,7 +24,7 @@ class ShopMenu extends Component {
     this.ids = this.props.data.map(val => val.id);
   }
   componentDidMount() {
-    const main = this.refs.main;
+    const main = this.main;
     const mainEle = ReactDOM.findDOMNode(main);
     const { top } = mainEle.getBoundingClientRect();
     this.top = top;
@@ -34,7 +34,7 @@ class ShopMenu extends Component {
     this.scroll = throttle(this.handleScroll, 100);
   }
   getEleTop(node) {
-    const ele = ReactDOM.findDOMNode(this.refs[node]);
+    const ele = ReactDOM.findDOMNode(this[node]);
     return ele.getBoundingClientRect().top - this.top <= 10;
   }
   handleScroll() {
@@ -48,8 +48,8 @@ class ShopMenu extends Component {
     }
   }
   handleClick(id) {
-    const ele = ReactDOM.findDOMNode(this.refs[`ref${id}`]);
-    const subMenu = ReactDOM.findDOMNode(this.refs["sub-menu"]);
+    const ele = ReactDOM.findDOMNode(this[`ref${id}`]);
+    const subMenu = ReactDOM.findDOMNode(this["sub-menu"]);
     subMenu.scrollTo(0, ele.offsetTop - this.top);
   }
   toggleShowModal(info) {
@@ -99,7 +99,7 @@ class ShopMenu extends Component {
     const cart = this.props.cart;
     return (
       <div styleName="shop-menu-wrap" style={{ height: height }}>
-        <div styleName="main" ref="main">
+        <div styleName="main" ref={(node) => {this.main = node}}>
           <ul styleName="shop-main-menu">
             {data.map((val, index) => (
               <li
@@ -114,10 +114,10 @@ class ShopMenu extends Component {
             ))}
             <li style={{ height: 100 }} />
           </ul>
-          <div styleName="shop-sub-menu" ref="sub-menu" onScroll={this.scroll}>
+          <div styleName="shop-sub-menu" ref={(node)=>{this["sub-menu"] = node}} onScroll={this.scroll}>
             {data.map((foods, index) => (
               <div styleName="shop-sub-list" key={index}>
-                <p styleName="title" ref={`ref${foods.id}`}>
+                <p styleName="title" ref={(node)=>{this[`ref${foods.id}`] = node}}>
                   <span styleName="name">{foods.name}</span>
                   {foods.description}
                 </p>
