@@ -3,7 +3,7 @@ import React from "react";
 import "./style.scss"
 
 let notification = null;
-Notification.newInstance({}, n => (notification = n));
+Notification.newInstance({style:{position:"fixed",top:"60%",display:"flex",justifyContent: "center",width:"100%",zIndex:1001}}, n => (notification = n));
 
 function notice(content, type, duration, onClose, mask) {
   notification.notice({

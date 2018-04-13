@@ -5,6 +5,7 @@ import styles from "./style.scss";
 import getImgSrc from "../../util/getImgSrc";
 import throttle from "../../util/throttle";
 import Modal from "../Modal";
+import Toast from "../Toast";
 
 class ShopMenu extends Component {
   constructor(props) {
@@ -160,7 +161,8 @@ class ShopMenu extends Component {
                               onClick={
                                 cart[val.virtual_food_id].length > 1
                                   ? () => {
-                                      console.log(1111111222222);
+                                    console.log(Toast)
+                                      Toast.info("多规格商品请去购物车删除",2);
                                     }
                                   : this.addCart.bind(this, val, -1)
                               }

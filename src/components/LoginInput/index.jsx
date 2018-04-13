@@ -74,19 +74,17 @@ class LoginInput extends React.Component {
         Toast.info("手机号格式错误错误");
       } else if (!message) {
         Toast.info("请输入验证码");
+      }else{
+        submit(mobile, message, loginByMessage);
       }
     } else {
       if (!username) {
         Toast.info("请输入用户名");
       } else if (!password) {
         Toast.info("请输入密码");
+      }else{
+        submit(username, password, loginByMessage);
       }
-    }
-
-    if (loginByMessage) {
-      submit(mobile, message, loginByMessage);
-    } else {
-      submit(username, password, loginByMessage);
     }
   }
   render() {

@@ -1,10 +1,13 @@
 :global {
+  
   .toast {
+    // position: relative;
     display: flex;
     justify-content: center;
     padding: 0 50px;
     color: #fff;
     font-size: 28px;
+    // z-index: 1001;
     .text {
       min-width: 150px;
       border-radius: 10px;
