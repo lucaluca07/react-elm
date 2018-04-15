@@ -3,8 +3,8 @@ import CSSModules from "react-css-modules";
 import styles from "./style.scss";
 import classNames from "classnames"
 
-const Item = ({address}) => (
-  <div styleName="item">
+const Item = ({address,onClick}) => (
+  <div styleName="item" onClick={() => {onClick&&onClick(address)}}>
     <div styleName="info">
       <p>
         <span styleName="username">{address.name}</span>

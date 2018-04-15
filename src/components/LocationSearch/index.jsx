@@ -4,9 +4,9 @@ import SearchComponent from "../SearchComponent";
 import styles from "./style.scss";
 
 class LocationSearch extends Component {
-  handleClick(address, latitude, longitude) {
+  handleClick(name, latitude, longitude, address,geohash) {
     const onClick = this.props.onClick;
-    onClick && onClick(address, latitude, longitude);
+    onClick && onClick(name, latitude, longitude,address,geohash);
   }
   render() {
     const locationList = this.props.locationList;
@@ -25,7 +25,9 @@ class LocationSearch extends Component {
                 this,
                 val.name,
                 val.latitude,
-                val.longitude
+                val.longitude,
+                val.address,
+                val.geohash
               )}
               styleName="location-item"
               key={index}

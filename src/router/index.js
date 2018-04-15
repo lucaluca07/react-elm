@@ -14,6 +14,7 @@ import Login from "../containers/Login";
 import User from "../containers/User"
 import Address from "../containers/Address"
 import AddAddress from "../containers/AddAddress"
+import SearchAddress from "../containers/SearchAddress"
 
 export default class RouterMap extends React.Component {
   render() {
@@ -37,6 +38,8 @@ export default class RouterMap extends React.Component {
               <Route path="/user" component={User} />
               <Route exact path="/my/address" component={Address} />
               <Route exact path="/my/address/add" component={AddAddress} />
+              <Route exact path="/my/address/search" component={SearchAddress} />
+              <Route exact path="/my/address/edit" component={AddAddress} />
               <Footer />
             </Switch>
           </div>

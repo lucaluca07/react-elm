@@ -95,3 +95,58 @@ export const getAddresses = async (user_id) => {
     return e;
   }
 };
+
+export const tempAddress = (address) => {
+  return {
+    type:actionTypes.TEMP_ADDRESS,
+    address:address
+  }
+}
+
+export const addAddress = async(user_id, address) => {
+  try {
+    const {result} = await UserModel.addAddress(user_id, address);
+    return {
+      type: actionTypes.ADD_ADDRESS,
+      address:result
+    };
+  } catch (e) {
+    return e;
+  }
+}
+
+export const modifyAddress = async(user_id, id, address) => {
+  try {
+    const result = await UserModel.modifyAddress(user_id, id, address);
+    return {
+      type: actionTypes.MODIFY_ADDRESS,
+      address:result
+    };
+  } catch (e) {
+    return e;
+  }
+}
+
+export const deleteAddress = async(user_id, id) => {
+  try {
+    const result = await UserModel.deleteAddress(user_id, id);
+    return {
+      type: actionTypes.DELETE_ADDRESS,
+      address:result
+    };
+  } catch (e) {
+    return e;
+  }
+}
+
+export const getOrder = async(user_id,limit,offset) => {
+  try {
+    const result = await UserModel.getOrder(user_id, limit, offset);
+    return {
+      type: actionTypes.GET_ORDER,
+      order:result
+    };
+  } catch (e) {
+    return e;
+  }
+}

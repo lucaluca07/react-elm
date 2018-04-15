@@ -196,7 +196,7 @@ router.post("/api/login", async ctx => {
     const userid = result.user_id;
     ctx.cookies.set("userid", userid, {
       path: "/", // 写cookie所在的路径
-      maxAge: 60 * 60 * 1000, // cookie有效时长
+      maxAge: 24 * 60 * 60 * 1000, // cookie有效时长
       httpOnly: false, // 是否只用于http请求中获取
       overwrite: false // 是否允许重写
     });
@@ -249,11 +249,66 @@ router.post("/api/user/:user_id/avatar", async ( ctx ) => {
 });
 let addresses = require("./user/address")
 router.get("/api/user/:user_id/addresses", async ( ctx ) => {
-  // 上传文件请求处理
   const { user_id } = ctx.params;
   console.log("user_id::::",user_id)
   ctx.body = addresses;
 });
+router.post("/api/user/:user_id/addresses", async ( ctx ) => {
+  let postData = await parsePostData(ctx);
+  const { user_id } = ctx.params;
+  const {sex,address,name,phone,tag_type,geohash,address_detail} = postData
+  let data = {
+    "address": address,
+    "address_detail": address_detail,
+    "city_id": 1,
+    "city_name": "",
+    "created_at": new Date().valueOf(),
+    "district_id": 5255,
+    "entry_id": 0,
+    "geohash": 0,
+    "id": new Date().valueOf() + 1,
+    "is_valid": 1,
+    "name": name,
+    "phone": phone,
+    "phone_bk": "",
+    "poi_type": 0,
+    "sex": 0,
+    "st_geohash": geohash,
+    "tag": tag_type===1?"家":(tag_type===2?"学校":(tag_type===3?"公司":"")),
+    "tag_type": tag_type,
+    "user_id": user_id
+  }
+  addresses.push(data)
+  
+  ctx.body = addresses;
+});
+router.put("/api/user/:user_id/addresses/:id", async ( ctx ) => {
+  let postData = await parsePostData(ctx);
+  const { user_id,id } = ctx.params;
+  addresses = addresses.map(val => {
+    if(val.id == id){
+      return {...val,...postData}
+    }else{
+      return val
+    }
+  })
+  console.log("put:::",id)
+  console.log(addresses)
+  ctx.body = addresses;
+  });
+  router.delete("/api/user/:user_id/addresses/:id", async ( ctx ) => {
+      const { user_id,id } = ctx.params;
+      console.log("delete::::",id)
+      const result = addresses.filter(val => val.id != id)
+      addresses = result
+      console.log(addresses)
+      ctx.body = addresses;
+    });
+  const order = require("./order/order")
+  router.get("/api/user/:user_id/order",async ( ctx ) => {
+    const { user_id } = ctx.params
+    ctx.body = order;
+  })
 // 加载路由中间件
 app.use(router.routes()).use(router.allowedMethods());
 

@@ -1,7 +1,17 @@
 import React, { Component } from "react";
+import {connect} from "react-redux"
 import Header from "../../components/Header";
+import {getOrder,getCurrentUser} from "../../actions/userinfo"
 
-export default class Order extends Component {
+class Order extends Component {
+  async componentDidMount(){
+    const {dispatch} = this.props
+    dispatch(await getCurrentUser())
+    const id = this.props.id
+    if(!!id){
+      dispatch(await(getOrder(id,8,0)))
+    }
+  }
   render() {
     return (
       <div>
@@ -10,3 +20,11 @@ export default class Order extends Component {
     );
   }
 }
+const mapStateToProps = (state) => {
+  const {id, order} = state.userinfo
+  return {
+    id,
+    order
+  }
+} 
+export default connect(mapStateToProps)(Order)

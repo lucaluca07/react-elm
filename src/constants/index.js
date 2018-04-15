@@ -42,3 +42,5 @@ export const GET_CAPTCHAS = "GET_CAPTCHAS";
 export const GET_CURRENT_USER = "GET_CURRENT_USER";
 export const GET_USERINFO = "GET_USERINFO";
 export const UPLOAD_AVATAR = "UPLOAD_AVATAR";
+export const TEMP_ADDRESS = "TEMP_ADDRESS"
+export const GET_ORDER = "GET_ORDER"

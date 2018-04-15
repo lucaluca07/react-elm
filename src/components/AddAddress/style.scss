@@ -1,16 +1,72 @@
-.add{
+.content {
+    padding-left: 30px;
     background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #3190e8;
-    line-height: 100px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    border-top:1px solid #eee;/*no*/
-    font-size: 32px;
-    i:before{
-        font-size: 45px;
+    color: #333;
+    font-size: 28px;
+    .frombolack {
+        display: flex;
+        border-bottom: 1px solid #eee;
+        /*no*/
+        .label-warp {
+            width: 130px;
+            padding: 28px 0;
+            font-weight: 700;
+        }
+    }
+    .input-warp {
+        flex: 1;
+        padding-right: 30px;
+        input {
+            padding: 28px 20px 28px 0;
+            width: 100%;
+        }
+        textarea {
+            padding: 28px 20px 28px 0;
+            width: 100%;
+            resize: none;
+            line-height: 1.2;
+        }
+    }
+    .location {
+        display: flex; 
+        flex:1;
+        justify-content: space-between;
+        input {
+            flex: 1;
+        }
+        i {
+            padding: 28px 20px
+        }
+    }
+    .tag-warp {
+        padding: 20px 0;
+        color: #666;
+        .tag {
+            display: inline-block;
+            width: 134px;
+            height: 56px;
+            text-align: center;
+            line-height: 56px;
+            margin-right: 20px;
+            border: 1px solid #eee;
+            /*no*/
+            border-radius: 5px;
+        }
+        .activity {
+            color: #2395ff;
+            background: #eef7ff;
+            border-color: rgba(35, 149, 255, .18);
+        }
+    }
+    .submit {
+        font-size: 32px;
+        font-weight: 700;
+        padding: 20px 0;
+        color: #fff;
+        margin: 30px 0;
+        width: 690px;
+        border: none;
+        border-radius: 10px;
+        background: #00d762;
     }
 }

@@ -28,11 +28,11 @@ class Login extends Component {
   componentDidUpdate() {
     const { id, history } = this.props;
     const router = this.props.match.params.redirect;
-    console.log("router",router)
     if (!!id) {
       if (router) {
         //替换router参数中的 && 为 /
-        const url = router.replace("&&", "/");
+        const url = router.replace(/&&/g, "/");
+        console.log(url)
         history.push("/" + url);
       } else {
         history.push("/my");

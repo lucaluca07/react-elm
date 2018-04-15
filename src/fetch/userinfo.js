@@ -45,10 +45,45 @@ let UserModel = {
   async getAddresses(user_id){
     const result = await Http.get(`/api/user/${user_id}/addresses`);
     return result;
+  },
+  async addAddress(user_id,data){
+    const result = await Http.post(`/api/user/${user_id}/addresses`, {
+      body: data
+    });
+    return result;
+  },
+  async modifyAddress(user_id, data, id) {
+    let result ;
+    try {
+      const response = await fetch(`/api/user/${user_id}/addresses/${id}`, {
+        method: "PUT",
+        credentials: "include",
+        body: JSON.stringify(data)
+      });
+      result = await response.json()
+    } catch (error) {
+      throw new Error(error);
+    }
+    return result;
+  },
+  async deleteAddress(user_id, id) {
+    let result ;
+    try {
+      const response = await fetch(`/api/user/${user_id}/addresses/${id}`, {
+        method: "DELETE",
+        credentials: "include"
+      });
+      result = await response.json()
+    } catch (error) {
+      throw new Error(error);
+    }
+    return result;
+  },
+  async getOrder(user_id,limit,offset){
+    const {result} = await Http.get(`/api/user/${user_id}/order?limit=${limit}&offset=${offset}`);
+    return result;
   }
 };
-
-
 
 
 export default UserModel;
