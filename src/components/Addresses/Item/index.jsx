@@ -9,7 +9,7 @@ const Item = ({address,onClick}) => (
       <p>
         <span styleName="username">{address.name}</span>
         <span styleName="sex">{address.sex==0?"":(address.sex==1?"先生":"女士")}</span>
-        <span styleName="mobile">17321009807</span>
+        <span styleName="mobile">{address.phone}</span>
       </p>
       <p>
         {!!address.tag&&<span styleName={classNames("tag",{"company":address.tag_type==3},{"home":address.tag_type==1})}>{address.tag}</span>}

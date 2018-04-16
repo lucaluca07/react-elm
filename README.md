@@ -86,3 +86,10 @@ onTouchStart的执行顺序在onClick事件之前,执行顺序onTouchStart > onT
 
 <img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/shop-detail.png" width="365" height="619"/> <img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/shop-detail.gif" width="365" height="619"/>
 
+### 登陆页面
+
+<img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/login.png" width="365" height="619"/> <img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/login1.png" width="365" height="619"/>
+
+### 收货地址页
+
+<img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/address.png" width="365" height="619"/> <img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/address1.png" width="365" height="619"/>
