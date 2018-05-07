@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import {connect} from "react-redux"
 import Header from "../../components/Header";
 import {getOrder,getCurrentUser} from "../../actions/userinfo"
+import OrderList from "../../components/OrderList"
 
 class Order extends Component {
   async componentDidMount(){
@@ -13,9 +14,11 @@ class Order extends Component {
     }
   }
   render() {
+    const {order} = this.props
     return (
       <div>
         <Header title="订单" />
+        {!!order&&<OrderList data={order}/>}
       </div>
     );
   }
