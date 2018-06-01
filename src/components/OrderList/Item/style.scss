@@ -1,0 +1,33 @@
+.item{
+    margin: 20px 0;
+    color:#333;
+    .info{
+        display: flex;
+        .order-avatar{
+            flex:0 0 65px;
+            margin-right: 20px;
+        }
+        .wrap{
+            .name-wrap{
+                display: flex;
+                justify-content: space-between;
+                .shop-name{
+                    max-width:10em;
+                    overflow:hidden;
+                    text-overflow:ellipsis;
+                    font-size: 30px;
+                    white-space:nowrap;
+                }
+                .status_bar{
+                    color:#333;
+                }
+            }
+            .time{
+                color:#999;
+            }
+        }
+    }
+    .btn-warp{
+        padding: 10px;
+    }
+}
