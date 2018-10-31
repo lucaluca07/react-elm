@@ -11,6 +11,7 @@ class Order extends Component {
     const id = this.props.id
     if(!!id){
       dispatch(await(getOrder(id,8,0)))
+      console.log('order', this.props.order)
     }
   }
   render() {
@@ -18,6 +19,8 @@ class Order extends Component {
     return (
       <div>
         <Header title="订单列表" />
+        <OrderList
+        data={order}/>
       </div>
     );
   }
@@ -28,5 +31,5 @@ const mapStateToProps = (state) => {
     id,
     order
   }
-} 
+}
 export default connect(mapStateToProps)(Order)

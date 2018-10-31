@@ -1,33 +1,65 @@
 .item{
-    margin: 20px 0;
+    margin: 20px 32px;
     color:#333;
     .info{
         display: flex;
         .order-avatar{
             flex:0 0 65px;
-            margin-right: 20px;
+            margin: 4px 20px 0 0;
+            img{
+                height: 60px;
+                width: 60px;
+                border-radius: 4px;
+            }
         }
         .wrap{
+            border-bottom: 1px solid #eee;
+            padding-bottom: 30px;
+            flex: 1;
             .name-wrap{
                 display: flex;
-                justify-content: space-between;
                 .shop-name{
-                    max-width:10em;
                     overflow:hidden;
                     text-overflow:ellipsis;
                     font-size: 30px;
                     white-space:nowrap;
+                    flex:1;
+                    a{
+                        color: #333;
+                    }
                 }
                 .status_bar{
+                    margin-left: 20px;
                     color:#333;
                 }
             }
             .time{
                 color:#999;
             }
+            .goods-wrap{
+                display: flex;
+                justify-content: space-between;
+                .goods{
+                    max-width: 500px;
+                    overflow:hidden;
+                    text-overflow:ellipsis;
+                    white-space:nowrap;
+                }
+                .total-price{
+                    font-weight: bold;
+                    color: #333;
+                }
+            }
+            .btn-wrap{
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 20px;
+                a{
+                    padding: 10px 16px;
+                    border: 1px solid #eee;
+                    color: #333;
+                }
+            }
         }
-    }
-    .btn-warp{
-        padding: 10px;
     }
 }

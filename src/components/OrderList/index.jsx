@@ -9,7 +9,7 @@ class OrderList extends Component {
     return (
         <ul styleName="wrap">
             {data.map((val) => (
-                <Item key={val.id} data={val}/>
+                <Item key={val.unique_id} data={val}/>
             ))}
         </ul>
     );
