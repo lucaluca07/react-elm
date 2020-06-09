@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  height: 88px;
+  line-height: 88px;
+  color: #fff;
+  width: 100%;
+  background: linear-gradient(to right, #0af, #0085ff);
+  .header-back {
+    flex: 0 0 60px;
+    padding: 0 20px;
+    .back:before {
+      font-size: 40px;
+    }
+  }
+  .header-title {
+    font-size: 35px;
+    flex: 1;
+    text-align: center;
+  }
+  .add-address {
+    font-size: 26px;
+    flex: 0 0 130px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,68 @@
+.search-tips {
+  .search-word {
+    padding: 20px 32px;
+    color: #999;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.2;
+    .icon-sousuoxiao {
+      margin-right: 28px;
+    }
+    .keyword {
+      color: #333;
+    }
+  }
+  .tips {
+    .shop-tips {
+      display: flex;
+      align-items: center;
+      color: #333;
+      padding: 0 32px;
+      height: 100px;
+      .shop-img {
+        height: 48px;
+        width: 48px;
+        margin-right: 32px;
+      }
+      .shop-info {
+        display: flex;
+        flex: 1;
+        height: 100px;
+        line-height: 100px;
+        justify-content: space-between;
+        border-bottom: 1px solid #999; /*no*/
+        .shop-name {
+          font-size: 28px;
+          display: flex;
+          align-items: center;
+          .tag {
+            font-size: 24px;
+            line-height: 1.2;
+            margin: 0 5px;
+            color:#fff;
+          }
+        }
+      }
+    }
+    .word-tips {
+      display: flex;
+      align-items: center;
+      height: 100px;
+      padding: 0 32px;
+      color: #333;
+      .icon-sousuoxiao {
+        margin-right: 28px;
+      }
+      .word {
+        flex: 1;
+        font-size: 28px;
+        height: 100px;
+        line-height: 100px;
+        border-bottom: 1px solid #999; /*no*/
+        span {
+          color: #999;
+        }
+      }
+    }
+  }
+}

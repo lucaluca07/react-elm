@@ -1,0 +1,35 @@
+.categories {
+  width: 100%;
+  background: linear-gradient(to right, #0af, #0085ff);
+  height: 80px;
+  display: flex;
+  color: #fff;
+  font-size: 26px;
+  .category-list {
+    // display: flex;
+    // flex-direction: row ;
+    flex: 1;
+    overflow: auto;
+    padding: 0 0 15px 30px;
+    line-height: 1.2;
+    white-space: nowrap;
+    .category-item {
+      padding: 24px 0 12px;
+      display: inline-block;
+      margin-right: 50px;
+      opacity: 0.7;
+      line-height: 1;
+      font-weight: 300;
+    }
+    .activity {
+      opacity: 1 !important;
+      font-weight: 700;
+      border-bottom: 3px solid #fff;
+    }
+  }
+  .show-more-btn {
+    flex: 0 0 90px;
+    text-align: center;
+    line-height: 80px;
+  }
+}

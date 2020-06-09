@@ -1,0 +1,46 @@
+.item {
+  background: #fff;
+  display: flex;
+  color: #666;
+  padding: 30px;
+  font-size: 28px;
+  align-items: center;
+  border-bottom:1px solid #eee;/*no*/
+  .info {
+    flex: 1;
+    font-size: 32px;
+    .username {
+      font-weight: 700;
+      color: #333;
+      font-size: 32px;
+    }
+    .sex {
+      font-size: 32px;
+    }
+    .mobile {
+      font-size: 32px;
+    }
+    .tag {
+      font-size: 24px;
+      display: inline-block;
+      transform: scale(0.9);
+    }
+    .company{
+        color:#3190e8;
+        border: 1px solid #3190e8; /*no*/
+    }
+    .home{
+        color:#ff5722;
+        border: 1px solid #ff5722; /*no*/
+    }
+    .address {
+      font-size: 28px;
+    }
+  }
+
+  .edit {
+    i:before {
+      font-size: 40px !important;
+    }
+  }
+}

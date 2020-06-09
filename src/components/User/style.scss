@@ -1,0 +1,57 @@
+.user {
+  .avatar-upload {
+    position: relative;
+    .avatar-file {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 2;
+    }
+    .avatar-warp {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 28px;
+      background: #fff;
+      padding: 20px 28px;
+      color:#333;
+      .avatar-box {
+        display: flex;
+        align-items: center;
+        .head-icon {
+          height: 96px;
+          width: 96px;
+          border-radius: 50%;
+          overflow: hidden;
+          background: #fff;
+          color: #e1e1e7;
+        }
+        .avatar {
+          height: 96px;
+          width: 96px;
+          border-radius: 50%;
+          overflow: hidden;
+          background: #fff;
+          img {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+  .logout{
+      width: 100%;
+      background: #fff;
+      border:none;
+      margin: 40px 0;
+      padding: 28px 0;
+      text-align: center;
+      font-size: 28px;
+      color:#ff5339;
+      font-weight: 700;
+  }
+}

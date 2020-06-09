@@ -1,0 +1,41 @@
+.login{
+    padding: 0 75px;
+    color:#333;
+    .message-login{
+        position: relative;
+        .message-btn{
+            position: absolute;
+            right: 8px;
+            top:36px;
+            height: 84px;
+            line-height: 84px;
+            border: none;
+            background: #fff;
+            font-size: 26px;
+        }
+    }
+    .login-input{
+        padding-left: 4%;
+        border:1px solid #eee;/*no*/ 
+        height: 88px;
+        line-height: 88px;
+        border-radius: 10px;
+        width: 96%;
+        margin-top: 32px;
+        font-size: 26px;
+    }
+    input:focus{
+        border-color: #0af;
+    }
+    .login-btn{
+        height: 88px;
+        line-height: 88px;
+        width: 100%;
+        background: #4cd96f;
+        margin-top: 60px;
+        border: none;
+        border-radius: 10px;
+        font-size: 32px;
+        color:#fff;
+    }
+}

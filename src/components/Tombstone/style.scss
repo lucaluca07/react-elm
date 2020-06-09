@@ -1,0 +1,219 @@
+.foodentry-tombstone {
+  display: flex;
+  height: 354px;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  background: #fff;
+  .foodentry-item {
+    box-sizing: border-box;
+    background-color: white;
+    flex: 0 0 20%;
+    height: 128px;
+    margin-top: 22px;
+    .stone-container {
+      height: 90px;
+      width: 90px;
+      border-radius: 50%;
+      background: #efefef;
+      margin: 0 auto;
+    }
+    .stone-title {
+      height: 20px;
+      width: 80px;
+      margin: 10px auto 0;
+      background: #efefef;
+    }
+  }
+}
+
+.shop-item-stone {
+  display: flex;
+  border-bottom: 1px solid #fdfdfd;
+  padding: 20px;
+  background: #fff;
+  .img-stone {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    background: #efefef;
+  }
+  .info-stone {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    .item-stone-top {
+      display: flex;
+      justify-content: space-between;
+      .top-left {
+        height: 30px;
+        width: 380px;
+        background: #efefef;
+      }
+      .top-right {
+        height: 20px;
+        width: 90px;
+        background: #efefef;
+      }
+    }
+    .item-stone-center {
+      display: flex;
+      justify-content: space-between;
+      .center-left {
+        height: 20px;
+        width: 280px;
+        background: #efefef;
+      }
+      .center-right {
+        height: 20px;
+        width: 140px;
+        background: #efefef;
+      }
+    }
+    .item-stone-bottom {
+      display: flex;
+      justify-content: space-between;
+      .bottom-left {
+        height: 20px;
+        width: 260px;
+        background: #efefef;
+      }
+      .bottom-right {
+        height: 20px;
+        width: 160px;
+        background: #efefef;
+      }
+    }
+  }
+}
+
+$gary1: #efeeec;
+$gary2: #f7f6f5;
+.shop-detail-tombstone {
+  min-height: 100vh;
+  position: relative;
+  background: #fff;
+  .shop-header {
+    .shop-header-top {
+      height: 120px;
+      background: $gary1;
+    }
+    .shop-header-center {
+      position: relative;
+      height: 110px;
+      width: 420px;
+      margin: 50px auto 0;
+      .shop-img {
+        position: absolute;
+        height: 110px;
+        width: 110px;
+        border-radius: 5px;
+        top: -120px;
+        left: 50%;
+        margin-left: -55px;
+        background: $gary2;
+      }
+      div:nth-child(2) {
+        width: 420px;
+        height: 40px;
+        background: $gary1;
+      }
+      div:nth-child(3) {
+        width: 420px;
+        height: 20px;
+        background: $gary1;
+        margin-top: 15px;
+      }
+      div:nth-child(4) {
+        width: 420px;
+        height: 20px;
+        margin-top: 15px;
+        background: $gary2;
+      }
+    }
+    .shop-header-bottom {
+      margin: 20px auto;
+      width: 600px;
+      border: 1px solid $gary1;
+      padding: 20px 40px;
+      div:nth-child(1) {
+        height: 30px;
+        background: $gary1;
+      }
+    }
+  }
+  .shop-tab {
+    display: flex;
+    margin: 80px 0 40px;
+    justify-content: space-around;
+    li {
+      width: 60px;
+      height: 30px;
+      background: $gary1;
+    }
+  }
+  .menu-view {
+    display: flex;
+    border-top: 1px solid $gary1;
+    /*no*/
+    .main-menu {
+      width: 170px;
+      li:nth-child(1) {
+        background: #fff;
+      }
+      li {
+        padding: 35px 40px;
+        background: $gary2;
+        div {
+          width: 90px;
+          height: 30px;
+          background: $gary1;
+        }
+      }
+    }
+    .sub-menu {
+      flex: 1;
+      display: flex;
+      margin-right: 15px;
+      .sub-list {
+        flex: 1;
+        .sub-item {
+          display: flex;
+          height: 120px;
+          padding: 10px 20px 30px;
+          .food-img {
+            height: 120px;
+            width: 120px;
+            background: $gary1;
+            margin-right: 20px;
+          }
+          .food-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            div:nth-child(1) {
+              height: 26px;
+              background: $gary1;
+            }
+            div:nth-child(2) {
+              height: 20px;
+              background: $gary1;
+            }
+            div:nth-child(3) {
+              height: 35px;
+              background: $gary1;
+            }
+          }
+        }
+      }
+    }
+  }
+  .cart {
+    height: 180px;
+    background: $gary2;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+}

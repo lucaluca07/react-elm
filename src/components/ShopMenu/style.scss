@@ -1,0 +1,202 @@
+$gary1: #efeeec;
+$gary2: #f7f6f5;
+.shop-menu-wrap {
+  border-top: 1px solid $gary1;
+  /*no*/
+  -webkit-text-size-adjust: none;
+  color: #333;
+  flex: 1;
+  .specpanle {
+    background: #fff;
+    width: 600px;
+    border-radius: 10px;
+    font-size: 26px;
+    color: #666;
+    .item-activity {
+      border-color: #3199e8 !important;
+      background: #f6fbff;
+      color: #3199e8;
+    }
+    .specpanle-title {
+      text-align: center;
+      font-size: 32px;
+      padding: 20px;
+    }
+    .specpanle-specs {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 20px;
+      .spec-item {
+        display: inline-block;
+        height: 44px;
+        border-radius: 22px;
+        line-height: 44px;
+        text-align: center;
+        border: 1px solid #eee;/*no*/
+        padding: 0 20px;
+        margin: 13px 30px 0 0;
+      }
+    }
+    .attr-wrap {
+      padding: 0 20px;
+      .spec-attr-name {
+        margin-top: 15px;
+      }
+      .spec-attrs {
+        display: flex;
+        flex-wrap: wrap;
+        .spec-attr-item {
+          display: inline-block;
+          height: 44px;
+          border-radius: 22px;
+          line-height: 44px;
+          text-align: center;
+          border: 1px solid #eee;/*no*/
+          padding: 0 20px;
+          margin: 13px 30px 0 0;
+        }
+      }
+    }
+    .specpanle-footer {
+      height: 65px;
+      padding: 25px 30px;
+      margin-top: 20px;
+      border-top: 1px solid #eee; /*no*/
+      display: flex;
+      justify-content: space-between;
+      line-height: 65px;
+      background: #f9f9f9;
+      .price {
+        font-size: 40px;
+        color: #f60000;
+      }
+      .submit-btn {
+        background: #3199e8;
+        padding: 0 25px;
+        border-radius: 6px;
+        font-size: 28px;
+        color: #fff;
+      }
+    }
+  }
+  .main {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+  }
+  .shop-main-menu {
+    width: 170px;
+    overflow: auto;
+    .activity-menu {
+      background: #fff !important;
+    }
+    .main-menu-item {
+      background: $gary2;
+      border-bottom: 1px solid #e8e8e8;
+      /*no*/
+      padding: 35px 15px;
+      line-height: 1.2;
+    }
+  }
+  .shop-sub-menu {
+    flex: 1;
+    padding-right: 15px;
+    overflow: auto;
+    background: #fff;
+    .shop-sub-list {
+      .title{
+        margin: 10px 0;
+      }
+      .name {
+        font-weight: 700;
+        margin-right: 5px;
+      }
+      .shop-sub-item {
+        display: flex;
+        height: 152px;
+        padding: 10px 20px 40px;
+        .food-img {
+          height: 152px;
+          width: 152px;
+          background: $gary1;
+          margin-right: 20px;
+          img {
+            height: 152px;
+            width: 152px;
+          }
+        }
+        .food-detail {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          .food-name {
+            font-size: 28px;
+            font-weight: 700;
+          }
+          .description {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: #999;
+            max-width: 360px; // display: inline-block;
+            transform: scale(0.8);
+            margin-left: -38px;
+          }
+          .sales {
+            flex: 1;
+            margin: 6px 0;
+            display: inline-block;
+            transform: scale(0.85);
+            margin-left: -30px;
+          }
+          .price-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .price {
+              font-size: 28px;
+              color: #f60;
+            }
+            .btn-warp {
+              display: flex;
+              align-items: center;
+            }
+            .add-cart-btn,
+            .decrease-cart-btn {
+              display: inline-block;
+              height: 38px;
+              width: 40px;
+              line-height: 40px;
+              text-align: center;
+              font-size: 32px;
+              border-radius: 50%;
+              border: 1px solid #0af; /*no*/
+            }
+            .choose-goods-btn {
+              display: inline-block;
+              height: 42px;
+              border-radius: 21px;
+              line-height: 42px;
+              text-align: center;
+              border: 1px solid #0af;
+              background: #0af;
+              color: #fff;
+              padding: 0 20px;
+            }
+            .goods-num {
+              display: inline-block;
+              width: 50px;
+              text-align: center;
+              line-height: 42px;
+              font-size: 28px;
+            }
+            .add-cart-btn {
+              background: #0af;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

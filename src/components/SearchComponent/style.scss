@@ -1,0 +1,25 @@
+.search-wrap {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #f4f4f4;
+  color: #666;
+  flex: 1;
+  input {
+    flex: 1;
+    border: none;
+    margin-left: 15px;
+    background: #f4f4f4;
+    color: #666;
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  .clear-input {
+    color: rgb(29, 19, 122);
+  }
+  .clear-btn {
+    height: 40px;
+    width: 40px;
+  }
+}

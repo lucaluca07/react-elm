@@ -1,0 +1,21 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.loadding {
+  padding: 40px;
+  text-align: center;
+  color: #0af;
+  .loadding-animate{
+    display: inline-block;
+    animation: rotate infinite 0.5s linear;
+  }
+}
+
+:global{ .icon-loading:before {
+  font-size: 40px;
+}}

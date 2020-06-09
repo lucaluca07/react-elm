@@ -1,0 +1,27 @@
+.activity-item {
+  padding: 24px 0 0 30px;
+  background: linear-gradient(0deg, #f4f4f4 5%, #fafafa 95%);
+  position: relative;
+  color: #333;
+  height: 280px;
+  flex: 1;
+  .item-title {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  .item-subtitle {
+    font-size: 28px;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  .item-describe {
+    font-size: 24px;
+  }
+  .item-img {
+    position: absolute;
+    width: 240px;
+    height: 160px;
+    bottom: -10px;
+    right: 0;
+  }
+}

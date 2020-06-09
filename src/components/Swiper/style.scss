@@ -1,0 +1,45 @@
+:global .slider-decorator-0,
+:global .slider-decorator-1 {
+  display: none;
+}
+:global .slider-decorator-2 {
+  ul {
+    top: 20px !important;
+    button {
+      font-size: 32px !important;
+      padding: 20px 10px !important;
+    }
+  }
+}
+.carousel-item {
+  background: #fff;
+  display: flex;
+  height: 354px;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  .item-child {
+    box-sizing: border-box;
+    background-color: white;
+    flex: 0 0 20%;
+    height: 128px;
+    margin-top: 22px;
+    .container {
+      height: 90px;
+      width: 90px;
+      border-radius: 50%;
+      margin: 0 auto;
+      img {
+        height: 90px;
+        width: 90px;
+        border-radius: 50%;
+      }
+    }
+    .title {
+      height: 20px;
+      text-align: center;
+      color: #666;
+      font-size: 26px;
+      margin: 10px auto 0;
+    }
+  }
+}

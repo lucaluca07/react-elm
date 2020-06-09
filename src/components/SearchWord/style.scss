@@ -1,0 +1,22 @@
+.search-words {
+  color: #666;
+  line-height: 1.2;
+  background: #fff;
+  .title {
+    font-size: 32px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .word-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 25px 25px;
+    .word {
+      padding: 15px 20px;
+      margin: 25px 25px 0 0;
+      background: #f7f7f7;
+      font-size: 26px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.item {
+  color: #333;
+  a {
+    color: #333;
+    text-decoration: none;
+  }
+  .title {
+    background: #f5f5f5;
+    font-size: 24px;
+    padding: 32px 28px 14px;
+  }
+  .warp {
+    padding: 28px;
+    display: flex;
+    justify-content: space-between;
+    background:#fff;
+    border-top:1px solid #f5f5f5;/*no*/
+    b{
+        font-size: 28px;
+    }
+  }
+}

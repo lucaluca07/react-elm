@@ -1,0 +1,46 @@
+:global {
+  .icon-touxiang {
+    font-size: 96px;
+  }
+  .icon-shouji {
+    font-size: 26px;
+  }
+}
+.userinfo {
+  background: linear-gradient(to right, #0af, #0085ff);
+  color: #fff;
+  padding: 50px 30px;
+  display: flex;
+  line-height: 1.2;
+  .head-icon {
+    height: 96px;
+    width: 96px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #fff;
+    color: #e1e1e7;
+  }
+  .avatar {
+    height: 96px;
+    width: 96px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #fff;
+    img {
+      height: 96px;
+      width: 96px;
+    }
+  }
+  .user {
+    flex: 1;
+    margin-left: 36px;
+    .name {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+  }
+  .user-btn {
+    line-height: 96px;
+  }
+}

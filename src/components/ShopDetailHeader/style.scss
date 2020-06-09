@@ -1,0 +1,117 @@
+.shop-detail-header {
+  color: #333;
+  background: #fff;
+  .header {
+    height: 120px;
+    padding-left: 30px;
+    background: #3199e8;
+    line-height: 120px;
+    font-weight: 700;
+    color:#fff;
+  }
+  .shop-header-center {
+    position: relative;
+    margin: 50px auto 0;
+    padding: 10px 30px;
+    .shop-img {
+      position: absolute;
+      height: 110px;
+      width: 110px;
+      border-radius: 5px;
+      top: -120px;
+      left: 50%;
+      margin-left: -55px;
+      background: #fff;
+      overflow: hidden;
+      img{
+        height: 110px;
+        width: 110px;
+      }
+    }
+    .shop-name {
+      text-align: center;
+      font-size: 42px;
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      .name-text {
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 500px;
+      }
+    }
+    .shop-info {
+      display: flex;
+      justify-content: center;
+      margin-top: 13px;
+    }
+    .shop-notice {
+      padding: 20px 125px 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #666;
+    }
+  }
+  .activity-btn {
+    margin: 20px 48px 16px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 16px;
+    border: 1px solid #eee;
+    /*no*/
+  }
+  .shopinfo-modal {
+    padding: 50px;
+    background: #fff;
+    border-radius: 10px;
+    width: 600px;
+    color: #333;
+    .title {
+      font-size: 40px;
+      text-align: center;
+    }
+    .info-list {
+      display: flex;
+      text-align: center;
+      justify-content: space-between;
+      margin-top: 38px;
+      .item {
+        h3 {
+          font-size: 30px;
+          margin-bottom: 12px;
+        }
+        p {
+          color: #999;
+        }
+      }
+    }
+    .modal-notice {
+      margin-top: 25px;
+      .title {
+        color: #999;
+        text-align: center;
+        font-size: 24px;
+      }
+      .content {
+        margin-top: 15px;
+        color: #666;
+      }
+    }
+  }
+  .shop-activity-item{
+    height: 35px;
+    padding:  0 52px;
+    margin-bottom: 23px;
+    .activity-icon{
+      color:#fff;
+      margin:0 10px 2px 0;
+      
+    }
+    .activity-descripition{
+      font-size: 26px;
+    }
+  }
+}
