@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import CSSModules from 'react-css-modules';
+
 import RatingStar from '../RatingStar'
 import styles from './style.scss';
 import InfiniteScroll from "../ScrollList";
@@ -32,14 +32,14 @@ class RatingList extends Component {
         const loadNext = this.props.loadNext;
         console.log("rating", hasMore)
         return (
-            <div styleName="rating-list">
-                <ul styleName="rating-tag-list">
-                    <li styleName="rating-tag activity-tag">全部</li>
-                    <li styleName="rating-tag">满意</li>
-                    <li styleName="rating-tag">不满意</li>
-                    <li styleName="rating-tag">有图</li>
+            <div className="rating-list">
+                <ul className="rating-tag-list">
+                    <li className="rating-tag activity-tag">全部</li>
+                    <li className="rating-tag">满意</li>
+                    <li className="rating-tag">不满意</li>
+                    <li className="rating-tag">有图</li>
                 </ul>
-                <div styleName="rating-comment-list">
+                <div className="rating-comment-list">
                     {data.length > 0 && <InfiniteScroll
                         loadNext={loadNext}
                         threshold={100}
@@ -47,31 +47,31 @@ class RatingList extends Component {
                         spinLoader={spinLoader}>
 
                         {data.map((val, index) => (
-                            <div key={index} styleName="rating-comment-item">
-                                <div styleName="rating-comment-header"></div>
-                                <div styleName="rating-comment-main">
-                                    <div styleName="rating-comment-user">
+                            <div key={index} className="rating-comment-item">
+                                <div className="rating-comment-header"></div>
+                                <div className="rating-comment-main">
+                                    <div className="rating-comment-user">
                                         <span>{val.username}</span>
-                                        <span styleName="rating-date">{val.rated_at}</span>
+                                        <span className="rating-date">{val.rated_at}</span>
                                     </div>
-                                    <div styleName="rating-star">
+                                    <div className="rating-star">
                                         <RatingStar scale={0.8} rate={val.rating}/>
                                         <span>{val.time_spent_desc}</span>
                                     </div>
                                     
-                                    <div styleName="rating-comment">{val.rating_text}</div>
-                                    <ul styleName="rating-img-list">
+                                    <div className="rating-comment">{val.rating_text}</div>
+                                    <ul className="rating-img-list">
                                         {val.order_images && val
                                             .order_images
                                             .map((img) => (
-                                                <li key={img.image_hash} styleName="rating-img-item">
+                                                <li key={img.image_hash} className="rating-img-item">
                                                     <img src={getImgSrc(img.image_hash)} alt=""/>
                                                 </li>
                                             ))}
                                     </ul>
-                                    <ul styleName="rating-goods-list">
+                                    <ul className="rating-goods-list">
                                         {val.food_ratings.map((goods,index) => (
-                                            <li key={index} styleName="rating-goods">{goods.rate_name}</li>
+                                            <li key={index} className="rating-goods">{goods.rate_name}</li>
                                         ))}
                                         
                                     </ul>
@@ -86,4 +86,4 @@ class RatingList extends Component {
     }
 }
 
-export default CSSModules(RatingList, styles, {allowMultiple: true});
+export default RatingList;

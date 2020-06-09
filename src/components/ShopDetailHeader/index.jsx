@@ -1,6 +1,6 @@
 import React from "react";
-import CSSModules from 'react-css-modules';
-import styles from "./style.scss";
+
+import "./style.scss";
 import Modal from "../Modal";
 import ActivitySheet from "../ActivitySheet";
 import getImgSrc from "../../util/getImgSrc.js";
@@ -30,25 +30,25 @@ class ShopDetailHeader extends React.Component {
     const { showModal, showActivity } = this.state;
     const { data } = this.props;
     return (
-      <div styleName="shop-detail-header">
-        <div styleName="header">
+      <div className="shop-detail-header">
+        <div className="header">
           <i className="iconfont icon-fanhuijiantou"
           onClick={this.handleback}></i>
         </div>
         <div
-          styleName="shop-header-center"
+          className="shop-header-center"
           onClick={this.handleToggleShowModal}
         >
-          <div styleName="shop-img">
+          <div className="shop-img">
             <img src={getImgSrc(data.image_path)} alt="shop" />
           </div>
-          <h3 styleName="shop-name">
-            <span styleName="name-text">{data.name}</span>
+          <h3 className="shop-name">
+            <span className="name-text">{data.name}</span>
             <div>
               <i className="iconfont icon-playfill" />
             </div>
           </h3>
-          <div styleName="shop-info">
+          <div className="shop-info">
             <span>{data.rating}&nbsp;</span>
             <span>月售{data.recent_order_num}单&nbsp;</span>
             <span>{data.delivery_mode.text}&nbsp;</span>
@@ -59,11 +59,11 @@ class ShopDetailHeader extends React.Component {
                 : `${data.distance}m`}&nbsp;
             </span>
           </div>
-          <p styleName="shop-notice">
+          <p className="shop-notice">
             {data.promotion_info || "欢迎光临，用餐高峰期请提前下单，谢谢。"}
           </p>
         </div>
-        <div styleName="activity-btn" onClick={this.toggleShowActivity}>
+        <div className="activity-btn" onClick={this.toggleShowActivity}>
           <div>
             <span
               style={{
@@ -83,26 +83,26 @@ class ShopDetailHeader extends React.Component {
         </div>
         {showModal && (
           <Modal callback={this.handleToggleShowModal} displacement={50}>
-            <div styleName="shopinfo-modal">
-              <h3 styleName="title">{data.name}</h3>
-              <ul styleName="info-list">
-                <li styleName="item">
+            <div className="shopinfo-modal">
+              <h3 className="title">{data.name}</h3>
+              <ul className="info-list">
+                <li className="item">
                   <h3>{data.rating}</h3>
                   <p>评分</p>
                 </li>
-                <li styleName="item">
+                <li className="item">
                   <h3>{data.recent_order_num}</h3>
                   <p>月售</p>
                 </li>
-                <li styleName="item">
+                <li className="item">
                   <h3>蜂鸟专送</h3>
                   <p>约{data.order_lead_time}分钟</p>
                 </li>
-                <li styleName="item">
+                <li className="item">
                   <h3>{data.float_delivery_fee}元</h3>
                   <p>配送费</p>
                 </li>
-                <li styleName="item">
+                <li className="item">
                   <h3>
                     {data.distance > 1000
                       ? `${(data.distance / 1000).toFixed(1)}km`
@@ -111,9 +111,9 @@ class ShopDetailHeader extends React.Component {
                   <p>距离</p>
                 </li>
               </ul>
-              <div styleName="modal-notice">
-                <h4 styleName="title">—&nbsp;公告&nbsp;—</h4>
-                <p styleName="content">
+              <div className="modal-notice">
+                <h4 className="title">—&nbsp;公告&nbsp;—</h4>
+                <p className="content">
                   {data.promotion_info ||
                     "欢迎光临，用餐高峰期请提前下单，谢谢。"}
                 </p>
@@ -125,14 +125,14 @@ class ShopDetailHeader extends React.Component {
           <ActivitySheet title="优惠活动" onClick={this.toggleShowActivity}>
             <div>
               {data.activities.map((val,index) => (
-                <div styleName="shop-activity-item" key={index}>
+                <div className="shop-activity-item" key={index}>
                 <span
-                  styleName="activity-icon"
+                  className="activity-icon"
                   style={{ background: `#${val.icon_color}` }}
                 >
                   {val.icon_name}
                 </span>
-                <span styleName="activity-descripition">{val.description}</span>
+                <span className="activity-descripition">{val.description}</span>
               </div>
               ))}
             </div>
@@ -143,4 +143,4 @@ class ShopDetailHeader extends React.Component {
   }
 }
 
-export default CSSModules(ShopDetailHeader,styles,{allowMultiple:true});
+export default ShopDetailHeader;

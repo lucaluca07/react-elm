@@ -1,7 +1,7 @@
 import React from "react";
 import CSSModules from "react-css-modules";
 import {Link} from "react-router-dom";
-import styles from "./style.scss";
+import "./style.scss";
 import classNames from "classnames";
 import Toast from "../../components/Toast"
 import {withRouter} from "react-router-dom"
@@ -99,26 +99,26 @@ class AddAddresses extends React.Component {
       tag_type
     } = this.state
     return (
-      <div styleName="content">
-        <div styleName="frombolack">
-          <div styleName="label-warp">联系人</div>
-          <div styleName="input-warp">
+      <div className="content">
+        <div className="frombolack">
+          <div className="label-warp">联系人</div>
+          <div className="input-warp">
             <input
               type="text"
               value={name}
               onChange={this.handleChangeName}
               maxLength="20"
               placeholder="你的姓名"/>
-            <div styleName="tag-warp">
+            <div className="tag-warp">
               <span
-                styleName={classNames("tag", {
+                className={classNames("tag", {
                 "activity": sex == 1
               })}
                 onClick={this
                 .handleChangeSex
                 .bind(this, 1)}>先生</span>
               <span
-                styleName={classNames("tag", {
+                className={classNames("tag", {
                 "activity": sex == 2
               })}
                 onClick={this
@@ -127,9 +127,9 @@ class AddAddresses extends React.Component {
             </div>
           </div>
         </div>
-        <div styleName="frombolack">
-          <div styleName="label-warp">电话</div>
-          <div styleName="input-warp">
+        <div className="frombolack">
+          <div className="label-warp">电话</div>
+          <div className="input-warp">
             <input
               maxLength="20"
               value={phone}
@@ -138,11 +138,11 @@ class AddAddresses extends React.Component {
               placeholder="你的手机号"/>
           </div>
         </div>
-        <div styleName="frombolack">
-          <div styleName="label-warp">位置</div>
-          <div styleName="location" onClick={this.locationClick}>
+        <div className="frombolack">
+          <div className="label-warp">位置</div>
+          <div className="location" onClick={this.locationClick}>
             <input
-              styleName="input-warp"
+              className="input-warp"
               type="text"
               readOnly="readonly"
               value={address}
@@ -150,9 +150,9 @@ class AddAddresses extends React.Component {
             <i className="iconfont icon-jinrujiantou"></i>
           </div>
         </div>
-        <div styleName="frombolack">
-          <div styleName="label-warp">详细地址</div>
-          <div styleName="input-warp">
+        <div className="frombolack">
+          <div className="label-warp">详细地址</div>
+          <div className="input-warp">
             <textarea
               maxLength="100"
               value={address_detail}
@@ -161,25 +161,25 @@ class AddAddresses extends React.Component {
               placeholder="详细地址（如门牌号等）"/>
           </div>
         </div>
-        <div styleName="frombolack">
-          <div styleName="label-warp">标签</div>
-          <div styleName="tag-warp">
+        <div className="frombolack">
+          <div className="label-warp">标签</div>
+          <div className="tag-warp">
             <span
-              styleName={classNames("tag", {
+              className={classNames("tag", {
               "activity": tag_type == 1
             })}
               onClick={this
               .handleChangeTag
               .bind(this, 1)}>家</span>
             <span
-              styleName={classNames("tag", {
+              className={classNames("tag", {
               "activity": tag_type == 2
             })}
               onClick={this
               .handleChangeTag
               .bind(this, 2)}>学校</span>
             <span
-              styleName={classNames("tag", {
+              className={classNames("tag", {
               "activity": tag_type == 3
             })}
               onClick={this
@@ -187,10 +187,10 @@ class AddAddresses extends React.Component {
               .bind(this, 3)}>公司</span>
           </div>
         </div>
-        <button styleName="submit" onClick={this.hangleSubmit}>确定</button>
+        <button className="submit" onClick={this.hangleSubmit}>确定</button>
       </div>
     );
   }
 }
 
-export default withRouter(CSSModules(AddAddresses, styles, {allowMultiple: true}));
+export default withRouter(AddAddresses);

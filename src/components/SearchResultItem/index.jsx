@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import CSSModules from 'react-css-modules';
+
 import { Link } from "react-router-dom";
-import styles from "./style.scss";
+import "./style.scss";
 import FoodList from "../FoodList";
 import getImgSrc from "../../util/getImgSrc";
 
@@ -21,19 +21,19 @@ class ShopItem extends Component {
       image_path
     } = restaurant;
     return (
-      <div styleName="search-result-item">
+      <div className="search-result-item">
         <Link to={`/shop/${id}`}>
-          <div styleName="result-item">
-            <div styleName="result-img">
+          <div className="result-item">
+            <div className="result-img">
               <img src={getImgSrc(image_path)} alt="result" />
             </div>
-            <div styleName="result-info">
-              <div styleName="result-title">
-                <h3 styleName="title">{name}</h3>
-                <div styleName="top-right">
+            <div className="result-info">
+              <div className="result-title">
+                <h3 className="title">{name}</h3>
+                <div className="top-right">
                   {delivery_mode ? (
                     <div
-                      styleName="delivery"
+                      className="delivery"
                       style={{
                         color: `#${delivery_mode.text_color}`,
                         background: `linear-gradient(to right, #${
@@ -48,8 +48,8 @@ class ShopItem extends Component {
                   )}
                 </div>
               </div>
-              <div styleName="result-rate">
-                <div styleName="result-rate-left">
+              <div className="result-rate">
+                <div className="result-rate-left">
                   <span>评价{rating}</span>&nbsp;|&nbsp;
                   <span>起送费¥{float_minimum_order_amount}</span>&nbsp;|&nbsp;
                   <span>配送费¥{float_delivery_fee}</span>
@@ -72,4 +72,4 @@ class ShopItem extends Component {
   }
 }
 
-export default CSSModules(ShopItem,styles,{allowMultiple:true});
+export default ShopItem;

@@ -1,6 +1,6 @@
 import React from "react";
-import CSSModules from 'react-css-modules';
-import styles from "./style.scss";
+
+import "./style.scss";
 import ShopActivityList from "../ShopActivityList";
 
 class ShopActivity extends React.Component {
@@ -19,12 +19,12 @@ class ShopActivity extends React.Component {
     const showMore = this.state.showMore;
     const recommend = this.props.recommend;
     return (
-      <div styleName="shop-activity">
-        <div styleName="activity-left" />
-        <div styleName="activity-right">
-          <div styleName="tag-line">
+      <div className="shop-activity">
+        <div className="activity-left" />
+        <div className="activity-right">
+          <div className="tag-line">
             {!recommend.is_ad && recommend.reason ? (
-              <div styleName="tag-container">
+              <div className="tag-container">
                 <img
                   src="http://fuss10.elemecdn.com/a/c1/24c767ffa7fd296d3e2d6f01798c6png.png?imageMogr/format/webp/thumbnail/!60x60r/gravity/Center/crop/60x60/"
                   alt="tag"
@@ -35,8 +35,8 @@ class ShopActivity extends React.Component {
               ""
             )}
           </div>
-          <div styleName="activities">
-            <div styleName="activity-list">
+          <div className="activities">
+            <div className="activity-list">
               {showMore ? (
                 <ShopActivityList data={activityList} />
               ) : (
@@ -45,10 +45,10 @@ class ShopActivity extends React.Component {
             </div>
             {activityList.length > 2 ? (
               <div
-                styleName="activityBtn"
+                className="activityBtn"
                 onClick={this.toggleShowMore.bind(this)}>
                   <span>{activityList.length}个活动</span>
-                  <div styleName={showMore ? "rotate180" : "rotate0"}>
+                  <div className={showMore ? "rotate180" : "rotate0"}>
                     <i className="iconfont icon-sanjiao1"/>
                   </div>
               </div>
@@ -62,4 +62,4 @@ class ShopActivity extends React.Component {
   }
 }
 
-export default CSSModules(ShopActivity,styles,{allowMultiple:true});
+export default ShopActivity;

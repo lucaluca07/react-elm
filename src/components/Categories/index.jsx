@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import CSSModules from 'react-css-modules';
-import style from "./style.scss";
+
+import  "./style.scss";
 
 class Categories extends Component {
   handleClick(id) {
@@ -10,20 +10,20 @@ class Categories extends Component {
     const categories = this.props.categories;
     const { categoryId } = this.props;
     return (
-      <div styleName="categories">
-        <ul styleName="category-list">
+      <div className="categories">
+        <ul className="category-list">
           {categories.map((val, index) => (
             <li
               key={index}
               onClick={this.handleClick.bind(this, val.id)}
-              styleName={`category-item ${categoryId === val.id ? "activity":""}`}
+              className={`category-item ${categoryId === val.id ? "activity":""}`}
             >
               {val.name}
             </li>
           ))}
         </ul>
         <div
-          styleName="show-more-btn"
+          className="show-more-btn"
           onClick={() => {
             this.props.onMoreClick();
           }}
@@ -35,4 +35,4 @@ class Categories extends Component {
   }
 }
 
-export default CSSModules(Categories,style,{allowMultiple:true});
+export default Categories;

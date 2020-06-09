@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import CSSModules from 'react-css-modules';
-import styles from "./style.scss";
+
+import "./style.scss";
 import getImgSrc from "../../util/getImgSrc";
 import throttle from "../../util/throttle";
 import Modal from "../Modal";
@@ -99,13 +99,13 @@ class ShopMenu extends Component {
     const { height, activityId, showModal, foodInfo, spec, attrs } = this.state;
     const cart = this.props.cart;
     return (
-      <div styleName="shop-menu-wrap" style={{ height: height }}>
-        <div styleName="main" ref={(node) => {this.main = node}}>
-          <ul styleName="shop-main-menu">
+      <div className="shop-menu-wrap" style={{ height: height }}>
+        <div className="main" ref={(node) => {this.main = node}}>
+          <ul className="shop-main-menu">
             {data.map((val, index) => (
               <li
                 key={index}
-                styleName={`main-menu-item ${
+                className={`main-menu-item ${
                   activityId === val.id ? "activity-menu" : ""
                 }`}
                 onClick={this.handleClick.bind(this, val.id)}
@@ -115,29 +115,29 @@ class ShopMenu extends Component {
             ))}
             <li style={{ height: 100 }} />
           </ul>
-          <div styleName="shop-sub-menu" ref={(node)=>{this["sub-menu"] = node}} onScroll={this.scroll}>
+          <div className="shop-sub-menu" ref={(node)=>{this["sub-menu"] = node}} onScroll={this.scroll}>
             {data.map((foods, index) => (
-              <div styleName="shop-sub-list" key={index}>
-                <p styleName="title" ref={(node)=>{this[`ref${foods.id}`] = node}}>
-                  <span styleName="name">{foods.name}</span>
+              <div className="shop-sub-list" key={index}>
+                <p className="title" ref={(node)=>{this[`ref${foods.id}`] = node}}>
+                  <span className="name">{foods.name}</span>
                   {foods.description}
                 </p>
                 {foods.foods.map(val => (
-                  <div styleName="shop-sub-item" key={val.virtual_food_id}>
-                    <div styleName="food-img">
+                  <div className="shop-sub-item" key={val.virtual_food_id}>
+                    <div className="food-img">
                       {val.image_path && (
                         <img src={getImgSrc(val.image_path, 140)} alt="food" />
                       )}
                     </div>
-                    <div styleName="food-detail">
-                      <div styleName="food-name">{val.name}</div>
-                      <div styleName="description">{val.description}</div>
-                      <div styleName="sales">
+                    <div className="food-detail">
+                      <div className="food-name">{val.name}</div>
+                      <div className="description">{val.description}</div>
+                      <div className="sales">
                         <span>月售{val.month_sales}份</span>&nbsp;
                         <span>好评率{val.satisfy_rate}%</span>
                       </div>
-                      <div styleName="price-wrap">
-                        <span styleName="price">
+                      <div className="price-wrap">
+                        <span className="price">
                           {val.specfoods.length > 1
                             ? `¥${Math.min(
                                 ...val.specfoods.map(item => item.price)
@@ -155,9 +155,9 @@ class ShopMenu extends Component {
                               0
                             )
                           : cart[val.virtual_food_id][0].quantity) > 0 ? (
-                          <div styleName="btn-warp">
+                          <div className="btn-warp">
                             <span
-                              styleName="decrease-cart-btn"
+                              className="decrease-cart-btn"
                               onClick={
                                 cart[val.virtual_food_id].length > 1
                                   ? () => {
@@ -169,7 +169,7 @@ class ShopMenu extends Component {
                             >
                               <i className="iconfont icon-jian1" />
                             </span>
-                            <span styleName="goods-num">
+                            <span className="goods-num">
                               {cart[val.virtual_food_id].length > 1
                                 ? cart[val.virtual_food_id].reduce(
                                     (accumulator, current) =>
@@ -180,7 +180,7 @@ class ShopMenu extends Component {
                             </span>
                             {val.specfoods.length > 1 ? (
                               <span
-                                styleName="choose-goods-btn"
+                                className="choose-goods-btn"
                                 onClick={() => {
                                   this.toggleShowModal(val);
                                 }}
@@ -189,7 +189,7 @@ class ShopMenu extends Component {
                               </span>
                             ) : (
                               <span
-                                styleName="add-cart-btn"
+                                className="add-cart-btn"
                                 onClick={this.addCart.bind(this, val, 1)}
                               >
                                 <i className="iconfont icon-tianjia" />
@@ -200,7 +200,7 @@ class ShopMenu extends Component {
                           <div>
                             {val.specfoods.length > 1 ? (
                               <span
-                                styleName="choose-goods-btn"
+                                className="choose-goods-btn"
                                 onClick={() => {
                                   this.toggleShowModal(val);
                                 }}
@@ -209,7 +209,7 @@ class ShopMenu extends Component {
                               </span>
                             ) : (
                               <span
-                                styleName="add-cart-btn"
+                                className="add-cart-btn"
                                 onClick={this.addCart.bind(this, val, 1)}
                               >
                                 <i className="iconfont icon-tianjia" />
@@ -228,14 +228,14 @@ class ShopMenu extends Component {
         </div>
         {showModal && (
           <Modal onTouch={false} callback={this.toggleShowModal}>
-            <div styleName="specpanle">
-              <h2 styleName="specpanle-title">{foodInfo.name}</h2>
+            <div className="specpanle">
+              <h2 className="specpanle-title">{foodInfo.name}</h2>
               <div style={{ padding: "0 20px" }}>规格</div>
-              <ul styleName="specpanle-specs">
+              <ul className="specpanle-specs">
                 {foodInfo.specfoods.map((val, index) => (
                   <li
                     onClick={this.setSpecState.bind(this, index)}
-                    styleName={`spec-item ${
+                    className={`spec-item ${
                       spec === index ? "item-activity" : ""
                     }`}
                     key={index}
@@ -245,11 +245,11 @@ class ShopMenu extends Component {
                 ))}
               </ul>
               {foodInfo.attrs.length > 0 && (
-                <div styleName="attr-wrap">
+                <div className="attr-wrap">
                   {foodInfo.attrs.map((val, ind) => (
                     <div key={ind}>
-                      <div styleName="spec-attr-name">{val.name}</div>
-                      <ul styleName="spec-attrs">
+                      <div className="spec-attr-name">{val.name}</div>
+                      <ul className="spec-attrs">
                         {val.values.map((attr, index) => (
                           <li
                           onClick={this.setAttrs.bind(
@@ -257,7 +257,7 @@ class ShopMenu extends Component {
                               val.name,
                               attr
                             )}
-                            styleName={`spec-attr-item ${
+                            className={`spec-attr-item ${
                               attr === attrs[ind].value ? "item-activity" : ""
                             }`}
                             key={index}
@@ -270,10 +270,10 @@ class ShopMenu extends Component {
                   ))}
                 </div>
               )}
-              <div styleName="specpanle-footer">
-                <div styleName="price">￥{foodInfo.specfoods[spec].price}</div>
+              <div className="specpanle-footer">
+                <div className="price">￥{foodInfo.specfoods[spec].price}</div>
                 <div
-                  styleName="submit-btn"
+                  className="submit-btn"
                   onClick={this.addCart.bind(this, foodInfo, 1)}
                 >
                   选好了
@@ -287,4 +287,4 @@ class ShopMenu extends Component {
   }
 }
 
-export default CSSModules(ShopMenu,styles,{allowMultiple:true});
+export default ShopMenu;

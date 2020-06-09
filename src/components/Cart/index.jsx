@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import CSSModules from 'react-css-modules';
-import style from "./style.scss";
+
+import  "./style.scss";
 import ActivitySheet from "../ActivitySheet";
 
 class Cart extends Component {
@@ -50,15 +50,15 @@ class Cart extends Component {
     const total = (data && this.getMoney(data)) || 0;
     return (
       <div>
-        <div styleName="cartview">
-          <div styleName="discount-tips" />
-          <div styleName="cartview-body">
-            <div styleName="cartview-main">
-              <div styleName="cartview-total">¥{total}</div>
-              <div styleName="cart-delivery">配送费¥5</div>
+        <div className="cartview">
+          <div className="discount-tips" />
+          <div className="cartview-body">
+            <div className="cartview-main">
+              <div className="cartview-total">¥{total}</div>
+              <div className="cart-delivery">配送费¥5</div>
             </div>
             <div
-              styleName={`submit-btn ${
+              className={`submit-btn ${
                 total - minOrderAmount >= 0 ? "activity-btn" : ""
               }`}
             >
@@ -71,10 +71,10 @@ class Cart extends Component {
           </div>
           <div
             onClick={total > 0 ? this.toggleShowGoodsList : null}
-            styleName={`cart ${arr > 0 ? "activity-cart" : ""}`}
+            className={`cart ${arr > 0 ? "activity-cart" : ""}`}
           >
             <i className="iconfont icon-cartfill" />
-            {arr > 0 && <div styleName="badge">{arr}</div>}
+            {arr > 0 && <div className="badge">{arr}</div>}
           </div>
         </div>
         {showGoods && (
@@ -83,27 +83,27 @@ class Cart extends Component {
             close={false}
             onClick={this.toggleShowGoodsList}
           >
-            <div styleName="goods-wrap">
-              <div styleName="goods-header">
-                <div styleName="header-text">已选商品</div>
-                <div styleName="clear-all" onClick={this.clearClick}>
+            <div className="goods-wrap">
+              <div className="goods-header">
+                <div className="header-text">已选商品</div>
+                <div className="clear-all" onClick={this.clearClick}>
                   <i className="iconfont icon-lajixiang" />
                   <span>清空</span>
                 </div>
               </div>
-              <ul styleName="goods-list">
+              <ul className="goods-list">
                 {data &&
                   Object.keys(data).map(ele =>
                     data[ele].map((val, index) => (
-                      <li styleName="goods-item" key={index}>
-                        <div styleName="goods">
-                          <span styleName="name">{val.name}</span>
-                          <span styleName="price">
+                      <li className="goods-item" key={index}>
+                        <div className="goods">
+                          <span className="name">{val.name}</span>
+                          <span className="price">
                             ￥{val.price * val.quantity}
                           </span>
-                          <div styleName="quantity">
+                          <div className="quantity">
                             <span
-                              styleName="decrease-cart-btn"
+                              className="decrease-cart-btn"
                               onClick={this.handleRemoveClick.bind(
                                 this,
                                 ele,
@@ -114,9 +114,9 @@ class Cart extends Component {
                             >
                               <i className="iconfont icon-jian1" />
                             </span>
-                            <span styleName="goods-num">{val.quantity}</span>
+                            <span className="goods-num">{val.quantity}</span>
                             <span
-                              styleName="add-cart-btn"
+                              className="add-cart-btn"
                               onClick={() => {
                                 changeCart(ele, 1, val, val.attrs);
                               }}
@@ -126,7 +126,7 @@ class Cart extends Component {
                           </div>
                         </div>
                         {val.specs[0] && (
-                          <div styleName="goods-spec">
+                          <div className="goods-spec">
                             {val.specs[0].value}
                             /{val.attrs.map(attr => attr.value).join("/")}
                           </div>
@@ -135,7 +135,7 @@ class Cart extends Component {
                     ))
                   )}
               </ul>
-              <div styleName="box" />
+              <div className="box" />
             </div>
           </ActivitySheet>
         )}
@@ -144,4 +144,4 @@ class Cart extends Component {
   }
 }
  
-export default CSSModules(Cart,style,{allowMultiple:true});
+export default Cart;

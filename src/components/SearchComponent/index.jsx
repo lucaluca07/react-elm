@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import CSSModules from 'react-css-modules';
-import styles from "./style.scss";
+
+import "./style.scss";
 
 class SearchInput extends Component {
   constructor(props) {
@@ -42,7 +42,7 @@ class SearchInput extends Component {
     const { value, showClear } = this.state;
     const padding = height ? `${height}px` : "10px";
     return (
-      <div styleName="search-wrap">
+      <div className="search-wrap">
         <i className="iconfont icon-sousuoxiao" />
         <input
           type="text"
@@ -55,7 +55,7 @@ class SearchInput extends Component {
           onFocus={this.handleFocus}
           onBlur={this.handleBlur}
         />
-        <div styleName="clear-btn" onClick={this.handleClick}>
+        <div className="clear-btn" onClick={this.handleClick}>
           {showClear && <i className="iconfont icon-close clear-input" />}
         </div>
       </div>
@@ -63,4 +63,4 @@ class SearchInput extends Component {
   }
 }
 
-export default CSSModules(SearchInput,styles,{allowMultiple:true});
+export default SearchInput;

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import CSSModules from "react-css-modules";
-import styles from "./style.scss";
+import "./style.scss";
 
 class UserInfo extends Component {
   static defaultProps = {
@@ -10,20 +10,20 @@ class UserInfo extends Component {
   render() {
     const { name, mobile, avatar, onClick } = this.props;
     return (
-      <div styleName="userinfo" onClick={onClick}>
-      {!!avatar?<div styleName="avatar"><img src={avatar} alt=""/></div>
-      :<div styleName="head-icon">
+      <div className="userinfo" onClick={onClick}>
+      {!!avatar?<div className="avatar"><img src={avatar} alt=""/></div>
+      :<div className="head-icon">
       <i className="iconfont icon-touxiang" />
     </div>}
         
-        <div styleName="user">
-          <div styleName="name">{name}</div>
+        <div className="user">
+          <div className="name">{name}</div>
           <div>
             <i className="iconfont icon-shouji" />
             <span>{mobile}</span>
           </div>
         </div>
-        <div styleName="user-btn">
+        <div className="user-btn">
           <i className="iconfont icon-jinrujiantou" />
         </div>
       </div>
@@ -31,4 +31,4 @@ class UserInfo extends Component {
   }
 }
 
-export default CSSModules(UserInfo, styles, { allowMultiple: true });
+export default UserInfo;

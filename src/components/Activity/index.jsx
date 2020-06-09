@@ -1,10 +1,10 @@
 import React from "react";
-import style from "./style.scss";
-import CSSModules from 'react-css-modules';
+import  "./style.scss";
+
 import ActivityItem from "../ActivityItem";
 
 const Activity = ({ data }) => (
-  <div styleName="activity">
+  <div className="activity">
     <ActivityItem
       title={data.name}
       color={data.name_color}
@@ -28,4 +28,4 @@ const Activity = ({ data }) => (
   </div>
 );
 
-export default CSSModules(Activity,style);
+export default Activity;

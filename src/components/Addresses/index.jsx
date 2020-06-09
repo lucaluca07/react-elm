@@ -1,6 +1,6 @@
 import React from "react";
 import CSSModules from "react-css-modules";
-import styles from "./style.scss";
+import "./style.scss";
 import Item from "./Item";
 
 const Addresses = ({
@@ -10,7 +10,7 @@ const Addresses = ({
   <div>
     {data.map((address, index) => <Item onClick={onClick} key={index} address={address}/>)}
 
-    <div styleName="add" onClick={() => {
+    <div className="add" onClick={() => {
       onClick && onClick({})
     }}>
       <i className="iconfont icon-jia"/>
@@ -19,4 +19,4 @@ const Addresses = ({
   </div>
 );
 
-export default CSSModules(Addresses, styles, {allowMultiple: true});
+export default Addresses;

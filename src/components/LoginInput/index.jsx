@@ -1,6 +1,6 @@
 import React from "react";
 import CSSModules from "react-css-modules";
-import styles from "./style.scss";
+import "./style.scss";
 import Toast from "../Toast";
 
 class LoginInput extends React.Component {
@@ -98,13 +98,13 @@ class LoginInput extends React.Component {
     } = this.state;
     const { tips, loginByMessage } = this.props;
     return (
-      <div styleName="login">
+      <div className="login">
         {loginByMessage ? (
           <div>
-            <section styleName="message-login">
+            <section className="message-login">
               <input
                 onChange={this.handleMobileChange}
-                styleName="login-input"
+                className="login-input"
                 type="tel"
                 maxLength="11"
                 placeholder="手机号"
@@ -115,7 +115,7 @@ class LoginInput extends React.Component {
                   color: disabled !== "disabled" ? "#2395ff" : "#999"
                 }}
                 onClick={this.handleClickMessage}
-                styleName="message-btn"
+                className="message-btn"
                 disabled={disabled}
               >
                 {btnText}
@@ -123,7 +123,7 @@ class LoginInput extends React.Component {
             </section>
             <section>
               <input
-                styleName="login-input"
+                className="login-input"
                 type="tel"
                 maxLength="6"
                 placeholder="验证码"
@@ -136,7 +136,7 @@ class LoginInput extends React.Component {
           <div>
             <section>
               <input
-                styleName="login-input"
+                className="login-input"
                 type="text"
                 placeholder="手机/邮箱/用户名"
                 onChange={this.handleUserChange}
@@ -145,7 +145,7 @@ class LoginInput extends React.Component {
             </section>
             <section>
               <input
-                styleName="login-input"
+                className="login-input"
                 type="password"
                 placeholder="密码"
                 onChange={this.handlePwdChange}
@@ -156,7 +156,7 @@ class LoginInput extends React.Component {
         )}
         {tips}
         <div>
-          <button styleName="login-btn" onClick={this.handleSubmit}>
+          <button className="login-btn" onClick={this.handleSubmit}>
             登录
           </button>
         </div>
@@ -165,4 +165,4 @@ class LoginInput extends React.Component {
   }
 }
 
-export default CSSModules(LoginInput, styles, { allowMultiple: true });
+export default LoginInput;

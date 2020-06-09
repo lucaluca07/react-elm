@@ -1,7 +1,7 @@
 import React from "react";
-import CSSModules from 'react-css-modules';
+
 import header from "../../static/image/header.png"
-import styles from "./style.scss";
+import "./style.scss";
 
 class LoginHeader extends React.Component {
     state = {
@@ -15,23 +15,23 @@ class LoginHeader extends React.Component {
     render() {
         const {index} = this.state
         return (
-            <div styleName="header">
-                <div styleName="img">
+            <div className="login-header">
+                <div className="img">
                     <img src={header} alt="header"/>
                 </div>
-                <ul styleName="switch">
+                <ul className="switch">
                     <li
                         onClick={this
                         .handleClick
                         .bind(this, 0)}
-                        styleName={`item ${index === 0
+                        className={`item ${index === 0
                         ? "active"
                         : ""}`}>短信登陆</li>
                     <li
                         onClick={this
                         .handleClick
                         .bind(this, 1)}
-                        styleName={`item ${index === 1
+                        className={`item ${index === 1
                         ? "active"
                         : ""}`}>密码登陆</li>
                 </ul>
@@ -40,4 +40,4 @@ class LoginHeader extends React.Component {
     }
 }
 
-export default CSSModules(LoginHeader, styles, {allowMultiple: true});
+export default LoginHeader;

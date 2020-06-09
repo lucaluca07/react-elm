@@ -1,6 +1,6 @@
 import React from "react";
-import CSSModules from 'react-css-modules';
-import styles from "./style.scss";
+
+import "./style.scss";
 import RatingStar from "../RatingStar";
 import ShopActivity from "../ShopActivity";
 import { Link } from "react-router-dom";
@@ -23,21 +23,21 @@ const ShopItem = ({ shopData }) => {
     activities
   } = restaurant;
   return (
-    <div styleName="item-wrap">
+    <div className="item-wrap">
       <Link to={`/shop/${id}`}>
-        <div styleName="shop-item">
-          <div styleName="shop-img">
+        <div className="shop-item">
+          <div className="shop-img">
             <img src={image_path} alt="shop" />
           </div>
-          <div styleName="shop-info">
-            <div styleName="shop-title">
-              <h3 styleName="title">{name}</h3>
-              <ul styleName="top-right">
-                {recommend.is_ad ? <li styleName="ad">广告</li> : ""}
+          <div className="shop-info">
+            <div className="shop-title">
+              <h3 className="title">{name}</h3>
+              <ul className="top-right">
+                {recommend.is_ad ? <li className="ad">广告</li> : ""}
                 {supports.length > 0
                   ? supports.map((val, index) => (
                       <li
-                        styleName="support"
+                        className="support"
                         key={index}
                         style={{ color: `#${val.icon_color}` }}
                       >
@@ -47,18 +47,18 @@ const ShopItem = ({ shopData }) => {
                   : ""}
               </ul>
             </div>
-            <div styleName="shop-rate">
-              <div styleName="shop-rate-left">
-                <div styleName="star">
+            <div className="shop-rate">
+              <div className="shop-rate-left">
+                <div className="star">
                   <RatingStar rate={rating} scale={0.9} />
                 </div>
-                <div styleName="grade">{rating}</div>&nbsp;
-                <div styleName="sell-number">月售{recent_order_num}单</div>
+                <div className="grade">{rating}</div>&nbsp;
+                <div className="sell-number">月售{recent_order_num}单</div>
               </div>
-              <div styleName="shop-rate-right">
+              <div className="shop-rate-right">
                 {delivery_mode ? (
                   <div
-                    styleName="delivery"
+                    className="delivery"
                     style={{
                       color: `#${delivery_mode.text_color}`,
                       background: `linear-gradient(to right, #${
@@ -73,7 +73,7 @@ const ShopItem = ({ shopData }) => {
                 )}
               </div>
             </div>
-            <div styleName="distribution-info">
+            <div className="distribution-info">
               <div>
                 <span>¥{float_minimum_order_amount}起送</span>&nbsp;|&nbsp;
                 <span>配送费¥{float_delivery_fee}</span>
@@ -95,4 +95,4 @@ const ShopItem = ({ shopData }) => {
   );
 };
 
-export default CSSModules(ShopItem,styles,{allowMultiple:true});
+export default ShopItem;

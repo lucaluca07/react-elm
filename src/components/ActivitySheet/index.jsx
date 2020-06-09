@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import CSSModules from 'react-css-modules';
-import style from "./style.scss";
+
+import  "./style.scss";
 
 class ActivitySheet extends Component {
   static defaultProps = {
@@ -29,19 +29,19 @@ class ActivitySheet extends Component {
     return (
       <div 
       style={{zIndex:zIndex}}
-      styleName="activity-sheet">
-        <div styleName="sheet-shade" onClick={this.handleClick.bind(this)} />
-        <div styleName="sheet-comment">
+      className="activity-sheet">
+        <div className="sheet-shade" onClick={this.handleClick.bind(this)} />
+        <div className="sheet-comment">
           {close && (
-            <div styleName="close-tag" onClick={this.handleClick.bind(this)}>
+            <div className="close-tag" onClick={this.handleClick.bind(this)}>
               <i className="iconfont icon-close" />
             </div>
           )}
-          {title && <h2 styleName="sheet-title">{title}</h2>}
-          <div styleName="sheet-list">{this.props.children}</div>
+          {title && <h2 className="sheet-title">{title}</h2>}
+          <div className="sheet-list">{this.props.children}</div>
         </div>
       </div>
     );
   }
 }
-export default CSSModules(ActivitySheet,style);
+export default ActivitySheet;

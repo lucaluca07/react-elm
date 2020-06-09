@@ -1,10 +1,10 @@
 import React from "react";
-import CSSModules from 'react-css-modules';
+
 import styles from './style.scss';
 
 const ShopActivityList = ({data}) => data.map((val, index) => (
   <div key={index}>
-    <span styleName="tag" style={{
+    <span className="tag" style={{
       background: `#${val.icon_color}`
     }}>
       {val.icon_name}
@@ -13,4 +13,4 @@ const ShopActivityList = ({data}) => data.map((val, index) => (
   </div>
 ));
 
-export default CSSModules(ShopActivityList, styles, {allowMultiple: true});
+export default ShopActivityList;

@@ -5,7 +5,7 @@ const defaultState = {
   activity: [],
   offset: 0,
   result: {
-    restaurants: false,
+    restaurants: [],
     hasMore: false,
     filterMore: false
   }
@@ -22,7 +22,7 @@ const shop = (state = defaultState, action) => {
       return {
         ...state,
         result: {
-          restaurants: [...state.result.restaurants, ...action.restaurants],
+          restaurants: [...state.result.restaurants || [], ...action.restaurants],
           offset: action.offset,
           hasMore: action.hasMore
         }

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import CSSModules from 'react-css-modules';
-import style from "./style.scss";
+
+import  "./style.scss";
 
 class FilterNav extends Component {
   constructor(props) {
@@ -64,15 +64,15 @@ class FilterNav extends Component {
     } = fliterMore;
     const { activityId, delivery, averageCosts, supportIds } = this.state;
     return (
-      <div styleName="filter-nav">
-        <div styleName="filter-wrap">
+      <div className="filter-nav">
+        <div className="filter-wrap">
           {delivery_mode && (
-            <dl styleName="filter-item ">
-              <dt styleName="title">配送方式</dt>
-              <dd styleName="content">
+            <dl className="filter-item ">
+              <dt className="title">配送方式</dt>
+              <dd className="content">
                 {
                   <div
-                    styleName={`more-filter ${delivery === delivery_mode.id ?
+                    className={`more-filter ${delivery === delivery_mode.id ?
                       "filter-activity":""}`}
                     onClick={this.handleClick.bind(
                       this,
@@ -95,9 +95,9 @@ class FilterNav extends Component {
             </dl>
           )}
           {activity_types.length > 0 && (
-            <dl styleName="filter-item">
-              <dt styleName="title">优惠活动</dt>
-              <dd styleName="content">
+            <dl className="filter-item">
+              <dt className="title">优惠活动</dt>
+              <dd className="content">
                 {activity_types.map((val, index) => (
                   <div
                     key={index}
@@ -112,14 +112,14 @@ class FilterNav extends Component {
                           ? "none"
                           : "1px solid #e4e3e3"
                     }}
-                    styleName={`more-filter ${activityId === val.id ?
+                    className={`more-filter ${activityId === val.id ?
                       "filter-activity":""}`}
                   >
                     {activityId === val.id ? (
                       <i className="iconfont icon-finish" />
                     ) : (
                       <div
-                        styleName="activity-icon"
+                        className="activity-icon"
                         style={{ background: `#${val.icon_color}` }}
                       >
                         {val.icon_name}
@@ -132,9 +132,9 @@ class FilterNav extends Component {
             </dl>
           )}
           {average_costs.length > 0 && (
-            <dl styleName="filter-item">
-              <dt styleName="title">人均消费</dt>
-              <dd styleName="content">
+            <dl className="filter-item">
+              <dt className="title">人均消费</dt>
+              <dd className="content">
                 {average_costs.map((val, index) => (
                   <div
                     key={index}
@@ -153,22 +153,22 @@ class FilterNav extends Component {
                           ? "none"
                           : "1px solid #e4e3e3"
                     }}
-                    styleName={`more-filter ${averageCosts === val.id ?
+                    className={`more-filter ${averageCosts === val.id ?
                       "filter-activity":""}`}
                   >
                     {averageCosts === val.id && (
                       <i className="iconfont icon-finish" />
                     )}
-                    <span styleName="average-costs">{val.description}</span>
+                    <span className="average-costs">{val.description}</span>
                   </div>
                 ))}
               </dd>
             </dl>
           )}
           {supports.length > 0 && (
-            <dl styleName="filter-item">
-              <dt styleName="title">商家属性</dt>
-              <dd styleName="content">
+            <dl className="filter-item">
+              <dt className="title">商家属性</dt>
+              <dd className="content">
                 {supports.map((val, index) => (
                   <div
                     key={index}
@@ -183,14 +183,14 @@ class FilterNav extends Component {
                           ? "none"
                           : "1px solid #e4e3e3"
                     }}
-                    styleName={`more-filter ${supportIds.indexOf(val.id) !==
+                    className={`more-filter ${supportIds.indexOf(val.id) !==
                       -1 ? "filter-activity":""}`}
                   >
                     {supportIds.indexOf(val.id) !== -1 ? (
                       <i className="iconfont icon-finish" />
                     ) : (
                       <div
-                        styleName="support-icon"
+                        className="support-icon"
                         style={{
                           color: `#${val.icon_color}`,
                           borderColor: `#${val.icon_color}`
@@ -206,9 +206,9 @@ class FilterNav extends Component {
             </dl>
           )}
         </div>
-        <div styleName="filter-btn">
+        <div className="filter-btn">
           <div
-            styleName="clear-btn"
+            className="clear-btn"
             onClick={this.handleClearState}
             style={{
               color:
@@ -222,7 +222,7 @@ class FilterNav extends Component {
           >
             清空
           </div>
-          <div styleName="submit-btn" onClick={this.handleSubmit}>
+          <div className="submit-btn" onClick={this.handleSubmit}>
             确定
           </div>
         </div>
@@ -231,4 +231,4 @@ class FilterNav extends Component {
   }
 }
 
-export default CSSModules(FilterNav,style,{allowMultiple:true});
+export default FilterNav;

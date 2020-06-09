@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import CSSModules from 'react-css-modules';
-import styles from "./style.scss";
+
+import "./style.scss";
 
 class SearchWord extends Component {
   render() {
     const { title, del, data, onDelClick, onWordClick } = this.props;
     return (
-      <div styleName="search-words">
-        <h3 styleName="title">
+      <div className="search-words">
+        <h3 className="title">
           <span>{title}</span>
           {del && (
             <i
@@ -18,10 +18,10 @@ class SearchWord extends Component {
             />
           )}
         </h3>
-        <ul styleName="word-list">
+        <ul className="word-list">
           {data.map((val, index) => (
             <div
-              styleName="word"
+              className="word"
               onClick={() => {
                 onWordClick && onWordClick(val);
               }}
@@ -36,4 +36,4 @@ class SearchWord extends Component {
   }
 }
 
-export default CSSModules(SearchWord,styles,{allowMultiple:true});
+export default SearchWord;
