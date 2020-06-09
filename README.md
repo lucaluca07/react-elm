@@ -1,68 +1,93 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 20200609
+今天把项目重新拉了下来，发现跑不起来了[Sweats]，于是抽时间修改了一下配置，现在又可以完美运行了，现在在看看自己两年前的代码，还能看懂。。。
 
-## Available Scripts
+## 项目背景
 
-In the project directory, you can run:
+此项目主要是利用业余时间完成，主要使用了 react, redux, router 完成, 大部分组件是纯手工完成[流汗], 主要目的是为了练习 react 全家桶的使用,练习一下在公司项目上不能使(xia)用(gao)的技术; 另外也是体验一下一个人完成一个完整的项目的难度。
+项目中也遇到了很多的坑, 后面我会把项目中遇到的坑整理出来, 目前的目标是先完成整体的功能。由于在项目开始时对整个项目的复杂性考虑不够周全,导致现在的项目结构不能很好的发挥 redux 的优势, 在整体功能完成之后我准备对项目的整体结构进行一次调整,之后再对代码进行优化整合。
 
-### `yarn start`
+## 项目遇到的坑
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- 安装 node-sass 报错：<br/>
+  原因:
+  安装 node-sass 时会去 GitHub 上面拉去代码,由于国内环境不稳定(大家懂的)下载时间可能过长导致超时失败。<br/>
+  解决办法:
+  使用下面命令安装(其他的解决方法请自行搜索) <br/>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+  > SASS_BINARY_SITE=https://npm.taobao.org/mirrors/node-sass/ npm install node-sass
 
-### `yarn test`
+- onTouchStart、onClick 时间冲突：<br/>
+  当父元素添加了 onTouchStart(onTouchMove/onTouchEnd)事件后, 子元素的 onClick 事件不会被触发。<br/>
+  原因：<br/>
+  onTouchStart 的执行顺序在 onClick 事件之前,执行顺序 onTouchStart > onTouchMove > onTouchEnd > onClick。 <br/>
+  解决方法：<br/>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  1. 把子元素触发 onClick 的事件放在 onTouchStart 上触发;
+  2. 阻止子元素的 onTouchStart 事件冒泡,使用 event.e.stopPropagation()
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 项目运行
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- 运行 mock 服务器: npm run server
+- 运行本地项目: npm start
+- 编译项目: npm run build
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 完成进度
 
-### `yarn eject`
+- [x] 定位功能
+- [x] 搜索切换城市
+- [x] 推荐商家
+- [x] 搜索功能
+- [x] 搜索结果页
+- [x] 排序筛选功能
+- [x] 店铺商品详情
+- [x] 购物车功能
+- [x] 店铺评价页面
+- [x] 商品详情
+- [x] 商家详情页
+- [x] 登录、登出、注册
+- [ ] 提交订单
+- [x] 订单列表
+- [ ] 订单详情
+- [ ] 评价订单
+- [x] 下载 App
+- [x] 添加、删除、修改收货地址
+- [x] 上传头像
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 项目截图
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### State 结构
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/state.png" width="740" height="550"/>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 首页
 
-## Learn More
+<img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/home.png" width="365" height="619"/> <img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/home.gif" width="365" height="619"/>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 选择城市
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/city.png" width="365" height="619"/>
 
-### Code Splitting
+### 店铺列表
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+<img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/shoplist.png" width="365" height="619"/> <img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/shoplist.gif" width="365" height="619"/>
 
-### Analyzing the Bundle Size
+### 搜索页
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+<img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/search.png" width="365" height="619"/>
 
-### Making a Progressive Web App
+### 搜索结果页
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+<img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/search-result.png" width="365" height="619"/> <img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/result2.png" width="365" height="619"/>
 
-### Advanced Configuration
+### 店铺详情页
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+<img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/shop-detail.png" width="365" height="619"/> <img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/shop-detail.gif" width="365" height="619"/>
 
-### Deployment
+### 登陆页面
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+<img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/login.png" width="365" height="619"/> <img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/login1.png" width="365" height="619"/>
 
-### `yarn build` fails to minify
+### 收货地址页
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/address.png" width="365" height="619"/> <img src="https://github.com/volcanoliuc/react-elm/blob/master/screenshot/address1.png" width="365" height="619"/>
