@@ -1,6 +1,4 @@
 import React from "react";
-import CSSModules from "react-css-modules";
-import {Link} from "react-router-dom";
 import "./style.scss";
 import classNames from "classnames";
 import Toast from "../../components/Toast"
@@ -9,7 +7,6 @@ import {withRouter} from "react-router-dom"
 class AddAddresses extends React.Component {
   constructor(props) {
     super(props)
-    const data = this.props.data
     const {
       name,
       sex,
