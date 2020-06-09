@@ -7,7 +7,7 @@ class OrderList extends Component {
   render() {
     const {data} = this.props
     return (
-        <ul className="wrap">
+        <ul className="order-list">
             {data.map((val) => (
                 <Item key={val.unique_id} data={val}/>
             ))}

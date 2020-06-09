@@ -1,4 +1,4 @@
-.item{
+.order-item{
     margin: 20px 32px;
     color:#333;
     .info{
@@ -10,6 +10,8 @@
                 height: 60px;
                 width: 60px;
                 border-radius: 4px;
+                display: inline-block;
+                background-color: #eee;
             }
         }
         .wrap{

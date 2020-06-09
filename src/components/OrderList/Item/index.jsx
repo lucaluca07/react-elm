@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import CSSModules from "react-css-modules";
 import "./style.scss";
 import {Link} from "react-router-dom";
 import getImgSrc from "../../../util/getImgSrc";
@@ -8,7 +7,7 @@ class Item extends Component {
   render() {
     const {data} = this.props
     return (
-        <li className="item">
+        <li className="order-item">
             <div className="info">
                 <div className="order-avatar">
                     <img src={getImgSrc(data.restaurant_image_hash)} alt=""/>
