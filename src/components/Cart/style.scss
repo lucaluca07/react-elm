@@ -144,8 +144,6 @@
   }
 }
 
-:global{
-  .icon-cartfill::before {
-    font-size: 70px;
-  }
+.icon-cartfill::before {
+  font-size: 70px;
 }
