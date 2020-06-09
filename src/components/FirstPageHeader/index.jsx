@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
-import CSSModules from 'react-css-modules';
+import CSSModules from "react-css-modules";
 import throttle from "../../util/throttle";
 import styles from "./style.scss";
 
@@ -35,7 +35,12 @@ class FirstPageHeader extends React.Component {
     return (
       <div styleName="first-page-header">
         <Link to={"/location"}>
-          <div styleName="header-address" ref={(node) => {this.address = node}}>
+          <div
+            styleName="header-address"
+            ref={(node) => {
+              this.address = node;
+            }}
+          >
             <i className="iconfont icon-coordinates_fill coordinates" />
             <span styleName="address">{address ? address : "正在定位..."}</span>
           </div>
@@ -60,4 +65,4 @@ class FirstPageHeader extends React.Component {
   }
 }
 
-export default CSSModules(FirstPageHeader,styles,{allowMultiple:true});
+export default FirstPageHeader;
